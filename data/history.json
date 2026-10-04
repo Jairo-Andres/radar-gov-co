@@ -1,0 +1,61 @@
+{
+  "runs": [
+    {
+      "date": "2026-10-04",
+      "summary": "2026-10-04/summary.json",
+      "sites_audited": 3,
+      "average_overall": 69,
+      "lights": {
+        "verde": 0,
+        "amarillo": 3,
+        "rojo": 0,
+        "sin_dato": 0
+      }
+    }
+  ],
+  "sites": {
+    "dane": {
+      "name": "DANE",
+      "category": "Entidad nacional",
+      "url": "https://www.dane.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 76,
+          "rank": 1,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "dian": {
+      "name": "DIAN",
+      "category": "Entidad nacional",
+      "url": "https://www.dian.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 70,
+          "rank": 2,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-medellin": {
+      "name": "Alcaldía de Medellín",
+      "category": "Alcaldía",
+      "url": "https://www.medellin.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 60,
+          "rank": 3,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    }
+  },
+  "generated_at": "2026-10-04T22:09:58+00:00"
+}

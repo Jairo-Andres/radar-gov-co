@@ -1,0 +1,7 @@
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Notas de seguridad encontradas por casualidad: NUNCA se publican
+private/

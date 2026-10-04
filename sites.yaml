@@ -1,0 +1,56 @@
+# Portales auditados por el Radar .gov.co.
+# Verificados el 2026-10-04 con `python -m radar verify` (responden y robots.txt permite la visita).
+# `pages` (opcional): hasta 2 páginas internas fijas; si no se indica, se eligen las 2 primeras
+# del menú que robots.txt permita. El código nunca visita más de 3 páginas por sitio.
+settings:
+  pause_seconds: 5   # mínimo 3, lo impone el código
+  max_pages: 3       # máximo 3, lo impone el código
+sites:
+  - {id: presidencia, name: Presidencia de la República, url: "https://www.presidencia.gov.co/", category: Presidencia}
+  - {id: gov-co, name: Portal Único del Estado (GOV.CO), url: "https://www.gov.co/", category: Portal del Estado}
+  - {id: minsalud, name: Ministerio de Salud y Protección Social, url: "https://www.minsalud.gov.co/", category: Ministerio}
+  - {id: mineducacion, name: Ministerio de Educación Nacional, url: "https://www.mineducacion.gov.co/", category: Ministerio}
+  - {id: minhacienda, name: Ministerio de Hacienda y Crédito Público, url: "https://www.minhacienda.gov.co/", category: Ministerio}
+  - {id: mintrabajo, name: Ministerio del Trabajo, url: "https://www.mintrabajo.gov.co/", category: Ministerio}
+  - {id: mininterior, name: Ministerio del Interior, url: "https://www.mininterior.gov.co/", category: Ministerio}
+  - {id: minjusticia, name: Ministerio de Justicia y del Derecho, url: "https://www.minjusticia.gov.co/", category: Ministerio}
+  - {id: cancilleria, name: Ministerio de Relaciones Exteriores, url: "https://www.cancilleria.gov.co/", category: Ministerio}
+  - {id: mindefensa, name: Ministerio de Defensa Nacional, url: "https://www.mindefensa.gov.co/", category: Ministerio}
+  - {id: minagricultura, name: Ministerio de Agricultura y Desarrollo Rural, url: "https://www.minagricultura.gov.co/", category: Ministerio}
+  - {id: minambiente, name: Ministerio de Ambiente y Desarrollo Sostenible, url: "https://www.minambiente.gov.co/", category: Ministerio}
+  - {id: mintransporte, name: Ministerio de Transporte, url: "https://www.mintransporte.gov.co/", category: Ministerio}
+  - {id: minvivienda, name: Ministerio de Vivienda, Ciudad y Territorio, url: "https://www.minvivienda.gov.co/", category: Ministerio}
+  - {id: dian, name: DIAN, url: "https://www.dian.gov.co/", category: Entidad nacional}
+  - {id: registraduria, name: Registraduría Nacional del Estado Civil, url: "https://www.registraduria.gov.co/", category: Entidad nacional}
+  - {id: dane, name: DANE, url: "https://www.dane.gov.co/", category: Entidad nacional}
+  - {id: dnp, name: Departamento Nacional de Planeación, url: "https://www.dnp.gov.co/", category: Entidad nacional}
+  - {id: icbf, name: ICBF, url: "https://www.icbf.gov.co/", category: Entidad nacional}
+  - {id: policia, name: Policía Nacional, url: "https://www.policia.gov.co/", category: Entidad nacional}
+  - {id: migracion, name: Migración Colombia, url: "https://www.migracioncolombia.gov.co/", category: Entidad nacional}
+  - {id: supersalud, name: Superintendencia Nacional de Salud, url: "https://www.supersalud.gov.co/", category: Entidad nacional}
+  - {id: procuraduria, name: Procuraduría General de la Nación, url: "https://www.procuraduria.gov.co/", category: Órgano de control}
+  - {id: contraloria, name: Contraloría General de la República, url: "https://www.contraloria.gov.co/", category: Órgano de control}
+  - {id: alcaldia-bogota, name: Alcaldía de Bogotá, url: "https://bogota.gov.co/", category: Alcaldía}
+  - {id: alcaldia-medellin, name: Alcaldía de Medellín, url: "https://www.medellin.gov.co/", category: Alcaldía}
+  - {id: alcaldia-cali, name: Alcaldía de Cali, url: "https://www.cali.gov.co/", category: Alcaldía}
+  - {id: alcaldia-barranquilla, name: Alcaldía de Barranquilla, url: "https://www.barranquilla.gov.co/", category: Alcaldía}
+  - {id: alcaldia-cartagena, name: Alcaldía de Cartagena, url: "https://www.cartagena.gov.co/", category: Alcaldía}
+  - {id: alcaldia-bucaramanga, name: Alcaldía de Bucaramanga, url: "https://www.bucaramanga.gov.co/", category: Alcaldía}
+
+# Reserva: también respondieron en la verificación; se pueden mover arriba para rotar la muestra.
+# - {id: mincit, name: Ministerio de Comercio, Industria y Turismo, url: "https://www.mincit.gov.co/", category: Ministerio}
+# - {id: mincultura, name: Ministerio de las Culturas, las Artes y los Saberes, url: "https://www.mincultura.gov.co/", category: Ministerio}
+# - {id: minenergia, name: Ministerio de Minas y Energía, url: "https://www.minenergia.gov.co/", category: Ministerio}
+# - {id: minciencias, name: Ministerio de Ciencia, Tecnología e Innovación, url: "https://minciencias.gov.co/", category: Ministerio}
+# - {id: mindeporte, name: Ministerio del Deporte, url: "https://www.mindeporte.gov.co/", category: Ministerio}
+# - {id: funcionpublica, name: Función Pública, url: "https://www.funcionpublica.gov.co/", category: Entidad nacional}
+# - {id: datos-gov-co, name: Portal de Datos Abiertos, url: "https://www.datos.gov.co/", category: Portal del Estado}
+# - {id: defensoria, name: Defensoría del Pueblo, url: "https://www.defensoria.gov.co/", category: Órgano de control}
+# - {id: colombiacompra, name: Colombia Compra Eficiente, url: "https://www.colombiacompra.gov.co/", category: Entidad nacional}
+# - {id: alcaldia-pereira, name: Alcaldía de Pereira, url: "https://www.pereira.gov.co/", category: Alcaldía}
+# - {id: alcaldia-manizales, name: Alcaldía de Manizales, url: "https://manizales.gov.co/", category: Alcaldía}
+
+# Excluidos en la verificación del 2026-10-04:
+#   mintic: robots.txt responde 403 (se asume que no permite la visita)
+#   minigualdad: el dominio no resuelve (DNS)
+#   sic: robots.txt no permite visitar la página de inicio

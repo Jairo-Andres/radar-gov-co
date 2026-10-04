@@ -1,0 +1,10 @@
+{
+  "name": "radar-gov-co",
+  "private": true,
+  "description": "Dependencias de Node para el auditor: axe-core y Lighthouse",
+  "license": "MIT",
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "lighthouse": "^13.0.0"
+  }
+}
