@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Jairo Andrés · Componentes base "Rutas + Cota" v1.0
+   Requiere tokens.css. CSS plano con prefijo ja-, funciona con o sin Tailwind.
+   ========================================================================== */
+
+/* ---- Base ---- */
+.ja-base {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font: var(--weight-regular) var(--text-base) / var(--leading-normal) var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+.ja-base :focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+.ja-display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-tight);
+  text-wrap: balance;
+}
+.ja-label {
+  font: var(--weight-bold) var(--text-xs) / 1.2 var(--font-mono);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+.ja-num { font-variant-numeric: tabular-nums; }
+.ja-topo { background-image: var(--texture-topo); background-size: 240px 240px; }
+
+/* ---- Bullet de ruta: siempre letra + color, nunca solo color ---- */
+.ja-bullet {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.75rem;
+  height: 1.75rem;
+  padding: 0 0.4rem;
+  border-radius: var(--radius-pill);
+  font: var(--weight-black) var(--text-sm) / 1 var(--font-display);
+}
+.ja-bullet--b { background: var(--route-b); color: var(--on-route-b); }
+.ja-bullet--d { background: var(--route-d); color: var(--on-route-d); }
+.ja-bullet--q { background: var(--route-q); color: var(--on-route-q); }
+
+/* ---- Botones ---- */
+.ja-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  padding: 0 var(--space-5);
+  border: var(--border-2) solid transparent;
+  border-radius: var(--radius-md);
+  font: var(--weight-bold) var(--text-base) / 1 var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
+}
+.ja-btn:active { transform: translateY(1px); }
+.ja-btn--primary { background: var(--color-accent); color: var(--color-on-accent); }
+.ja-btn--primary:hover { background: var(--color-accent-hover); }
+.ja-btn--secondary { background: transparent; color: var(--color-fg); border-color: var(--color-border-strong); }
+.ja-btn--secondary:hover { background: var(--color-surface-2); }
+.ja-btn--ghost { background: transparent; color: var(--ink-b); padding-inline: var(--space-3); }
+.ja-btn--ghost:hover { background: var(--color-surface-2); }
+.ja-btn:disabled, .ja-btn[aria-disabled="true"] {
+  background: var(--color-surface-2);
+  color: var(--color-fg-muted);
+  border-color: transparent;
+  cursor: not-allowed;
+  transform: none;
+}
+.ja-btn--lg { min-height: 3.25rem; padding-inline: var(--space-6); font-size: var(--text-md); }
+
+/* ---- Tarjeta (estación) ---- */
+.ja-card {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  min-width: 0;
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: var(--border-1) solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+.ja-card--raised { background: var(--color-bg); box-shadow: var(--shadow-md); }
+.ja-card__sign {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font: var(--weight-display) var(--text-lg) / 1.15 var(--font-display);
+}
+.ja-card__meta { font: var(--text-sm) / 1.4 var(--font-mono); color: var(--color-fg-muted); }
+.ja-card__meta::before { content: "△ "; color: var(--color-cota); }
+
+/* ---- Badge de estado: forma + texto + color ---- */
+.ja-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.3em 0.7em;
+  border-radius: var(--radius-pill);
+  font: var(--weight-bold) var(--text-sm) / 1.1 var(--font-body);
+  white-space: nowrap;
+}
+.ja-status::before { content: ""; width: 0.7em; height: 0.7em; flex: none; background: currentColor; }
+.ja-status--good { color: var(--status-good); background: var(--status-good-bg); }
+.ja-status--good::before { border-radius: 50%; }
+.ja-status--warn { color: var(--status-warn); background: var(--status-warn-bg); }
+.ja-status--warn::before { background: var(--status-warn-dot); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.ja-status--bad { color: var(--status-bad); background: var(--status-bad-bg); }
+.ja-status--bad::before { border-radius: 1px; }
+.ja-tag-example {
+  display: inline-block;
+  padding: 0.25em 0.55em;
+  border: var(--border-1) dashed var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font: var(--weight-bold) var(--text-xs) / 1 var(--font-mono);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+
+/* ---- Tabla ---- */
+.ja-table-wrap { overflow-x: auto; border: var(--border-1) solid var(--color-border); border-radius: var(--radius-md); }
+.ja-table { width: 100%; border-collapse: collapse; font-size: var(--text-sm); font-variant-numeric: tabular-nums; }
+.ja-table th, .ja-table td { padding: var(--space-3) var(--space-4); text-align: left; border-bottom: var(--border-1) solid var(--color-border); }
+.ja-table thead th {
+  position: sticky; top: 0;
+  background: var(--color-surface);
+  font: var(--weight-bold) var(--text-xs) / 1.2 var(--font-mono);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-fg-muted);
+}
+.ja-table tbody tr:last-child td { border-bottom: 0; }
+.ja-table tbody tr:hover { background: var(--color-surface); }
+.ja-table .is-num { text-align: right; }
+
+/* ---- Tarjeta de KPI ---- */
+.ja-kpi { display: grid; gap: var(--space-1); min-width: 0; padding: var(--space-5); background: var(--color-surface); border: var(--border-1) solid var(--color-border); border-radius: var(--radius-lg); }
+.ja-kpi__value { font: var(--weight-black) var(--text-3xl) / 1 var(--font-display); font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-display); }
+.ja-kpi__unit { font: var(--weight-bold) var(--text-md) / 1 var(--font-body); color: var(--color-fg-muted); margin-left: 0.2em; }
+.ja-kpi__delta { font: var(--weight-bold) var(--text-sm) / 1.3 var(--font-body); }
+.ja-kpi__delta--up { color: var(--status-bad); }    /* más días de espera = peor */
+.ja-kpi__delta--down { color: var(--status-good); }
+
+/* ---- Cargando datos (la API de Render despierta) ---- */
+.ja-loading { display: grid; gap: var(--space-4); padding: var(--space-6); border: var(--border-1) solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-surface); }
+.ja-loading__track { position: relative; height: var(--route-stroke); border-radius: var(--radius-pill); background: var(--color-surface-2); margin-inline: 0.6rem; }
+.ja-loading__fill { position: absolute; inset: 0 auto 0 0; width: 0; border-radius: inherit; background: var(--route-b); transition: width var(--duration-slow) var(--ease-out); }
+.ja-loading__stops { display: flex; justify-content: space-between; font: var(--text-xs) / 1.2 var(--font-mono); color: var(--color-fg-muted); }
+.ja-loading__train {
+  position: absolute; top: 50%; left: 0;
+  width: 1.1rem; height: 1.1rem; margin: -0.55rem 0 0 -0.55rem;
+  border-radius: 50%;
+  background: var(--color-bg);
+  border: 4px solid var(--route-b);
+  transition: left var(--duration-slow) var(--ease-out);
+}
+.ja-loading__pulse { animation: ja-pulse 1.4s var(--ease-in-out) infinite; }
+@keyframes ja-pulse { 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--route-b) 25%, transparent); } }
+.ja-skeleton { border-radius: var(--radius-sm); background: linear-gradient(90deg, var(--color-surface-2) 0 40%, var(--color-border) 50%, var(--color-surface-2) 60% 100%) 0 0 / 300% 100%; animation: ja-shimmer 1.6s linear infinite; }
+@keyframes ja-shimmer { to { background-position: -150% 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ja-loading__pulse, .ja-skeleton { animation: none; }
+  .ja-btn, .ja-loading__fill, .ja-loading__train { transition: none; }
+}

@@ -1,0 +1,222 @@
+/* ==========================================================================
+   Jairo Andrés · Sistema de diseño "Rutas + Cota" · tokens v1.0 (2026-10-04)
+   Rutas: señalética, 3 líneas fijas (B Backend, D Datos, Q QA).
+   Cota: tipografía Atkinson Hyperlegible, curvas de nivel y marcas de vértice (△).
+
+   Uso: importa este archivo una vez (antes de Tailwind o de tus estilos).
+   Modo oscuro: sigue al sistema (prefers-color-scheme) y se puede forzar con
+   <html data-theme="dark"> o data-theme="light".
+   Contraste: todas las parejas texto/fondo pasan WCAG 2.1 AA (ver guia.html).
+   ========================================================================== */
+
+:root {
+  /* ---- Marca fija (no cambia con el tema; úsala para logo y bullets) ---- */
+  --ja-graphite: #1A1D21;
+  --ja-white: #FFFFFF;
+  --ja-b: #1959D1;
+  --ja-d: #F2B705;
+  --ja-q: #C2185B;
+  --ja-cota: #8A5A2B;
+
+  /* ---- Tema claro (por defecto) ---- */
+  --color-bg: #FFFFFF;
+  --color-surface: #F4F5F7;
+  --color-surface-2: #E9EBEF;
+  --color-border: #D5D8DD;
+  --color-border-strong: #7D858E;
+  --color-fg: #1A1D21;
+  --color-fg-muted: #5C636B;
+  --color-accent: #1959D1;
+  --color-accent-hover: #1447A8;
+  --color-on-accent: #FFFFFF;
+  --color-focus: #1959D1;
+  --color-cota: #8A5A2B;
+
+  --route-b: #1959D1;  --on-route-b: #FFFFFF;
+  --route-d: #F2B705;  --on-route-d: #1A1D21;
+  --route-q: #C2185B;  --on-route-q: #FFFFFF;
+  --ink-b: #1959D1;
+  --ink-d: #7A5B00;
+  --ink-q: #C2185B;
+
+  --status-good: #1A7F37;     --status-good-bg: #E7F5EC;
+  --status-warn: #8F6200;     --status-warn-dot: #B07D00;   --status-warn-bg: #FFF4D6;
+  --status-bad: #C4320A;      --status-bad-bg: #FDEDE8;
+
+  --chart-1: #1959D1;
+  --chart-2: #E8A200;
+  --chart-3: #C2185B;
+  --chart-4: #4A3AA7;
+  --chart-5: #1BAF7A;
+  --chart-6: #EB6834;
+  --chart-grid: #E9EBEF;
+  --chart-axis: #5C636B;
+
+  --shadow-sm: 0 1px 2px rgb(26 29 33 / 0.08);
+  --shadow-md: 0 2px 4px rgb(26 29 33 / 0.06), 0 8px 20px -6px rgb(26 29 33 / 0.14);
+  --shadow-lg: 0 4px 8px rgb(26 29 33 / 0.06), 0 20px 40px -12px rgb(26 29 33 / 0.22);
+
+  --texture-topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cpath d='M0 12C60 2 180 22 240 12 M0 36C60 20 180 52 240 36 M0 60C60 38 180 82 240 60 M0 84C60 70 180 98 240 84 M0 108C60 100 180 116 240 108 M0 132C60 114 180 150 240 132 M0 156C60 132 180 180 240 156 M0 180C60 168 180 192 240 180 M0 204C60 184 180 224 240 204 M0 228C60 222 180 234 240 228' fill='none' stroke='%238A5A2B' stroke-opacity='.16' stroke-width='1.2'/%3E%3C/svg%3E");
+
+  /* ---- Gráficos: escala secuencial (un solo tono, claro -> oscuro) ---- */
+  --seq-100: #CDE2FB; --seq-200: #9EC5F4; --seq-300: #6DA7EC; --seq-400: #3987E5;
+  --seq-500: #256ABF; --seq-600: #184F95; --seq-700: #0D366B;
+
+  /* ---- Tipografía ---- */
+  --font-display: "Overpass", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Atkinson Hyperlegible Next", Verdana, system-ui, sans-serif;
+  --font-mono: "Atkinson Hyperlegible Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  /* Escala 1.25 (tercera mayor) sobre 16 px */
+  --text-xs: 0.75rem;     /* 12 */
+  --text-sm: 0.875rem;    /* 14 */
+  --text-base: 1rem;      /* 16 */
+  --text-md: 1.125rem;    /* 18 */
+  --text-lg: 1.25rem;     /* 20 */
+  --text-xl: 1.5625rem;   /* 25 */
+  --text-2xl: 1.953rem;   /* 31 */
+  --text-3xl: 2.441rem;   /* 39 */
+  --text-4xl: 3.052rem;   /* 49 */
+  --text-display: clamp(2.441rem, 6vw + 1rem, 4.768rem); /* 39 -> 76 */
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.3;
+  --leading-normal: 1.55;
+  --tracking-display: -0.015em;
+  --tracking-label: 0.08em;
+
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-display: 800;
+  --weight-black: 900;
+
+  /* ---- Espaciado (base 4 px; coincide con la escala de Tailwind) ---- */
+  --space-0: 0;
+  --space-1: 0.25rem;  /* 4 */
+  --space-2: 0.5rem;   /* 8 */
+  --space-3: 0.75rem;  /* 12 */
+  --space-4: 1rem;     /* 16 */
+  --space-5: 1.25rem;  /* 20 */
+  --space-6: 1.5rem;   /* 24 */
+  --space-8: 2rem;     /* 32 */
+  --space-10: 2.5rem;  /* 40 */
+  --space-12: 3rem;    /* 48 */
+  --space-16: 4rem;    /* 64 */
+  --space-24: 6rem;    /* 96 */
+  --gutter: 1rem;      /* margen lateral mínimo en móvil */
+  --content-max: 72rem;
+  --tap-min: 2.75rem;  /* 44 px: objetivo táctil mínimo */
+
+  /* ---- Bordes y radios ---- */
+  --border-1: 1px;
+  --border-2: 2px;
+  --route-stroke: 6px; /* grosor de las líneas de ruta en la interfaz */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-sign: 25%;  /* proporción del monograma (18/72) */
+  --radius-pill: 999px;
+
+  /* ---- Movimiento ---- */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.6, 0, 0.3, 1);
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #121417;
+    --color-surface: #1A1D21;
+    --color-surface-2: #23272C;
+    --color-border: #2D3137;
+    --color-border-strong: #6E767F;
+    --color-fg: #F2F3F5;
+    --color-fg-muted: #A2A9B1;
+    --color-accent: #7FA8FF;
+    --color-accent-hover: #A3C0FF;
+    --color-on-accent: #0E1A33;
+    --color-focus: #7FA8FF;
+    --color-cota: #D9A46B;
+
+    --route-b: #4D86F0;  --on-route-b: #121417;
+    --route-d: #F2B705;  --on-route-d: #121417;
+    --route-q: #E0569A;  --on-route-q: #121417;
+    --ink-b: #7FA8FF;
+    --ink-d: #F2B705;
+    --ink-q: #FF7AAE;
+
+    --status-good: #3FB950;     --status-good-bg: #13261A;
+    --status-warn: #E3B341;     --status-warn-dot: #E3B341;   --status-warn-bg: #2A2210;
+    --status-bad: #FF7B5C;      --status-bad-bg: #2E1711;
+
+    --chart-1: #4D86F0;
+    --chart-2: #C98500;
+    --chart-3: #E0569A;
+    --chart-4: #9085E9;
+    --chart-5: #199E70;
+    --chart-6: #D95926;
+    --chart-grid: #2D3137;
+    --chart-axis: #A2A9B1;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+    --shadow-md: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 20px -6px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 4px 8px rgb(0 0 0 / 0.3), 0 20px 40px -12px rgb(0 0 0 / 0.6);
+
+    --texture-topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cpath d='M0 12C60 2 180 22 240 12 M0 36C60 20 180 52 240 36 M0 60C60 38 180 82 240 60 M0 84C60 70 180 98 240 84 M0 108C60 100 180 116 240 108 M0 132C60 114 180 150 240 132 M0 156C60 132 180 180 240 156 M0 180C60 168 180 192 240 180 M0 204C60 184 180 224 240 204 M0 228C60 222 180 234 240 228' fill='none' stroke='%23D9A46B' stroke-opacity='.13' stroke-width='1.2'/%3E%3C/svg%3E");
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #121417;
+  --color-surface: #1A1D21;
+  --color-surface-2: #23272C;
+  --color-border: #2D3137;
+  --color-border-strong: #6E767F;
+  --color-fg: #F2F3F5;
+  --color-fg-muted: #A2A9B1;
+  --color-accent: #7FA8FF;
+  --color-accent-hover: #A3C0FF;
+  --color-on-accent: #0E1A33;
+  --color-focus: #7FA8FF;
+  --color-cota: #D9A46B;
+
+  --route-b: #4D86F0;  --on-route-b: #121417;
+  --route-d: #F2B705;  --on-route-d: #121417;
+  --route-q: #E0569A;  --on-route-q: #121417;
+  --ink-b: #7FA8FF;
+  --ink-d: #F2B705;
+  --ink-q: #FF7AAE;
+
+  --status-good: #3FB950;     --status-good-bg: #13261A;
+  --status-warn: #E3B341;     --status-warn-dot: #E3B341;   --status-warn-bg: #2A2210;
+  --status-bad: #FF7B5C;      --status-bad-bg: #2E1711;
+
+  --chart-1: #4D86F0;
+  --chart-2: #C98500;
+  --chart-3: #E0569A;
+  --chart-4: #9085E9;
+  --chart-5: #199E70;
+  --chart-6: #D95926;
+  --chart-grid: #2D3137;
+  --chart-axis: #A2A9B1;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --shadow-md: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 20px -6px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 4px 8px rgb(0 0 0 / 0.3), 0 20px 40px -12px rgb(0 0 0 / 0.6);
+
+  --texture-topo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cpath d='M0 12C60 2 180 22 240 12 M0 36C60 20 180 52 240 36 M0 60C60 38 180 82 240 60 M0 84C60 70 180 98 240 84 M0 108C60 100 180 116 240 108 M0 132C60 114 180 150 240 132 M0 156C60 132 180 180 240 156 M0 180C60 168 180 192 240 180 M0 204C60 184 180 224 240 204 M0 228C60 222 180 234 240 228' fill='none' stroke='%23D9A46B' stroke-opacity='.13' stroke-width='1.2'/%3E%3C/svg%3E");
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}

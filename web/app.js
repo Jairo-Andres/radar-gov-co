@@ -22,7 +22,9 @@ const SECTORS = [
   { key: "Portales", label: "Presidencia y portales", short: "Portales", includes: ["Presidencia", "Portal del Estado"] },
 ];
 
-const LIGHT_LABEL = { verde: "verde", amarillo: "amarillo", rojo: "rojo", sin_dato: "sin dato" };
+// Estados de la identidad común: siempre forma + texto + color.
+const LIGHT_LABEL = { verde: "bueno", amarillo: "regular", rojo: "malo", sin_dato: "sin dato" };
+const STATUS_CLASS = { verde: "ja-status--good", amarillo: "ja-status--warn", rojo: "ja-status--bad" };
 const IMPACT_LABEL = { critical: "crítico", serious: "grave", moderate: "moderado", minor: "menor" };
 
 // Explicación en lenguaje claro de las reglas de axe más comunes.
@@ -201,7 +203,7 @@ function renderRadar(summary) {
         style: `--delay:${((angleDeg / 360) * SWEEP_SECONDS).toFixed(2)}s`,
       });
       group.append(svg("circle", { class: "halo", cx: x, cy: y, r: 3.4 }));
-      group.append(svg("circle", { class: "core", cx: x, cy: y, r: 3.4 }));
+      group.append(statusShape(site.light, x, y));
       const open = () => openSheet(site.id);
       group.addEventListener("click", open);
       group.addEventListener("keydown", (event) => {
@@ -216,10 +218,25 @@ function renderRadar(summary) {
   });
 }
 
+// Bueno = círculo, regular = triángulo, malo = cuadrado (regla de la identidad común).
+function statusShape(light, x, y) {
+  if (light === "amarillo") {
+    const r = 4.4;
+    return svg("path", { class: "core", d: `M${x} ${y - r} L${x + r * 0.93} ${y + r * 0.62} L${x - r * 0.93} ${y + r * 0.62} Z` });
+  }
+  if (light === "rojo") return svg("rect", { class: "core", x: x - 3.2, y: y - 3.2, width: 6.4, height: 6.4, rx: 0.6 });
+  return svg("circle", { class: "core", cx: x, cy: y, r: 3.6 });
+}
+
+function statusBadge(site, text) {
+  if (!STATUS_CLASS[site.light]) return el("span", { class: "na", text: text ?? "sin dato" });
+  return el("span", { class: `ja-status ${STATUS_CLASS[site.light]}` }, text, el("span", { class: "sr-only", text: `, ${LIGHT_LABEL[site.light]}` }));
+}
+
 function showTip(tip, group, site) {
   const box = group.getBoundingClientRect();
   const parent = $("#radar").getBoundingClientRect();
-  tip.replaceChildren(document.createTextNode(`${site.name} · `), el("b", { text: String(site.overall) }));
+  tip.replaceChildren(document.createTextNode(`${site.name} · `), el("b", { text: String(site.overall) }), ` (${LIGHT_LABEL[site.light]})`);
   tip.style.left = `${box.left - parent.left + box.width / 2}px`;
   tip.style.top = `${box.top - parent.top}px`;
   tip.hidden = false;
@@ -272,13 +289,7 @@ function renderTable(summary) {
           el("button", { class: "site-btn", type: "button", onclick: () => openSheet(site.id), text: site.name }),
           el("span", { class: "site-cat", text: site.category }),
         ),
-        el("td", {},
-          el("span", { class: "score" },
-            el("i", { class: `dot ${site.light}`, "aria-hidden": "true" }),
-            site.overall ?? "–",
-            el("span", { class: "sr-only", text: `, ${LIGHT_LABEL[site.light]}` }),
-          ),
-        ),
+        el("td", {}, statusBadge(site, site.overall === null || site.overall === undefined ? null : String(site.overall))),
         ...COMPONENTS.map(([key]) => valueCell(scores[key], "c-wide")),
         el("td", { class: "num c-mid", text: site.wcag_rules ?? "–", title: `${site.wcag_cases ?? 0} casos` }),
       ),
@@ -322,8 +333,10 @@ function buildSheet(site, detail) {
 
   nodes.push(
     el("div", { class: "sheet-score" },
-      el("span", { class: `big-score ${site.light}`, text: site.overall ?? "–" }),
-      el("span", { class: "pill", text: `Semáforo ${LIGHT_LABEL[site.light]}` }),
+      el("span", { class: "big-score", text: site.overall ?? "–" }),
+      STATUS_CLASS[site.light]
+        ? el("span", { class: `ja-status ${STATUS_CLASS[site.light]}`, text: `Nivel ${LIGHT_LABEL[site.light]}` })
+        : el("span", { class: "pill", text: "Sin nota" }),
       site.status === "parcial" ? el("span", { class: "pill", text: "Medición parcial" }) : null,
     ),
   );

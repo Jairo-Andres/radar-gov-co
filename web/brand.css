@@ -1,22 +1,22 @@
-/* Identidad visual común de los proyectos de portafolio (propuesta).
-   Mismos tokens para la API, el dashboard de citas y el Radar: cada proyecto
-   cambia el fondo y el concepto, pero conserva tipografía, acentos y semáforo. */
+/* Radar .gov.co sobre la identidad común "Rutas + Cota" (v1.0).
+   tokens.css y components.css son copias sin modificar de identidad-visual/fase-2.
+   Aquí solo se traducen esos tokens al vocabulario del radar: el Radar es la
+   línea Q (QA), y el semáforo usa los estados bueno / regular / malo, siempre
+   con forma + texto + color (círculo, triángulo, cuadrado). */
 :root {
-  --font-sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --radar-route: var(--route-q);
+  --radar-route-ink: var(--ink-q);
 
-  /* Acentos de marca */
-  --brand-signal: #3ddc97;   /* verde señal */
-  --brand-amber: #f5b841;
-  --brand-alert: #ff6b6b;
-  --brand-ink: #e8f1f2;
+  --ok: var(--status-good);
+  --ok-bg: var(--status-good-bg);
+  --warn: var(--status-warn-dot);
+  --warn-text: var(--status-warn);
+  --warn-bg: var(--status-warn-bg);
+  --bad: var(--status-bad);
+  --bad-bg: var(--status-bad-bg);
+  --none: var(--color-fg-muted);
 
-  /* Semáforo (contraste AA sobre fondos oscuros) */
-  --ok: #3ddc97;
-  --warn: #f5b841;
-  --bad: #ff6b6b;
-  --none: #8a9aa8;
-
-  --radius: 14px;
-  --radius-sm: 8px;
+  --radar-core: var(--color-surface-2);
+  --radar-edge: var(--color-bg);
+  --radar-ring: var(--color-border-strong);
 }

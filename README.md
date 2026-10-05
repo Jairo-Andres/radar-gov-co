@@ -125,7 +125,8 @@ Página estática en [`web/`](web/) (HTML, CSS y JavaScript, sin frameworks) que
 - **Radar animado:** cada punto es un portal. La distancia al centro depende de la nota (cada anillo son 10 puntos y el borde es 50 o menos) y el sector, del tipo de entidad. Con `prefers-reduced-motion` se apaga la animación.
 - **Tabla de posiciones** con filtro por tipo de entidad. En móvil muestra solo puesto, portal, nota y reglas WCAG.
 - **Ficha por sitio** con capturas, componentes de la nota, reglas WCAG explicadas en lenguaje claro, LCP, desborde móvil y evolución semanal. Se puede enlazar directamente con `#id`, por ejemplo `#dian`.
-- `web/brand.css` guarda los tokens de la identidad visual común de los 3 proyectos (propuesta).
+- **Identidad visual común "Rutas + Cota":** el Radar es la **línea Q** (QA). `web/tokens.css`, `web/components.css`, el monograma y los favicons son copias sin modificar de `identidad-visual/fase-2` (v1.0). `web/brand.css` solo traduce esos tokens al radar. Los estados siempre llevan forma, texto y color: bueno ≥ 80 (círculo), regular 50–79 (triángulo) y malo < 50 (cuadrado). La página fuerza el tema oscuro (`data-theme="dark"`), porque el concepto es una pantalla de radar.
+- Si se actualiza la identidad, hay que volver a copiar esos archivos; no se editan aquí.
 
 **Despliegue en Vercel (plan Hobby):**
 
@@ -220,6 +221,7 @@ A static page in `web/` (plain HTML, CSS and JavaScript) reads `data/latest.json
 - **Animated radar:** distance to the center depends on the score and the sector on the type of entity. The animation is disabled with `prefers-reduced-motion`.
 - **Leaderboard:** with a filter by type of entity.
 - **Site sheet:** screenshots, score components, WCAG rules in plain language, LCP, mobile overflow and weekly trend. It can be deep-linked with `#id`.
+- **Shared "Rutas + Cota" identity:** the Radar is **line Q**. `tokens.css`, `components.css`, the monogram and the favicons are unmodified copies of the shared design system. Statuses always combine shape, text and color: good is a circle, fair a triangle and poor a square.
 
 **Deploying to Vercel (Hobby plan):** import the repository, keep the root directory and deploy. `vercel.json` copies `web/` and `data/` into `dist/` without installing dependencies, so every push to `main`, including the weekly data commits, publishes a new version.
 
