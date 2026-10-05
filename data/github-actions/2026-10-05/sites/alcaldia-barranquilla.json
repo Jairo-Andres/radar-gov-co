@@ -1,0 +1,362 @@
+{
+  "id": "alcaldia-barranquilla",
+  "name": "Alcaldía de Barranquilla",
+  "category": "Alcaldía",
+  "url": "https://www.barranquilla.gov.co/",
+  "audited_at": "2026-10-05T16:31:40+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://barranquilla.gov.co/",
+      "status": 200,
+      "load_ms": 3858,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-search-predictive-govco"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              ".n-1 > .body-tarjeta-govco.title-big-card.description-big-card > .meta-info > .on",
+              ".n-2 > .body-tarjeta-govco.title-big-card.description-big-card > .meta-info > .on",
+              ".n-3 > .body-tarjeta-govco.title-big-card.description-big-card > .meta-info > .on"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#cambiarElemento"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 1,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-barranquilla-desktop.jpg"
+    },
+    {
+      "url": "https://barranquilla.gov.co/transparencia",
+      "final_url": "https://barranquilla.gov.co/transparencia",
+      "status": 403,
+      "load_ms": 67,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://barranquilla.gov.co/transparencia",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://barranquilla.gov.co/atencion-al-ciudadano",
+      "final_url": "https://barranquilla.gov.co/atencion-al-ciudadano",
+      "status": 403,
+      "load_ms": 31,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://barranquilla.gov.co/atencion-al-ciudadano",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://www.barranquilla.gov.co/",
+      "status": 403,
+      "load_ms": 75,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.barranquilla.gov.co/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-barranquilla-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 76,
+        "accessibility": 93,
+        "best_practices": 92,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 945,
+        "lcp_ms": 2866,
+        "tbt_ms": 784,
+        "cls": 0.002,
+        "speed_index_ms": 945
+      },
+      "performance_runs": [
+        76,
+        76,
+        77
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Latencia potencial máxima de la primera interacción"
+          },
+          {
+            "id": "bootup-time",
+            "title": "Reduce el tiempo de ejecución de JavaScript"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 100,
+        "accessibility": 93,
+        "best_practices": 92,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 299,
+        "lcp_ms": 783,
+        "tbt_ms": 26,
+        "cls": 0.001,
+        "speed_index_ms": 346
+      },
+      "performance_runs": [
+        100,
+        100,
+        100
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 3,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 9,
+    "criteria": [
+      "1.4.3",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 1
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 7
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 1,
+  "scores": {
+    "accessibility": 94,
+    "mobile": 76,
+    "performance": 100,
+    "best_practices": 92,
+    "seo": 45,
+    "failed_resources": 100,
+    "overall": 87
+  },
+  "light": "verde"
+}

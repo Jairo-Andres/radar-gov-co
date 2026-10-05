@@ -1,0 +1,690 @@
+{
+  "id": "dian",
+  "name": "DIAN",
+  "category": "Entidad nacional",
+  "url": "https://www.dian.gov.co/",
+  "audited_at": "2026-10-05T15:52:47+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.dian.gov.co/",
+      "final_url": "https://www.dian.gov.co/",
+      "status": 200,
+      "load_ms": 1496,
+      "axe": {
+        "score": 72,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 21,
+            "examples": [
+              "img[src$=\"Escudo_Colombia.png\"]",
+              "img[src$=\"Logo_Dian_Derecho.png\"]",
+              ".sliderHItem.px-2.px-md-2:nth-child(1) > .flex-center.justify-content-center > .col-md-1.img-responsive.col-2 > .imagen"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 20,
+            "examples": [
+              ".portales > .pb-2.card-block > h5",
+              ".sliderHItem.px-2.px-md-2:nth-child(1) > .flex-center.justify-content-center > .col-md-9.titulo-home.font-weight-bold",
+              ".texto.col-9 > .pl-0.mb-0 > li:nth-child(1) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".he_footer_redes > li:nth-child(1) > a[target=\"_blank\"]",
+              ".he_footer_redes > li:nth-child(2) > a[target=\"_blank\"]",
+              ".he_footer_redes > li:nth-child(3) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".sliderHItem.px-2.px-md-2:nth-child(1) > .bodypreval.row > .texto.col-9 > .pl-0.mb-0",
+              ".sliderHItem.px-2.px-md-2:nth-child(2) > .bodypreval.row > .texto.col-9 > .pl-0.mb-0",
+              ".sliderHItem.px-2.px-md-2:nth-child(3) > .bodypreval.row > .texto.col-9 > .pl-0.mb-0"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.dian.gov.co/js/jquery-latest.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/dian-desktop.jpg"
+    },
+    {
+      "url": "https://www.dian.gov.co/Paginas/Inicio.aspx",
+      "final_url": "https://www.dian.gov.co/Paginas/Inicio.aspx",
+      "status": 200,
+      "load_ms": 7018,
+      "axe": {
+        "score": 59,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "a[href$=\"Ht7Jiw5L\"] > .img-responsive",
+              "img[src$=\"ico-oea.svg\"]",
+              "li:nth-child(2) > a[target=\"_blank\"] > .icoVinculosInteres"
+            ]
+          },
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#accordion"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "#heading1",
+              "#heading2",
+              "#heading3"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "a[href$=\"Ht7Jiw5L\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dian.gov.co/atencionciudadano/Paginas/Transparencia.aspx",
+      "final_url": "https://www.dian.gov.co/atencionciudadano/Paginas/Transparencia.aspx",
+      "status": 200,
+      "load_ms": 1689,
+      "axe": {
+        "score": 85,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".cell-margin:nth-child(1) > .ms-webpart-zone.ms-fullWidth > .panel-group > .panel.panel-default:nth-child(1) > .panel-heading.panel-accordion > .panel-title > a[href$=\"#collapse1\"][data-toggle=\"collap",
+              ".cell-margin:nth-child(1) > .ms-webpart-zone.ms-fullWidth > .panel-group > .panel.panel-default:nth-child(2) > .panel-heading.panel-accordion > .panel-title > a[href$=\"#collapse2\"][data-toggle=\"collap"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dian.gov.co/",
+      "final_url": "https://www.dian.gov.co/",
+      "status": 200,
+      "load_ms": 1711,
+      "axe": {
+        "score": 72,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "img[src$=\"Escudo_Colombia.png\"]",
+              ".active.sliderHItem.px-2 > .flex-center.justify-content-center > .col-md-1.img-responsive.col-2 > .imagen",
+              ".mt-md-0.active.mt-3 > .card.h-0 > .card-body > .justify-content-center.row > .col-md-2.col-2.col-sm-2 > .imagen"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 11,
+            "examples": [
+              ".portales > .pb-2.card-block > h5",
+              ".texto.col-9 > .pl-0.mb-0 > li:nth-child(1) > a[target=\"_blank\"]",
+              ".texto.col-9 > .pl-0.mb-0 > li:nth-child(2) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".he_footer_redes > li:nth-child(1) > a[target=\"_blank\"]",
+              ".he_footer_redes > li:nth-child(2) > a[target=\"_blank\"]",
+              ".he_footer_redes > li:nth-child(3) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".active.sliderHItem.px-2 > .bodypreval.row > .texto.col-9 > .pl-0.mb-0"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.dian.gov.co/js/jquery-latest.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/dian-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 405,
+    "viewport_width": 405,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      405,
+      405
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "div.row",
+          "right_px": 405,
+          "width_px": 275
+        }
+      ],
+      "screenshot": "screenshots/dian-mobile-overflow.jpg"
+    },
+    "overflow_px": 15
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 61,
+        "accessibility": 63,
+        "best_practices": 69,
+        "seo": 82
+      },
+      "metrics": {
+        "fcp_ms": 2985,
+        "lcp_ms": 9786,
+        "tbt_ms": 214,
+        "cls": 0,
+        "speed_index_ms": 5729
+      },
+      "performance_runs": [
+        62,
+        56,
+        61
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Latencia potencial máxima de la primera interacción"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 84,
+        "accessibility": 56,
+        "best_practices": 73,
+        "seo": 82
+      },
+      "metrics": {
+        "fcp_ms": 1113,
+        "lcp_ms": 2365,
+        "tbt_ms": 0,
+        "cls": 0,
+        "speed_index_ms": 1251
+      },
+      "performance_runs": [
+        70,
+        88,
+        84
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce el contenido CSS que no se use"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "sin robots.txt (404)",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 7,
+    "cases": 70,
+    "criteria": [
+      "1.1.1",
+      "1.3.1",
+      "1.4.3",
+      "1.4.4",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-children",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+        "cases": 1
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 28
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 22
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 7
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 6
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 4
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 2
+      }
+    ]
+  },
+  "failed_resources_first_party": 1,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 66,
+    "mobile": 54,
+    "performance": 84,
+    "best_practices": 71,
+    "seo": 82,
+    "failed_resources": 90,
+    "overall": 71
+  },
+  "light": "amarillo"
+}

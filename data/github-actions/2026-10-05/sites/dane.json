@@ -1,0 +1,451 @@
+{
+  "id": "dane",
+  "name": "DANE",
+  "category": "Entidad nacional",
+  "url": "https://www.dane.gov.co/",
+  "audited_at": "2026-10-05T15:55:36+00:00",
+  "status": "parcial",
+  "pages": [
+    {
+      "url": "https://www.dane.gov.co/",
+      "final_url": "https://www.dane.gov.co/",
+      "status": 200,
+      "load_ms": 2279,
+      "axe": {
+        "score": 97,
+        "violations": [
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "desktop",
+      "screenshot": "screenshots/dane-desktop.jpg"
+    },
+    {
+      "url": "https://www.dane.gov.co/index.php",
+      "final_url": "https://www.dane.gov.co/index.php",
+      "status": 200,
+      "load_ms": 2205,
+      "axe": {
+        "score": 97,
+        "violations": [
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.dane.gov.co/block_style.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.dane.gov.co/_vars.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dane.gov.co/index.php/transparencia",
+      "final_url": "https://www.dane.gov.co/index.php/transparencia",
+      "status": 200,
+      "load_ms": 1627,
+      "axe": {
+        "score": 85,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".a2a_button_facebook"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".gap-2"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.dane.gov.co/block_style.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.dane.gov.co/_vars.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dane.gov.co/",
+      "final_url": "https://www.dane.gov.co/",
+      "status": 200,
+      "load_ms": 2365,
+      "axe": {
+        "score": 97,
+        "violations": [
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "mobile",
+      "screenshot": "screenshots/dane-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 396,
+    "viewport_width": 396,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      396,
+      396
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "span",
+          "right_px": 521,
+          "width_px": 110
+        },
+        {
+          "selector": "span",
+          "right_px": 510,
+          "width_px": 99
+        },
+        {
+          "selector": "span",
+          "right_px": 497,
+          "width_px": 86
+        },
+        {
+          "selector": "span",
+          "right_px": 476,
+          "width_px": 65
+        },
+        {
+          "selector": "img.img-fluid",
+          "right_px": 398,
+          "width_px": 20
+        }
+      ],
+      "screenshot": "screenshots/dane-mobile-overflow.jpg"
+    },
+    "overflow_px": 6
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 53,
+        "accessibility": 93,
+        "best_practices": 69,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 6981,
+        "lcp_ms": 21778,
+        "tbt_ms": 256,
+        "cls": 0,
+        "speed_index_ms": 6981
+      },
+      "performance_runs": [
+        53,
+        54,
+        53
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 2,
+      "categories": {
+        "performance": 60,
+        "accessibility": 92,
+        "best_practices": 73,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 2690,
+        "lcp_ms": 5734,
+        "tbt_ms": 11,
+        "cls": 0.04,
+        "speed_index_ms": 2826
+      },
+      "performance_runs": [
+        60,
+        61
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [
+    "Lighthouse (desktop): 1 de 3 corridas no pudieron analizar la página"
+  ],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 5,
+    "criteria": [
+      "1.3.1",
+      "1.4.4",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 1
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 1
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 2,
+  "third_party_failures": 8,
+  "scores": {
+    "accessibility": 93,
+    "mobile": 50,
+    "performance": 60,
+    "best_practices": 71,
+    "seo": 100,
+    "failed_resources": 80,
+    "overall": 77
+  },
+  "light": "amarillo"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "mintrabajo",
+  "name": "Ministerio del Trabajo",
+  "category": "Ministerio",
+  "url": "https://www.mintrabajo.gov.co/",
+  "audited_at": "2026-10-05T15:21:29+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (Page.goto: Timeout 45000ms exceeded.)"
+}

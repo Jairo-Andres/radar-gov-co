@@ -1,0 +1,18 @@
+{
+  "id": "contraloria",
+  "name": "Contraloría General de la República",
+  "category": "Órgano de control",
+  "url": "https://www.contraloria.gov.co/",
+  "audited_at": "2026-10-05T16:25:42+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (403)"
+}
