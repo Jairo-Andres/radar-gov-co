@@ -3,6 +3,7 @@
     python -m radar verify                 # comprueba que los sitios respondan
     python -m radar run --only dian,dane   # audita y guarda data/AAAA-MM-DD/
     python -m radar history                # reconstruye data/history.json
+    python -m radar og                     # regenera la imagen para compartir (web/og-image.png)
 """
 
 from __future__ import annotations
@@ -34,6 +35,7 @@ def main(argv: list[str] | None = None) -> int:
         help="Desde dónde se mide (se publica en summary.json). También: variable RADAR_MEASURED_FROM",
     )
     sub.add_parser("history")
+    sub.add_parser("og", help="Regenera web/og-image.png con la última medición")
     args = parser.parse_args(argv)
 
     settings, sites = load_config(args.sites)
@@ -57,6 +59,11 @@ def main(argv: list[str] | None = None) -> int:
         from .runner import run_audit
 
         run_audit(settings, sites, Path(args.data), args.date, args.measured_from)
+        return 0
+    if args.command == "og":
+        from .og import render_og_image
+
+        print(f"Imagen generada: {render_og_image()}")
         return 0
     if args.command == "history":
         from .history import write_history

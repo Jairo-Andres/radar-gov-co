@@ -1,82 +1,39 @@
-// Radar .gov.co: carga los JSON de data/ y dibuja el radar, la tabla y las fichas.
+// Radar .gov.co: carga los JSON de data/ y dibuja el radar, los hallazgos, la tabla y las fichas (ES/EN).
+import {
+  TEXT, STATUS_LABEL, IMPACT_LABEL, COMPONENT_LABEL, CATEGORY_LABEL, SECTOR_LABEL, RULE_LABEL, translateNote,
+} from "./i18n.js";
 
 // En Vercel los datos se copian junto a la web (data/); en local se sirve desde la raíz del repo (../data/).
 const DATA = location.pathname.includes("/web/") ? "../data/" : "data/";
 const SWEEP_SECONDS = 6;
-
-const COMPONENTS = [
-  ["accessibility", "Accesibilidad"],
-  ["mobile", "Móvil"],
-  ["performance", "Rendimiento"],
-  ["best_practices", "Buenas prácticas"],
-  ["seo", "SEO"],
-  ["failed_resources", "Recursos fallidos"],
-];
+const COMPONENT_KEYS = ["accessibility", "mobile", "performance", "best_practices", "seo", "failed_resources"];
+const STATUS_CLASS = { verde: "ja-status--good", amarillo: "ja-status--warn", rojo: "ja-status--bad" };
 
 // Sectores del radar (tipo de entidad).
 const SECTORS = [
-  { key: "Ministerio", label: "Ministerios" },
-  { key: "Entidad nacional", label: "Entidades" },
-  { key: "Órgano de control", label: "Control" },
-  { key: "Alcaldía", label: "Alcaldías" },
-  { key: "Portales", label: "Presidencia y portales", short: "Portales", includes: ["Presidencia", "Portal del Estado"] },
+  { key: "Ministerio" },
+  { key: "Entidad nacional" },
+  { key: "Órgano de control" },
+  { key: "Alcaldía" },
+  { key: "Portales", includes: ["Presidencia", "Portal del Estado"] },
 ];
 
-// Estados de la identidad común: siempre forma + texto + color.
-const LIGHT_LABEL = { verde: "bueno", amarillo: "regular", rojo: "malo", sin_dato: "sin dato" };
-const STATUS_CLASS = { verde: "ja-status--good", amarillo: "ja-status--warn", rojo: "ja-status--bad" };
-const IMPACT_LABEL = { critical: "crítico", serious: "grave", moderate: "moderado", minor: "menor" };
+const state = { summary: null, history: null, filter: "todos", details: new Map(), lang: "es", openId: null };
 
-// Explicación en lenguaje claro de las reglas de axe más comunes.
-const RULE_LABELS = {
-  "image-alt": "Imágenes sin texto alternativo",
-  "color-contrast": "Texto con contraste de color insuficiente",
-  "link-name": "Enlaces sin un nombre que se pueda leer",
-  "button-name": "Botones sin un nombre que se pueda leer",
-  "list": "Listas con una estructura incorrecta",
-  "listitem": "Elementos de lista fuera de una lista",
-  "html-has-lang": "La página no declara su idioma",
-  "html-lang-valid": "El idioma declarado no es válido",
-  "meta-viewport": "Impide hacer zoom en el móvil",
-  "select-name": "Listas desplegables sin etiqueta",
-  "label": "Campos de formulario sin etiqueta",
-  "aria-required-children": "Componentes ARIA sin los elementos hijos que exigen",
-  "aria-required-parent": "Componentes ARIA fuera del contenedor que exigen",
-  "aria-allowed-attr": "Atributos ARIA no permitidos en el elemento",
-  "aria-valid-attr-value": "Atributos ARIA con valores no válidos",
-  "aria-hidden-focus": "Elementos ocultos que aún reciben el foco",
-  "nested-interactive": "Controles interactivos anidados",
-  "frame-title": "Marcos (iframe) sin título",
-  "document-title": "La página no tiene título",
-  "duplicate-id-aria": "Identificadores repetidos usados por ARIA",
-  "input-image-alt": "Botones de imagen sin texto alternativo",
-  "role-img-alt": "Imágenes ARIA sin texto alternativo",
-  "svg-img-alt": "Gráficos SVG sin texto alternativo",
-  "link-in-text-block": "Enlaces que solo se distinguen por el color",
-  "scrollable-region-focusable": "Zonas con desplazamiento a las que no llega el teclado",
-  "td-headers-attr": "Celdas de tabla con encabezados mal referenciados",
-  "th-has-data-cells": "Encabezados de tabla sin celdas asociadas",
-  "video-caption": "Videos sin subtítulos",
-  "area-alt": "Áreas de imagen sin texto alternativo",
-  "object-alt": "Objetos incrustados sin texto alternativo",
-  "aria-input-field-name": "Campos ARIA sin nombre",
-  "aria-toggle-field-name": "Interruptores ARIA sin nombre",
-  "aria-command-name": "Comandos ARIA sin nombre",
-  "aria-progressbar-name": "Barras de progreso sin nombre",
-  "aria-tooltip-name": "Tooltips sin nombre",
-  "aria-dialog-name": "Diálogos sin nombre",
-  "autocomplete-valid": "Autocompletado de formularios mal declarado",
-  "blink": "Contenido que parpadea",
-  "marquee": "Texto que se desplaza solo",
-  "definition-list": "Listas de definición mal construidas",
-  "dlitem": "Elementos de definición fuera de su lista",
-  "form-field-multiple-labels": "Campos con varias etiquetas",
-  "bypass": "Sin forma de saltar al contenido principal",
-};
-
-const state = { summary: null, history: null, filter: "todos", details: new Map() };
+// ---------- Utilidades ----------
 
 const $ = (sel, root = document) => root.querySelector(sel);
+
+function t(key, vars = {}) {
+  const template = TEXT[state.lang][key] ?? TEXT.es[key] ?? key;
+  return template.replace(/\{(\w+)\}/g, (_, name) => (vars[name] ?? `{${name}}`));
+}
+
+const statusLabel = (light) => STATUS_LABEL[state.lang][light] || light;
+const categoryLabel = (category) => CATEGORY_LABEL[state.lang][category] || category;
+const ruleLabel = (rule) => RULE_LABEL[state.lang][rule] || RULE_LABEL.es[rule] || rule;
+const numberFmt = (value, digits = 0) =>
+  value === null || value === undefined ? "–" : Number(value).toLocaleString(state.lang === "en" ? "en-US" : "es-CO", { maximumFractionDigits: digits });
 
 function el(tag, attrs = {}, ...children) {
   const node = document.createElement(tag);
@@ -108,11 +65,18 @@ async function getJSON(path) {
 
 function formatDate(iso) {
   const [y, m, d] = iso.split("-").map(Number);
-  return new Date(Date.UTC(y, m - 1, d, 12)).toLocaleDateString("es-CO", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  return new Date(Date.UTC(y, m - 1, d, 12)).toLocaleDateString(state.lang === "en" ? "en-US" : "es-CO", {
+    day: "numeric", month: "long", year: "numeric", timeZone: "UTC",
+  });
 }
 
 function sectorOf(category) {
   return SECTORS.findIndex((s) => s.key === category || (s.includes || []).includes(category));
+}
+
+function sectorLabel(index, short = false) {
+  const key = SECTORS[index].key;
+  return SECTOR_LABEL[state.lang][short && key === "Portales" ? "PortalesShort" : key];
 }
 
 function levelClass(value) {
@@ -129,35 +93,139 @@ function median(values) {
   return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
+function describeRule(rule) {
+  const criteria = rule.criteria || [];
+  if (!criteria.length) return t("criterion0", { rule: rule.rule });
+  return t(criteria.length === 1 ? "criterion1" : "criterionN", { c: criteria.join(", "), rule: rule.rule });
+}
+
+// ---------- Idioma ----------
+
+function initialLang() {
+  const param = new URLSearchParams(location.search).get("lang");
+  if (param === "es" || param === "en") return param;
+  try {
+    const saved = localStorage.getItem("radar-lang");
+    if (saved === "es" || saved === "en") return saved;
+  } catch { /* almacenamiento no disponible */ }
+  return (navigator.language || "es").toLowerCase().startsWith("en") ? "en" : "es";
+}
+
+function applyStaticText() {
+  document.documentElement.lang = state.lang;
+  document.title = t("pageTitle");
+  for (const node of document.querySelectorAll("[data-i18n]")) node.textContent = t(node.dataset.i18n);
+  for (const node of document.querySelectorAll("[data-i18n-aria]")) node.setAttribute("aria-label", t(node.dataset.i18nAria));
+  const toggle = $("#lang-toggle");
+  toggle.textContent = t("langButton");
+  toggle.setAttribute("aria-label", t("langLabel"));
+  toggle.setAttribute("lang", state.lang === "es" ? "en" : "es");
+  renderHero(state.summary?.sites_audited ?? 30);
+}
+
+function setLang(lang) {
+  state.lang = lang;
+  try { localStorage.setItem("radar-lang", lang); } catch { /* sin almacenamiento */ }
+  const url = new URL(location.href);
+  if (lang === "en") url.searchParams.set("lang", "en"); else url.searchParams.delete("lang");
+  history.replaceState(null, "", url);
+  applyStaticText();
+  if (state.summary) renderAll();
+  if (state.openId && $("#sheet").open) openSheet(state.openId);
+}
+
 // ---------- Portada ----------
 
+function renderHero(count) {
+  $("#hero-title").replaceChildren(t("heroBefore"), el("span", { class: "accent", text: String(count) }), t("heroAfter"));
+}
+
 function renderHeader(summary) {
-  $("#scan-date").textContent = `Última medición: ${formatDate(summary.date)}`;
-  $("#hero-count").textContent = summary.sites_audited;
-  $("#kpi-avg").textContent = summary.average_overall ?? "–";
+  $("#scan-date").textContent = t("lastScan", { date: formatDate(summary.date) });
+  renderHero(summary.sites_audited);
+  $("#kpi-avg").textContent = numberFmt(summary.average_overall);
   $("#kpi-green").textContent = `${summary.lights.verde}/${summary.sites_audited}`;
-  const rules = median(summary.sites.map((s) => s.wcag_rules));
-  $("#kpi-rules").textContent = rules ?? "–";
-  const from = summary.measurement?.from;
-  $("#measured-from").textContent =
-    `Medición del ${formatDate(summary.date)} desde: ${from || "sin dato"}. ` +
-    `Lighthouse ${summary.measurement?.lighthouse_versions?.join(", ") || ""}, ${summary.measurement?.lighthouse_runs_per_view || 3} corridas por vista (mediana). ` +
-    `Metodología v${summary.methodology_version}.`;
+  $("#kpi-rules").textContent = numberFmt(median(summary.sites.map((s) => s.wcag_rules)), 1);
+  const m = summary.measurement || {};
+  $("#measured-from").textContent = t("measuredFrom", {
+    date: formatDate(summary.date),
+    from: m.from || t("noData"),
+    lh: (m.lighthouse_versions || []).join(", "),
+    runs: m.lighthouse_runs_per_view || 3,
+    v: summary.methodology_version,
+  });
 }
 
 function renderWeights(summary) {
-  const list = $("#weights");
-  list.replaceChildren();
-  for (const [key, label] of COMPONENTS) {
-    const pct = Math.round((summary.weights[key] || 0) * 100);
-    list.append(
-      el("li", {},
-        el("span", { text: label }),
+  $("#weights").replaceChildren(
+    ...COMPONENT_KEYS.map((key) => {
+      const pct = Math.round((summary.weights[key] || 0) * 100);
+      return el("li", {},
+        el("span", { text: COMPONENT_LABEL[state.lang][key] }),
         el("span", { class: "bar", "aria-hidden": "true" }, el("span", { style: `width:${pct * 2.5}%` })),
         el("span", { class: "pct", text: `${pct} %` }),
+      );
+    }),
+  );
+}
+
+// ---------- Hallazgos ----------
+
+function renderFindings(summary) {
+  const f = summary.findings;
+  const section = $("#findings");
+  section.hidden = !f || !f.sites_measured;
+  if (section.hidden) return;
+  const n = f.sites_measured;
+  $("#findings-title").textContent = f.sites_with_any_wcag_rule === n
+    ? t("findingsTitleAll", { n })
+    : t("findingsTitleSome", { k: f.sites_with_any_wcag_rule, n });
+  $("#findings-lead").textContent = t("findingsLead");
+
+  const rule = (id) => f.top_rules.find((r) => r.rule === id);
+  const cards = [
+    [f.sites_with_critical_rule, "fCritical"],
+    [rule("link-name")?.sites, "fTopRule"],
+    [rule("color-contrast")?.sites, "fContrast"],
+    [f.sites_with_mobile_overflow, "fOverflow"],
+  ].filter(([value]) => typeof value === "number");
+
+  $("#findings-grid").replaceChildren(
+    ...cards.map(([value, key]) =>
+      el("article", { class: "finding ja-card" },
+        el("p", { class: "finding-num" }, el("span", { text: String(value) }), el("span", { class: "finding-of", text: ` ${t("ofSites", { n })}` })),
+        el("p", { class: "finding-text", text: t(key) }),
       ),
-    );
-  }
+    ),
+    el("article", { class: "finding ja-card" },
+      el("p", { class: "finding-num" },
+        el("span", { text: numberFmt(f.median_accessibility) }),
+        el("span", { class: "finding-of", text: " / " }),
+        el("span", { text: numberFmt(f.median_mobile_performance) }),
+      ),
+      el("p", { class: "finding-text", text: t("fMedians", { a11y: numberFmt(f.median_accessibility), perf: numberFmt(f.median_mobile_performance) }) }),
+    ),
+  );
+
+  $("#top-rules").replaceChildren(
+    ...f.top_rules.map((r) =>
+      el("li", {},
+        el("span", { class: "rb-label" }, el("strong", { text: ruleLabel(r.rule) }), el("span", { class: "rb-crit", text: `WCAG ${r.criteria.join(", ")} · ${IMPACT_LABEL[state.lang][r.impact] || r.impact}` })),
+        el("span", { class: "rb-bar", "aria-hidden": "true" }, el("span", { style: `width:${(r.sites / n) * 100}%` })),
+        el("span", { class: "rb-val", text: t("sitesCount", { k: r.sites, n }) }),
+      ),
+    ),
+  );
+
+  $("#by-category").replaceChildren(
+    ...f.by_category.map((c) =>
+      el("li", {},
+        el("span", { class: "rb-label" }, el("strong", { text: categoryLabel(c.category) })),
+        el("span", { class: "rb-bar", "aria-hidden": "true" }, el("span", { class: levelClass(c.average_overall), style: `width:${c.average_overall}%` })),
+        el("span", { class: "rb-val", text: t("categoryRow", { avg: numberFmt(c.average_overall, 1), n: c.sites, sites: c.sites === 1 ? t("site1") : t("sitesN") }) }),
+      ),
+    ),
+  );
 }
 
 // ---------- Radar ----------
@@ -169,12 +237,12 @@ function renderRadar(summary) {
   dotsGroup.replaceChildren();
 
   const span = 360 / SECTORS.length;
-  SECTORS.forEach((sector, i) => {
+  SECTORS.forEach((_, i) => {
     const start = (i * span * Math.PI) / 180;
     sectorsGroup.append(svg("line", { x1: 0, y1: 0, x2: 104 * Math.sin(start), y2: -104 * Math.cos(start) }));
     const mid = ((i + 0.5) * span * Math.PI) / 180;
     const label = svg("text", { x: 116 * Math.sin(mid), y: -116 * Math.cos(mid) + 3 });
-    label.textContent = sector.short || sector.label;
+    label.textContent = sectorLabel(i, true);
     sectorsGroup.append(label);
   });
 
@@ -185,8 +253,11 @@ function renderRadar(summary) {
     if (index >= 0) bySector[index].push(site);
   }
 
-  const tip = el("div", { class: "radar-tip", hidden: true, "aria-hidden": "true" });
-  $("#radar").append(tip);
+  let tip = $(".radar-tip");
+  if (!tip) {
+    tip = el("div", { class: "radar-tip", hidden: true, "aria-hidden": "true" });
+    $("#radar").append(tip);
+  }
 
   bySector.forEach((sites, i) => {
     sites.sort((a, b) => a.id.localeCompare(b.id));
@@ -197,7 +268,7 @@ function renderRadar(summary) {
       const radius = Math.max(4, Math.min(102, ((100 - site.overall) * 104) / 50));
       const x = radius * Math.sin(angle);
       const y = -radius * Math.cos(angle);
-      const label = `${site.name}: nota ${site.overall}, ${LIGHT_LABEL[site.light]}, puesto ${site.rank}`;
+      const label = t("tipLabel", { name: site.name, score: site.overall, label: statusLabel(site.light), rank: site.rank });
       const group = svg("g", {
         class: `blip ${site.light}`, tabindex: "0", role: "button", "aria-label": label, "data-id": site.id,
         style: `--delay:${((angleDeg / 360) * SWEEP_SECONDS).toFixed(2)}s`,
@@ -216,6 +287,7 @@ function renderRadar(summary) {
       dotsGroup.append(group);
     });
   });
+  dimRadar();
 }
 
 // Bueno = círculo, regular = triángulo, malo = cuadrado (regla de la identidad común).
@@ -229,14 +301,14 @@ function statusShape(light, x, y) {
 }
 
 function statusBadge(site, text) {
-  if (!STATUS_CLASS[site.light]) return el("span", { class: "na", text: text ?? "sin dato" });
-  return el("span", { class: `ja-status ${STATUS_CLASS[site.light]}` }, text, el("span", { class: "sr-only", text: `, ${LIGHT_LABEL[site.light]}` }));
+  if (!STATUS_CLASS[site.light]) return el("span", { class: "na", text: text ?? t("noData") });
+  return el("span", { class: `ja-status ${STATUS_CLASS[site.light]}` }, text, el("span", { class: "sr-only", text: `, ${statusLabel(site.light)}` }));
 }
 
 function showTip(tip, group, site) {
   const box = group.getBoundingClientRect();
   const parent = $("#radar").getBoundingClientRect();
-  tip.replaceChildren(document.createTextNode(`${site.name} · `), el("b", { text: String(site.overall) }), ` (${LIGHT_LABEL[site.light]})`);
+  tip.replaceChildren(document.createTextNode(`${site.name} · `), el("b", { text: String(site.overall) }), ` (${statusLabel(site.light)})`);
   tip.style.left = `${box.left - parent.left + box.width / 2}px`;
   tip.style.top = `${box.top - parent.top}px`;
   tip.hidden = false;
@@ -245,18 +317,16 @@ function showTip(tip, group, site) {
 // ---------- Tabla ----------
 
 function renderFilters(summary) {
-  const box = $("#filters");
-  box.replaceChildren();
   const present = new Set(summary.sites.map((s) => sectorOf(s.category)));
-  const options = [{ key: "todos", label: "Todos" }, ...SECTORS.filter((_, i) => present.has(i))];
-  for (const option of options) {
-    box.append(
+  const options = [{ key: "todos", label: t("all") }, ...SECTORS.map((s, i) => ({ key: s.key, label: sectorLabel(i), i })).filter((o) => present.has(o.i))];
+  $("#filters").replaceChildren(
+    ...options.map((option) =>
       el("button", {
         class: "chip", type: "button", "aria-pressed": String(state.filter === option.key), text: option.label,
         onclick: () => { state.filter = option.key; renderFilters(summary); renderTable(summary); dimRadar(); },
       }),
-    );
-  }
+    ),
+  );
 }
 
 function matchesFilter(site) {
@@ -265,6 +335,7 @@ function matchesFilter(site) {
 }
 
 function dimRadar() {
+  if (!state.summary) return;
   for (const blip of document.querySelectorAll(".blip")) {
     const site = state.summary.sites.find((s) => s.id === blip.dataset.id);
     blip.classList.toggle("dim", !matchesFilter(site));
@@ -272,35 +343,32 @@ function dimRadar() {
 }
 
 function valueCell(value, extraClass = "") {
-  if (value === null || value === undefined) return el("td", { class: `num ${extraClass}` }, el("span", { class: "na", text: "sin dato" }));
+  if (value === null || value === undefined) return el("td", { class: `num ${extraClass}` }, el("span", { class: "na", text: t("noData") }));
   const level = value < 50 ? "low" : value < 80 ? "mid" : "";
   return el("td", { class: `num ${extraClass}` }, el("span", { class: `cell-bar ${level}`, text: String(value) }));
 }
 
 function renderTable(summary) {
   const body = $("#ranking-body");
-  body.replaceChildren();
-  for (const site of summary.sites.filter(matchesFilter)) {
-    const scores = site.scores || {};
-    body.append(
-      el("tr", {},
+  body.replaceChildren(
+    ...summary.sites.filter(matchesFilter).map((site) => {
+      const scores = site.scores || {};
+      return el("tr", {},
         el("td", { class: "rank", text: site.rank ?? "–" }),
         el("td", {},
           el("button", { class: "site-btn", type: "button", onclick: () => openSheet(site.id), text: site.name }),
-          el("span", { class: "site-cat", text: site.category }),
+          el("span", { class: "site-cat", text: categoryLabel(site.category) }),
         ),
         el("td", {}, statusBadge(site, site.overall === null || site.overall === undefined ? null : String(site.overall))),
-        ...COMPONENTS.map(([key]) => valueCell(scores[key], "c-wide")),
-        el("td", { class: "num c-mid", text: site.wcag_rules ?? "–", title: `${site.wcag_cases ?? 0} casos` }),
-      ),
-    );
-  }
+        ...COMPONENT_KEYS.map((key) => valueCell(scores[key], "c-wide")),
+        el("td", { class: "num c-mid", text: site.wcag_rules ?? "–", title: t("casesTitle", { n: site.wcag_cases ?? 0 }) }),
+      );
+    }),
+  );
   const skipped = summary.sites.filter((s) => s.overall === null || s.overall === undefined);
   const note = $("#status-note");
   note.hidden = !skipped.length;
-  note.textContent = skipped.length
-    ? `Sin nota esta semana: ${skipped.map((s) => s.name).join(", ")} (no se pudo leer su robots.txt o el sitio no respondió).`
-    : "";
+  note.textContent = skipped.length ? t("skipped", { names: skipped.map((s) => s.name).join(", ") }) : "";
 }
 
 // ---------- Ficha ----------
@@ -308,22 +376,23 @@ function renderTable(summary) {
 async function openSheet(id) {
   const site = state.summary.sites.find((s) => s.id === id);
   if (!site) return;
+  state.openId = id;
   const dialog = $("#sheet");
-  $("#sheet-category").textContent = `${site.category} · puesto ${site.rank ?? "–"} de ${state.summary.sites_audited}`;
+  $("#sheet-category").textContent = t("sheetMeta", { category: categoryLabel(site.category), rank: site.rank ?? "–", total: state.summary.sites_audited });
   $("#sheet-title").textContent = site.name;
   const link = $("#sheet-url");
   link.href = site.url;
   link.textContent = site.url.replace(/^https?:\/\//, "").replace(/\/$/, "");
   const body = $("#sheet-body");
-  body.replaceChildren(el("p", { class: "note", text: "Cargando ficha…" }));
+  body.replaceChildren(el("p", { class: "note", text: t("sheetLoading") }));
   if (!dialog.open) dialog.showModal();
-  history.replaceState(null, "", `#${id}`);
+  history.replaceState(null, "", `${location.pathname}${location.search}#${id}`);
 
   try {
     if (!state.details.has(id)) state.details.set(id, await getJSON(`${state.summary.date}/${site.detail}`));
     body.replaceChildren(...buildSheet(site, state.details.get(id)));
   } catch (error) {
-    body.replaceChildren(el("p", { class: "note", text: "No se pudo cargar la ficha de este portal." }));
+    body.replaceChildren(el("p", { class: "note", text: t("sheetError") }));
   }
 }
 
@@ -335,9 +404,8 @@ function buildSheet(site, detail) {
     el("div", { class: "sheet-score" },
       el("span", { class: "big-score", text: site.overall ?? "–" }),
       STATUS_CLASS[site.light]
-        ? el("span", { class: `ja-status ${STATUS_CLASS[site.light]}`, text: `Nivel ${LIGHT_LABEL[site.light]}` })
-        : el("span", { class: "pill", text: "Sin nota" }),
-      site.status === "parcial" ? el("span", { class: "pill", text: "Medición parcial" }) : null,
+        ? el("span", { class: `ja-status ${STATUS_CLASS[site.light]}`, text: t("level", { label: statusLabel(site.light) }) })
+        : el("span", { class: "pill", text: t("noScore") }),
     ),
   );
 
@@ -346,8 +414,8 @@ function buildSheet(site, detail) {
   if (desktop || mobile) {
     nodes.push(
       el("div", { class: "shots" },
-        desktop ? el("figure", {}, el("img", { src: base + desktop, alt: `Página de inicio de ${site.name} en escritorio`, loading: "lazy", width: 1366, height: 768 }), el("figcaption", { text: "Escritorio" })) : null,
-        mobile ? el("figure", {}, el("img", { src: base + mobile, alt: `Página de inicio de ${site.name} en móvil`, loading: "lazy", width: 390, height: 844 }), el("figcaption", { text: "Móvil (390 px)" })) : null,
+        desktop ? el("figure", {}, el("img", { src: base + desktop, alt: t("shotAlt", { name: site.name, view: t("viewDesktop") }), loading: "lazy", width: 1366, height: 768 }), el("figcaption", { text: t("desktop") })) : null,
+        mobile ? el("figure", {}, el("img", { src: base + mobile, alt: t("shotAlt", { name: site.name, view: t("viewMobile") }), loading: "lazy", width: 390, height: 844 }), el("figcaption", { text: t("mobileShot") })) : null,
       ),
     );
   }
@@ -355,14 +423,13 @@ function buildSheet(site, detail) {
   const scores = site.scores || {};
   nodes.push(
     el("section", {},
-      el("h3", { text: "Componentes de la nota" }),
+      el("h3", { text: t("components") }),
       el("ul", { class: "components" },
-        COMPONENTS.map(([key, label]) => {
+        COMPONENT_KEYS.map((key) => {
           const value = scores[key];
           return el("li", {},
-            el("span", { text: label }),
-            el("span", { class: "meter", "aria-hidden": "true" },
-              el("span", { class: levelClass(value), style: `width:${value ?? 0}%` })),
+            el("span", { text: COMPONENT_LABEL[state.lang][key] }),
+            el("span", { class: "meter", "aria-hidden": "true" }, el("span", { class: levelClass(value), style: `width:${value ?? 0}%` })),
             el("span", { class: "val", text: value ?? "–" }),
           );
         }),
@@ -373,37 +440,38 @@ function buildSheet(site, detail) {
   const wcag = detail.wcag || { rules: [], rules_count: 0, cases: 0 };
   nodes.push(
     el("section", {},
-      el("h3", { text: `Accesibilidad: ${wcag.rules_count} reglas WCAG incumplidas, ${wcag.cases} casos` }),
+      el("h3", { text: t("a11yHeading", { rules: wcag.rules_count, cases: wcag.cases }) }),
       wcag.rules.length
         ? el("ul", { class: "rules" },
             wcag.rules.slice(0, 8).map((rule) =>
               el("li", {},
-                el("span", { class: `impact ${rule.impact}`, text: IMPACT_LABEL[rule.impact] || rule.impact }),
-                el("strong", { text: RULE_LABELS[rule.rule] || rule.rule }),
-                ` · ${rule.cases} ${rule.cases === 1 ? "caso" : "casos"}`,
-                el("span", { class: "crit", text: rule.description }),
+                el("span", { class: `impact ${rule.impact}`, text: IMPACT_LABEL[state.lang][rule.impact] || rule.impact }),
+                el("strong", { text: ruleLabel(rule.rule) }),
+                ` · ${rule.cases} ${rule.cases === 1 ? t("case1") : t("casesN")}`,
+                el("span", { class: "crit", text: describeRule(rule) }),
               ),
             ),
-            wcag.rules.length > 8 ? el("li", { text: `Y ${wcag.rules.length - 8} reglas más en el JSON del sitio.` }) : null,
+            wcag.rules.length > 8 ? el("li", { text: t("moreRules", { n: wcag.rules.length - 8 }) }) : null,
           )
-        : el("p", { class: "note", text: "axe-core no encontró incumplimientos WCAG 2.1 A/AA en las páginas revisadas." }),
+        : el("p", { class: "note", text: t("noViolations") }),
     ),
   );
 
   const lhMobile = detail.lighthouse?.mobile;
   const lhDesktop = detail.lighthouse?.desktop;
-  const seconds = (ms) => (ms === undefined || ms === null ? "–" : `${(ms / 1000).toFixed(1).replace(".", ",")} s`);
+  const seconds = (ms) => (ms === undefined || ms === null ? "–" : `${numberFmt(ms / 1000, 1)} s`);
+  const overflow = detail.mobile?.overflow_px;
   nodes.push(
     el("section", {},
-      el("h3", { text: "Datos de la medición" }),
+      el("h3", { text: t("facts") }),
       el("dl", { class: "facts" },
-        el("div", {}, el("dt", { text: "Carga del contenido principal (LCP), móvil" }), el("dd", { text: seconds(lhMobile?.metrics?.lcp_ms) })),
-        el("div", {}, el("dt", { text: "LCP en escritorio" }), el("dd", { text: seconds(lhDesktop?.metrics?.lcp_ms) })),
-        el("div", {}, el("dt", { text: "Desborde horizontal en móvil" }), el("dd", { text: detail.mobile?.overflow_px === undefined || detail.mobile?.overflow_px === null ? "–" : `${detail.mobile.overflow_px} px` })),
-        el("div", {}, el("dt", { text: "Recursos propios fallidos" }), el("dd", { text: detail.failed_resources_first_party ?? "–" })),
+        el("div", {}, el("dt", { text: t("lcpMobile") }), el("dd", { text: seconds(lhMobile?.metrics?.lcp_ms) })),
+        el("div", {}, el("dt", { text: t("lcpDesktop") }), el("dd", { text: seconds(lhDesktop?.metrics?.lcp_ms) })),
+        el("div", {}, el("dt", { text: t("overflow") }), el("dd", { text: overflow === undefined || overflow === null ? "–" : `${overflow} px` })),
+        el("div", {}, el("dt", { text: t("failed") }), el("dd", { text: detail.failed_resources_first_party ?? "–" })),
       ),
-      el("p", { class: "fineprint", text: `Páginas revisadas: ${new Set((detail.pages || []).map((p) => p.url)).size}. Fallos en recursos de terceros (no restan): ${detail.third_party_failures ?? 0}.` }),
-      detail.errors?.length ? el("p", { class: "fineprint", text: `Notas: ${detail.errors.join(" · ")}` }) : null,
+      el("p", { class: "fineprint", text: t("pagesNote", { pages: new Set((detail.pages || []).map((p) => p.url)).size, third: detail.third_party_failures ?? 0 }) }),
+      detail.errors?.length ? el("p", { class: "fineprint", text: t("notes", { notes: detail.errors.map((n) => translateNote(n, state.lang)).join(" · ") }) }) : null,
     ),
   );
 
@@ -413,15 +481,15 @@ function buildSheet(site, detail) {
 
 function buildEvolution(site) {
   const series = (state.history?.sites?.[site.id]?.series || []).filter((p) => p.overall !== null);
-  const section = el("section", {}, el("h3", { text: "Evolución semanal" }));
+  const section = el("section", {}, el("h3", { text: t("evolution") }));
   if (series.length < 2) {
-    section.append(el("p", { class: "note", text: "Primera medición. La evolución aparece desde la segunda semana." }));
+    section.append(el("p", { class: "note", text: t("firstRun") }));
     return section;
   }
   const w = 300, h = 48, pad = 4;
   const xs = (i) => pad + (i * (w - pad * 2)) / (series.length - 1);
   const ys = (v) => h - pad - (v / 100) * (h - pad * 2);
-  const chart = svg("svg", { class: "spark", viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": `Notas: ${series.map((p) => `${p.date} ${p.overall}`).join(", ")}` });
+  const chart = svg("svg", { class: "spark", viewBox: `0 0 ${w} ${h}`, role: "img", "aria-label": t("sparkLabel", { points: series.map((p) => `${p.date} ${p.overall}`).join(", ") }) });
   chart.append(svg("polyline", { points: series.map((p, i) => `${xs(i)},${ys(p.overall)}`).join(" ") }));
   series.forEach((p, i) => chart.append(svg("circle", { cx: xs(i), cy: ys(p.overall), r: 3 })));
   section.append(chart);
@@ -432,27 +500,39 @@ function setupDialog() {
   const dialog = $("#sheet");
   $("#sheet-close").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
-  dialog.addEventListener("close", () => history.replaceState(null, "", location.pathname + location.search));
+  dialog.addEventListener("close", () => {
+    state.openId = null;
+    history.replaceState(null, "", location.pathname + location.search);
+  });
 }
 
 // ---------- Inicio ----------
 
+function renderAll() {
+  const summary = state.summary;
+  renderHeader(summary);
+  renderFindings(summary);
+  renderWeights(summary);
+  renderRadar(summary);
+  renderFilters(summary);
+  renderTable(summary);
+}
+
 async function main() {
+  state.lang = initialLang();
+  applyStaticText();
   setupDialog();
+  $("#lang-toggle").addEventListener("click", () => setLang(state.lang === "es" ? "en" : "es"));
   try {
     const latest = await getJSON("latest.json");
     const [summary, historyData] = await Promise.all([getJSON(latest.summary), getJSON("history.json").catch(() => null)]);
     state.summary = summary;
     state.history = historyData;
-    renderHeader(summary);
-    renderWeights(summary);
-    renderRadar(summary);
-    renderFilters(summary);
-    renderTable(summary);
+    renderAll();
     const hash = decodeURIComponent(location.hash.slice(1));
     if (hash && summary.sites.some((s) => s.id === hash)) openSheet(hash);
   } catch (error) {
-    $("#scan-date").textContent = "No se pudieron cargar los resultados.";
+    $("#scan-date").textContent = t("loadError");
     console.error(error);
   }
 }

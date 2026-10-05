@@ -11,6 +11,7 @@ from playwright.sync_api import sync_playwright
 from . import scoring
 from .auditor import SecurityLog, audit_site
 from .config import LIGHTHOUSE_RUNS, MAX_PAGES_PER_SITE, USER_AGENT, Settings, Site
+from .findings import build_findings
 from .history import write_history
 
 COLOMBIA = timezone(timedelta(hours=-5))  # Colombia no tiene horario de verano
@@ -58,6 +59,7 @@ def build_summary(records: list[dict], date: str, measured_from: str | None = No
         "sites_audited": len(ranked),
         "average_overall": round(sum(overalls) / len(overalls)) if overalls else None,
         "lights": {k: sum(1 for r in ranked if r["light"] == k) for k in ("verde", "amarillo", "rojo", "sin_dato")},
+        "findings": build_findings(records),
         "sites": ranked,
     }
 

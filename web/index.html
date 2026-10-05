@@ -3,12 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Radar .gov.co · Calidad de 30 portales públicos de Colombia</title>
-  <meta name="description" content="Auditoría semanal de accesibilidad (WCAG 2.1 AA), versión móvil, rendimiento y buenas prácticas de 30 portales del Estado colombiano.">
+  <title>Radar .gov.co · Accesibilidad de 30 portales públicos de Colombia</title>
+  <meta name="description" content="Auditoría semanal de accesibilidad (WCAG 2.1 AA), versión móvil, rendimiento y buenas prácticas de 30 portales del Estado colombiano. Weekly accessibility audit of 30 Colombian government websites.">
   <meta name="theme-color" content="#121417">
-  <meta property="og:title" content="Radar .gov.co">
-  <meta property="og:description" content="Ranking semanal de accesibilidad y calidad de 30 portales públicos colombianos.">
+  <link rel="canonical" href="https://radar-gov-co.vercel.app/">
+  <link rel="alternate" hreflang="es" href="https://radar-gov-co.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://radar-gov-co.vercel.app/?lang=en">
+
+  <!-- Vista previa al compartir (LinkedIn, X, WhatsApp). La imagen se regenera con `python -m radar og`. -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Radar .gov.co">
+  <meta property="og:url" content="https://radar-gov-co.vercel.app/">
+  <meta property="og:title" content="Radar .gov.co · ¿Qué tan accesibles son 30 portales del Estado?">
+  <meta property="og:description" content="Ranking semanal de accesibilidad (WCAG 2.1 AA), versión móvil y rendimiento de 30 portales públicos colombianos. Weekly ranking, ES/EN.">
+  <meta property="og:image" content="https://radar-gov-co.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Radar con 30 portales públicos colombianos y su nota de accesibilidad y calidad.">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -22,27 +37,30 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="ja-base">
-  <a class="skip" href="#ranking">Saltar a la tabla de posiciones</a>
+  <a class="skip" href="#ranking" data-i18n="skip">Saltar a la tabla de posiciones</a>
 
   <header class="topbar">
-    <a class="brand" href="./" aria-label="Radar .gov.co, línea Q de los proyectos de Jairo Andrés. Inicio">
+    <a class="brand" href="./" data-i18n-aria="brandLabel" aria-label="Radar .gov.co, línea Q de los proyectos de Jairo Andrés. Inicio">
       <img class="brand-mark" src="marca/monograma-oscuro.svg" alt="" width="36" height="36">
       <span class="ja-bullet ja-bullet--q" aria-hidden="true">Q</span>
       <span class="brand-name">Radar <b>.gov.co</b></span>
     </a>
-    <p class="scan-date" id="scan-date" aria-live="polite">Cargando la última medición…</p>
+    <div class="topbar-right">
+      <p class="scan-date" id="scan-date" aria-live="polite" data-i18n="loading">Cargando la última medición…</p>
+      <button class="lang" type="button" id="lang-toggle" lang="en" aria-label="Read in English">EN</button>
+    </div>
   </header>
 
   <main>
     <section class="hero ja-topo" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow ja-label">Línea Q · Auditoría semanal · WCAG 2.1 AA</p>
-        <h1 id="hero-title" class="ja-display">¿Qué tan accesibles son <span class="accent" id="hero-count">30</span> portales del Estado?</h1>
-        <p class="lead">Cada semana un robot visita estos sitios como un ciudadano más y mide accesibilidad, versión móvil, rendimiento y buenas prácticas. Más cerca del centro del radar, mejor nota.</p>
+        <p class="eyebrow ja-label" data-i18n="eyebrow">Línea Q · Auditoría semanal · WCAG 2.1 AA</p>
+        <h1 id="hero-title" class="ja-display"></h1>
+        <p class="lead" data-i18n="lead">Cada semana un robot visita estos sitios como un ciudadano más y mide accesibilidad, versión móvil, rendimiento y buenas prácticas. Más cerca del centro del radar, mejor nota.</p>
         <dl class="kpis" id="kpis">
-          <div class="ja-kpi"><dt>Nota promedio</dt><dd class="ja-kpi__value" id="kpi-avg">–</dd></div>
-          <div class="ja-kpi"><dt>Sitios con nota buena (≥ 80)</dt><dd class="ja-kpi__value" id="kpi-green">–</dd></div>
-          <div class="ja-kpi"><dt>Reglas WCAG incumplidas (mediana por sitio)</dt><dd class="ja-kpi__value" id="kpi-rules">–</dd></div>
+          <div class="ja-kpi"><dt data-i18n="kpiAvg">Nota promedio</dt><dd class="ja-kpi__value" id="kpi-avg">–</dd></div>
+          <div class="ja-kpi"><dt data-i18n="kpiGood">Sitios con nota buena (≥ 80)</dt><dd class="ja-kpi__value" id="kpi-green">–</dd></div>
+          <div class="ja-kpi"><dt data-i18n="kpiRules">Reglas WCAG incumplidas (mediana por sitio)</dt><dd class="ja-kpi__value" id="kpi-rules">–</dd></div>
         </dl>
       </div>
 
@@ -71,36 +89,63 @@
           </svg>
         </div>
         <figcaption id="radar-caption">
-          Cada marca es un portal. Cada anillo son 10 puntos menos de nota y el borde es 50 o menos; el sector es el tipo de entidad.
+          <span data-i18n="radarCaption">Cada marca es un portal. Cada anillo son 10 puntos menos de nota y el borde es 50 o menos; el sector es el tipo de entidad.</span>
           <span class="legend">
-            <span class="ja-status ja-status--good">Bueno ≥ 80</span>
-            <span class="ja-status ja-status--warn">Regular 50–79</span>
-            <span class="ja-status ja-status--bad">Malo &lt; 50</span>
+            <span class="ja-status ja-status--good" data-i18n="legendGood">Bueno ≥ 80</span>
+            <span class="ja-status ja-status--warn" data-i18n="legendWarn">Regular 50–79</span>
+            <span class="ja-status ja-status--bad" data-i18n="legendBad">Malo &lt; 50</span>
           </span>
         </figcaption>
       </figure>
     </section>
 
+    <section class="findings" id="findings" aria-labelledby="findings-title">
+      <p class="eyebrow ja-label" data-i18n="findingsEyebrow">Hallazgos de esta semana</p>
+      <h2 id="findings-title"></h2>
+      <p class="lead findings-lead" id="findings-lead"></p>
+      <div class="findings-grid" id="findings-grid"></div>
+      <div class="findings-split">
+        <article class="ja-card">
+          <h3 data-i18n="topRulesTitle">Las reglas WCAG más incumplidas</h3>
+          <p class="fineprint" data-i18n="topRulesNote">Portales en los que axe-core detectó cada regla (cuenta sitios, no casos).</p>
+          <ol class="rule-bars" id="top-rules"></ol>
+        </article>
+        <article class="ja-card">
+          <h3 data-i18n="byCategoryTitle">Nota promedio por tipo de entidad</h3>
+          <ul class="rule-bars" id="by-category"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="why" aria-labelledby="why-title">
+      <h2 id="why-title" data-i18n="whyTitle">Por qué importa</h2>
+      <div class="why-grid">
+        <p data-i18n="why1">Desde el 1 de enero de 2022, la Resolución 1519 de 2020 de MinTIC exige a las entidades públicas cumplir el nivel AA de las pautas WCAG 2.1 en sus portales. No es una buena práctica opcional: es la norma.</p>
+        <p data-i18n="why2">Un enlace sin nombre o un texto con poco contraste deja por fuera a quien usa lector de pantalla, tiene baja visión o navega con teclado. Y la mayoría de trámites del Estado hoy empiezan en un celular.</p>
+      </div>
+      <p class="fineprint"><span data-i18n="whySource">Fuente:</span> <a href="https://www.cancilleria.gov.co/sites/default/files/Normograma/docs/resolucion_mintic_1519_2020.htm" rel="noopener" data-i18n="whySourceLink">Resolución 1519 de 2020, artículo 3 (normograma de la Cancillería)</a>. <span data-i18n="whyCaveat">axe-core detecta solo una parte de los problemas de forma automática; una nota alta no certifica el cumplimiento.</span></p>
+    </section>
+
     <section class="board" id="ranking" aria-labelledby="ranking-title" tabindex="-1">
       <div class="board-head">
-        <h2 id="ranking-title">Tabla de posiciones</h2>
-        <div class="filters" role="group" aria-label="Filtrar por tipo de entidad" id="filters"></div>
+        <h2 id="ranking-title" data-i18n="rankingTitle">Tabla de posiciones</h2>
+        <div class="filters" role="group" data-i18n-aria="filtersLabel" aria-label="Filtrar por tipo de entidad" id="filters"></div>
       </div>
-      <div class="table-scroll ja-table-wrap" tabindex="0" role="region" aria-label="Tabla de posiciones (se puede desplazar)">
+      <div class="table-scroll ja-table-wrap" tabindex="0" role="region" data-i18n-aria="tableRegion" aria-label="Tabla de posiciones (se puede desplazar)">
         <table class="ranking ja-table">
-          <caption class="sr-only">Portales ordenados por nota global. Elige un portal para ver su ficha.</caption>
+          <caption class="sr-only" data-i18n="tableCaption">Portales ordenados por nota global. Elige un portal para ver su ficha.</caption>
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Portal</th>
-              <th scope="col">Nota</th>
-              <th scope="col" class="c-wide">Accesib.</th>
-              <th scope="col" class="c-wide">Móvil</th>
-              <th scope="col" class="c-wide">Rendim.</th>
-              <th scope="col" class="c-wide">Buenas pr.</th>
-              <th scope="col" class="c-wide">SEO</th>
-              <th scope="col" class="c-wide">Rec. fallidos</th>
-              <th scope="col" class="c-mid">WCAG</th>
+              <th scope="col" data-i18n="colSite">Portal</th>
+              <th scope="col" data-i18n="colScore">Nota</th>
+              <th scope="col" class="c-wide num" data-i18n="colA11y">Accesib.</th>
+              <th scope="col" class="c-wide num" data-i18n="colMobile">Móvil</th>
+              <th scope="col" class="c-wide num" data-i18n="colPerf">Rendim.</th>
+              <th scope="col" class="c-wide num" data-i18n="colBest">Buenas pr.</th>
+              <th scope="col" class="c-wide num">SEO</th>
+              <th scope="col" class="c-wide num" data-i18n="colFailed">Rec. fallidos</th>
+              <th scope="col" class="c-mid num" data-i18n="colWcag">Reglas WCAG</th>
             </tr>
           </thead>
           <tbody id="ranking-body"></tbody>
@@ -110,20 +155,20 @@
     </section>
 
     <section class="method" aria-labelledby="method-title">
-      <h2 id="method-title">Cómo se calcula la nota</h2>
+      <h2 id="method-title" data-i18n="methodTitle">Cómo se calcula la nota</h2>
       <ol class="weights" id="weights"></ol>
       <div class="method-grid">
         <article class="ja-card">
-          <h3>Accesibilidad primero</h3>
-          <p>axe-core revisa las reglas WCAG 2.1 A y AA en hasta 3 páginas por sitio, en escritorio y móvil. Se cuentan aparte las <strong>reglas distintas</strong> incumplidas y el <strong>total de casos</strong>.</p>
+          <h3 data-i18n="m1Title">Accesibilidad primero</h3>
+          <p data-i18n="m1">axe-core revisa las reglas WCAG 2.1 A y AA en hasta 3 páginas por sitio, en escritorio y móvil. Se cuentan aparte las reglas distintas incumplidas y el total de casos.</p>
         </article>
         <article class="ja-card">
-          <h3>Mediana de 3</h3>
-          <p>Lighthouse se corre 3 veces por vista y se publica la mediana, porque el rendimiento varía entre mediciones. La nota móvil resta 0,5 puntos por cada píxel que la página se sale de una pantalla de 390 px.</p>
+          <h3 data-i18n="m2Title">Mediana de 3</h3>
+          <p data-i18n="m2">Lighthouse se corre 3 veces por vista y se publica la mediana, porque el rendimiento varía entre mediciones. La nota móvil resta 0,5 puntos por cada píxel que la página se sale de una pantalla de 390 px.</p>
         </article>
         <article class="ja-card">
-          <h3>Visitante normal</h3>
-          <p>Máximo 3 páginas por sitio, pausas de varios segundos, una vez por semana, respetando robots.txt y con un agente identificable. Nada de pruebas de carga, formularios ni escaneos de seguridad (Ley 1273 de 2009).</p>
+          <h3 data-i18n="m3Title">Visitante normal</h3>
+          <p data-i18n="m3">Máximo 3 páginas por sitio, pausas de varios segundos, una vez por semana, respetando robots.txt y con un agente identificable. Nada de pruebas de carga, formularios ni escaneos de seguridad (Ley 1273 de 2009).</p>
         </article>
       </div>
       <p class="fineprint" id="measured-from"></p>
@@ -131,8 +176,8 @@
   </main>
 
   <footer class="footer">
-    <p>Proyecto académico de <a href="https://www.linkedin.com/in/jairo-andres31-analyst" rel="noopener">Jairo Andrés Sierra</a>. Código, datos y metodología en <a href="https://github.com/Jairo-Andres/radar-gov-co" rel="noopener">GitHub</a>.</p>
-    <p class="fineprint">Las notas son mediciones automáticas y no reemplazan una auditoría manual de accesibilidad.</p>
+    <p><span data-i18n="footer1">Proyecto académico de</span> <a href="https://www.linkedin.com/in/jairo-andres31-analyst" rel="noopener">Jairo Andrés Sierra</a>. <span data-i18n="footer2">Código, datos y metodología en</span> <a href="https://github.com/Jairo-Andres/radar-gov-co" rel="noopener">GitHub</a>.</p>
+    <p class="fineprint" data-i18n="footer3">Las notas son mediciones automáticas y no reemplazan una auditoría manual de accesibilidad.</p>
   </footer>
 
   <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
@@ -143,13 +188,13 @@
           <h2 id="sheet-title"></h2>
           <a id="sheet-url" class="sheet-url" rel="noopener" target="_blank"></a>
         </div>
-        <button class="close" type="button" id="sheet-close" aria-label="Cerrar ficha">✕</button>
+        <button class="close" type="button" id="sheet-close" data-i18n-aria="close" aria-label="Cerrar ficha">✕</button>
       </header>
       <div id="sheet-body" class="sheet-body"></div>
     </div>
   </dialog>
 
-  <noscript><p class="note">Esta página necesita JavaScript para cargar los resultados. Los datos están en el repositorio en formato JSON.</p></noscript>
+  <noscript><p class="note">Esta página necesita JavaScript para cargar los resultados. / This page needs JavaScript to load the results.</p></noscript>
   <script src="app.js" type="module"></script>
 </body>
 </html>

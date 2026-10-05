@@ -70,11 +70,14 @@ jobs:
             echo "::warning::Hubo posibles hallazgos de seguridad. No se publicaron; revisa ejecutando el Radar en local."
           fi
 
+      - name: Regenerar la imagen para compartir (og-image.png)
+        run: python -m radar og
+
       - name: Guardar resultados en el repositorio
         run: |
           git config user.name "radar-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ web/og-image.png
           if git diff --cached --quiet; then
             echo "Sin cambios en data/"
           else

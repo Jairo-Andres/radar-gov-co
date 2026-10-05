@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Radar .gov.co · tarjeta para compartir</title>
+  <!-- Plantilla de la imagen og-image.png (1200x630). Se genera con `python -m radar og`; no es una página pública. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Atkinson+Hyperlegible+Mono:wght@400;700&family=Overpass:wght@800;900&display=swap">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="brand.css">
+  <style>
+    html, body { margin: 0; background: var(--color-bg); }
+    #card {
+      width: 1200px; height: 630px; box-sizing: border-box; padding: 56px 64px; position: relative; overflow: hidden;
+      display: grid; grid-template-columns: 1fr 470px; gap: 40px; align-items: center;
+      background: var(--color-bg) var(--texture-topo); background-size: 240px 240px;
+      color: var(--color-fg); font-family: var(--font-body);
+      border-top: 10px solid var(--route-q);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font: 800 30px/1 var(--font-display); }
+    .brand img { width: 52px; height: 52px; }
+    .brand b { color: var(--ink-q); }
+    .brand .ja-bullet { min-width: 40px; height: 40px; font-size: 20px; }
+    h1 { font: 900 56px/1.04 var(--font-display); letter-spacing: -0.015em; margin: 28px 0 10px; }
+    h1 span { color: var(--ink-q); }
+    .sub { font-size: 22px; color: var(--color-fg-muted); margin: 0 0 28px; }
+    .stats { display: flex; gap: 14px; }
+    .stat { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 14px; padding: 14px 18px; min-width: 150px; }
+    .stat b { display: block; font: 900 40px/1 var(--font-display); }
+    .stat span { display: block; margin-top: 6px; font-size: 16px; color: var(--color-fg-muted); line-height: 1.25; }
+    .url { position: absolute; left: 64px; bottom: 30px; font: 700 18px/1 var(--font-mono); color: var(--color-fg-muted); letter-spacing: 0.04em; }
+    svg { width: 470px; height: 470px; }
+    .ring { fill: none; stroke: var(--color-border-strong); stroke-opacity: .45; stroke-width: .6; }
+    .disc { fill: var(--color-surface); stroke: var(--color-border-strong); stroke-width: .8; }
+    .sweep { fill: var(--route-q); fill-opacity: .18; }
+    .sweep-line { stroke: var(--route-q); stroke-width: 1.4; }
+    .good { fill: var(--status-good); } .warn { fill: var(--status-warn-dot); } .bad { fill: var(--status-bad); }
+    .core { stroke: var(--color-bg); stroke-width: .8; }
+  </style>
+</head>
+<body>
+  <div id="card">
+    <div>
+      <div class="brand"><img src="marca/monograma-oscuro.svg" alt=""><span class="ja-bullet ja-bullet--q">Q</span><span>Radar <b>.gov.co</b></span></div>
+      <h1 id="title">¿Qué tan accesibles son <span>30</span> portales del Estado?</h1>
+      <p class="sub" id="sub">Ranking semanal WCAG 2.1 AA · Weekly accessibility ranking</p>
+      <div class="stats">
+        <div class="stat"><b id="s-wcag">–</b><span>incumplen al menos<br>una regla WCAG</span></div>
+        <div class="stat"><b id="s-avg">–</b><span>nota promedio<br>sobre 100</span></div>
+        <div class="stat"><b id="s-good">–</b><span>con nota<br>buena (≥ 80)</span></div>
+      </div>
+    </div>
+    <svg viewBox="-110 -110 220 220" aria-hidden="true">
+      <circle class="disc" r="104" />
+      <circle class="ring" r="20.8" /><circle class="ring" r="41.6" /><circle class="ring" r="62.4" /><circle class="ring" r="83.2" />
+      <path class="sweep" d="M0 0 L0 -104 A104 104 0 0 0 -60 -85 Z" transform="rotate(140)" />
+      <line class="sweep-line" x1="0" y1="0" x2="0" y2="-104" transform="rotate(140)" />
+      <g id="dots"></g>
+    </svg>
+    <div class="url">radar-gov-co.vercel.app</div>
+  </div>
+  <script type="module">
+    const base = location.pathname.includes("/web/") ? "../data/" : "data/";
+    const latest = await (await fetch(base + "latest.json")).json();
+    const s = await (await fetch(base + latest.summary)).json();
+    const f = s.findings || {};
+    document.querySelector("#title span").textContent = s.sites_audited;
+    document.querySelector("#s-wcag").textContent = `${f.sites_with_any_wcag_rule}/${f.sites_measured}`;
+    document.querySelector("#s-avg").textContent = s.average_overall;
+    document.querySelector("#s-good").textContent = `${s.lights.verde}/${s.sites_audited}`;
+    const order = ["Ministerio", "Entidad nacional", "Órgano de control", "Alcaldía", "Portales"];
+    const sector = (c) => (c === "Presidencia" || c === "Portal del Estado" ? 4 : order.indexOf(c));
+    const groups = order.map(() => []);
+    for (const site of s.sites) if (site.overall != null && sector(site.category) >= 0) groups[sector(site.category)].push(site);
+    const ns = "http://www.w3.org/2000/svg";
+    const dots = document.querySelector("#dots");
+    groups.forEach((list, i) => list.sort((a, b) => a.id.localeCompare(b.id)).forEach((site, j) => {
+      const deg = i * 72 + ((j + 0.5) / list.length) * 72, rad = deg * Math.PI / 180;
+      const r = Math.max(4, Math.min(102, (100 - site.overall) * 104 / 50));
+      const x = r * Math.sin(rad), y = -r * Math.cos(rad);
+      let node;
+      if (site.light === "amarillo") {
+        node = document.createElementNS(ns, "path");
+        node.setAttribute("d", `M${x} ${y - 5} L${x + 4.6} ${y + 3.1} L${x - 4.6} ${y + 3.1} Z`);
+        node.setAttribute("class", "core warn");
+      } else if (site.light === "rojo") {
+        node = document.createElementNS(ns, "rect");
+        Object.entries({ x: x - 3.6, y: y - 3.6, width: 7.2, height: 7.2, class: "core bad" }).forEach(([k, v]) => node.setAttribute(k, v));
+      } else {
+        node = document.createElementNS(ns, "circle");
+        Object.entries({ cx: x, cy: y, r: 4, class: "core good" }).forEach(([k, v]) => node.setAttribute(k, v));
+      }
+      dots.append(node);
+    }));
+    await document.fonts.ready;
+    document.body.dataset.ready = "1";
+  </script>
+</body>
+</html>

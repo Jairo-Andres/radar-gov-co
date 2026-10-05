@@ -28,6 +28,117 @@
     "rojo": 0,
     "sin_dato": 0
   },
+  "findings": {
+    "sites_measured": 30,
+    "sites_with_critical_rule": 20,
+    "sites_with_any_wcag_rule": 30,
+    "top_rules": [
+      {
+        "rule": "link-name",
+        "sites": 22,
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "impact": "serious"
+      },
+      {
+        "rule": "color-contrast",
+        "sites": 18,
+        "criteria": [
+          "1.4.3"
+        ],
+        "impact": "serious"
+      },
+      {
+        "rule": "list",
+        "sites": 11,
+        "criteria": [
+          "1.3.1"
+        ],
+        "impact": "serious"
+      },
+      {
+        "rule": "nested-interactive",
+        "sites": 10,
+        "criteria": [
+          "4.1.2"
+        ],
+        "impact": "serious"
+      },
+      {
+        "rule": "button-name",
+        "sites": 9,
+        "criteria": [
+          "4.1.2"
+        ],
+        "impact": "critical"
+      },
+      {
+        "rule": "frame-title",
+        "sites": 9,
+        "criteria": [
+          "4.1.2"
+        ],
+        "impact": "serious"
+      },
+      {
+        "rule": "image-alt",
+        "sites": 8,
+        "criteria": [
+          "1.1.1"
+        ],
+        "impact": "critical"
+      },
+      {
+        "rule": "aria-required-children",
+        "sites": 7,
+        "criteria": [
+          "1.3.1"
+        ],
+        "impact": "critical"
+      }
+    ],
+    "sites_with_mobile_overflow": 12,
+    "sites_without_viewport_meta": 1,
+    "sites_with_failed_resources": 16,
+    "median_overall": 68.0,
+    "median_accessibility": 84.5,
+    "median_mobile_performance": 47.0,
+    "median_desktop_performance": 56,
+    "by_category": [
+      {
+        "category": "Entidad nacional",
+        "sites": 8,
+        "average_overall": 73.4
+      },
+      {
+        "category": "Ministerio",
+        "sites": 12,
+        "average_overall": 68.3
+      },
+      {
+        "category": "Alcaldía",
+        "sites": 6,
+        "average_overall": 67.8
+      },
+      {
+        "category": "Órgano de control",
+        "sites": 2,
+        "average_overall": 67.5
+      },
+      {
+        "category": "Presidencia",
+        "sites": 1,
+        "average_overall": 66
+      },
+      {
+        "category": "Portal del Estado",
+        "sites": 1,
+        "average_overall": 63
+      }
+    ]
+  },
   "sites": [
     {
       "id": "minhacienda",

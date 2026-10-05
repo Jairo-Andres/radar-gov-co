@@ -39,7 +39,8 @@ def browser():
 
 @pytest.fixture
 def page(browser):
-    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    # Idioma fijo: la web elige ES o EN según el navegador.
+    context = browser.new_context(viewport={"width": 1280, "height": 900}, locale="es-CO")
     # Las fuentes de Google no son necesarias para probar: se bloquean para no salir a internet.
     context.route("**/fonts.googleapis.com/**", lambda route: route.abort())
     context.route("**/fonts.gstatic.com/**", lambda route: route.abort())
