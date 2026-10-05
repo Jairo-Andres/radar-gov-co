@@ -78,6 +78,33 @@ def unique_failed(pages: list[dict]) -> list[dict]:
     return list(seen.values())
 
 
+# Sufijos compartidos por muchas entidades: no sirven como "dominio propio".
+PUBLIC_SUFFIXES = {"gov.co", "edu.co", "org.co", "com.co", "mil.co", "co"}
+
+# Códigos que suelen venir de un firewall o de un límite de peticiones, no de un
+# recurso roto: se registran pero no restan puntos.
+BLOCKING_STATUSES = {401, 403, 407, 429}
+
+
 def is_first_party(url: str, home_url: str) -> bool:
-    host, home = _bare_host(url), _bare_host(home_url)
-    return host == home or host.endswith("." + home)
+    """Recurso del propio sitio: mismo host o subdominio. Si el sitio está en la raíz
+    de un sufijo compartido (www.gov.co), se usa el host completo para que otras
+    entidades .gov.co no cuenten como propias."""
+    host = (urlparse(url).hostname or "").lower()
+    home = _bare_host(home_url)
+    if home in PUBLIC_SUFFIXES:
+        home = (urlparse(home_url).hostname or "").lower()
+    return host == home or host.endswith("." + home) or _bare_host(url) == home
+
+
+def failure_kind(item: dict) -> str:
+    """http: el servidor respondió con error (recurso roto, se penaliza).
+    blocked: 401/403/407/429, posible bloqueo; network: error de red o del navegador
+    (conexión reiniciada, tiempo agotado, ORB). Estos dos no se penalizan porque no
+    se puede atribuir con certeza al sitio."""
+    status = item.get("status")
+    if status is None:
+        return "network"
+    if status in BLOCKING_STATUSES:
+        return "blocked"
+    return "http"

@@ -25,7 +25,7 @@ def page(score, failed=(), viewport="desktop", screenshot=None, url="u", third_p
 def test_finish_record_full(lhr_mobile):
     summary, _ = parsers.parse_lighthouse(lhr_mobile)
     lh = parsers.median_lighthouse([summary, summary, summary])
-    failed = [{"url": "https://www.dane.gov.co/x.png", "first_party": True}]
+    failed = [{"url": "https://www.dane.gov.co/x.png", "status": 404, "first_party": True}]
     record = make_record(
         pages=[page(84, failed, third_party=5, url="https://www.dane.gov.co/"), page(100, url="https://www.dane.gov.co/a")],
         mobile={"viewport_meta": True, "horizontal_overflow": True, "scroll_width": 400, "screen_width": 390},
@@ -116,14 +116,58 @@ def test_history_tracks_weekly_change():
     assert len(history["sites"]["dian"]["series"]) == 2
 
 
-def test_write_history_reads_date_folders(tmp_path):
-    for date in ("2026-10-05", "2026-10-12"):
-        folder = tmp_path / date
-        folder.mkdir()
-        summary = build_summary(records_for_summary(), date)
-        (folder / "summary.json").write_text(json.dumps(summary), encoding="utf-8")
-    (tmp_path / "notas").mkdir()  # las carpetas que no son fechas se ignoran
-    history = write_history(tmp_path)
-    assert len(history["runs"]) == 2
+def write_run(root, origin, date):
+    folder = root / origin / date
+    folder.mkdir(parents=True)
+    summary = build_summary(records_for_summary(), date, "prueba", origin)
+    (folder / "summary.json").write_text(json.dumps(summary), encoding="utf-8")
+
+
+def test_write_history_keeps_series_by_origin(tmp_path):
+    write_run(tmp_path, "local-co", "2026-10-05")
+    write_run(tmp_path, "github-actions", "2026-10-12")
+    write_run(tmp_path, "github-actions", "2026-10-19")
+    (tmp_path / "notas").mkdir()  # carpetas sin fechas adentro se ignoran
+    history = write_history(tmp_path, "github-actions")
+    assert set(history["origins"]) == {"local-co", "github-actions"}
+    assert len(history["origins"]["github-actions"]["runs"]) == 2
+    # El cambio semanal solo compara dentro de la misma serie.
+    assert history["origins"]["local-co"]["sites"]["dane"]["change"] is None
     latest = json.loads((tmp_path / "latest.json").read_text(encoding="utf-8"))
-    assert latest == {"date": "2026-10-12", "summary": "2026-10-12/summary.json"}
+    assert latest == {"origin": "github-actions", "official": True, "date": "2026-10-19",
+                      "summary": "github-actions/2026-10-19/summary.json"}
+
+
+def test_latest_falls_back_when_official_series_is_empty(tmp_path):
+    write_run(tmp_path, "local-co", "2026-10-04")
+    write_history(tmp_path, "github-actions")
+    latest = json.loads((tmp_path / "latest.json").read_text(encoding="utf-8"))
+    assert latest["origin"] == "local-co"
+    assert latest["official"] is False
+    assert latest["summary"] == "local-co/2026-10-04/summary.json"
+
+
+def test_only_http_errors_are_penalized():
+    failed = [
+        {"url": "https://www.dane.gov.co/a.png", "status": 404, "first_party": True},
+        {"url": "https://www.dane.gov.co/b.js", "status": None, "error": "net::ERR_CONNECTION_RESET", "first_party": True},
+        {"url": "https://www.dane.gov.co/c.css", "status": 403, "first_party": True},
+    ]
+    record = finish_record(make_record(pages=[page(100, failed)]))
+    assert record["failed_resources_first_party"] == 1
+    assert record["failed_resources_unverified"] == 2
+    assert record["scores"]["failed_resources"] == 90
+
+
+def test_verified_overflow_lowers_penalty_only():
+    lh = lighthouse(60)
+    base = dict(pages=[page(100)], lighthouse=lh)
+    measured = finish_record(make_record(mobile={"scroll_width": 478, "screen_width": 390}, **base))
+    verified = finish_record(make_record(
+        mobile={"scroll_width": 478, "screen_width": 390, "overflow_px_verified": 4}, **base))
+    higher = finish_record(make_record(
+        mobile={"scroll_width": 394, "screen_width": 390, "overflow_px_verified": 50}, **base))
+    assert measured["mobile"]["overflow_px"] == 88
+    assert verified["mobile"]["overflow_px"] == 4
+    assert verified["scores"]["mobile"] == 58
+    assert higher["mobile"]["overflow_px"] == 4  # nunca sube por una re-verificación

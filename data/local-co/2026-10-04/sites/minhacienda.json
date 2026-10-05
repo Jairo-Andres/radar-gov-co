@@ -1,0 +1,325 @@
+{
+  "id": "minhacienda",
+  "name": "Ministerio de Hacienda y Crédito Público",
+  "category": "Ministerio",
+  "url": "https://www.minhacienda.gov.co/",
+  "audited_at": "2026-10-04T23:31:22-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.minhacienda.gov.co/",
+      "final_url": "https://www.minhacienda.gov.co/",
+      "status": 200,
+      "load_ms": 3657,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".menu-primer-nivel"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "#main-content > a[target=\"\"]",
+              ".component-image.overflow-hidden > a[href$=\"revista-gente-hacienda\"]",
+              "a[href$=\"colombia.co/\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 102,
+      "viewport": "desktop",
+      "screenshot": "screenshots/minhacienda-desktop.jpg"
+    },
+    {
+      "url": "https://www.minhacienda.gov.co/",
+      "final_url": "https://validate.perfdrive.com/6d681a70928cb440a30ccb4f8b66356a/?ssa=84fc116e-1d6e-4d30-800f-70f23514785c&ssb=77351367981&ssc=https%3A%2F%2Fwww.minhacienda.gov.co%2F&ssi=2e5716ed-cv6z-4610-84ec-8dafbd00d95d&ssk=botmanager_support@radware.com&ssm=62381527570421561106135292631175&ssn=aae0ee12b4927e5559a6efb0f738ad163f56897bd55e-d2cd-4010-b3c300&sso=4cd21ecf-d043f04cd4fe3321e27f7ff0808257eda66446547d3ef57b&ssp=43642348331791199964179117291421292&ssq=17991547470127476613374701899578354653989&ssr=MTg2Ljg0LjIwLjE2MQ==&sst=RadarGovCo/1.0%20(proyecto%20academico;%20linkedin.com/in/jairo-andres31-analyst)&ssu=&ssv=&ssw=&ssx=eyJyZCI6Im1pbmhhY2llbmRhLmdvdi5jbyIsInV6bXgiOiI3ZmMwMDAxZDVkMzdlNS1iMDkwLTQyY2MtYWViMi03M2YzZDczYjZkODQxLTE3OTExNzQ3MDE0NDgwLTAwODJjZGIyZGE3ODQ5OTI3ZWUxMCIsIl9fdXptZiI6IjdmOTAwMDg5N2JkNTVlLWQyY2QtNDAxMC1iZWNmLWQwNDNmMDRjZDRmZTEtMTc5MTE3NDcwMTQ0ODAtMDA1ZTc2ODJkN2Y3MjllYTk1YTEwIn0=",
+      "status": 200,
+      "load_ms": 1828,
+      "axe": {
+        "score": 94,
+        "violations": [
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 1,
+      "viewport": "mobile",
+      "screenshot": "screenshots/minhacienda-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 80,
+        "accessibility": 88,
+        "best_practices": 92,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 3809,
+        "lcp_ms": 3809,
+        "tbt_ms": 0,
+        "cls": 0.002,
+        "speed_index_ms": 3809
+      },
+      "performance_runs": [
+        80,
+        81,
+        80
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "doctype",
+            "title": "A la página le falta el DOCTYPE de HTML, por lo que se ha activado el modo Quirks"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 89,
+        "accessibility": 88,
+        "best_practices": 96,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 1507,
+        "lcp_ms": 1507,
+        "tbt_ms": 0,
+        "cls": 0,
+        "speed_index_ms": 1541
+      },
+      "performance_runs": [
+        89,
+        84,
+        92
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "unsized-images",
+            "title": "Los elementos de imagen no tienen `width` y `height` explícitos"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "doctype",
+            "title": "A la página le falta el DOCTYPE de HTML, por lo que se ha activado el modo Quirks"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 3,
+    "cases": 6,
+    "criteria": [
+      "1.3.1",
+      "2.4.4",
+      "3.1.1",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-children",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+        "cases": 1
+      },
+      {
+        "rule": "html-has-lang",
+        "impact": "serious",
+        "criteria": [
+          "3.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+        "cases": 1
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 4
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 103,
+  "scores": {
+    "accessibility": 88,
+    "mobile": 80,
+    "performance": 89,
+    "best_practices": 94,
+    "seo": 83,
+    "failed_resources": 100,
+    "overall": 88
+  },
+  "light": "verde",
+  "failed_resources_unverified": 0
+}

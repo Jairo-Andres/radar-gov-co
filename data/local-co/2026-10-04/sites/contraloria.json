@@ -1,0 +1,534 @@
+{
+  "id": "contraloria",
+  "name": "Contraloría General de la República",
+  "category": "Órgano de control",
+  "url": "https://www.contraloria.gov.co/",
+  "audited_at": "2026-10-05T00:34:23-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.contraloria.gov.co/",
+      "final_url": "https://www.contraloria.gov.co/",
+      "status": 200,
+      "load_ms": 3609,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 23,
+            "examples": [
+              "#fragment-26338b54-28af-c4bd-3306-6ae1be594350 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-b86bd994-4866-a713-7a4b-a8f2af74b74f > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "#fragment-7a00ab26-438c-7cf0-1c8d-85cd26979b7e > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-e2cf8792-b0a0-8ab6-ece6-1353484c7497 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-0e0e4925-5eac-3673-1765-55b58068b11c > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "desktop",
+      "screenshot": "screenshots/contraloria-desktop.jpg"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/en/home",
+      "final_url": "https://www.contraloria.gov.co/en/home",
+      "status": 200,
+      "load_ms": 2766,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 23,
+            "examples": [
+              "#fragment-43950b00-9fa5-1f7d-8d99-71bed6780609 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-82ea8e5d-6a16-8da8-6b5d-7c5dfe732f3b > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "#fragment-c6526b57-569e-e625-cf04-adca741465c6 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-3e98486b-df22-2812-02a4-2ee486a8e1d6 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-29f91c65-6a9e-2d72-0edb-c17daf111109 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 3,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/web/guest/la-entidad",
+      "final_url": "https://www.contraloria.gov.co/web/guest/la-entidad",
+      "status": 200,
+      "load_ms": 1609,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/10462140/B_Contraloria_Entidad.png/74b08644-e9c5-0ca9-110d-9bd5d1b89260?version=1.0&t=1779300966709",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/",
+      "final_url": "https://www.contraloria.gov.co/",
+      "status": 200,
+      "load_ms": 3563,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 24,
+            "examples": [
+              "#fragment-43950b00-9fa5-1f7d-8d99-71bed6780609 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-82ea8e5d-6a16-8da8-6b5d-7c5dfe732f3b > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 5,
+            "examples": [
+              "#fragment-c6526b57-569e-e625-cf04-adca741465c6 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-3e98486b-df22-2812-02a4-2ee486a8e1d6 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-29f91c65-6a9e-2d72-0edb-c17daf111109 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 404,
+          "type": "image",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "mobile",
+      "screenshot": "screenshots/contraloria-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 54,
+        "accessibility": 81,
+        "best_practices": 50,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 21060,
+        "lcp_ms": 43661,
+        "tbt_ms": 131,
+        "cls": 0,
+        "speed_index_ms": 21060
+      },
+      "performance_runs": [
+        51,
+        54,
+        54
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "tabindex",
+            "title": "Algunos elementos tienen un valor de `[tabindex]` superior a 0"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 51,
+        "accessibility": 87,
+        "best_practices": 54,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 3069,
+        "lcp_ms": 7819,
+        "tbt_ms": 0,
+        "cls": 0.154,
+        "speed_index_ms": 8105
+      },
+      "performance_runs": [
+        49,
+        51,
+        52
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "tabindex",
+            "title": "Algunos elementos tienen un valor de `[tabindex]` superior a 0"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 3,
+    "cases": 61,
+    "criteria": [
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 12
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 2
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 47
+      }
+    ]
+  },
+  "failed_resources_first_party": 3,
+  "third_party_failures": 8,
+  "scores": {
+    "accessibility": 85,
+    "mobile": 54,
+    "performance": 51,
+    "best_practices": 52,
+    "seo": 92,
+    "failed_resources": 70,
+    "overall": 70
+  },
+  "light": "amarillo",
+  "failed_resources_unverified": 0
+}

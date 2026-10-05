@@ -18,7 +18,7 @@ const SECTORS = [
   { key: "Portales", includes: ["Presidencia", "Portal del Estado"] },
 ];
 
-const state = { summary: null, history: null, filter: "todos", details: new Map(), lang: "es", openId: null };
+const state = { summary: null, history: null, latest: null, runDir: "", filter: "todos", details: new Map(), lang: "es", openId: null };
 
 // ---------- Utilidades ----------
 
@@ -147,6 +147,7 @@ function renderHeader(summary) {
   $("#kpi-green").textContent = `${summary.lights.verde}/${summary.sites_audited}`;
   $("#kpi-rules").textContent = numberFmt(median(summary.sites.map((s) => s.wcag_rules)), 1);
   const m = summary.measurement || {};
+  $("#series-note").textContent = t(state.latest?.official ? "seriesOfficial" : "seriesInitial", { origin: summary.origin || "–" });
   $("#measured-from").textContent = t("measuredFrom", {
     date: formatDate(summary.date),
     from: m.from || t("noData"),
@@ -389,7 +390,7 @@ async function openSheet(id) {
   history.replaceState(null, "", `${location.pathname}${location.search}#${id}`);
 
   try {
-    if (!state.details.has(id)) state.details.set(id, await getJSON(`${state.summary.date}/${site.detail}`));
+    if (!state.details.has(id)) state.details.set(id, await getJSON(`${state.runDir}${site.detail}`));
     body.replaceChildren(...buildSheet(site, state.details.get(id)));
   } catch (error) {
     body.replaceChildren(el("p", { class: "note", text: t("sheetError") }));
@@ -397,7 +398,7 @@ async function openSheet(id) {
 }
 
 function buildSheet(site, detail) {
-  const base = `${DATA}${state.summary.date}/`;
+  const base = `${DATA}${state.runDir}`;
   const nodes = [];
 
   nodes.push(
@@ -470,7 +471,8 @@ function buildSheet(site, detail) {
         el("div", {}, el("dt", { text: t("overflow") }), el("dd", { text: overflow === undefined || overflow === null ? "–" : `${overflow} px` })),
         el("div", {}, el("dt", { text: t("failed") }), el("dd", { text: detail.failed_resources_first_party ?? "–" })),
       ),
-      el("p", { class: "fineprint", text: t("pagesNote", { pages: new Set((detail.pages || []).map((p) => p.url)).size, third: detail.third_party_failures ?? 0 }) }),
+      buildOverflowEvidence(detail, base),
+      el("p", { class: "fineprint", text: t("pagesNote", { pages: new Set((detail.pages || []).map((p) => p.url)).size, third: detail.third_party_failures ?? 0, unverified: detail.failed_resources_unverified ?? 0 }) }),
       detail.errors?.length ? el("p", { class: "fineprint", text: t("notes", { notes: detail.errors.map((n) => translateNote(n, state.lang)).join(" · ") }) }) : null,
     ),
   );
@@ -479,8 +481,29 @@ function buildSheet(site, detail) {
   return nodes;
 }
 
+function buildOverflowEvidence(detail, base) {
+  const evidence = detail.mobile?.evidence;
+  const verification = detail.mobile?.overflow_verification;
+  if (!evidence?.screenshot && !verification) return null;
+  const offenders = (evidence?.offenders || []).map((o) => o.selector).join(", ");
+  return el("figure", { class: "evidence" },
+    evidence?.screenshot
+      ? el("img", { src: base + evidence.screenshot, alt: t("evidenceAlt", { px: detail.mobile.overflow_px ?? 0 }), loading: "lazy" })
+      : null,
+    el("figcaption", {},
+      evidence?.zoomed_out
+        ? t("evidenceZoom", { width: detail.mobile.scroll_width, pct: Math.round((evidence.zoom || 0) * 100) })
+        : t("evidenceCaption", { px: detail.mobile.overflow_px ?? 0 }),
+      offenders ? ` ${t("evidenceOffenders", { list: offenders })}` : "",
+      verification ? ` ${t("evidenceVerified")}` : "",
+    ),
+  );
+}
+
 function buildEvolution(site) {
-  const series = (state.history?.sites?.[site.id]?.series || []).filter((p) => p.overall !== null);
+  const origin = state.summary.origin;
+  const siteHistory = origin ? state.history?.origins?.[origin]?.sites?.[site.id] : state.history?.sites?.[site.id];
+  const series = (siteHistory?.series || []).filter((p) => p.overall !== null);
   const section = el("section", {}, el("h3", { text: t("evolution") }));
   if (series.length < 2) {
     section.append(el("p", { class: "note", text: t("firstRun") }));
@@ -525,6 +548,8 @@ async function main() {
   $("#lang-toggle").addEventListener("click", () => setLang(state.lang === "es" ? "en" : "es"));
   try {
     const latest = await getJSON("latest.json");
+    state.latest = latest;
+    state.runDir = latest.summary.replace(/summary\.json$/, "");
     const [summary, historyData] = await Promise.all([getJSON(latest.summary), getJSON("history.json").catch(() => null)]);
     state.summary = summary;
     state.history = historyData;

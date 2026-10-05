@@ -5,6 +5,7 @@
 settings:
   pause_seconds: 5   # mínimo 3, lo impone el código
   max_pages: 3       # máximo 3, lo impone el código
+  official_origin: github-actions   # serie que publica la web (ver README: Desde dónde se mide)
 sites:
   - {id: presidencia, name: Presidencia de la República, url: "https://www.presidencia.gov.co/", category: Presidencia}
   - {id: gov-co, name: Portal Único del Estado (GOV.CO), url: "https://www.gov.co/", category: Portal del Estado}

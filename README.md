@@ -17,7 +17,7 @@ Auditoría semanal y automática de la calidad de 30 portales públicos colombia
 | **Rendimiento** | 15 % | Rendimiento de Lighthouse en escritorio (mediana de 3) |
 | **Buenas prácticas** | 10 % | Lighthouse, promedio de las medianas de móvil y escritorio |
 | **SEO** | 10 % | Lighthouse, promedio de las medianas de móvil y escritorio |
-| **Recursos fallidos** | 10 % | 100 menos 10 por cada recurso propio que falla al cargar las páginas visitadas |
+| **Recursos fallidos** | 10 % | 100 menos 10 por cada recurso propio que responde con error HTTP (404, 500…) al cargar las páginas visitadas |
 
 - La accesibilidad pesa más que cualquier otro componente: es el foco del proyecto.
 - El rendimiento móvil se usa solo en "Móvil" y el de escritorio solo en "Rendimiento", para no contar dos veces la misma medición.
@@ -36,20 +36,38 @@ Los pesos están en [`radar/scoring.py`](radar/scoring.py) y se publican en cada
 
 Los hallazgos se redactan de forma objetiva: "No cumple el criterio WCAG 1.1.1 (regla image-alt)".
 
-**Móvil.** Vista de 390 × 844 px. El desborde horizontal se mide como `scrollWidth − ancho de pantalla` y penaliza de forma gradual desde el primer píxel, sin tolerancia (6 px restan 3 puntos; una página sin `meta viewport`, que se dibuja a 980 px, resta el tope de 50). Si Lighthouse móvil no pudo medir, no hay nota móvil.
+**Móvil.** Vista de 390 × 844 px. El desborde horizontal se mide como `scrollWidth − ancho de pantalla` y penaliza de forma gradual desde el primer píxel, sin tolerancia (6 px restan 3 puntos; una página sin `meta viewport`, que se dibuja a 980 px y el navegador reduce al 40 %, resta el tope de 50). Si Lighthouse móvil no pudo medir, no hay nota móvil.
+
+- **Dos lecturas:** el desborde se lee dos veces con 3 s de diferencia y cuenta la menor, para no penalizar un elemento que se acomoda tarde (un carrusel, un banner).
+- **Evidencia:** cuando hay desborde se guarda `screenshots/<id>-mobile-overflow.jpg` con una línea en el borde de los 390 px, y la lista de elementos que ensanchan la página (los recortados por un contenedor no cuentan). Si el navegador reduce toda la página, la evidencia es la vista reducida y su escala.
+- **Re-verificación:** `python -m radar recheck --only <ids> --date <fecha>` vuelve a cargar solo el inicio en móvil (una visita por sitio, con pausa) y guarda el resultado en `rechecks` de la ficha. Si la anomalía no se reproduce igual, se usa el valor confirmado **más bajo** (`overflow_px_verified`); una re-verificación nunca sube una penalización.
 
 **Rendimiento y Lighthouse.** Lighthouse varía bastante entre ejecuciones, así que se corre **3 veces por vista** (móvil y escritorio) sobre la página de inicio y se publica la **mediana** de cada categoría y métrica (`performance_runs` guarda las 3 notas de rendimiento). Las auditorías fallidas que se listan vienen de la corrida mediana. Condiciones: en móvil, la limitación simulada por defecto de Lighthouse (red 4G lenta y CPU 4x); en escritorio, el preset `desktop`.
 
-**Desde dónde se mide.** Los tiempos dependen de la red de origen, así que cada `summary.json` guarda `measurement.from`:
+**Desde dónde se mide (series separadas).** El rendimiento depende de la red de origen: medir desde un PC en Colombia y desde un centro de datos de GitHub (normalmente en EE. UU.) da tiempos distintos para el mismo sitio. Por eso cada ubicación es una **serie aparte**:
 
-- Ejecución local: `--measured-from` o la variable `RADAR_MEASURED_FROM` (por defecto, "equipo local").
-- GitHub Actions: "GitHub Actions (ubuntu-latest, centro de datos de GitHub; región no garantizada)".
+- `data/local-co/`: mediciones desde el equipo de Jairo en Colombia (`--origin local-co`, el valor por defecto). La primera medición, del 2026-10-04, es de esta serie.
+- `data/github-actions/`: la ejecución semanal automática (`RADAR_ORIGIN=github-actions` en el workflow).
 
-Solo se comparan semanas medidas desde el mismo origen.
+Reglas:
 
-**Recursos fallidos.** Son los recursos (imágenes, scripts, hojas de estilo, fuentes, páginas) que responden con error (código ≥ 400) o no cargan por un error de red **mientras se cargan las 3 páginas visitadas**. No se recorren los demás enlaces del sitio, porque eso rompería el límite de 3 páginas: es una muestra, no un inventario de enlaces rotos.
+1. **Una sola serie oficial**, definida en `sites.yaml` (`official_origin: github-actions`). Es la que publica la web y la que se compara semana a semana, porque corre sola en la nube como pide el plan (nada corriendo en el PC). `latest.json` apunta a su última medición; mientras no exista ninguna, apunta a la serie local y la web lo avisa.
+2. **Nunca se mezclan series:** `history.json` guarda cada serie por separado y el cambio semanal solo se calcula dentro de la misma serie.
+3. La serie local sirve de **contraste**: si un sitio sale sin respuesta desde GitHub (bloqueo de IP de centros de datos), se mide desde Colombia y se reporta en su propia serie, sin reemplazar la oficial.
 
-**Regla de terceros.** Solo restan los recursos del propio dominio de la entidad y sus subdominios. Los que fallan en dominios de terceros (CDN externos, analítica, widgets) se cuentan en `third_party_failures` pero no bajan la nota, porque la entidad no siempre los controla. Las cancelaciones normales del navegador (`net::ERR_ABORTED`) no cuentan.
+Cada `summary.json` guarda `origin` y `measurement.from` (texto libre con `--measured-from` o `RADAR_MEASURED_FROM`).
+
+**Recursos fallidos.** Son los recursos (imágenes, scripts, hojas de estilo, fuentes, páginas) que fallan **mientras se cargan las 3 páginas visitadas**. No se recorren los demás enlaces del sitio, porque eso rompería el límite de 3 páginas: es una muestra, no un inventario de enlaces rotos. Cada fallo se clasifica (`kind`):
+
+| Tipo | Ejemplo | ¿Resta? |
+|---|---|---|
+| `http` | 404, 410, 500 | Sí: el servidor de la entidad confirma que el recurso no existe o falló |
+| `blocked` | 401, 403, 407, 429 | No: suele ser un firewall o un límite de peticiones ante un robot, no un recurso roto |
+| `network` | conexión reiniciada, DNS, tiempo agotado, bloqueo del navegador (ORB) | No: no se puede atribuir con certeza al sitio |
+
+Los que no restan se publican en `failed_resources_unverified`.
+
+**Regla de terceros.** Solo restan los recursos del propio dominio de la entidad y sus subdominios. Si el sitio está en la raíz de un sufijo compartido (por ejemplo `www.gov.co`), cuenta como propio solo ese host y sus subdominios, no cualquier dominio `.gov.co` de otra entidad. Los que fallan en dominios de terceros (CDN externos, analítica, widgets) se cuentan en `third_party_failures` pero no bajan la nota, porque la entidad no siempre los controla. Las cancelaciones normales del navegador (`net::ERR_ABORTED`) no cuentan.
 
 ### Límites éticos y legales (Ley 1273 de 2009)
 
@@ -92,7 +110,8 @@ python -m playwright install chromium
 
 python -m radar verify                                   # comprueba que los sitios respondan y robots.txt
 python -m radar run --only dian,dane                     # audita algunos sitios
-python -m radar run --measured-from "equipo local, Bogotá"   # audita los 30 (≈ 1,5 h por las pausas)
+python -m radar run --origin local-co --measured-from "equipo local, Bogotá"   # audita los 30 (≈ 1,5 h)
+python -m radar recheck --only dnp --date 2026-10-04     # re-verifica una anomalía en móvil (una visita)
 python -m radar history                                  # reconstruye data/history.json
 python -m radar og                                       # regenera la imagen para compartir (web/og-image.png)
 python -m pytest                                         # tests del auditor (sin llamar a sitios reales)
@@ -104,12 +123,13 @@ python -m http.server 8000                               # ver la web en http://
 
 ```
 data/
-├── latest.json                 # {"date": "...", "summary": "AAAA-MM-DD/summary.json"}
-├── history.json                # evolución semana a semana por sitio (nota, puesto, semáforo, cambio)
-└── AAAA-MM-DD/
-    ├── summary.json            # ranking del día, pesos, condiciones de medición y una fila por sitio
-    ├── sites/<id>.json         # detalle: páginas, reglas WCAG, Lighthouse (mediana y corridas), recursos fallidos
-    └── screenshots/<id>-desktop.jpg, <id>-mobile.jpg
+├── latest.json                 # {"origin", "official", "date", "summary": "<origen>/AAAA-MM-DD/summary.json"}
+├── history.json                # evolución semana a semana, separada por serie (origins.<origen>.sites)
+└── <origen>/                   # local-co, github-actions
+    └── AAAA-MM-DD/
+        ├── summary.json        # ranking, pesos, condiciones de medición, hallazgos y una fila por sitio
+        ├── sites/<id>.json     # detalle: páginas, reglas WCAG, Lighthouse, recursos fallidos, evidencia, rechecks
+        └── screenshots/<id>-desktop.jpg, <id>-mobile.jpg, <id>-mobile-overflow.jpg
 ```
 
 Correr `run` con `--only` el mismo día agrega sitios al resumen de esa fecha sin borrar los anteriores.
@@ -184,9 +204,10 @@ Accessibility carries the most weight. Mobile performance only feeds "Mobile" an
 - **axe-core:** each page starts at 100 and loses points once per failed rule by impact (critical 10, serious 6, moderate 3, minor 1). Each site reports `wcag_rules` (distinct WCAG rules failed) and, separately, `wcag_cases` (total affected elements, taking the larger of the desktop and mobile views of the same page instead of adding both).
 - **Mobile:** 390 × 844 px viewport. Overflow is `scrollWidth − screen width`, penalized gradually from the first pixel with no tolerance.
 - **Lighthouse:** 3 runs per view (mobile and desktop) on the homepage; the median of each category and metric is published, and the listed failed audits come from the median run. Mobile uses Lighthouse's default simulated throttling (slow 4G, 4x CPU); desktop uses the `desktop` preset.
-- **Where it is measured from:** stored in `measurement.from` in every `summary.json` (`--measured-from` or `RADAR_MEASURED_FROM` locally; the GitHub Actions data center in CI). Only weeks measured from the same origin should be compared.
-- **Failed resources:** resources that return an error (≥ 400) or fail with a network error **while loading the 3 visited pages only**. It is a sample, not a full broken-link crawl.
-- **Third-party rule:** only resources on the entity's own domain and subdomains are penalized. Failures on third-party domains (external CDNs, analytics, widgets) are recorded in `third_party_failures` but do not lower the score.
+- **Where it is measured from (separate series):** performance depends on the network of origin, so each location is its own series (`data/local-co/`, `data/github-actions/`). The official series is set in `sites.yaml` (`official_origin: github-actions`) because it runs in the cloud every week. Series are never mixed, and the weekly trend only compares runs within one series.
+- **Mobile overflow:** it is read twice, 3 s apart, keeping the lower value. Evidence screenshots and the elements that widen the page are stored. `python -m radar recheck` re-checks an anomaly with a single visit, and a re-check can only lower a penalty.
+- **Failed resources:** failures **while loading the 3 visited pages only**. Only HTTP errors (404, 500…) are penalized. Possible blocking (401/403/429) and network errors (reset connections, DNS, timeouts, ORB) are published in `failed_resources_unverified` but not penalized.
+- **Third-party rule:** only the entity's own domain and subdomains count. For a site at the root of a shared suffix (`www.gov.co`), only that host counts, not other `.gov.co` entities.
 
 ### Ethical and legal limits (Colombian Law 1273 of 2009)
 

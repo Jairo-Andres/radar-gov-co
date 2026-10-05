@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from urllib.parse import urlparse
@@ -36,10 +37,16 @@ class Site:
         return urlparse(self.url).hostname or ""
 
 
+# Serie oficial del ranking (ver "Desde dónde se mide" en el README).
+DEFAULT_OFFICIAL_ORIGIN = "github-actions"
+ORIGIN_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]{1,40}$")
+
+
 @dataclass
 class Settings:
     pause_seconds: float = DEFAULT_PAUSE_SECONDS
     max_pages: int = MAX_PAGES_PER_SITE
+    official_origin: str = DEFAULT_OFFICIAL_ORIGIN
 
 
 def _validate_site(raw: dict) -> Site:
@@ -64,7 +71,10 @@ def load_config(path: str | Path) -> tuple[Settings, list[Site]]:
     settings = Settings(
         pause_seconds=max(MIN_PAUSE_SECONDS, float(raw_settings.get("pause_seconds", DEFAULT_PAUSE_SECONDS))),
         max_pages=max(1, min(MAX_PAGES_PER_SITE, int(raw_settings.get("max_pages", MAX_PAGES_PER_SITE)))),
+        official_origin=str(raw_settings.get("official_origin", DEFAULT_OFFICIAL_ORIGIN)),
     )
+    if not ORIGIN_PATTERN.match(settings.official_origin):
+        raise ValueError(f"official_origin no válido: {settings.official_origin}")
     sites = [_validate_site(s) for s in data.get("sites") or []]
     ids = [s.id for s in sites]
     duplicated = {i for i in ids if ids.count(i) > 1}

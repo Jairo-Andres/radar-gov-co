@@ -237,7 +237,7 @@ h2 { font: var(--weight-black) clamp(var(--text-xl), 4vw, var(--text-2xl)) / var
 
 @media (min-width: 900px) {
   .hero { grid-template-columns: 1.05fr 1fr; padding: var(--space-12) var(--space-6) var(--space-16); margin-inline: calc(-1 * var(--space-6)); }
-  .method-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .findings-split, .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sheet-inner { padding: var(--space-6); }
   .facts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -252,3 +252,8 @@ h2 { font: var(--weight-black) clamp(var(--text-xl), 4vw, var(--text-2xl)) / var
   .sweep, .blip .halo { animation: none; }
   .sweep { display: none; }
 }
+
+.series-note { margin: 0 0 var(--space-3); border-left: var(--border-2) solid var(--color-cota); padding-left: var(--space-3); max-width: 60ch; }
+.evidence { margin: var(--space-3) 0 0; }
+.evidence img { display: block; max-width: 100%; max-height: 320px; width: auto; border-radius: var(--radius-md); border: var(--border-1) solid var(--color-border); background: #fff; }
+.evidence figcaption { text-align: left; font-size: var(--text-xs); margin-top: var(--space-2); }

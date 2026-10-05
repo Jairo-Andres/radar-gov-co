@@ -60,3 +60,20 @@ def test_pick_internal_pages_skips_home_redirect_target():
         "https://www.dian.gov.co/", hrefs, allow_all, 1, home_aliases=("https://www.dian.gov.co/Paginas/Inicio.aspx",)
     )
     assert picked == ["https://www.dian.gov.co/tramites"]
+
+
+def test_first_party_on_shared_suffix_root():
+    home = "https://www.gov.co/"
+    assert links.is_first_party("https://cdn.www.gov.co/assets/a.css", home)
+    assert links.is_first_party("https://www.gov.co/x.js", home)
+    # Otra entidad bajo .gov.co no es "propia" del portal GOV.CO.
+    assert not links.is_first_party("https://robi.and.gov.co/chatbot-widget.css", home)
+    assert not links.is_first_party("https://www.dian.gov.co/a.png", home)
+
+
+def test_failure_kind():
+    assert links.failure_kind({"status": 404}) == "http"
+    assert links.failure_kind({"status": 500}) == "http"
+    assert links.failure_kind({"status": 403}) == "blocked"
+    assert links.failure_kind({"status": 429}) == "blocked"
+    assert links.failure_kind({"status": None, "error": "net::ERR_CONNECTION_RESET"}) == "network"

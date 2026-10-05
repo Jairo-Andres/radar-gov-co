@@ -27,7 +27,7 @@ def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def build_summary(records: list[dict], date: str, measured_from: str | None = None) -> dict:
+def build_summary(records: list[dict], date: str, measured_from: str | None = None, origin: str | None = None) -> dict:
     """Resumen del día que consume la web: una fila por sitio con sus puntuaciones."""
     rows = []
     for r in records:
@@ -55,6 +55,7 @@ def build_summary(records: list[dict], date: str, measured_from: str | None = No
         "methodology_version": scoring.METHODOLOGY_VERSION,
         "weights": scoring.WEIGHTS,
         "user_agent": USER_AGENT,
+        "origin": origin,
         "measurement": measurement_info(records, measured_from),
         "sites_audited": len(ranked),
         "average_overall": round(sum(overalls) / len(overalls)) if overalls else None,
@@ -86,10 +87,16 @@ def load_day_records(day_dir: Path) -> list[dict]:
 
 
 def run_audit(
-    settings: Settings, sites: list[Site], data_dir: Path, date: str | None = None, measured_from: str | None = None
+    settings: Settings,
+    sites: list[Site],
+    data_dir: Path,
+    date: str | None = None,
+    measured_from: str | None = None,
+    origin: str = "local-co",
 ) -> dict:
     date = date or today()
-    day_dir = data_dir / date
+    # Cada ubicación de origen es una serie aparte: data/<origen>/<fecha>/.
+    day_dir = data_dir / origin / date
     screenshots = day_dir / "screenshots"
     screenshots.mkdir(parents=True, exist_ok=True)
     security = SecurityLog()
@@ -117,9 +124,9 @@ def run_audit(
         browser.close()
 
     # El resumen incluye todos los sitios de ese día (permite corridas parciales con --only).
-    summary = build_summary(load_day_records(day_dir), date, measured_from)
+    summary = build_summary(load_day_records(day_dir), date, measured_from, origin)
     write_json(day_dir / "summary.json", summary)
-    write_history(data_dir)
+    write_history(data_dir, settings.official_origin)
 
     if security.items:
         print(f"\nAVISO: {len(security.items)} posibles hallazgos de seguridad guardados en "

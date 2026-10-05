@@ -4,6 +4,7 @@
     python -m radar run --only dian,dane   # audita y guarda data/AAAA-MM-DD/
     python -m radar history                # reconstruye data/history.json
     python -m radar og                     # regenera la imagen para compartir (web/og-image.png)
+    python -m radar recheck --only dnp --date 2026-10-04   # re-verifica una anomalía en móvil
 """
 
 from __future__ import annotations
@@ -14,7 +15,7 @@ import os
 import sys
 from pathlib import Path
 
-from .config import load_config
+from .config import ORIGIN_PATTERN, load_config
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -23,6 +24,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="radar")
     parser.add_argument("--sites", default="sites.yaml")
     parser.add_argument("--data", default="data")
+    parser.add_argument(
+        "--origin",
+        default=os.environ.get("RADAR_ORIGIN", "local-co"),
+        help="Serie de medición (desde dónde se mide), p. ej. local-co o github-actions. También: RADAR_ORIGIN",
+    )
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("verify")
     run = sub.add_parser("run")
@@ -36,9 +42,14 @@ def main(argv: list[str] | None = None) -> int:
     )
     sub.add_parser("history")
     sub.add_parser("og", help="Regenera web/og-image.png con la última medición")
+    recheck = sub.add_parser("recheck", help="Vuelve a verificar el inicio en móvil de algunos sitios")
+    recheck.add_argument("--only", required=True, help="IDs separados por coma")
+    recheck.add_argument("--date", required=True, help="Medición a la que se agrega la verificación (AAAA-MM-DD)")
     args = parser.parse_args(argv)
 
     settings, sites = load_config(args.sites)
+    if not ORIGIN_PATTERN.match(args.origin):
+        parser.error(f"--origin no válido: {args.origin} (minúsculas, números y guiones)")
     if getattr(args, "only", None):
         wanted = [s.strip() for s in args.only.split(",") if s.strip()]
         unknown = set(wanted) - {s.id for s in sites}
@@ -58,7 +69,15 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run":
         from .runner import run_audit
 
-        run_audit(settings, sites, Path(args.data), args.date, args.measured_from)
+        run_audit(settings, sites, Path(args.data), args.date, args.measured_from, args.origin)
+        return 0
+    if args.command == "recheck":
+        from .evidence import recheck_sites
+
+        for row in recheck_sites(settings, sites, Path(args.data) / args.origin / args.date):
+            overflow = row.get("overflow", {})
+            print(f"{row['id']}: desborde {overflow.get('overflow_px')} px, "
+                  f"recursos propios con error: {len(row.get('failed_resources', []))} {row.get('error', '')}")
         return 0
     if args.command == "og":
         from .og import render_og_image
@@ -68,8 +87,8 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "history":
         from .history import write_history
 
-        history = write_history(Path(args.data))
-        print(json.dumps({"runs": len(history["runs"])}, ensure_ascii=False))
+        history = write_history(Path(args.data), settings.official_origin)
+        print(json.dumps({k: len(v["runs"]) for k, v in history["origins"].items()}, ensure_ascii=False))
         return 0
     return 1
 

@@ -1,0 +1,647 @@
+{
+  "id": "minjusticia",
+  "name": "Ministerio de Justicia y del Derecho",
+  "category": "Ministerio",
+  "url": "https://www.minjusticia.gov.co/",
+  "audited_at": "2026-10-04T23:41:36-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.minjusticia.gov.co/",
+      "final_url": "https://www.minjusticia.gov.co/",
+      "status": 200,
+      "load_ms": 15766,
+      "axe": {
+        "score": 75,
+        "violations": [
+          {
+            "rule": "aria-roles",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-roles)",
+            "help_en": "ARIA roles used must conform to valid values",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-roles?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#s4-titlerow"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "li[spxid=\"ID_3\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              "li[spxid=\"ID_4\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              ".dropdown-megamenu > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.minjusticia.gov.co/Paginas/NaNnavglobal.html",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.minjusticia.gov.co/_catalogs/masterpage/portal/gov.co/fonts/Montserrat-SemiBold.woff2",
+          "status": 404,
+          "type": "font",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://sofiachatbot.minjusticia.gov.co/agenti_lite_minJus/js/scripts.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/minjusticia-desktop.jpg"
+    },
+    {
+      "url": "https://www.minjusticia.gov.co/inicio",
+      "final_url": "https://www.minjusticia.gov.co/inicio",
+      "status": 200,
+      "load_ms": 21188,
+      "axe": {
+        "score": 75,
+        "violations": [
+          {
+            "rule": "aria-roles",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-roles)",
+            "help_en": "ARIA roles used must conform to valid values",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-roles?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#s4-titlerow"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "li[spxid=\"ID_3\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              "li[spxid=\"ID_4\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              ".dropdown-megamenu > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.minjusticia.gov.co/_catalogs/masterpage/portal/gov.co/fonts/Montserrat-SemiBold.woff2",
+          "status": 404,
+          "type": "font",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://sofiachatbot.minjusticia.gov.co/agenti_lite_minJus/js/scripts.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minjusticia.gov.co/transparencia",
+      "final_url": "https://www.minjusticia.gov.co/transparencia",
+      "status": 200,
+      "load_ms": 21282,
+      "axe": {
+        "score": 75,
+        "violations": [
+          {
+            "rule": "aria-roles",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-roles)",
+            "help_en": "ARIA roles used must conform to valid values",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-roles?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#s4-titlerow"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "li[spxid=\"ID_3\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              "li[spxid=\"ID_4\"] > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]",
+              ".dropdown-megamenu > .dropdown-toggle[data-toggle=\"dropdown\"][href=\"#\"]"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://sofiachatbot.minjusticia.gov.co/agenti_lite_minJus/js/scripts.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minjusticia.gov.co/",
+      "final_url": "https://www.minjusticia.gov.co/",
+      "status": 200,
+      "load_ms": 22000,
+      "axe": {
+        "score": 81,
+        "violations": [
+          {
+            "rule": "aria-roles",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-roles)",
+            "help_en": "ARIA roles used must conform to valid values",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-roles?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#s4-titlerow"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.minjusticia.gov.co/NaNnavglobal.html",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.minjusticia.gov.co/_catalogs/masterpage/portal/gov.co/fonts/Montserrat-SemiBold.woff2",
+          "status": 404,
+          "type": "font",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://sofiachatbot.minjusticia.gov.co/agenti_lite_minJus/js/scripts.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/minjusticia-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 417,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 27
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 43,
+        "accessibility": 84,
+        "best_practices": 73,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 5039,
+        "lcp_ms": 20292,
+        "tbt_ms": 184,
+        "cls": 0.245,
+        "speed_index_ms": 8071
+      },
+      "performance_runs": [
+        46,
+        43,
+        41
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-roles",
+            "title": "Los valores de `[role]` no son válidos"
+          },
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 54,
+        "accessibility": 80,
+        "best_practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 1444,
+        "lcp_ms": 4231,
+        "tbt_ms": 0,
+        "cls": 0.302,
+        "speed_index_ms": 2119
+      },
+      "performance_runs": [
+        54,
+        56,
+        54
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-roles",
+            "title": "Los valores de `[role]` no son válidos"
+          },
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "sin robots.txt (404)",
+  "wcag": {
+    "rules_count": 4,
+    "cases": 30,
+    "criteria": [
+      "1.4.4",
+      "2.4.4",
+      "3.1.1",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-roles",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-roles)",
+        "cases": 3
+      },
+      {
+        "rule": "html-has-lang",
+        "impact": "serious",
+        "criteria": [
+          "3.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+        "cases": 3
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 21
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 3,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 79,
+    "mobile": 30,
+    "performance": 54,
+    "best_practices": 75,
+    "seo": 92,
+    "failed_resources": 70,
+    "overall": 65
+  },
+  "light": "amarillo",
+  "failed_resources_unverified": 1
+}

@@ -54,6 +54,7 @@ jobs:
         env:
           ONLY: ${{ github.event.inputs.only }}
           RADAR_MEASURED_FROM: "GitHub Actions (ubuntu-latest, centro de datos de GitHub; región no garantizada)"
+          RADAR_ORIGIN: github-actions
         run: |
           if [ -n "$ONLY" ]; then
             python -m radar run --only "$ONLY"

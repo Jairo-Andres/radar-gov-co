@@ -123,3 +123,19 @@ def test_english_browser_gets_english_by_default(browser, base_url):
     page.goto(base_url)
     expect(page.locator("html")).to_have_attribute("lang", "en")
     context.close()
+
+
+def test_overflow_evidence_is_shown_when_available(page, base_url):
+    latest = json.loads((ROOT / "data" / "latest.json").read_text(encoding="utf-8"))
+    run_dir = ROOT / "data" / latest["summary"].rsplit("/", 1)[0]
+    with_evidence = [
+        p.stem for p in (run_dir / "sites").glob("*.json")
+        if json.loads(p.read_text(encoding="utf-8")).get("mobile", {}) and
+        (json.loads(p.read_text(encoding="utf-8"))["mobile"] or {}).get("evidence", {}).get("screenshot")
+    ]
+    if not with_evidence:
+        return
+    page.goto(f"{base_url}#{with_evidence[0]}")
+    evidence = page.locator(".evidence img")
+    expect(evidence).to_be_visible()
+    assert page.evaluate("(img) => img.complete && img.naturalWidth > 0", evidence.element_handle())

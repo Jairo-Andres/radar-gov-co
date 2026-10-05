@@ -1,0 +1,696 @@
+{
+  "id": "procuraduria",
+  "name": "Procuraduría General de la Nación",
+  "category": "Órgano de control",
+  "url": "https://www.procuraduria.gov.co/",
+  "audited_at": "2026-10-05T00:31:00-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.procuraduria.gov.co/",
+      "final_url": "https://www.procuraduria.gov.co/Pages/Inicio.aspx",
+      "status": 200,
+      "load_ms": 4078,
+      "axe": {
+        "score": 64,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 15,
+            "examples": [
+              ".p-1 > .img-fluid[data-themekey=\"#\"]",
+              "a:nth-child(1) > .enlace-bg.d-flex.pe-3 > .icon-enlace[data-themekey=\"#\"]",
+              "a[href$=\"fallos-de-interes.aspx\"] > .enlace-bgb.d-flex.pe-3 > .icon-enlace[data-themekey=\"#\"]"
+            ]
+          },
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#playButton",
+              "#pauseButton"
+            ]
+          },
+          {
+            "rule": "aria-allowed-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+            "help_en": "Elements must only use supported ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#btnVivo"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 10,
+            "examples": [
+              ".max-fontsize[target=\"_blank\"]",
+              ".col-2 > a[href=\"/\"]",
+              ".carousel-control-prev[href$=\"#custCarousel\"][data-slide=\"prev\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/procuraduria-desktop.jpg"
+    },
+    {
+      "url": "https://www.procuraduria.gov.co/_catalogs/masterpage/",
+      "final_url": "https://www.procuraduria.gov.co/_catalogs/masterpage/",
+      "status": 403,
+      "load_ms": 235,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.procuraduria.gov.co/_catalogs/masterpage/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.procuraduria.gov.co/Pages/Transparenci.aspx",
+      "final_url": "https://www.procuraduria.gov.co/Pages/Transparenci.aspx",
+      "status": 200,
+      "load_ms": 1375,
+      "axe": {
+        "score": 56,
+        "violations": [
+          {
+            "rule": "aria-allowed-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+            "help_en": "Elements must only use supported ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=axeAPI",
+            "elements": 11,
+            "examples": [
+              "a[data-target=\"#seccion2\"]",
+              "a[data-target=\"#seccion4\"]",
+              "a[data-target=\"#seccion5\"]"
+            ]
+          },
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".carousel-item.active > .row > .col-4.col-md-2.px-3:nth-child(1) > a[target=\"_blank\"] > .d-block[title=\"\"][data-themekey=\"#\"]",
+              "a[href$=\"contaduria.gov.co/\"] > .d-block[title=\"\"][data-themekey=\"#\"]",
+              "a[href$=\"auditoria.gov.co/\"] > .d-block[title=\"\"][data-themekey=\"#\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 9,
+            "examples": [
+              ".max-fontsize[target=\"_blank\"]",
+              ".col-2 > a[href=\"/\"]",
+              "#ctl00_PlaceHolderMain_ctl01__ControlWrapper_RichHtmlField > div:nth-child(1) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".bread-crums > a[href=\"/\"]",
+              "a[href$=\"Transparencia.aspx\"]"
+            ]
+          },
+          {
+            "rule": "aria-prohibited-attr",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-prohibited-attr)",
+            "help_en": "Elements must only use permitted ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-prohibited-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#ctl00_PlaceHolderMain_ctl00__ControlWrapper_RichImageField"
+            ]
+          },
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.procuraduria.gov.co/",
+      "final_url": "https://www.procuraduria.gov.co/Pages/Inicio.aspx",
+      "status": 200,
+      "load_ms": 4219,
+      "axe": {
+        "score": 58,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 15,
+            "examples": [
+              ".p-1 > .img-fluid[data-themekey=\"#\"]",
+              "a:nth-child(1) > .enlace-bg.d-flex.pe-3 > .icon-enlace[data-themekey=\"#\"]",
+              "a[href$=\"fallos-de-interes.aspx\"] > .enlace-bgb.d-flex.pe-3 > .icon-enlace[data-themekey=\"#\"]"
+            ]
+          },
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#playButton",
+              "#pauseButton"
+            ]
+          },
+          {
+            "rule": "aria-valid-attr-value",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr-value)",
+            "help_en": "ARIA attributes must conform to valid values",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "button[data-target=\"#navbarCollapsible\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 9,
+            "examples": [
+              ".col-2 > a[href=\"/\"]",
+              ".carousel-control-prev[href$=\"#custCarousel\"][data-slide=\"prev\"]",
+              ".carousel-control-next[href$=\"#custCarousel\"][data-slide=\"next\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".p-0.card-body > .card-category:nth-child(2)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/procuraduria-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 54,
+        "accessibility": 79,
+        "best_practices": 54,
+        "seo": 69
+      },
+      "metrics": {
+        "fcp_ms": 19139,
+        "lcp_ms": 73004,
+        "tbt_ms": 122,
+        "cls": 0,
+        "speed_index_ms": 19139
+      },
+      "performance_runs": [
+        49,
+        54,
+        54
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-valid-attr-value",
+            "title": "Los atributos `[aria-*]` no tienen valores válidos"
+          },
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 55,
+        "accessibility": 73,
+        "best_practices": 54,
+        "seo": 69
+      },
+      "metrics": {
+        "fcp_ms": 4339,
+        "lcp_ms": 14330,
+        "tbt_ms": 0,
+        "cls": 0,
+        "speed_index_ms": 4904
+      },
+      "performance_runs": [
+        55,
+        56,
+        55
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-allowed-attr",
+            "title": "Los atributos `[aria-*]` no se corresponden con sus funciones"
+          },
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "sin robots.txt (404)",
+  "wcag": {
+    "rules_count": 9,
+    "cases": 62,
+    "criteria": [
+      "1.1.1",
+      "1.4.3",
+      "2.4.2",
+      "2.4.4",
+      "3.1.1",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-allowed-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+        "cases": 12
+      },
+      {
+        "rule": "aria-valid-attr-value",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr-value)",
+        "cases": 1
+      },
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 2
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 21
+      },
+      {
+        "rule": "aria-prohibited-attr",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-prohibited-attr)",
+        "cases": 1
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 3
+      },
+      {
+        "rule": "document-title",
+        "impact": "serious",
+        "criteria": [
+          "2.4.2"
+        ],
+        "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+        "cases": 2
+      },
+      {
+        "rule": "html-has-lang",
+        "impact": "serious",
+        "criteria": [
+          "3.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+        "cases": 1
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 19
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 71,
+    "mobile": 54,
+    "performance": 55,
+    "best_practices": 54,
+    "seo": 69,
+    "failed_resources": 100,
+    "overall": 66
+  },
+  "light": "amarillo",
+  "failed_resources_unverified": 1
+}

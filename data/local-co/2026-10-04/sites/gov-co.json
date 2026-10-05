@@ -1,0 +1,494 @@
+{
+  "id": "gov-co",
+  "name": "Portal Único del Estado (GOV.CO)",
+  "category": "Portal del Estado",
+  "url": "https://www.gov.co/",
+  "audited_at": "2026-10-05T08:11:47-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.gov.co/",
+      "final_url": "https://www.gov.co/",
+      "status": 200,
+      "load_ms": 3578,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://cdn.www.gov.co/webcomponents/buscador-webcomponents/buscador-webcomponents/buscador-webcomponents.esm.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/assets/css/font.min.css",
+          "status": null,
+          "type": "stylesheet",
+          "error": "net::ERR_BLOCKED_BY_ORB",
+          "first_party": true,
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/webcomponents/govco-collection-webcomponents/govco-collection-webcomponents/govco-collection-webcomponents.esm.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/assets/fonts/montserrat/montserrat-v14-latin-500.woff2",
+          "status": null,
+          "type": "font",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/assets/fonts/worksans/work-sans-v5-latin-regular.woff2",
+          "status": null,
+          "type": "font",
+          "error": "net::ERR_CONNECTION_RESET",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 4,
+      "viewport": "desktop",
+      "screenshot": "screenshots/gov-co-desktop.jpg"
+    },
+    {
+      "url": "https://www.gov.co/noticias/",
+      "final_url": "https://www.gov.co/noticias",
+      "status": 200,
+      "load_ms": 765,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "aria-valid-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+            "help_en": "ARIA attributes must conform to valid names",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "select-search-1[id-select=\"selectcategoria\"]",
+              "select-search-1[id-select=\"selectsubcategoria\"]",
+              "select-search-1[id-select=\"selectsector\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://cdn.www.gov.co/assets/css/font.min.css",
+          "status": null,
+          "type": "stylesheet",
+          "error": "net::ERR_BLOCKED_BY_ORB",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.gov.co/entidades/",
+      "final_url": "https://www.gov.co/entidades",
+      "status": 200,
+      "load_ms": 1094,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              "#btnIngresarUbicacion > span",
+              "span > span",
+              ".nav-link.list[href$=\"gov.co/\"] > .mt-3.size-li-text"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              ".nav-item",
+              ".d-lg-flex > .list-group-item.ancho-desktop-lg.p-1",
+              "#https\\:www\\.gov\\.cobiblioteca"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://cdn.www.gov.co/assets/css/font.min.css",
+          "status": null,
+          "type": "stylesheet",
+          "error": "net::ERR_BLOCKED_BY_ORB",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.gov.co/",
+      "final_url": "https://www.gov.co/",
+      "status": 200,
+      "load_ms": 3203,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#headerMenu > .navbar-item:nth-child(2) > .navbar-brand[href=\"https://www.gov.co//\"][role=\"link\"] > img"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".news1-fecha",
+              ".news-extracto"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://cdn.www.gov.co/assets/css/font.min.css",
+          "status": null,
+          "type": "stylesheet",
+          "error": "net::ERR_BLOCKED_BY_ORB",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/gov-co-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 421,
+    "viewport_width": 421,
+    "screen_width": 390,
+    "overflow_px": 0,
+    "overflow_px_verified": 0,
+    "overflow_verification": "Re-verificado el 2026-10-05: 0 px (medición original: 31 px). Se usa el menor."
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 29,
+        "accessibility": 97,
+        "best_practices": 69,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 34849,
+        "lcp_ms": 66862,
+        "tbt_ms": 164,
+        "cls": 0.778,
+        "speed_index_ms": 34849
+      },
+      "performance_runs": [
+        30,
+        28,
+        29
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 39,
+        "accessibility": 97,
+        "best_practices": 73,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 1692,
+        "lcp_ms": 13160,
+        "tbt_ms": 10,
+        "cls": 0.602,
+        "speed_index_ms": 3440
+      },
+      "performance_runs": [
+        41,
+        39,
+        37
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 4,
+    "cases": 24,
+    "criteria": [
+      "1.1.1",
+      "1.3.1",
+      "1.4.3",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-valid-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+        "cases": 6
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 1
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 10
+      },
+      {
+        "rule": "listitem",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+        "cases": 7
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 4,
+  "scores": {
+    "accessibility": 94,
+    "mobile": 29,
+    "performance": 39,
+    "best_practices": 71,
+    "seo": 100,
+    "failed_resources": 100,
+    "overall": 72
+  },
+  "light": "amarillo",
+  "rechecks": [
+    {
+      "checked_at": "2026-10-05T09:12:54-05:00",
+      "page": "https://www.gov.co/",
+      "error": "robots.txt no permite la visita o no se pudo leer"
+    },
+    {
+      "checked_at": "2026-10-05T09:14:40-05:00",
+      "page": "https://www.gov.co/",
+      "overflow": {
+        "overflow_px": 0,
+        "scroll_width": 390,
+        "screen_width": 390,
+        "offenders": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://cdn.www.gov.co/webcomponents/buscador-webcomponents/buscador-webcomponents/buscador-webcomponents.esm.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/webcomponents/govco-collection-webcomponents/govco-collection-webcomponents.js",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_CONNECTION_RESET",
+          "kind": "network"
+        },
+        {
+          "url": "https://cdn.www.gov.co/assets/css/font.min.css",
+          "status": null,
+          "type": "stylesheet",
+          "error": "net::ERR_BLOCKED_BY_ORB",
+          "kind": "network"
+        }
+      ]
+    }
+  ],
+  "failed_resources_unverified": 5
+}

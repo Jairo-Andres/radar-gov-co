@@ -17,8 +17,9 @@ from playwright.sync_api import Browser, Page
 
 from . import parsers, scoring
 from .browser import fetch_robots_with_browser, new_context, short_error
+from .evidence import capture_overflow_evidence
 from .config import LIGHTHOUSE_RUNS, MAX_PAGES_PER_SITE, Settings, Site
-from .links import is_first_party, is_ignored_failure, pick_internal_pages, unique_failed
+from .links import failure_kind, is_first_party, is_ignored_failure, pick_internal_pages, unique_failed
 from .lighthouse import run_lighthouse
 
 AXE_SOURCE = (Path(__file__).resolve().parent.parent / "node_modules" / "axe-core" / "axe.min.js")
@@ -87,7 +88,9 @@ def _visit(page: Page, url: str, home_url: str, pause: float, axe_source: str) -
         page.remove_listener("response", on_response)
         page.remove_listener("requestfailed", on_failed)
     unique = _dedupe(broken)
-    record["failed_resources"] = [dict(item, first_party=True) for item in unique if is_first_party(item["url"], home_url)]
+    record["failed_resources"] = [
+        dict(item, first_party=True, kind=failure_kind(item)) for item in unique if is_first_party(item["url"], home_url)
+    ]
     record["third_party_failures"] = sum(1 for item in unique if not is_first_party(item["url"], home_url))
     return record
 
@@ -194,6 +197,15 @@ def audit_site(
         home_mobile = _visit(mobile_page, site.url, site.url, pause, axe_source)
         home_mobile["viewport"] = "mobile"
         record["mobile"] = _mobile_checks(mobile_page)
+        mobile_page.wait_for_timeout(3_000)
+        second = _mobile_checks(mobile_page)
+        record["mobile"]["readings_scroll_width"] = [record["mobile"]["scroll_width"], second["scroll_width"]]
+        # Se queda con la lectura menor: solo penaliza el desborde que persiste.
+        if second["scroll_width"] < record["mobile"]["scroll_width"]:
+            record["mobile"].update(scroll_width=second["scroll_width"], horizontal_overflow=second["horizontal_overflow"])
+        evidence = capture_overflow_evidence(mobile_page, screenshots_dir / f"{site.id}-mobile-overflow.jpg")
+        if evidence["offenders"] or evidence.get("screenshot"):
+            record["mobile"]["evidence"] = {k: evidence[k] for k in ("offenders", "screenshot") if k in evidence}
         mobile_page.screenshot(path=str(screenshots_dir / f"{site.id}-mobile.jpg"), type="jpeg", quality=60)
         home_mobile["screenshot"] = f"screenshots/{site.id}-mobile.jpg"
         record["pages"].append(home_mobile)
@@ -237,9 +249,15 @@ def finish_record(record: dict) -> dict:
     """Calcula puntuaciones a partir de lo recogido (separado para poder probarlo)."""
     pages = record.get("pages", [])
     axe_scores = [p["axe"]["score"] for p in pages if p.get("axe")]
-    failed = [b for b in unique_failed(pages) if b.get("first_party")]
+    own = [b for b in unique_failed(pages) if b.get("first_party")]
+    # Solo restan los errores HTTP del propio sitio; red y posibles bloqueos se publican aparte.
+    failed = [b for b in own if failure_kind(b) == "http"]
+    record["failed_resources_unverified"] = len(own) - len(failed)
     mobile = record.get("mobile") or {}
     px = scoring.overflow_px(mobile.get("scroll_width"), mobile.get("screen_width"))
+    # Una re-verificación documentada puede bajar el desborde si la medición no se reprodujo.
+    if mobile.get("overflow_px_verified") is not None:
+        px = min(px if px is not None else mobile["overflow_px_verified"], mobile["overflow_px_verified"])
     if record.get("mobile") is not None:
         record["mobile"]["overflow_px"] = px
     components = scoring.component_scores(
