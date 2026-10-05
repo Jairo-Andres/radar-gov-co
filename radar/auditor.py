@@ -148,7 +148,10 @@ def audit_site(
     if not robots.allowed(site.url):
         desktop.close()
         record["status"] = "omitido_robots"
-        record["errors"].append("robots.txt no permite visitar la página de inicio")
+        record["errors"].append(
+            "no se pudo leer robots.txt; se omite por prudencia" if robots.disallow_all
+            else "robots.txt no permite visitar la página de inicio"
+        )
         log(f"  {site.id}: omitido por robots.txt")
         return record
     pause = max(settings.pause_seconds, robots.crawl_delay() or 0)

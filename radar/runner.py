@@ -91,6 +91,10 @@ def run_audit(
     screenshots = day_dir / "screenshots"
     screenshots.mkdir(parents=True, exist_ok=True)
     security = SecurityLog()
+    notes_path = PRIVATE_DIR / f"security-notes-{date}.json"
+    # Las notas de otros sitios del mismo día (corridas parciales con --only) se conservan.
+    audited_ids = {s.id for s in sites}
+    previous_notes = [n for n in _read_notes(notes_path) if n.get("site") not in audited_ids]
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -103,6 +107,9 @@ def run_audit(
                           "status": "error", "pages": [], "errors": [f"error inesperado: {type(error).__name__}"],
                           "scores": {}, "light": "sin_dato"}
             write_json(day_dir / "sites" / f"{site.id}.json", record)
+            # Se guarda tras cada sitio para no perder avisos si la corrida se corta.
+            if previous_notes or security.items:
+                write_json(notes_path, previous_notes + security.items)
             print(f"  -> {record.get('scores', {}).get('overall')} ({record['status']})", flush=True)
         browser.close()
 
@@ -112,7 +119,15 @@ def run_audit(
     write_history(data_dir)
 
     if security.items:
-        write_json(PRIVATE_DIR / f"security-notes-{date}.json", security.items)
         print(f"\nAVISO: {len(security.items)} posibles hallazgos de seguridad guardados en "
               f"private/security-notes-{date}.json (no se publican).")
     return summary
+
+
+def _read_notes(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []

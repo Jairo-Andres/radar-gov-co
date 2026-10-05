@@ -1,0 +1,18 @@
+{
+  "id": "gov-co",
+  "name": "Portal Único del Estado (GOV.CO)",
+  "category": "Portal del Estado",
+  "url": "https://www.gov.co/",
+  "audited_at": "2026-10-04T23:24:22-05:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (error de conexión)"
+}

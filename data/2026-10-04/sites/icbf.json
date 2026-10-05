@@ -1,0 +1,701 @@
+{
+  "id": "icbf",
+  "name": "ICBF",
+  "category": "Entidad nacional",
+  "url": "https://www.icbf.gov.co/",
+  "audited_at": "2026-10-05T00:14:43-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.icbf.gov.co/",
+      "final_url": "https://www.icbf.gov.co/",
+      "status": 200,
+      "load_ms": 2032,
+      "axe": {
+        "score": 72,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "img[width=\"2500\"]",
+              "div[data-az-id=\"lr1gmspk\"] > a > img[data-entity-type=\"file\"][width=\"100%\"][height=\"100%\"]",
+              "a[target=\"_self\"] > img[data-entity-type=\"file\"][width=\"100%\"][height=\"100%\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 14,
+            "examples": [
+              ".btn-1519-1[href$=\"noticias\"][target=\"_self\"]",
+              ".btn-1519-1[href$=\"servicios\"][target=\"_self\"]",
+              ".views-field-event-calendar-date > .field-content"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 10,
+            "examples": [
+              "div[data-slick-index=\"-1\"]",
+              "#slick-9f22077c17d > .slick-list.draggable > .slick-track > .slick-slide[data-slick-index=\"1\"][aria-hidden=\"true\"]",
+              "#slick-9f22077c17d > .slick-list.draggable > .slick-track > .slick-slide[data-slick-index=\"2\"][aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              ".col-sx-12.col-sm-6:nth-child(1) > .views-field-field-list-image.views-field > .field-content > .promo-z3[title=\"\"]",
+              ".col-sx-12.col-sm-6:nth-child(2) > .views-field-field-list-image.views-field > .field-content > .promo-z3[title=\"\"]",
+              "div[data-az-id=\"lr1gmspk\"] > a"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/glazed_frontend.min.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.transitions.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/css/st-owl-carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/icbf-desktop.jpg"
+    },
+    {
+      "url": "https://www.icbf.gov.co/servicios/preguntas-y-respuestas-frecuentes",
+      "final_url": "https://www.icbf.gov.co/atencion-y-servicios-ciudadania/preguntas-y-respuestas-frecuentes",
+      "status": 200,
+      "load_ms": 922,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "label",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla label)",
+            "help_en": "Form elements must have labels",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/label?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#edit-title"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 19,
+            "examples": [
+              ".breadcrumb-item:nth-child(1) > a[href=\"/\"]",
+              ".breadcrumb-item:nth-child(2) > a",
+              "#edit-submit-faqs-icbf"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/glazed_frontend.min.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/sites/default/files/icons-pts_39.png?fid=42515",
+          "status": 404,
+          "type": "image",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/css/st-owl-carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.transitions.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.icbf.gov.co/instituto",
+      "final_url": "https://www.icbf.gov.co/instituto",
+      "status": 200,
+      "load_ms": 765,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 19,
+            "examples": [
+              ".breadcrumb-item:nth-child(1) > a[href=\"/\"]",
+              "li[role=\"presentation\"]:nth-child(2) > a[role=\"tab\"][data-toggle=\"tab\"]",
+              ".field-content > span > .btn-1519-2[title=\"clic para ampliar información\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              "div[data-az-id=\"37owitp3\"] > a[href$=\"funciones-deberes\"][target=\"_self\"]",
+              "div[data-az-id=\"jw5a70xc\"] > a[href$=\"entidades-sector\"][target=\"_self\"]",
+              "div[data-az-id=\"s3k54t12\"] > a[target=\"_self\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/glazed_frontend.min.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.icbf.gov.co/",
+      "final_url": "https://www.icbf.gov.co/",
+      "status": 200,
+      "load_ms": 2532,
+      "axe": {
+        "score": 62,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "img[width=\"2500\"]",
+              "div[data-az-id=\"lr1gmspk\"] > a > img[data-entity-type=\"file\"][width=\"100%\"][height=\"100%\"]",
+              "a[target=\"_self\"] > img[data-entity-type=\"file\"][width=\"100%\"][height=\"100%\"]"
+            ]
+          },
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-navbar"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 19,
+            "examples": [
+              ".btn-1519-1[href$=\"noticias\"][target=\"_self\"]",
+              ".btn-1519-1[href$=\"servicios\"][target=\"_self\"]",
+              ".views-field-event-calendar-date > .field-content"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 10,
+            "examples": [
+              "#slick-9f22077c17d > .slick-list.draggable > .slick-track > .slick-cloned[data-slick-index=\"-1\"][aria-hidden=\"true\"]",
+              "#slick-9f22077c17d > .slick-list.draggable > .slick-track > .slick-slide[data-slick-index=\"1\"][aria-hidden=\"true\"]",
+              "#slick-9f22077c17d > .slick-list.draggable > .slick-track > .slick-slide[data-slick-index=\"2\"][aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              ".col-sx-12.col-sm-6:nth-child(1) > .views-field-field-list-image.views-field > .field-content > .promo-z3[title=\"\"]",
+              ".col-sx-12.col-sm-6:nth-child(2) > .views-field-field-list-image.views-field > .field-content > .promo-z3[title=\"\"]",
+              "div[data-az-id=\"lr1gmspk\"] > a"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/glazed_frontend.min.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/css/st-owl-carousel.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        },
+        {
+          "url": "https://www.icbf.gov.co/-module-directory-/glazed_builder/vendor/owl.carousel/owl-carousel/owl.transitions.css",
+          "status": 404,
+          "type": "xhr",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/icbf-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 49,
+        "accessibility": 78,
+        "best_practices": 69,
+        "seo": 77
+      },
+      "metrics": {
+        "fcp_ms": 21172,
+        "lcp_ms": 98972,
+        "tbt_ms": 287,
+        "cls": 0,
+        "speed_index_ms": 27452
+      },
+      "performance_runs": [
+        51,
+        45,
+        49
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "aria-hidden-focus",
+            "title": "Los elementos `[aria-hidden=\"true\"]` contienen elementos descendientes seleccionables"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-aspect-ratio",
+            "title": "Muestra imágenes con una relación de aspecto incorrecta"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "link-text",
+            "title": "Los enlaces no tienen texto descriptivo"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 55,
+        "accessibility": 83,
+        "best_practices": 73,
+        "seo": 77
+      },
+      "metrics": {
+        "fcp_ms": 4464,
+        "lcp_ms": 16898,
+        "tbt_ms": 4,
+        "cls": 0.02,
+        "speed_index_ms": 6963
+      },
+      "performance_runs": [
+        55,
+        55,
+        55
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "aria-hidden-focus",
+            "title": "Los elementos `[aria-hidden=\"true\"]` contienen elementos descendientes seleccionables"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "link-text",
+            "title": "Los enlaces no tienen texto descriptivo"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 6,
+    "cases": 92,
+    "criteria": [
+      "1.1.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 1
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 7
+      },
+      {
+        "rule": "label",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla label)",
+        "cases": 1
+      },
+      {
+        "rule": "aria-hidden-focus",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+        "cases": 10
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 57
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 16
+      }
+    ]
+  },
+  "failed_resources_first_party": 6,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 78,
+    "mobile": 49,
+    "performance": 55,
+    "best_practices": 71,
+    "seo": 77,
+    "failed_resources": 40,
+    "overall": 64
+  },
+  "light": "amarillo"
+}

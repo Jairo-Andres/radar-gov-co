@@ -1,0 +1,415 @@
+{
+  "id": "registraduria",
+  "name": "Registraduría Nacional del Estado Civil",
+  "category": "Entidad nacional",
+  "url": "https://www.registraduria.gov.co/",
+  "audited_at": "2026-10-05T00:08:30-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.registraduria.gov.co/",
+      "final_url": "https://www.registraduria.gov.co/",
+      "status": 200,
+      "load_ms": 1734,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "label",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla label)",
+            "help_en": "Form elements must have labels",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/label?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#openModalBtn"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "div:nth-child(1) > .containerSocial > a[target=\"_blank\"]:nth-child(1)",
+              "div:nth-child(1) > .containerSocial > a[target=\"_blank\"]:nth-child(2)",
+              "div:nth-child(1) > .containerSocial > a[target=\"_blank\"]:nth-child(3)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/registraduria-desktop.jpg"
+    },
+    {
+      "url": "https://www.registraduria.gov.co/-Portada-.html",
+      "final_url": "https://www.registraduria.gov.co/-Portada-.html",
+      "status": 200,
+      "load_ms": 1422,
+      "axe": {
+        "score": 94,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".logo__mb",
+              ".newsmodule.col-lg-4.col-md-12:nth-child(1) > .previewnew.glassitem > .seemorenew.maincyan",
+              ".newsmodule.col-lg-4.col-md-12:nth-child(2) > .previewnew.glassitem > .seemorenew.maincyan"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.registraduria.gov.co/-Noticias-.html",
+      "final_url": "https://www.registraduria.gov.co/-Noticias-.html",
+      "status": 200,
+      "load_ms": 1125,
+      "axe": {
+        "score": 94,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              ".logo__mb",
+              ".seemoreban.maincyan[href$=\"-2026-.html\"]",
+              ".seemoreban.maincyan[href$=\"-2025-.html\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.registraduria.gov.co/",
+      "final_url": "https://www.registraduria.gov.co/",
+      "status": 200,
+      "load_ms": 797,
+      "axe": {
+        "score": 74,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "button"
+            ]
+          },
+          {
+            "rule": "label",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla label)",
+            "help_en": "Form elements must have labels",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/label?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#openModalBtn"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".containerBtnSocial_1 > div:nth-child(1) > a[target=\"_blank\"]:nth-child(1)",
+              ".containerBtnSocial_1 > div:nth-child(1) > a[target=\"_blank\"]:nth-child(2)",
+              ".containerBtnSocial_1 > div:nth-child(1) > a[target=\"_blank\"]:nth-child(3)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/registraduria-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 75,
+        "accessibility": 60,
+        "best_practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 1548,
+        "lcp_ms": 7003,
+        "tbt_ms": 122,
+        "cls": 0.019,
+        "speed_index_ms": 2837
+      },
+      "performance_runs": [
+        75,
+        75,
+        74
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "label",
+            "title": "Los elementos de formulario no tienen ninguna etiqueta asociada"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 96,
+        "accessibility": 71,
+        "best_practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 454,
+        "lcp_ms": 1259,
+        "tbt_ms": 0,
+        "cls": 0.03,
+        "speed_index_ms": 1186
+      },
+      "performance_runs": [
+        94,
+        96,
+        96
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "label",
+            "title": "Los elementos de formulario no tienen ninguna etiqueta asociada"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 3,
+    "cases": 22,
+    "criteria": [
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 1
+      },
+      {
+        "rule": "label",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla label)",
+        "cases": 1
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 20
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 76,
+    "mobile": 75,
+    "performance": 96,
+    "best_practices": 100,
+    "seo": 100,
+    "failed_resources": 100,
+    "overall": 86
+  },
+  "light": "verde"
+}

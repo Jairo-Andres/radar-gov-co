@@ -1,0 +1,470 @@
+{
+  "id": "minagricultura",
+  "name": "Ministerio de Agricultura y Desarrollo Rural",
+  "category": "Ministerio",
+  "url": "https://www.minagricultura.gov.co/",
+  "audited_at": "2026-10-04T23:54:12-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.minagricultura.gov.co/",
+      "final_url": "https://www.minagricultura.gov.co/",
+      "status": 200,
+      "load_ms": 3766,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              "#c8476 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[rel=\"noreferrer\"][target=\"_blank\"]",
+              "#c6336 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[target=\"_blank\"]",
+              "#c4565 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".txt-title-cets",
+              "article:nth-child(1) > .cnt_item_related > .news_related_date",
+              "article:nth-child(2) > .cnt_item_related > .news_related_date"
+            ]
+          },
+          {
+            "rule": "marquee",
+            "impact": "serious",
+            "criteria": [
+              "2.2.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.2 (regla marquee)",
+            "help_en": "<marquee> elements are deprecated and must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/marquee?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "marquee"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/minagricultura-desktop.jpg"
+    },
+    {
+      "url": "https://www.minagricultura.gov.co/transparencia-y-acceso-a-la-informacion-publica",
+      "final_url": "https://www.minagricultura.gov.co/transparencia-y-acceso-a-la-informacion-publica",
+      "status": 200,
+      "load_ms": 2532,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/govco/govco-fontv2.woff2?35076025",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/Work_Sans/static/WorkSans-Medium.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/assets/icons/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/govco/govco-fontv2.woff?35076025",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/Icons/govco/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/icons/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minagricultura.gov.co/atencion-y-servicios-a-la-ciudadania",
+      "final_url": "https://www.minagricultura.gov.co/atencion-y-servicios-a-la-ciudadania",
+      "status": 200,
+      "load_ms": 2265,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.minagricultura.gov.co/assets/icons/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/Work_Sans/static/WorkSans-Medium.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/govco/govco-fontv2.woff2?35076025",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/Icons/govco/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/fonts/govco/govco-fontv2.woff?35076025",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        },
+        {
+          "url": "https://www.minagricultura.gov.co/icons/fonts/govco-font-icons.ttf",
+          "status": 404,
+          "type": "font",
+          "first_party": true
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minagricultura.gov.co/",
+      "final_url": "https://www.minagricultura.gov.co/",
+      "status": 200,
+      "load_ms": 3531,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              "#c8476 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[rel=\"noreferrer\"][target=\"_blank\"]",
+              "#c6336 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[target=\"_blank\"]",
+              "#c4565 > .ce-image.ce-center.ce-above > .ce-gallery[data-ce-images=\"1\"][data-ce-columns=\"1\"] > .ce-outer > .ce-inner > .ce-row > .ce-column > figure > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".txt-title-cets",
+              "article:nth-child(1) > .cnt_item_related > .news_related_date",
+              "article:nth-child(2) > .cnt_item_related > .news_related_date"
+            ]
+          },
+          {
+            "rule": "marquee",
+            "impact": "serious",
+            "criteria": [
+              "2.2.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.2 (regla marquee)",
+            "help_en": "<marquee> elements are deprecated and must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/marquee?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "marquee"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 1,
+      "viewport": "mobile",
+      "screenshot": "screenshots/minagricultura-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 59,
+        "accessibility": 86,
+        "best_practices": 73,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 3338,
+        "lcp_ms": 23440,
+        "tbt_ms": 184,
+        "cls": 0.028,
+        "speed_index_ms": 7877
+      },
+      "performance_runs": [
+        59,
+        57,
+        59
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 67,
+        "accessibility": 89,
+        "best_practices": 73,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 1387,
+        "lcp_ms": 5132,
+        "tbt_ms": 0,
+        "cls": 0.001,
+        "speed_index_ms": 2417
+      },
+      "performance_runs": [
+        72,
+        66,
+        67
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 3,
+    "cases": 13,
+    "criteria": [
+      "1.4.3",
+      "2.2.2",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 4
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 8
+      },
+      {
+        "rule": "marquee",
+        "impact": "serious",
+        "criteria": [
+          "2.2.2"
+        ],
+        "description": "No cumple el criterio WCAG 2.2.2 (regla marquee)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 6,
+  "third_party_failures": 1,
+  "scores": {
+    "accessibility": 89,
+    "mobile": 59,
+    "performance": 67,
+    "best_practices": 73,
+    "seo": 100,
+    "failed_resources": 40,
+    "overall": 74
+  },
+  "light": "amarillo"
+}

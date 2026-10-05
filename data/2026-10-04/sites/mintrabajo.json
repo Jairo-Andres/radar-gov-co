@@ -1,0 +1,668 @@
+{
+  "id": "mintrabajo",
+  "name": "Ministerio del Trabajo",
+  "category": "Ministerio",
+  "url": "https://www.mintrabajo.gov.co/",
+  "audited_at": "2026-10-04T23:33:32-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.mintrabajo.gov.co/",
+      "final_url": "https://www.mintrabajo.gov.co/",
+      "status": 200,
+      "load_ms": 8922,
+      "axe": {
+        "score": 66,
+        "violations": [
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".navbar-nav",
+              "#myCarousel > .carousel-indicators",
+              "#myCarousel2 > .carousel-indicators"
+            ]
+          },
+          {
+            "rule": "aria-input-field-name",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-input-field-name)",
+            "help_en": "ARIA input fields must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".active.carousel-item > .linkitem[rel=\"noopener noreferrer\"][target=\"_blank\"]",
+              "a[href$=\"mintrabajocol\"]:nth-child(4)"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".bext-chat-bot__iframe"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/mintrabajo-desktop.jpg"
+    },
+    {
+      "url": "https://www.mintrabajo.gov.co/web/guest",
+      "final_url": "https://www.mintrabajo.gov.co/web/guest",
+      "status": 200,
+      "load_ms": 11062,
+      "axe": {
+        "score": 66,
+        "violations": [
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".navbar-nav",
+              "#myCarousel > .carousel-indicators",
+              "#myCarousel2 > .carousel-indicators"
+            ]
+          },
+          {
+            "rule": "aria-input-field-name",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-input-field-name)",
+            "help_en": "ARIA input fields must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".active.carousel-item > .linkitem[rel=\"noopener noreferrer\"][target=\"_blank\"]",
+              "a[href$=\"mintrabajocol\"]:nth-child(4)"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".bext-chat-bot__iframe"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mintrabajo.gov.co/web/guest/inicio",
+      "final_url": "https://www.mintrabajo.gov.co/web/guest/inicio",
+      "status": 200,
+      "load_ms": 8531,
+      "axe": {
+        "score": 66,
+        "violations": [
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".navbar-nav",
+              "#myCarousel > .carousel-indicators",
+              "#myCarousel2 > .carousel-indicators"
+            ]
+          },
+          {
+            "rule": "aria-input-field-name",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-input-field-name)",
+            "help_en": "ARIA input fields must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".active.carousel-item > .linkitem[rel=\"noopener noreferrer\"][target=\"_blank\"]",
+              "a[href$=\"mintrabajocol\"]:nth-child(4)"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".bext-chat-bot__iframe"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mintrabajo.gov.co/",
+      "final_url": "https://www.mintrabajo.gov.co/",
+      "status": 200,
+      "load_ms": 11218,
+      "axe": {
+        "score": 66,
+        "violations": [
+          {
+            "rule": "aria-required-children",
+            "impact": "critical",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+            "help_en": "Certain ARIA roles must contain particular children",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "aria-input-field-name",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-input-field-name)",
+            "help_en": "ARIA input fields must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-inner[role=\"listbox\"]",
+              "#myCarousel2 > .carousel-inner[role=\"listbox\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".active.carousel-item > .linkitem[rel=\"noopener noreferrer\"][target=\"_blank\"]",
+              "a[href$=\"mintrabajocol\"]:nth-child(4)"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#myCarousel > .carousel-indicators",
+              "#myCarousel2 > .carousel-indicators"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".bext-chat-bot__iframe"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/mintrabajo-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 441,
+    "viewport_width": 441,
+    "screen_width": 390,
+    "overflow_px": 51
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 49,
+        "accessibility": 81,
+        "best_practices": 69,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 20698,
+        "lcp_ms": 37776,
+        "tbt_ms": 94,
+        "cls": 0.134,
+        "speed_index_ms": 20996
+      },
+      "performance_runs": [
+        49,
+        50,
+        49
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "duplicated-javascript-insight",
+            "title": "JavaScript duplicado"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-required-children",
+            "title": "A los elementos con un `[role]` ARIA que requieren que los elementos secundarios contengan un `[role]` específico les faltan algunos o todos los elementos secundarios necesarios."
+          },
+          {
+            "id": "aria-input-field-name",
+            "title": "Los campos de entrada de ARIA no tienen nombres accesibles"
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-aspect-ratio",
+            "title": "Muestra imágenes con una relación de aspecto incorrecta"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 45,
+        "accessibility": 81,
+        "best_practices": 73,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 3690,
+        "lcp_ms": 25028,
+        "tbt_ms": 0,
+        "cls": 0.204,
+        "speed_index_ms": 5695
+      },
+      "performance_runs": [
+        45,
+        43,
+        46
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "duplicated-javascript-insight",
+            "title": "JavaScript duplicado"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-required-children",
+            "title": "A los elementos con un `[role]` ARIA que requieren que los elementos secundarios contengan un `[role]` específico les faltan algunos o todos los elementos secundarios necesarios."
+          },
+          {
+            "id": "aria-input-field-name",
+            "title": "Los campos de entrada de ARIA no tienen nombres accesibles"
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 5,
+    "cases": 30,
+    "criteria": [
+      "1.3.1",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-children",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+        "cases": 6
+      },
+      {
+        "rule": "aria-input-field-name",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-input-field-name)",
+        "cases": 6
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 3
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 6
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 9
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 74,
+    "mobile": 24,
+    "performance": 45,
+    "best_practices": 71,
+    "seo": 92,
+    "failed_resources": 100,
+    "overall": 64
+  },
+  "light": "amarillo"
+}

@@ -3,17 +3,59 @@
     {
       "date": "2026-10-04",
       "summary": "2026-10-04/summary.json",
-      "sites_audited": 3,
+      "sites_audited": 30,
       "average_overall": 69,
       "lights": {
-        "verde": 1,
-        "amarillo": 2,
+        "verde": 4,
+        "amarillo": 24,
         "rojo": 0,
-        "sin_dato": 0
+        "sin_dato": 2
       }
     }
   ],
   "sites": {
+    "minhacienda": {
+      "name": "Ministerio de Hacienda y Crédito Público",
+      "category": "Ministerio",
+      "url": "https://www.minhacienda.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 88,
+          "rank": 1,
+          "light": "verde"
+        }
+      ],
+      "change": null
+    },
+    "registraduria": {
+      "name": "Registraduría Nacional del Estado Civil",
+      "category": "Entidad nacional",
+      "url": "https://www.registraduria.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 86,
+          "rank": 2,
+          "light": "verde"
+        }
+      ],
+      "change": null
+    },
+    "migracion": {
+      "name": "Migración Colombia",
+      "category": "Entidad nacional",
+      "url": "https://www.migracioncolombia.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 81,
+          "rank": 3,
+          "light": "verde"
+        }
+      ],
+      "change": null
+    },
     "dane": {
       "name": "DANE",
       "category": "Entidad nacional",
@@ -22,8 +64,92 @@
         {
           "date": "2026-10-04",
           "overall": 80,
-          "rank": 1,
+          "rank": 4,
           "light": "verde"
+        }
+      ],
+      "change": null
+    },
+    "mininterior": {
+      "name": "Ministerio del Interior",
+      "category": "Ministerio",
+      "url": "https://www.mininterior.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 78,
+          "rank": 5,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "supersalud": {
+      "name": "Superintendencia Nacional de Salud",
+      "category": "Entidad nacional",
+      "url": "https://www.supersalud.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 77,
+          "rank": 6,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-cartagena": {
+      "name": "Alcaldía de Cartagena",
+      "category": "Alcaldía",
+      "url": "https://www.cartagena.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 75,
+          "rank": 7,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "minagricultura": {
+      "name": "Ministerio de Agricultura y Desarrollo Rural",
+      "category": "Ministerio",
+      "url": "https://www.minagricultura.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 74,
+          "rank": 8,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-barranquilla": {
+      "name": "Alcaldía de Barranquilla",
+      "category": "Alcaldía",
+      "url": "https://www.barranquilla.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 73,
+          "rank": 9,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "cancilleria": {
+      "name": "Ministerio de Relaciones Exteriores",
+      "category": "Ministerio",
+      "url": "https://www.cancilleria.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 72,
+          "rank": 10,
+          "light": "amarillo"
         }
       ],
       "change": null
@@ -36,7 +162,217 @@
         {
           "date": "2026-10-04",
           "overall": 71,
-          "rank": 2,
+          "rank": 11,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "contraloria": {
+      "name": "Contraloría General de la República",
+      "category": "Órgano de control",
+      "url": "https://www.contraloria.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 70,
+          "rank": 12,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-bucaramanga": {
+      "name": "Alcaldía de Bucaramanga",
+      "category": "Alcaldía",
+      "url": "https://www.bucaramanga.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 69,
+          "rank": 13,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "mineducacion": {
+      "name": "Ministerio de Educación Nacional",
+      "category": "Ministerio",
+      "url": "https://www.mineducacion.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 69,
+          "rank": 13,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "mindefensa": {
+      "name": "Ministerio de Defensa Nacional",
+      "category": "Ministerio",
+      "url": "https://www.mindefensa.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 67,
+          "rank": 15,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "presidencia": {
+      "name": "Presidencia de la República",
+      "category": "Presidencia",
+      "url": "https://www.presidencia.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 66,
+          "rank": 16,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "minambiente": {
+      "name": "Ministerio de Ambiente y Desarrollo Sostenible",
+      "category": "Ministerio",
+      "url": "https://www.minambiente.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 65,
+          "rank": 17,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "procuraduria": {
+      "name": "Procuraduría General de la Nación",
+      "category": "Órgano de control",
+      "url": "https://www.procuraduria.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 65,
+          "rank": 17,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "dnp": {
+      "name": "Departamento Nacional de Planeación",
+      "category": "Entidad nacional",
+      "url": "https://www.dnp.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 64,
+          "rank": 19,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "icbf": {
+      "name": "ICBF",
+      "category": "Entidad nacional",
+      "url": "https://www.icbf.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 64,
+          "rank": 19,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "minjusticia": {
+      "name": "Ministerio de Justicia y del Derecho",
+      "category": "Ministerio",
+      "url": "https://www.minjusticia.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 64,
+          "rank": 19,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "mintrabajo": {
+      "name": "Ministerio del Trabajo",
+      "category": "Ministerio",
+      "url": "https://www.mintrabajo.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 64,
+          "rank": 19,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "policia": {
+      "name": "Policía Nacional",
+      "category": "Entidad nacional",
+      "url": "https://www.policia.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 64,
+          "rank": 19,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-bogota": {
+      "name": "Alcaldía de Bogotá",
+      "category": "Alcaldía",
+      "url": "https://bogota.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 63,
+          "rank": 24,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "minsalud": {
+      "name": "Ministerio de Salud y Protección Social",
+      "category": "Ministerio",
+      "url": "https://www.minsalud.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 61,
+          "rank": 25,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "minvivienda": {
+      "name": "Ministerio de Vivienda",
+      "category": "Ministerio",
+      "url": "https://www.minvivienda.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 61,
+          "rank": 25,
           "light": "amarillo"
         }
       ],
@@ -50,12 +386,54 @@
         {
           "date": "2026-10-04",
           "overall": 57,
-          "rank": 3,
+          "rank": 27,
           "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "mintransporte": {
+      "name": "Ministerio de Transporte",
+      "category": "Ministerio",
+      "url": "https://www.mintransporte.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 57,
+          "rank": 27,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "alcaldia-cali": {
+      "name": "Alcaldía de Cali",
+      "category": "Alcaldía",
+      "url": "https://www.cali.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": null,
+          "rank": null,
+          "light": "sin_dato"
+        }
+      ],
+      "change": null
+    },
+    "gov-co": {
+      "name": "Portal Único del Estado (GOV.CO)",
+      "category": "Portal del Estado",
+      "url": "https://www.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": null,
+          "rank": null,
+          "light": "sin_dato"
         }
       ],
       "change": null
     }
   },
-  "generated_at": "2026-10-05T04:12:24+00:00"
+  "generated_at": "2026-10-05T13:04:51+00:00"
 }

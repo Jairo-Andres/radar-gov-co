@@ -1,0 +1,553 @@
+{
+  "id": "supersalud",
+  "name": "Superintendencia Nacional de Salud",
+  "category": "Entidad nacional",
+  "url": "https://www.supersalud.gov.co/",
+  "audited_at": "2026-10-05T00:28:06-05:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.supersalud.gov.co/",
+      "final_url": "https://www.supersalud.gov.co/es-co/Paginas/Home.aspx",
+      "status": 200,
+      "load_ms": 2984,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "#servicios-container > ul",
+              ".data-container:nth-child(3) > .data",
+              ".data-container:nth-child(7) > .data:nth-child(1)"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#ctl00_ctl63_csr_sbox"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"100%\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/supersalud-desktop.jpg"
+    },
+    {
+      "url": "https://www.supersalud.gov.co/es-co/Accesibilidad",
+      "final_url": "https://www.supersalud.gov.co/es-co/Accesibilidad",
+      "status": 200,
+      "load_ms": 625,
+      "axe": {
+        "score": 76,
+        "violations": [
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".data-container:nth-child(3) > .data",
+              ".data-container:nth-child(7) > .data:nth-child(1)",
+              ".data:nth-child(2)"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#ctl00_ctl63_csr_sbox",
+              ".ms-rteStyle-References"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "p:nth-child(9) > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "a[href$=\"#ctl00_ctl66_SkipLink\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.supersalud.gov.co/es-co",
+      "final_url": "https://www.supersalud.gov.co/es-co",
+      "status": 200,
+      "load_ms": 812,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "#servicios-container > ul",
+              ".data-container:nth-child(3) > .data",
+              ".data-container:nth-child(7) > .data:nth-child(1)"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#ctl00_ctl63_csr_sbox"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"100%\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.supersalud.gov.co/",
+      "final_url": "https://www.supersalud.gov.co/es-co/Paginas/Home.aspx",
+      "status": 200,
+      "load_ms": 3375,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              "#servicios-container > ul",
+              ".data-container:nth-child(3) > .data",
+              ".data-container:nth-child(7) > .data:nth-child(1)"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"100%\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/supersalud-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 56,
+        "accessibility": 88,
+        "best_practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 11223,
+        "lcp_ms": 14980,
+        "tbt_ms": 54,
+        "cls": 0.002,
+        "speed_index_ms": 11223
+      },
+      "performance_runs": [
+        56,
+        56,
+        56
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          },
+          {
+            "id": "td-has-header",
+            "title": "Los elementos `<td>` de un elemento `<table>` grande no tienen encabezados de tabla."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 61,
+        "accessibility": 87,
+        "best_practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 3250,
+        "lcp_ms": 3958,
+        "tbt_ms": 0,
+        "cls": 0.044,
+        "speed_index_ms": 3586
+      },
+      "performance_runs": [
+        61,
+        63,
+        59
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          },
+          {
+            "id": "td-has-header",
+            "title": "Los elementos `<td>` de un elemento `<table>` grande no tienen encabezados de tabla."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "wcag": {
+    "rules_count": 5,
+    "cases": 19,
+    "criteria": [
+      "1.3.1",
+      "1.4.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 4
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 2
+      },
+      {
+        "rule": "link-in-text-block",
+        "impact": "serious",
+        "criteria": [
+          "1.4.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+        "cases": 1
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 1
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 11
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 85,
+    "mobile": 56,
+    "performance": 61,
+    "best_practices": 77,
+    "seo": 92,
+    "failed_resources": 100,
+    "overall": 77
+  },
+  "light": "amarillo"
+}

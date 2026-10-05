@@ -20,15 +20,96 @@
     "lighthouse_conditions": "móvil: limitación simulada por defecto de Lighthouse (red 4G lenta y CPU 4x); escritorio: preset desktop de Lighthouse",
     "max_pages_per_site": 3
   },
-  "sites_audited": 3,
+  "sites_audited": 30,
   "average_overall": 69,
   "lights": {
-    "verde": 1,
-    "amarillo": 2,
+    "verde": 4,
+    "amarillo": 24,
     "rojo": 0,
-    "sin_dato": 0
+    "sin_dato": 2
   },
   "sites": [
+    {
+      "id": "minhacienda",
+      "name": "Ministerio de Hacienda y Crédito Público",
+      "category": "Ministerio",
+      "url": "https://www.minhacienda.gov.co/",
+      "status": "ok",
+      "overall": 88,
+      "light": "verde",
+      "scores": {
+        "accessibility": 88,
+        "mobile": 80,
+        "performance": 89,
+        "best_practices": 94,
+        "seo": 83,
+        "failed_resources": 100,
+        "overall": 88
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 6,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/minhacienda-desktop.jpg",
+        "screenshots/minhacienda-mobile.jpg"
+      ],
+      "detail": "sites/minhacienda.json",
+      "rank": 1
+    },
+    {
+      "id": "registraduria",
+      "name": "Registraduría Nacional del Estado Civil",
+      "category": "Entidad nacional",
+      "url": "https://www.registraduria.gov.co/",
+      "status": "ok",
+      "overall": 86,
+      "light": "verde",
+      "scores": {
+        "accessibility": 76,
+        "mobile": 75,
+        "performance": 96,
+        "best_practices": 100,
+        "seo": 100,
+        "failed_resources": 100,
+        "overall": 86
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 22,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/registraduria-desktop.jpg",
+        "screenshots/registraduria-mobile.jpg"
+      ],
+      "detail": "sites/registraduria.json",
+      "rank": 2
+    },
+    {
+      "id": "migracion",
+      "name": "Migración Colombia",
+      "category": "Entidad nacional",
+      "url": "https://www.migracioncolombia.gov.co/",
+      "status": "parcial",
+      "overall": 81,
+      "light": "verde",
+      "scores": {
+        "accessibility": 94,
+        "mobile": 44,
+        "performance": 70,
+        "best_practices": 95,
+        "seo": 92,
+        "failed_resources": 100,
+        "overall": 81
+      },
+      "wcag_rules": 2,
+      "wcag_cases": 4,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/migracion-desktop.jpg",
+        "screenshots/migracion-mobile.jpg"
+      ],
+      "detail": "sites/migracion.json",
+      "rank": 3
+    },
     {
       "id": "dane",
       "name": "DANE",
@@ -54,7 +135,169 @@
         "screenshots/dane-mobile.jpg"
       ],
       "detail": "sites/dane.json",
-      "rank": 1
+      "rank": 4
+    },
+    {
+      "id": "mininterior",
+      "name": "Ministerio del Interior",
+      "category": "Ministerio",
+      "url": "https://www.mininterior.gov.co/",
+      "status": "ok",
+      "overall": 78,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 90,
+        "mobile": 55,
+        "performance": 63,
+        "best_practices": 73,
+        "seo": 92,
+        "failed_resources": 100,
+        "overall": 78
+      },
+      "wcag_rules": 2,
+      "wcag_cases": 26,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/mininterior-desktop.jpg",
+        "screenshots/mininterior-mobile.jpg"
+      ],
+      "detail": "sites/mininterior.json",
+      "rank": 5
+    },
+    {
+      "id": "supersalud",
+      "name": "Superintendencia Nacional de Salud",
+      "category": "Entidad nacional",
+      "url": "https://www.supersalud.gov.co/",
+      "status": "ok",
+      "overall": 77,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 85,
+        "mobile": 56,
+        "performance": 61,
+        "best_practices": 77,
+        "seo": 92,
+        "failed_resources": 100,
+        "overall": 77
+      },
+      "wcag_rules": 5,
+      "wcag_cases": 19,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/supersalud-desktop.jpg",
+        "screenshots/supersalud-mobile.jpg"
+      ],
+      "detail": "sites/supersalud.json",
+      "rank": 6
+    },
+    {
+      "id": "alcaldia-cartagena",
+      "name": "Alcaldía de Cartagena",
+      "category": "Alcaldía",
+      "url": "https://www.cartagena.gov.co/",
+      "status": "ok",
+      "overall": 75,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 92,
+        "mobile": 51,
+        "performance": 66,
+        "best_practices": 69,
+        "seo": 92,
+        "failed_resources": 70,
+        "overall": 75
+      },
+      "wcag_rules": 2,
+      "wcag_cases": 3,
+      "failed_resources_first_party": 3,
+      "screenshots": [
+        "screenshots/alcaldia-cartagena-desktop.jpg",
+        "screenshots/alcaldia-cartagena-mobile.jpg"
+      ],
+      "detail": "sites/alcaldia-cartagena.json",
+      "rank": 7
+    },
+    {
+      "id": "minagricultura",
+      "name": "Ministerio de Agricultura y Desarrollo Rural",
+      "category": "Ministerio",
+      "url": "https://www.minagricultura.gov.co/",
+      "status": "ok",
+      "overall": 74,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 89,
+        "mobile": 59,
+        "performance": 67,
+        "best_practices": 73,
+        "seo": 100,
+        "failed_resources": 40,
+        "overall": 74
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 13,
+      "failed_resources_first_party": 6,
+      "screenshots": [
+        "screenshots/minagricultura-desktop.jpg",
+        "screenshots/minagricultura-mobile.jpg"
+      ],
+      "detail": "sites/minagricultura.json",
+      "rank": 8
+    },
+    {
+      "id": "alcaldia-barranquilla",
+      "name": "Alcaldía de Barranquilla",
+      "category": "Alcaldía",
+      "url": "https://www.barranquilla.gov.co/",
+      "status": "ok",
+      "overall": 73,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 90,
+        "mobile": 55,
+        "performance": 48,
+        "best_practices": 64,
+        "seo": 92,
+        "failed_resources": 80,
+        "overall": 73
+      },
+      "wcag_rules": 4,
+      "wcag_cases": 10,
+      "failed_resources_first_party": 2,
+      "screenshots": [
+        "screenshots/alcaldia-barranquilla-desktop.jpg",
+        "screenshots/alcaldia-barranquilla-mobile.jpg"
+      ],
+      "detail": "sites/alcaldia-barranquilla.json",
+      "rank": 9
+    },
+    {
+      "id": "cancilleria",
+      "name": "Ministerio de Relaciones Exteriores",
+      "category": "Ministerio",
+      "url": "https://www.cancilleria.gov.co/",
+      "status": "ok",
+      "overall": 72,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 88,
+        "mobile": 47,
+        "performance": 58,
+        "best_practices": 54,
+        "seo": 92,
+        "failed_resources": 80,
+        "overall": 72
+      },
+      "wcag_rules": 5,
+      "wcag_cases": 26,
+      "failed_resources_first_party": 2,
+      "screenshots": [
+        "screenshots/cancilleria-desktop.jpg",
+        "screenshots/cancilleria-mobile.jpg"
+      ],
+      "detail": "sites/cancilleria.json",
+      "rank": 10
     },
     {
       "id": "dian",
@@ -81,7 +324,412 @@
         "screenshots/dian-mobile.jpg"
       ],
       "detail": "sites/dian.json",
-      "rank": 2
+      "rank": 11
+    },
+    {
+      "id": "contraloria",
+      "name": "Contraloría General de la República",
+      "category": "Órgano de control",
+      "url": "https://www.contraloria.gov.co/",
+      "status": "ok",
+      "overall": 70,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 85,
+        "mobile": 54,
+        "performance": 51,
+        "best_practices": 52,
+        "seo": 92,
+        "failed_resources": 70,
+        "overall": 70
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 61,
+      "failed_resources_first_party": 3,
+      "screenshots": [
+        "screenshots/contraloria-desktop.jpg",
+        "screenshots/contraloria-mobile.jpg"
+      ],
+      "detail": "sites/contraloria.json",
+      "rank": 12
+    },
+    {
+      "id": "alcaldia-bucaramanga",
+      "name": "Alcaldía de Bucaramanga",
+      "category": "Alcaldía",
+      "url": "https://www.bucaramanga.gov.co/",
+      "status": "ok",
+      "overall": 69,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 68,
+        "mobile": 47,
+        "performance": 67,
+        "best_practices": 92,
+        "seo": 83,
+        "failed_resources": 80,
+        "overall": 69
+      },
+      "wcag_rules": 7,
+      "wcag_cases": 134,
+      "failed_resources_first_party": 2,
+      "screenshots": [
+        "screenshots/alcaldia-bucaramanga-desktop.jpg",
+        "screenshots/alcaldia-bucaramanga-mobile.jpg"
+      ],
+      "detail": "sites/alcaldia-bucaramanga.json",
+      "rank": 13
+    },
+    {
+      "id": "mineducacion",
+      "name": "Ministerio de Educación Nacional",
+      "category": "Ministerio",
+      "url": "https://www.mineducacion.gov.co/",
+      "status": "ok",
+      "overall": 69,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 78,
+        "mobile": 34,
+        "performance": 52,
+        "best_practices": 77,
+        "seo": 92,
+        "failed_resources": 100,
+        "overall": 69
+      },
+      "wcag_rules": 7,
+      "wcag_cases": 26,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/mineducacion-desktop.jpg",
+        "screenshots/mineducacion-mobile.jpg"
+      ],
+      "detail": "sites/mineducacion.json",
+      "rank": 13
+    },
+    {
+      "id": "mindefensa",
+      "name": "Ministerio de Defensa Nacional",
+      "category": "Ministerio",
+      "url": "https://www.mindefensa.gov.co/",
+      "status": "ok",
+      "overall": 67,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 86,
+        "mobile": 24,
+        "performance": 38,
+        "best_practices": 73,
+        "seo": 91,
+        "failed_resources": 100,
+        "overall": 67
+      },
+      "wcag_rules": 2,
+      "wcag_cases": 123,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/mindefensa-desktop.jpg",
+        "screenshots/mindefensa-mobile.jpg"
+      ],
+      "detail": "sites/mindefensa.json",
+      "rank": 15
+    },
+    {
+      "id": "presidencia",
+      "name": "Presidencia de la República",
+      "category": "Presidencia",
+      "url": "https://www.presidencia.gov.co/",
+      "status": "parcial",
+      "overall": 66,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 90,
+        "mobile": 0,
+        "performance": 68,
+        "best_practices": 52,
+        "seo": 100,
+        "failed_resources": 90,
+        "overall": 66
+      },
+      "wcag_rules": 2,
+      "wcag_cases": 30,
+      "failed_resources_first_party": 1,
+      "screenshots": [
+        "screenshots/presidencia-desktop.jpg",
+        "screenshots/presidencia-mobile.jpg"
+      ],
+      "detail": "sites/presidencia.json",
+      "rank": 16
+    },
+    {
+      "id": "minambiente",
+      "name": "Ministerio de Ambiente y Desarrollo Sostenible",
+      "category": "Ministerio",
+      "url": "https://www.minambiente.gov.co/",
+      "status": "ok",
+      "overall": 65,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 66,
+        "mobile": 48,
+        "performance": 51,
+        "best_practices": 73,
+        "seo": 83,
+        "failed_resources": 90,
+        "overall": 65
+      },
+      "wcag_rules": 7,
+      "wcag_cases": 77,
+      "failed_resources_first_party": 1,
+      "screenshots": [
+        "screenshots/minambiente-desktop.jpg",
+        "screenshots/minambiente-mobile.jpg"
+      ],
+      "detail": "sites/minambiente.json",
+      "rank": 17
+    },
+    {
+      "id": "procuraduria",
+      "name": "Procuraduría General de la Nación",
+      "category": "Órgano de control",
+      "url": "https://www.procuraduria.gov.co/",
+      "status": "ok",
+      "overall": 65,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 71,
+        "mobile": 54,
+        "performance": 55,
+        "best_practices": 54,
+        "seo": 69,
+        "failed_resources": 90,
+        "overall": 65
+      },
+      "wcag_rules": 9,
+      "wcag_cases": 62,
+      "failed_resources_first_party": 1,
+      "screenshots": [
+        "screenshots/procuraduria-desktop.jpg",
+        "screenshots/procuraduria-mobile.jpg"
+      ],
+      "detail": "sites/procuraduria.json",
+      "rank": 17
+    },
+    {
+      "id": "dnp",
+      "name": "Departamento Nacional de Planeación",
+      "category": "Entidad nacional",
+      "url": "https://www.dnp.gov.co/",
+      "status": "ok",
+      "overall": 64,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 85,
+        "mobile": 0,
+        "performance": 62,
+        "best_practices": 52,
+        "seo": 100,
+        "failed_resources": 100,
+        "overall": 64
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 12,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/dnp-desktop.jpg",
+        "screenshots/dnp-mobile.jpg"
+      ],
+      "detail": "sites/dnp.json",
+      "rank": 19
+    },
+    {
+      "id": "icbf",
+      "name": "ICBF",
+      "category": "Entidad nacional",
+      "url": "https://www.icbf.gov.co/",
+      "status": "ok",
+      "overall": 64,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 78,
+        "mobile": 49,
+        "performance": 55,
+        "best_practices": 71,
+        "seo": 77,
+        "failed_resources": 40,
+        "overall": 64
+      },
+      "wcag_rules": 6,
+      "wcag_cases": 92,
+      "failed_resources_first_party": 6,
+      "screenshots": [
+        "screenshots/icbf-desktop.jpg",
+        "screenshots/icbf-mobile.jpg"
+      ],
+      "detail": "sites/icbf.json",
+      "rank": 19
+    },
+    {
+      "id": "minjusticia",
+      "name": "Ministerio de Justicia y del Derecho",
+      "category": "Ministerio",
+      "url": "https://www.minjusticia.gov.co/",
+      "status": "ok",
+      "overall": 64,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 79,
+        "mobile": 30,
+        "performance": 54,
+        "best_practices": 75,
+        "seo": 92,
+        "failed_resources": 60,
+        "overall": 64
+      },
+      "wcag_rules": 4,
+      "wcag_cases": 30,
+      "failed_resources_first_party": 4,
+      "screenshots": [
+        "screenshots/minjusticia-desktop.jpg",
+        "screenshots/minjusticia-mobile.jpg"
+      ],
+      "detail": "sites/minjusticia.json",
+      "rank": 19
+    },
+    {
+      "id": "mintrabajo",
+      "name": "Ministerio del Trabajo",
+      "category": "Ministerio",
+      "url": "https://www.mintrabajo.gov.co/",
+      "status": "ok",
+      "overall": 64,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 74,
+        "mobile": 24,
+        "performance": 45,
+        "best_practices": 71,
+        "seo": 92,
+        "failed_resources": 100,
+        "overall": 64
+      },
+      "wcag_rules": 5,
+      "wcag_cases": 30,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/mintrabajo-desktop.jpg",
+        "screenshots/mintrabajo-mobile.jpg"
+      ],
+      "detail": "sites/mintrabajo.json",
+      "rank": 19
+    },
+    {
+      "id": "policia",
+      "name": "Policía Nacional",
+      "category": "Entidad nacional",
+      "url": "https://www.policia.gov.co/",
+      "status": "ok",
+      "overall": 64,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 63,
+        "mobile": 52,
+        "performance": 45,
+        "best_practices": 67,
+        "seo": 81,
+        "failed_resources": 100,
+        "overall": 64
+      },
+      "wcag_rules": 7,
+      "wcag_cases": 56,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/policia-desktop.jpg",
+        "screenshots/policia-mobile.jpg"
+      ],
+      "detail": "sites/policia.json",
+      "rank": 19
+    },
+    {
+      "id": "alcaldia-bogota",
+      "name": "Alcaldía de Bogotá",
+      "category": "Alcaldía",
+      "url": "https://bogota.gov.co/",
+      "status": "ok",
+      "overall": 63,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 64,
+        "mobile": 26,
+        "performance": 65,
+        "best_practices": 69,
+        "seo": 83,
+        "failed_resources": 100,
+        "overall": 63
+      },
+      "wcag_rules": 8,
+      "wcag_cases": 209,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/alcaldia-bogota-desktop.jpg",
+        "screenshots/alcaldia-bogota-mobile.jpg"
+      ],
+      "detail": "sites/alcaldia-bogota.json",
+      "rank": 24
+    },
+    {
+      "id": "minsalud",
+      "name": "Ministerio de Salud y Protección Social",
+      "category": "Ministerio",
+      "url": "https://www.minsalud.gov.co/",
+      "status": "ok",
+      "overall": 61,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 92,
+        "mobile": 37,
+        "performance": 46,
+        "best_practices": 50,
+        "seo": 92,
+        "failed_resources": 0,
+        "overall": 61
+      },
+      "wcag_rules": 3,
+      "wcag_cases": 15,
+      "failed_resources_first_party": 11,
+      "screenshots": [
+        "screenshots/minsalud-desktop.jpg",
+        "screenshots/minsalud-mobile.jpg"
+      ],
+      "detail": "sites/minsalud.json",
+      "rank": 25
+    },
+    {
+      "id": "minvivienda",
+      "name": "Ministerio de Vivienda",
+      "category": "Ministerio",
+      "url": "https://www.minvivienda.gov.co/",
+      "status": "ok",
+      "overall": 61,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 62,
+        "mobile": 27,
+        "performance": 56,
+        "best_practices": 73,
+        "seo": 85,
+        "failed_resources": 100,
+        "overall": 61
+      },
+      "wcag_rules": 9,
+      "wcag_cases": 24,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/minvivienda-desktop.jpg",
+        "screenshots/minvivienda-mobile.jpg"
+      ],
+      "detail": "sites/minvivienda.json",
+      "rank": 25
     },
     {
       "id": "alcaldia-medellin",
@@ -108,7 +756,66 @@
         "screenshots/alcaldia-medellin-mobile.jpg"
       ],
       "detail": "sites/alcaldia-medellin.json",
-      "rank": 3
+      "rank": 27
+    },
+    {
+      "id": "mintransporte",
+      "name": "Ministerio de Transporte",
+      "category": "Ministerio",
+      "url": "https://www.mintransporte.gov.co/",
+      "status": "ok",
+      "overall": 57,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 61,
+        "mobile": 26,
+        "performance": 42,
+        "best_practices": 75,
+        "seo": 85,
+        "failed_resources": 80,
+        "overall": 57
+      },
+      "wcag_rules": 9,
+      "wcag_cases": 96,
+      "failed_resources_first_party": 2,
+      "screenshots": [
+        "screenshots/mintransporte-desktop.jpg",
+        "screenshots/mintransporte-mobile.jpg"
+      ],
+      "detail": "sites/mintransporte.json",
+      "rank": 27
+    },
+    {
+      "id": "alcaldia-cali",
+      "name": "Alcaldía de Cali",
+      "category": "Alcaldía",
+      "url": "https://www.cali.gov.co/",
+      "status": "omitido_robots",
+      "overall": null,
+      "light": "sin_dato",
+      "scores": {},
+      "wcag_rules": null,
+      "wcag_cases": null,
+      "failed_resources_first_party": null,
+      "screenshots": [],
+      "detail": "sites/alcaldia-cali.json",
+      "rank": null
+    },
+    {
+      "id": "gov-co",
+      "name": "Portal Único del Estado (GOV.CO)",
+      "category": "Portal del Estado",
+      "url": "https://www.gov.co/",
+      "status": "omitido_robots",
+      "overall": null,
+      "light": "sin_dato",
+      "scores": {},
+      "wcag_rules": null,
+      "wcag_cases": null,
+      "failed_resources_first_party": null,
+      "screenshots": [],
+      "detail": "sites/gov-co.json",
+      "rank": null
     }
   ]
 }
