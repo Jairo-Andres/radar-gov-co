@@ -33,7 +33,7 @@ jobs:
   audit:
     needs: tests
     runs-on: ubuntu-latest
-    timeout-minutes: 150
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,6 +53,7 @@ jobs:
       - name: Auditar portales
         env:
           ONLY: ${{ github.event.inputs.only }}
+          RADAR_MEASURED_FROM: "GitHub Actions (ubuntu-latest, centro de datos de GitHub; región no garantizada)"
         run: |
           if [ -n "$ONLY" ]; then
             python -m radar run --only "$ONLY"

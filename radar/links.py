@@ -1,4 +1,4 @@
-"""Selección de páginas internas y clasificación de recursos rotos."""
+"""Selección de páginas internas y clasificación de recursos fallidos."""
 
 from __future__ import annotations
 
@@ -69,11 +69,11 @@ def is_ignored_failure(error_text: str | None) -> bool:
     return bool(error_text) and any(token in error_text for token in IGNORED_FAILURES)
 
 
-def unique_broken(pages: list[dict]) -> list[dict]:
-    """Une los recursos rotos de todas las páginas sin repetir URL."""
+def unique_failed(pages: list[dict]) -> list[dict]:
+    """Une los recursos fallidos de todas las páginas visitadas sin repetir URL."""
     seen: dict[str, dict] = {}
     for page in pages:
-        for item in page.get("broken", []):
+        for item in page.get("failed_resources", []):
             seen.setdefault(item["url"], item)
     return list(seen.values())
 

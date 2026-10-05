@@ -3,14 +3,14 @@
   "name": "DANE",
   "category": "Entidad nacional",
   "url": "https://www.dane.gov.co/",
-  "audited_at": "2026-10-04T17:06:16-05:00",
+  "audited_at": "2026-10-04T23:07:07-05:00",
   "status": "ok",
   "pages": [
     {
       "url": "https://www.dane.gov.co/",
       "final_url": "https://www.dane.gov.co/",
       "status": 200,
-      "load_ms": 1390,
+      "load_ms": 1234,
       "axe": {
         "score": 97,
         "violations": [
@@ -31,16 +31,16 @@
           }
         ]
       },
-      "broken": [],
+      "failed_resources": [],
+      "third_party_failures": 2,
       "viewport": "desktop",
-      "screenshot": "screenshots/dane-desktop.jpg",
-      "third_party_failures": 2
+      "screenshot": "screenshots/dane-desktop.jpg"
     },
     {
       "url": "https://www.dane.gov.co/index.php",
       "final_url": "https://www.dane.gov.co/index.php",
       "status": 200,
-      "load_ms": 859,
+      "load_ms": 719,
       "axe": {
         "score": 97,
         "violations": [
@@ -61,28 +61,15 @@
           }
         ]
       },
-      "broken": [
-        {
-          "url": "https://www.dane.gov.co/block_style.css",
-          "status": 404,
-          "type": "xhr",
-          "first_party": true
-        },
-        {
-          "url": "https://www.dane.gov.co/_vars.css",
-          "status": 404,
-          "type": "xhr",
-          "first_party": true
-        }
-      ],
-      "viewport": "desktop",
-      "third_party_failures": 2
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.dane.gov.co/index.php/transparencia",
       "final_url": "https://www.dane.gov.co/index.php/transparencia",
       "status": 200,
-      "load_ms": 828,
+      "load_ms": 703,
       "axe": {
         "score": 85,
         "violations": [
@@ -134,15 +121,15 @@
           }
         ]
       },
-      "broken": [],
-      "viewport": "desktop",
-      "third_party_failures": 2
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.dane.gov.co/",
       "final_url": "https://www.dane.gov.co/",
       "status": 200,
-      "load_ms": 1578,
+      "load_ms": 1328,
       "axe": {
         "score": 97,
         "violations": [
@@ -163,10 +150,10 @@
           }
         ]
       },
-      "broken": [],
+      "failed_resources": [],
+      "third_party_failures": 2,
       "viewport": "mobile",
-      "screenshot": "screenshots/dane-mobile.jpg",
-      "third_party_failures": 2
+      "screenshot": "screenshots/dane-mobile.jpg"
     }
   ],
   "mobile": {
@@ -174,23 +161,30 @@
     "horizontal_overflow": true,
     "scroll_width": 396,
     "viewport_width": 396,
-    "screen_width": 390
+    "screen_width": 390,
+    "overflow_px": 6
   },
   "lighthouse": {
     "mobile": {
+      "runs": 3,
       "categories": {
-        "performance": 49,
+        "performance": 44,
         "accessibility": 93,
         "best_practices": 69,
         "seo": 100
       },
       "metrics": {
-        "fcp_ms": 4638,
-        "lcp_ms": 13603,
-        "tbt_ms": 157,
-        "cls": 0.257,
-        "speed_index_ms": 4638
+        "fcp_ms": 5534,
+        "lcp_ms": 14963,
+        "tbt_ms": 265,
+        "cls": 0.225,
+        "speed_index_ms": 5534
       },
+      "performance_runs": [
+        44,
+        46,
+        44
+      ],
       "failed_audits": {
         "performance": [
           {
@@ -251,22 +245,29 @@
           }
         ],
         "seo": []
-      }
+      },
+      "lighthouse_version": "13.5.0"
     },
     "desktop": {
+      "runs": 3,
       "categories": {
-        "performance": 75,
+        "performance": 80,
         "accessibility": 92,
         "best_practices": 73,
         "seo": 100
       },
       "metrics": {
-        "fcp_ms": 1527,
-        "lcp_ms": 3231,
+        "fcp_ms": 1066,
+        "lcp_ms": 3255,
         "tbt_ms": 0,
-        "cls": 0.039,
-        "speed_index_ms": 1688
+        "cls": 0.038,
+        "speed_index_ms": 1302
       },
+      "performance_runs": [
+        79,
+        82,
+        80
+      ],
       "failed_audits": {
         "performance": [
           {
@@ -323,20 +324,62 @@
           }
         ],
         "seo": []
-      }
+      },
+      "lighthouse_version": "13.5.0"
     }
   },
   "errors": [],
   "robots": "ok",
-  "broken_first_party": 2,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 5,
+    "criteria": [
+      "1.3.1",
+      "1.4.4",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 1
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 1
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 8,
   "scores": {
     "accessibility": 93,
-    "performance": 59,
+    "mobile": 41,
+    "performance": 80,
     "best_practices": 71,
     "seo": 100,
-    "links": 80,
-    "mobile": 50,
-    "overall": 76
+    "failed_resources": 100,
+    "overall": 80
   },
-  "light": "amarillo"
+  "light": "verde"
 }

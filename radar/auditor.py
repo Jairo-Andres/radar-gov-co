@@ -1,8 +1,9 @@
 """Auditoría de un sitio: hasta 3 páginas, escritorio y móvil, axe-core y Lighthouse.
 
 Tráfico total por sitio: robots.txt, la página de inicio (escritorio y móvil con
-Playwright, más 2 cargas de Lighthouse) y hasta 2 páginas internas, con una pausa
-de al menos 3 segundos antes de cada carga. Nunca se llenan formularios ni se inicia sesión.
+Playwright, más 3 cargas de Lighthouse por vista) y hasta 2 páginas internas, con
+una pausa de al menos 3 segundos antes de cada carga y siempre de forma secuencial.
+Nunca se llenan formularios ni se inicia sesión.
 """
 
 from __future__ import annotations
@@ -16,8 +17,8 @@ from playwright.sync_api import Browser, Page
 
 from . import parsers, scoring
 from .browser import fetch_robots_with_browser, new_context, short_error
-from .config import MAX_PAGES_PER_SITE, Settings, Site
-from .links import is_first_party, is_ignored_failure, pick_internal_pages, unique_broken
+from .config import LIGHTHOUSE_RUNS, MAX_PAGES_PER_SITE, Settings, Site
+from .links import is_first_party, is_ignored_failure, pick_internal_pages, unique_failed
 from .lighthouse import run_lighthouse
 
 AXE_SOURCE = (Path(__file__).resolve().parent.parent / "node_modules" / "axe-core" / "axe.min.js")
@@ -51,7 +52,8 @@ def public_error(error: Exception, site: Site, where: str, security: SecurityLog
 
 
 def _visit(page: Page, url: str, home_url: str, pause: float, axe_source: str) -> dict:
-    """Carga una página como un visitante normal y corre axe-core."""
+    """Carga una página como un visitante normal y corre axe-core.
+    Registra los recursos que fallan al cargarla (respuesta >= 400 o error de red)."""
     broken: list[dict] = []
 
     def on_response(response):
@@ -85,7 +87,7 @@ def _visit(page: Page, url: str, home_url: str, pause: float, axe_source: str) -
         page.remove_listener("response", on_response)
         page.remove_listener("requestfailed", on_failed)
     unique = _dedupe(broken)
-    record["broken"] = [dict(item, first_party=True) for item in unique if is_first_party(item["url"], home_url)]
+    record["failed_resources"] = [dict(item, first_party=True) for item in unique if is_first_party(item["url"], home_url)]
     record["third_party_failures"] = sum(1 for item in unique if not is_first_party(item["url"], home_url))
     return record
 
@@ -106,7 +108,7 @@ def _mobile_checks(page: Page) -> dict:
             return {
                 viewport_meta: /width\\s*=\\s*device-width/i.test(content),
                 // Sin meta viewport el móvil renderiza a 980 px: también cuenta como desborde.
-                horizontal_overflow: root.scrollWidth > window.screen.width + 1,
+                horizontal_overflow: root.scrollWidth > window.screen.width,
                 scroll_width: root.scrollWidth,
                 viewport_width: window.innerWidth,
                 screen_width: window.screen.width,
@@ -196,24 +198,33 @@ def audit_site(
         record["errors"].append(public_error(error, site, "inicio (móvil)", security))
     mobile.close()
 
-    # 4) Lighthouse sobre el inicio (móvil y escritorio).
+    # 4) Lighthouse sobre el inicio: 3 corridas por vista, mediana.
     for form in ("mobile", "desktop"):
-        time.sleep(pause)
-        try:
-            log(f"  {site.id}: Lighthouse ({form})")
-            lhr = lighthouse_runner(site.url, form, chrome_path)
-            summary, findings = parsers.parse_lighthouse(lhr)
-            for item in findings:
-                security.add(site, f"lighthouse-{form}", item)
-            if summary.get("runtime_error"):
-                # Lighthouse no pudo cargar la página: no se publica el código exacto
-                # (algunos, como CHROME_INTERSTITIAL_ERROR, pueden deberse a certificados).
-                security.add(site, f"lighthouse-{form}", {"runtime_error": summary["runtime_error"]})
-                record["errors"].append(f"Lighthouse ({form}): no se pudo analizar la página")
-            else:
-                record["lighthouse"][form] = summary
-        except Exception as error:
-            record["errors"].append(public_error(error, site, f"Lighthouse ({form})", security))
+        runs: list[dict] = []
+        failures = 0
+        for attempt in range(1, LIGHTHOUSE_RUNS + 1):
+            time.sleep(pause)
+            try:
+                log(f"  {site.id}: Lighthouse ({form}) {attempt}/{LIGHTHOUSE_RUNS}")
+                lhr = lighthouse_runner(site.url, form, chrome_path)
+                summary, findings = parsers.parse_lighthouse(lhr)
+                for item in findings:
+                    security.add(site, f"lighthouse-{form}", item)
+                if summary.get("runtime_error"):
+                    # Lighthouse no pudo cargar la página: no se publica el código exacto
+                    # (algunos, como CHROME_INTERSTITIAL_ERROR, pueden deberse a certificados).
+                    security.add(site, f"lighthouse-{form}", {"runtime_error": summary["runtime_error"]})
+                    failures += 1
+                else:
+                    runs.append(summary)
+            except Exception as error:
+                public_error(error, site, f"Lighthouse ({form})", security)
+                failures += 1
+        record["lighthouse"][form] = parsers.median_lighthouse(runs)
+        if failures:
+            record["errors"].append(
+                f"Lighthouse ({form}): {failures} de {LIGHTHOUSE_RUNS} corridas no pudieron analizar la página"
+            )
 
     finish_record(record)
     return record
@@ -223,16 +234,21 @@ def finish_record(record: dict) -> dict:
     """Calcula puntuaciones a partir de lo recogido (separado para poder probarlo)."""
     pages = record.get("pages", [])
     axe_scores = [p["axe"]["score"] for p in pages if p.get("axe")]
-    broken = [b for b in unique_broken(pages) if b.get("first_party")]
+    failed = [b for b in unique_failed(pages) if b.get("first_party")]
     mobile = record.get("mobile") or {}
+    px = scoring.overflow_px(mobile.get("scroll_width"), mobile.get("screen_width"))
+    if record.get("mobile") is not None:
+        record["mobile"]["overflow_px"] = px
     components = scoring.component_scores(
         axe_scores=axe_scores,
         lighthouse=record.get("lighthouse", {}),
-        broken_count=len(broken) if pages else None,
-        mobile=scoring.mobile_score(mobile.get("viewport_meta"), mobile.get("horizontal_overflow")) if mobile else None,
+        failed_count=len(failed) if pages else None,
+        mobile_overflow_px=px,
     )
     overall = scoring.overall_score(components)
-    record["broken_first_party"] = len(broken)
+    record["wcag"] = parsers.wcag_summary(pages)
+    record["failed_resources_first_party"] = len(failed)
+    record["third_party_failures"] = sum(p.get("third_party_failures", 0) for p in pages)
     record["scores"] = {**components, "overall": overall}
     record["light"] = scoring.light(overall)
     if not pages:

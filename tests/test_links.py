@@ -43,12 +43,12 @@ def test_ignored_failures():
     assert not links.is_ignored_failure(None)
 
 
-def test_unique_broken_and_first_party():
+def test_unique_failed_and_first_party():
     pages = [
-        {"broken": [{"url": "https://www.dane.gov.co/a.png"}, {"url": "https://cdn.example.com/x.js"}]},
-        {"broken": [{"url": "https://www.dane.gov.co/a.png"}]},
+        {"failed_resources": [{"url": "https://www.dane.gov.co/a.png"}, {"url": "https://cdn.example.com/x.js"}]},
+        {"failed_resources": [{"url": "https://www.dane.gov.co/a.png"}]},
     ]
-    urls = [b["url"] for b in links.unique_broken(pages)]
+    urls = [b["url"] for b in links.unique_failed(pages)]
     assert urls == ["https://www.dane.gov.co/a.png", "https://cdn.example.com/x.js"]
     assert links.is_first_party("https://static.dane.gov.co/a.css", HOME)
     assert not links.is_first_party("https://cdn.example.com/x.js", HOME)

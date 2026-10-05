@@ -3,14 +3,14 @@
   "name": "DIAN",
   "category": "Entidad nacional",
   "url": "https://www.dian.gov.co/",
-  "audited_at": "2026-10-04T17:04:57-05:00",
+  "audited_at": "2026-10-04T23:04:27-05:00",
   "status": "ok",
   "pages": [
     {
       "url": "https://www.dian.gov.co/",
       "final_url": "https://www.dian.gov.co/",
       "status": 200,
-      "load_ms": 1640,
+      "load_ms": 1078,
       "axe": {
         "score": 72,
         "violations": [
@@ -85,7 +85,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.dian.gov.co/js/jquery-latest.js",
           "status": 404,
@@ -93,15 +93,15 @@
           "first_party": true
         }
       ],
+      "third_party_failures": 0,
       "viewport": "desktop",
-      "screenshot": "screenshots/dian-desktop.jpg",
-      "third_party_failures": 0
+      "screenshot": "screenshots/dian-desktop.jpg"
     },
     {
       "url": "https://www.dian.gov.co/Paginas/Inicio.aspx",
       "final_url": "https://www.dian.gov.co/Paginas/Inicio.aspx",
       "status": 200,
-      "load_ms": 2406,
+      "load_ms": 2015,
       "axe": {
         "score": 59,
         "violations": [
@@ -202,15 +202,15 @@
           }
         ]
       },
-      "broken": [],
-      "viewport": "desktop",
-      "third_party_failures": 0
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.dian.gov.co/atencionciudadano/Paginas/Transparencia.aspx",
       "final_url": "https://www.dian.gov.co/atencionciudadano/Paginas/Transparencia.aspx",
       "status": 200,
-      "load_ms": 765,
+      "load_ms": 750,
       "axe": {
         "score": 85,
         "violations": [
@@ -262,15 +262,15 @@
           }
         ]
       },
-      "broken": [],
-      "viewport": "desktop",
-      "third_party_failures": 0
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.dian.gov.co/",
       "final_url": "https://www.dian.gov.co/",
       "status": 200,
-      "load_ms": 2062,
+      "load_ms": 1531,
       "axe": {
         "score": 72,
         "violations": [
@@ -343,7 +343,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.dian.gov.co/js/jquery-latest.js",
           "status": 404,
@@ -351,9 +351,9 @@
           "first_party": true
         }
       ],
+      "third_party_failures": 0,
       "viewport": "mobile",
-      "screenshot": "screenshots/dian-mobile.jpg",
-      "third_party_failures": 0
+      "screenshot": "screenshots/dian-mobile.jpg"
     }
   ],
   "mobile": {
@@ -361,10 +361,12 @@
     "horizontal_overflow": true,
     "scroll_width": 405,
     "viewport_width": 405,
-    "screen_width": 390
+    "screen_width": 390,
+    "overflow_px": 15
   },
   "lighthouse": {
     "mobile": {
+      "runs": 3,
       "categories": {
         "performance": 66,
         "accessibility": 63,
@@ -372,12 +374,17 @@
         "seo": 82
       },
       "metrics": {
-        "fcp_ms": 2915,
-        "lcp_ms": 9760,
-        "tbt_ms": 44,
+        "fcp_ms": 2863,
+        "lcp_ms": 9712,
+        "tbt_ms": 78,
         "cls": 0,
-        "speed_index_ms": 5356
+        "speed_index_ms": 5552
       },
+      "performance_runs": [
+        65,
+        67,
+        66
+      ],
       "failed_audits": {
         "performance": [
           {
@@ -463,22 +470,29 @@
             "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
           }
         ]
-      }
+      },
+      "lighthouse_version": "13.5.0"
     },
     "desktop": {
+      "runs": 3,
       "categories": {
-        "performance": 70,
+        "performance": 80,
         "accessibility": 56,
         "best_practices": 73,
         "seo": 82
       },
       "metrics": {
-        "fcp_ms": 1125,
-        "lcp_ms": 2023,
+        "fcp_ms": 641,
+        "lcp_ms": 1227,
         "tbt_ms": 0,
         "cls": 0.361,
-        "speed_index_ms": 1125
+        "speed_index_ms": 709
       },
+      "performance_runs": [
+        77,
+        80,
+        80
+      ],
       "failed_audits": {
         "performance": [
           {
@@ -560,20 +574,100 @@
             "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
           }
         ]
-      }
+      },
+      "lighthouse_version": "13.5.0"
     }
   },
   "errors": [],
   "robots": "sin robots.txt (404)",
-  "broken_first_party": 1,
+  "wcag": {
+    "rules_count": 7,
+    "cases": 70,
+    "criteria": [
+      "1.1.1",
+      "1.3.1",
+      "1.4.3",
+      "1.4.4",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-children",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+        "cases": 1
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 28
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 22
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 7
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 6
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 4
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 2
+      }
+    ]
+  },
+  "failed_resources_first_party": 1,
+  "third_party_failures": 0,
   "scores": {
     "accessibility": 66,
-    "performance": 68,
+    "mobile": 58,
+    "performance": 80,
     "best_practices": 71,
     "seo": 82,
-    "links": 90,
-    "mobile": 50,
-    "overall": 70
+    "failed_resources": 90,
+    "overall": 71
   },
   "light": "amarillo"
 }

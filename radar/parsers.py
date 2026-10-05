@@ -7,6 +7,7 @@ llega a data/: va a private/ (ignorado por git) para avisar a Jairo.
 from __future__ import annotations
 
 import re
+from statistics import median
 
 AXE_IMPACTS = ("critical", "serious", "moderate", "minor")
 
@@ -146,7 +147,74 @@ def parse_lighthouse(lhr: dict, max_failed: int = 8) -> tuple[dict, list[dict]]:
     runtime_error = lhr.get("runtimeError")
     if runtime_error:
         summary["runtime_error"] = runtime_error.get("code")
+    if lhr.get("lighthouseVersion"):
+        summary["lighthouse_version"] = lhr["lighthouseVersion"]
     return summary, security
+
+
+def _median(values: list[float]) -> float | None:
+    return median(values) if values else None
+
+
+def median_lighthouse(runs: list[dict]) -> dict | None:
+    """Combina varias corridas de Lighthouse (ya parseadas y sin runtime_error) con la
+    mediana de cada categoría y métrica. Las auditorías fallidas se toman de la corrida
+    cuyo rendimiento es la mediana, para que el detalle sea coherente con la nota."""
+    if not runs:
+        return None
+    combined: dict = {"runs": len(runs), "categories": {}, "metrics": {}}
+    for key in LIGHTHOUSE_CATEGORIES.values():
+        values = [r["categories"].get(key) for r in runs if r["categories"].get(key) is not None]
+        value = _median(values)
+        combined["categories"][key] = None if value is None else round(value)
+    for key in LIGHTHOUSE_METRICS.values():
+        values = [r["metrics"][key] for r in runs if r["metrics"].get(key) is not None]
+        value = _median(values)
+        if value is not None:
+            combined["metrics"][key] = round(value, 3) if key == "cls" else round(value)
+    combined["performance_runs"] = [r["categories"].get("performance") for r in runs]
+    target = combined["categories"]["performance"]
+    representative = min(
+        runs,
+        key=lambda r: abs((r["categories"].get("performance") or 0) - (target or 0)),
+    )
+    combined["failed_audits"] = representative.get("failed_audits", {})
+    if any(r.get("lighthouse_version") for r in runs):
+        combined["lighthouse_version"] = next(r["lighthouse_version"] for r in runs if r.get("lighthouse_version"))
+    return combined
+
+
+def wcag_summary(pages: list[dict]) -> dict:
+    """Resume axe por sitio sin contar varias veces lo mismo.
+
+    - rules: reglas WCAG distintas incumplidas en cualquier página o vista.
+    - cases: total de elementos afectados. Si una página se revisó en escritorio y
+      en móvil, por cada regla se toma la vista con más casos (no se suman ambas).
+    """
+    rules: dict[str, dict] = {}
+    per_page_rule: dict[tuple[str, str], int] = {}
+    for page in pages:
+        for finding in (page.get("axe") or {}).get("violations", []):
+            rule = finding["rule"]
+            rules.setdefault(rule, {
+                "rule": rule,
+                "impact": finding.get("impact"),
+                "criteria": finding.get("criteria", []),
+                "description": finding.get("description", ""),
+            })
+            key = (page.get("url", ""), rule)
+            per_page_rule[key] = max(per_page_rule.get(key, 0), finding.get("elements", 0))
+    order = {impact: i for i, impact in enumerate(AXE_IMPACTS)}
+    listed = sorted(rules.values(), key=lambda r: (order.get(r["impact"], len(order)), r["rule"]))
+    for item in listed:
+        item["cases"] = sum(n for (_, rule), n in per_page_rule.items() if rule == item["rule"])
+    criteria = sorted({c for r in listed for c in r["criteria"]}, key=lambda c: [int(x) for x in c.split(".")])
+    return {
+        "rules_count": len(listed),
+        "cases": sum(per_page_rule.values()),
+        "criteria": criteria,
+        "rules": listed,
+    }
 
 
 def _is_failed(audit: dict) -> bool:

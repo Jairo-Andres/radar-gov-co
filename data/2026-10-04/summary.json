@@ -1,20 +1,30 @@
 {
   "date": "2026-10-04",
-  "methodology_version": 1,
+  "methodology_version": 2,
   "weights": {
-    "accessibility": 0.3,
-    "performance": 0.25,
-    "best_practices": 0.15,
+    "accessibility": 0.35,
+    "mobile": 0.2,
+    "performance": 0.15,
+    "best_practices": 0.1,
     "seo": 0.1,
-    "links": 0.1,
-    "mobile": 0.1
+    "failed_resources": 0.1
   },
   "user_agent": "RadarGovCo/1.0 (proyecto academico; linkedin.com/in/jairo-andres31-analyst)",
+  "measurement": {
+    "from": "equipo local de Jairo, Colombia",
+    "lighthouse_versions": [
+      "13.5.0"
+    ],
+    "lighthouse_runs_per_view": 3,
+    "lighthouse_aggregate": "mediana",
+    "lighthouse_conditions": "móvil: limitación simulada por defecto de Lighthouse (red 4G lenta y CPU 4x); escritorio: preset desktop de Lighthouse",
+    "max_pages_per_site": 3
+  },
   "sites_audited": 3,
   "average_overall": 69,
   "lights": {
-    "verde": 0,
-    "amarillo": 3,
+    "verde": 1,
+    "amarillo": 2,
     "rojo": 0,
     "sin_dato": 0
   },
@@ -25,19 +35,20 @@
       "category": "Entidad nacional",
       "url": "https://www.dane.gov.co/",
       "status": "ok",
-      "overall": 76,
-      "light": "amarillo",
+      "overall": 80,
+      "light": "verde",
       "scores": {
         "accessibility": 93,
-        "performance": 59,
+        "mobile": 41,
+        "performance": 80,
         "best_practices": 71,
         "seo": 100,
-        "links": 80,
-        "mobile": 50,
-        "overall": 76
+        "failed_resources": 100,
+        "overall": 80
       },
-      "wcag_violations": 6,
-      "broken_first_party": 2,
+      "wcag_rules": 3,
+      "wcag_cases": 5,
+      "failed_resources_first_party": 0,
       "screenshots": [
         "screenshots/dane-desktop.jpg",
         "screenshots/dane-mobile.jpg"
@@ -51,19 +62,20 @@
       "category": "Entidad nacional",
       "url": "https://www.dian.gov.co/",
       "status": "ok",
-      "overall": 70,
+      "overall": 71,
       "light": "amarillo",
       "scores": {
         "accessibility": 66,
-        "performance": 68,
+        "mobile": 58,
+        "performance": 80,
         "best_practices": 71,
         "seo": 82,
-        "links": 90,
-        "mobile": 50,
-        "overall": 70
+        "failed_resources": 90,
+        "overall": 71
       },
-      "wcag_violations": 17,
-      "broken_first_party": 1,
+      "wcag_rules": 7,
+      "wcag_cases": 70,
+      "failed_resources_first_party": 1,
       "screenshots": [
         "screenshots/dian-desktop.jpg",
         "screenshots/dian-mobile.jpg"
@@ -77,19 +89,20 @@
       "category": "Alcaldía",
       "url": "https://www.medellin.gov.co/",
       "status": "parcial",
-      "overall": 60,
+      "overall": 57,
       "light": "amarillo",
       "scores": {
         "accessibility": 44,
-        "performance": 33,
+        "mobile": 40,
+        "performance": null,
         "best_practices": 73,
         "seo": 85,
-        "links": 90,
-        "mobile": 100,
-        "overall": 60
+        "failed_resources": 90,
+        "overall": 57
       },
-      "wcag_violations": 36,
-      "broken_first_party": 1,
+      "wcag_rules": 11,
+      "wcag_cases": 509,
+      "failed_resources_first_party": 1,
       "screenshots": [
         "screenshots/alcaldia-medellin-desktop.jpg",
         "screenshots/alcaldia-medellin-mobile.jpg"

@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 
 from . import scoring
 from .auditor import SecurityLog, audit_site
-from .config import USER_AGENT, Settings, Site
+from .config import LIGHTHOUSE_RUNS, MAX_PAGES_PER_SITE, USER_AGENT, Settings, Site
 from .history import write_history
 
 COLOMBIA = timezone(timedelta(hours=-5))  # Colombia no tiene horario de verano
@@ -26,7 +26,7 @@ def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def build_summary(records: list[dict], date: str) -> dict:
+def build_summary(records: list[dict], date: str, measured_from: str | None = None) -> dict:
     """Resumen del día que consume la web: una fila por sitio con sus puntuaciones."""
     rows = []
     for r in records:
@@ -40,8 +40,9 @@ def build_summary(records: list[dict], date: str) -> dict:
                 "overall": r.get("scores", {}).get("overall"),
                 "light": r.get("light", "sin_dato"),
                 "scores": r.get("scores", {}),
-                "wcag_violations": sum(len(p["axe"]["violations"]) for p in r.get("pages", []) if p.get("axe")),
-                "broken_first_party": r.get("broken_first_party"),
+                "wcag_rules": (r.get("wcag") or {}).get("rules_count"),
+                "wcag_cases": (r.get("wcag") or {}).get("cases"),
+                "failed_resources_first_party": r.get("failed_resources_first_party"),
                 "screenshots": [p["screenshot"] for p in r.get("pages", []) if p.get("screenshot")],
                 "detail": f"sites/{r['id']}.json",
             }
@@ -53,6 +54,7 @@ def build_summary(records: list[dict], date: str) -> dict:
         "methodology_version": scoring.METHODOLOGY_VERSION,
         "weights": scoring.WEIGHTS,
         "user_agent": USER_AGENT,
+        "measurement": measurement_info(records, measured_from),
         "sites_audited": len(ranked),
         "average_overall": round(sum(overalls) / len(overalls)) if overalls else None,
         "lights": {k: sum(1 for r in ranked if r["light"] == k) for k in ("verde", "amarillo", "rojo", "sin_dato")},
@@ -60,11 +62,30 @@ def build_summary(records: list[dict], date: str) -> dict:
     }
 
 
+def measurement_info(records: list[dict], measured_from: str | None) -> dict:
+    versions = sorted({
+        lh["lighthouse_version"]
+        for r in records for lh in (r.get("lighthouse") or {}).values()
+        if lh and lh.get("lighthouse_version")
+    })
+    return {
+        "from": measured_from or "sin dato",
+        "lighthouse_versions": versions,
+        "lighthouse_runs_per_view": LIGHTHOUSE_RUNS,
+        "lighthouse_aggregate": "mediana",
+        "lighthouse_conditions": "móvil: limitación simulada por defecto de Lighthouse (red 4G lenta y CPU 4x); "
+                                 "escritorio: preset desktop de Lighthouse",
+        "max_pages_per_site": MAX_PAGES_PER_SITE,
+    }
+
+
 def load_day_records(day_dir: Path) -> list[dict]:
     return [json.loads(p.read_text(encoding="utf-8")) for p in sorted((day_dir / "sites").glob("*.json"))]
 
 
-def run_audit(settings: Settings, sites: list[Site], data_dir: Path, date: str | None = None) -> dict:
+def run_audit(
+    settings: Settings, sites: list[Site], data_dir: Path, date: str | None = None, measured_from: str | None = None
+) -> dict:
     date = date or today()
     day_dir = data_dir / date
     screenshots = day_dir / "screenshots"
@@ -86,7 +107,7 @@ def run_audit(settings: Settings, sites: list[Site], data_dir: Path, date: str |
         browser.close()
 
     # El resumen incluye todos los sitios de ese día (permite corridas parciales con --only).
-    summary = build_summary(load_day_records(day_dir), date)
+    summary = build_summary(load_day_records(day_dir), date, measured_from)
     write_json(day_dir / "summary.json", summary)
     write_history(data_dir)
 

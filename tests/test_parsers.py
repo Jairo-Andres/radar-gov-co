@@ -100,3 +100,62 @@ def test_unpublished_but_not_security_audits_raise_no_alert():
     summary, security = parsers.parse_lighthouse(lhr)
     assert summary["failed_audits"]["best_practices"] == [{"id": "errors-in-console", "title": "Errores en consola"}]
     assert security == []
+
+
+def lh_run(perf, a11y=90, lcp=3000, failed=None, version="13.5.0"):
+    return {
+        "categories": {"performance": perf, "accessibility": a11y, "best_practices": 80, "seo": None},
+        "metrics": {"lcp_ms": lcp, "cls": 0.1},
+        "failed_audits": failed or {"performance": [{"id": f"run-{perf}", "title": "t"}]},
+        "lighthouse_version": version,
+    }
+
+
+def test_median_lighthouse_uses_median_of_three_runs():
+    combined = parsers.median_lighthouse([lh_run(30, lcp=29000), lh_run(70, lcp=5000), lh_run(55, lcp=8000)])
+    assert combined["runs"] == 3
+    assert combined["categories"] == {"performance": 55, "accessibility": 90, "best_practices": 80, "seo": None}
+    assert combined["metrics"] == {"lcp_ms": 8000, "cls": 0.1}
+    assert combined["performance_runs"] == [30, 70, 55]
+    # El detalle viene de la corrida mediana, coherente con la nota publicada.
+    assert combined["failed_audits"]["performance"][0]["id"] == "run-55"
+    assert combined["lighthouse_version"] == "13.5.0"
+
+
+def test_median_lighthouse_with_two_runs_and_none():
+    combined = parsers.median_lighthouse([lh_run(40), lh_run(60)])
+    assert combined["runs"] == 2
+    assert combined["categories"]["performance"] == 50
+    assert parsers.median_lighthouse([]) is None
+
+
+def axe_page(url, *findings):
+    return {"url": url, "axe": {"violations": [
+        {"rule": rule, "impact": impact, "criteria": criteria, "description": "d", "elements": n}
+        for rule, impact, criteria, n in findings
+    ]}}
+
+
+def test_wcag_summary_counts_distinct_rules_and_cases():
+    pages = [
+        axe_page("https://x.gov.co/", ("image-alt", "critical", ["1.1.1"], 21), ("color-contrast", "serious", ["1.4.3"], 20)),
+        axe_page("https://x.gov.co/a", ("image-alt", "critical", ["1.1.1"], 7), ("list", "serious", ["1.3.1"], 1)),
+        # El inicio en móvil repite reglas: por regla cuenta la vista con más casos.
+        axe_page("https://x.gov.co/", ("image-alt", "critical", ["1.1.1"], 4), ("color-contrast", "serious", ["1.4.3"], 25)),
+    ]
+    summary = parsers.wcag_summary(pages)
+    assert summary["rules_count"] == 3
+    assert summary["cases"] == 21 + 25 + 7 + 1
+    assert summary["criteria"] == ["1.1.1", "1.3.1", "1.4.3"]
+    by_rule = {r["rule"]: r["cases"] for r in summary["rules"]}
+    assert by_rule == {"image-alt": 28, "color-contrast": 25, "list": 1}
+    assert summary["rules"][0]["rule"] == "image-alt"  # crítica primero
+
+
+def test_wcag_summary_empty():
+    assert parsers.wcag_summary([{"url": "u"}]) == {"rules_count": 0, "cases": 0, "criteria": [], "rules": []}
+
+
+def test_wcag_criteria_sort_numerically():
+    pages = [axe_page("u", ("a", "minor", ["1.4.10"], 1), ("b", "minor", ["1.4.3"], 1))]
+    assert parsers.wcag_summary(pages)["criteria"] == ["1.4.3", "1.4.10"]

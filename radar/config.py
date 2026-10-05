@@ -18,6 +18,9 @@ MAX_PAGES_PER_SITE = 3
 MIN_PAUSE_SECONDS = 3.0
 DEFAULT_PAUSE_SECONDS = 5.0
 NAV_TIMEOUT_MS = 45_000
+# Lighthouse varía entre corridas: se mide 3 veces por vista y se usa la mediana.
+# Son cargas extra de la misma página de inicio (no páginas nuevas) y llevan pausa.
+LIGHTHOUSE_RUNS = 3
 
 
 @dataclass

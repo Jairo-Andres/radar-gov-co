@@ -3,14 +3,14 @@
   "name": "Alcaldía de Medellín",
   "category": "Alcaldía",
   "url": "https://www.medellin.gov.co/",
-  "audited_at": "2026-10-04T17:07:35-05:00",
+  "audited_at": "2026-10-04T23:09:58-05:00",
   "status": "parcial",
   "pages": [
     {
       "url": "https://www.medellin.gov.co/",
       "final_url": "https://www.medellin.gov.co/",
       "status": 200,
-      "load_ms": 4484,
+      "load_ms": 2547,
       "axe": {
         "score": 20,
         "violations": [
@@ -180,7 +180,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.medellin.gov.co/irj/go/km/docs/etc/PortalMedellin/images/popup/popup.jpeg",
           "status": 404,
@@ -188,15 +188,15 @@
           "first_party": true
         }
       ],
+      "third_party_failures": 8,
       "viewport": "desktop",
-      "screenshot": "screenshots/alcaldia-medellin-desktop.jpg",
-      "third_party_failures": 28
+      "screenshot": "screenshots/alcaldia-medellin-desktop.jpg"
     },
     {
       "url": "https://www.medellin.gov.co/es/mapa-del-sitio/",
       "final_url": "https://www.medellin.gov.co/es/mapa-del-sitio/",
       "status": 200,
-      "load_ms": 719,
+      "load_ms": 1000,
       "axe": {
         "score": 56,
         "violations": [
@@ -300,7 +300,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.medellin.gov.co/irj/go/km/docs/etc/PortalMedellin/images/popup/popup.jpeg",
           "status": 404,
@@ -308,14 +308,14 @@
           "first_party": true
         }
       ],
-      "viewport": "desktop",
-      "third_party_failures": 22
+      "third_party_failures": 5,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.medellin.gov.co/es/",
       "final_url": "https://www.medellin.gov.co/es/",
       "status": 200,
-      "load_ms": 1031,
+      "load_ms": 1579,
       "axe": {
         "score": 20,
         "violations": [
@@ -485,7 +485,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.medellin.gov.co/irj/go/km/docs/etc/PortalMedellin/images/popup/popup.jpeg",
           "status": 404,
@@ -493,14 +493,14 @@
           "first_party": true
         }
       ],
-      "viewport": "desktop",
-      "third_party_failures": 28
+      "third_party_failures": 28,
+      "viewport": "desktop"
     },
     {
       "url": "https://www.medellin.gov.co/",
       "final_url": "https://www.medellin.gov.co/",
       "status": 200,
-      "load_ms": 3485,
+      "load_ms": 2984,
       "axe": {
         "score": 16,
         "violations": [
@@ -670,7 +670,7 @@
           }
         ]
       },
-      "broken": [
+      "failed_resources": [
         {
           "url": "https://www.medellin.gov.co/irj/go/km/docs/etc/PortalMedellin/images/popup/popup.jpeg",
           "status": 404,
@@ -678,9 +678,9 @@
           "first_party": true
         }
       ],
+      "third_party_failures": 28,
       "viewport": "mobile",
-      "screenshot": "screenshots/alcaldia-medellin-mobile.jpg",
-      "third_party_failures": 28
+      "screenshot": "screenshots/alcaldia-medellin-mobile.jpg"
     }
   ],
   "mobile": {
@@ -688,23 +688,28 @@
     "horizontal_overflow": false,
     "scroll_width": 390,
     "viewport_width": 390,
-    "screen_width": 390
+    "screen_width": 390,
+    "overflow_px": 0
   },
   "lighthouse": {
     "mobile": {
+      "runs": 1,
       "categories": {
-        "performance": 33,
+        "performance": 40,
         "accessibility": 60,
         "best_practices": 73,
         "seo": 85
       },
       "metrics": {
-        "fcp_ms": 6018,
-        "lcp_ms": 29675,
-        "tbt_ms": 842,
+        "fcp_ms": 4477,
+        "lcp_ms": 36901,
+        "tbt_ms": 660,
         "cls": 0.102,
-        "speed_index_ms": 16821
+        "speed_index_ms": 7634
       },
+      "performance_runs": [
+        40
+      ],
       "failed_audits": {
         "performance": [
           {
@@ -790,23 +795,138 @@
             "title": "robots.txt no es válido"
           }
         ]
-      }
+      },
+      "lighthouse_version": "13.5.0"
     },
     "desktop": null
   },
   "errors": [
-    "Lighthouse (desktop): no se pudo analizar la página"
+    "Lighthouse (mobile): 2 de 3 corridas no pudieron analizar la página",
+    "Lighthouse (desktop): 3 de 3 corridas no pudieron analizar la página"
   ],
   "robots": "ok",
-  "broken_first_party": 1,
+  "wcag": {
+    "rules_count": 11,
+    "cases": 509,
+    "criteria": [
+      "1.3.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-allowed-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+        "cases": 3
+      },
+      {
+        "rule": "aria-required-children",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-children)",
+        "cases": 4
+      },
+      {
+        "rule": "aria-required-parent",
+        "impact": "critical",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla aria-required-parent)",
+        "cases": 4
+      },
+      {
+        "rule": "aria-valid-attr-value",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr-value)",
+        "cases": 3
+      },
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 20
+      },
+      {
+        "rule": "select-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla select-name)",
+        "cases": 9
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 148
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 62
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 6
+      },
+      {
+        "rule": "listitem",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+        "cases": 248
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 2
+      }
+    ]
+  },
+  "failed_resources_first_party": 1,
+  "third_party_failures": 69,
   "scores": {
     "accessibility": 44,
-    "performance": 33,
+    "mobile": 40,
+    "performance": null,
     "best_practices": 73,
     "seo": 85,
-    "links": 90,
-    "mobile": 100,
-    "overall": 60
+    "failed_resources": 90,
+    "overall": 57
   },
   "light": "amarillo"
 }

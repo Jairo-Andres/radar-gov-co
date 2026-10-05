@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -27,6 +28,11 @@ def main(argv: list[str] | None = None) -> int:
     run.add_argument("--only", help="IDs separados por coma")
     run.add_argument("--limit", type=int, help="Auditar solo los primeros N sitios")
     run.add_argument("--date", help="Fecha de la carpeta de salida (AAAA-MM-DD)")
+    run.add_argument(
+        "--measured-from",
+        default=os.environ.get("RADAR_MEASURED_FROM", "equipo local"),
+        help="Desde dónde se mide (se publica en summary.json). También: variable RADAR_MEASURED_FROM",
+    )
     sub.add_parser("history")
     args = parser.parse_args(argv)
 
@@ -50,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.command == "run":
         from .runner import run_audit
 
-        run_audit(settings, sites, Path(args.data), args.date)
+        run_audit(settings, sites, Path(args.data), args.date, args.measured_from)
         return 0
     if args.command == "history":
         from .history import write_history

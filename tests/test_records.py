@@ -8,12 +8,14 @@ from radar.history import build_history, write_history
 from radar.runner import build_summary
 
 
-def page(score, broken=(), viewport="desktop", screenshot=None):
+def page(score, failed=(), viewport="desktop", screenshot=None, url="u", third_party=0):
+    violations = [{"rule": "r", "impact": "serious", "criteria": ["1.1.1"], "elements": 2}] if score < 100 else []
     p = {
-        "url": "u",
+        "url": url,
         "viewport": viewport,
-        "axe": {"score": score, "violations": [{"rule": "r"}] if score < 100 else []},
-        "broken": list(broken),
+        "axe": {"score": score, "violations": violations},
+        "failed_resources": list(failed),
+        "third_party_failures": third_party,
     }
     if screenshot:
         p["screenshot"] = screenshot
@@ -22,19 +24,21 @@ def page(score, broken=(), viewport="desktop", screenshot=None):
 
 def test_finish_record_full(lhr_mobile):
     summary, _ = parsers.parse_lighthouse(lhr_mobile)
-    broken = [
-        {"url": "https://www.dane.gov.co/x.png", "first_party": True},
-        {"url": "https://cdn.example.com/y.js", "first_party": False},
-    ]
+    lh = parsers.median_lighthouse([summary, summary, summary])
+    failed = [{"url": "https://www.dane.gov.co/x.png", "first_party": True}]
     record = make_record(
-        pages=[page(84, broken), page(100)],
-        mobile={"viewport_meta": True, "horizontal_overflow": False},
-        lighthouse={"mobile": summary, "desktop": summary},
+        pages=[page(84, failed, third_party=5, url="https://www.dane.gov.co/"), page(100, url="https://www.dane.gov.co/a")],
+        mobile={"viewport_meta": True, "horizontal_overflow": True, "scroll_width": 400, "screen_width": 390},
+        lighthouse={"mobile": lh, "desktop": lh},
     )
     finish_record(record)
-    assert record["broken_first_party"] == 1  # los recursos de terceros no restan
-    assert record["scores"]["links"] == 90
-    assert record["scores"]["mobile"] == 100
+    assert record["failed_resources_first_party"] == 1
+    assert record["third_party_failures"] == 5  # se registran pero no restan
+    assert record["scores"]["failed_resources"] == 90
+    assert record["mobile"]["overflow_px"] == 10
+    assert record["scores"]["mobile"] == 95  # Lighthouse móvil 100 - 5 por 10 px
+    assert record["wcag"]["rules_count"] == 1
+    assert record["wcag"]["cases"] == 2
     assert record["scores"]["overall"] is not None
     assert record["status"] == "ok"
     assert record["light"] in {"verde", "amarillo", "rojo"}
@@ -67,23 +71,35 @@ def test_timeout_message_is_neutral():
     assert message == "inicio: la página no terminó de cargar a tiempo"
 
 
+def lighthouse(perf):
+    run = {"categories": {"performance": perf, "accessibility": 90, "best_practices": 80, "seo": 90},
+           "metrics": {}, "failed_audits": {}}
+    return {"mobile": parsers.median_lighthouse([run]), "desktop": parsers.median_lighthouse([run])}
+
+
 def records_for_summary():
     a = finish_record(make_record(
         "dane", pages=[page(100, screenshot="screenshots/dane-desktop.jpg")],
-        mobile={"viewport_meta": True, "horizontal_overflow": False},
+        mobile={"scroll_width": 390, "screen_width": 390}, lighthouse=lighthouse(80),
     ))
-    b = finish_record(make_record("dian", pages=[page(60)], mobile={"viewport_meta": False, "horizontal_overflow": True}))
+    b = finish_record(make_record(
+        "dian", pages=[page(60)], mobile={"scroll_width": 980, "screen_width": 390}, lighthouse=lighthouse(60),
+    ))
     c = finish_record(make_record("icbf"))
     return [c, b, a]
 
 
 def test_build_summary_ranks_and_counts():
-    summary = build_summary(records_for_summary(), "2026-10-05")
+    summary = build_summary(records_for_summary(), "2026-10-05", "equipo local")
+    assert summary["measurement"]["from"] == "equipo local"
     assert [(s["id"], s["rank"]) for s in summary["sites"]] == [("dane", 1), ("dian", 2), ("icbf", None)]
     assert summary["sites_audited"] == 3
     assert summary["lights"]["sin_dato"] == 1
     assert summary["sites"][0]["screenshots"] == ["screenshots/dane-desktop.jpg"]
     assert summary["sites"][0]["detail"] == "sites/dane.json"
+    assert summary["sites"][1]["wcag_rules"] == 1 and summary["sites"][1]["wcag_cases"] == 2
+    assert summary["measurement"]["lighthouse_runs_per_view"] == 3
+    assert summary["measurement"]["lighthouse_aggregate"] == "mediana"
     expected_avg = round((summary["sites"][0]["overall"] + summary["sites"][1]["overall"]) / 2)
     assert summary["average_overall"] == expected_avg
 
