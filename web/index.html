@@ -53,9 +53,11 @@
 
   <main>
     <section class="hero ja-topo" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-head">
         <p class="eyebrow ja-label" data-i18n="eyebrow">Línea Q · Auditoría semanal · WCAG 2.1 AA</p>
-        <h1 id="hero-title" class="ja-display"></h1>
+        <h1 id="hero-title" class="ja-display">¿Qué tan accesibles son <span class="accent">30</span> portales del Estado?</h1>
+      </div>
+      <div class="hero-body">
         <p class="series-note fineprint" id="series-note"></p>
         <p class="lead" data-i18n="lead">Cada semana un robot visita estos sitios como un ciudadano más y mide accesibilidad, versión móvil, rendimiento y buenas prácticas. Más cerca del centro del radar, mejor nota.</p>
         <dl class="kpis" id="kpis">
@@ -66,7 +68,16 @@
       </div>
 
       <figure class="radar-wrap">
-        <div class="radar" id="radar">
+        <div class="radar-controls" role="group" data-i18n-aria="viewGroup" aria-label="Vista del radar">
+          <button type="button" class="chip" id="view-3d" aria-pressed="true" data-i18n="view3d">Vista 3D</button>
+          <button type="button" class="chip" id="view-flat" aria-pressed="false" data-i18n="viewFlat">Vista plana</button>
+        </div>
+        <div class="radar-3d" id="radar-3d">
+          <canvas id="radar-canvas" role="img" data-i18n-aria="radar3dLabel" aria-label="Radar en 3D"></canvas>
+          <div class="crt" aria-hidden="true"></div>
+          <p class="radar-hint fineprint" data-i18n="radar3dHint">Arrastra para girar. Toca una baliza para abrir su ficha.</p>
+        </div>
+        <div class="radar" id="radar" hidden>
           <svg id="radar-svg" viewBox="-128 -128 256 256" role="group" aria-labelledby="radar-caption">
             <defs>
               <radialGradient id="radar-bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="scale(105)">
@@ -102,7 +113,7 @@
 
     <section class="findings" id="findings" aria-labelledby="findings-title">
       <p class="eyebrow ja-label" data-i18n="findingsEyebrow">Hallazgos de esta semana</p>
-      <h2 id="findings-title"></h2>
+      <h2 id="findings-title" data-i18n="findingsEyebrow">Hallazgos de esta semana</h2>
       <p class="lead findings-lead" id="findings-lead"></p>
       <div class="findings-grid" id="findings-grid"></div>
       <div class="findings-split">

@@ -2,6 +2,7 @@
 import {
   TEXT, STATUS_LABEL, IMPACT_LABEL, COMPONENT_LABEL, CATEGORY_LABEL, SECTOR_LABEL, RULE_LABEL, translateNote,
 } from "./i18n.js";
+import { createRadar3D } from "./radar3d.js";
 
 // En Vercel los datos se copian junto a la web (data/); en local se sirve desde la raíz del repo (../data/).
 const DATA = location.pathname.includes("/web/") ? "../data/" : "data/";
@@ -18,7 +19,10 @@ const SECTORS = [
   { key: "Portales", includes: ["Presidencia", "Portal del Estado"] },
 ];
 
-const state = { summary: null, history: null, latest: null, runDir: "", filter: "todos", details: new Map(), lang: "es", openId: null };
+const REDUCE_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let radar3d = null;
+
+const state = { view: REDUCE_MOTION ? "flat" : "3d", summary: null, history: null, latest: null, runDir: "", filter: "todos", details: new Map(), lang: "es", openId: null };
 
 // ---------- Utilidades ----------
 
@@ -134,6 +138,42 @@ function setLang(lang) {
   if (state.openId && $("#sheet").open) openSheet(state.openId);
 }
 
+// ---------- Contadores ----------
+
+const counterObserver = "IntersectionObserver" in window && !REDUCE_MOTION
+  ? new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        counterObserver.unobserve(entry.target);
+        runCounter(entry.target);
+      }
+    }, { threshold: 0.4 })
+  : null;
+
+function runCounter(node) {
+  const target = Number(node.dataset.target);
+  const digits = Number(node.dataset.digits || 0);
+  const suffix = node.dataset.suffix || "";
+  const start = performance.now();
+  const duration = 900;
+  const step = (now) => {
+    const progress = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    node.textContent = numberFmt(target * eased, digits) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+// Devuelve el número final para lectores de pantalla y una copia visual que cuenta desde 0.
+function counter(value, { digits = 0, suffix = "" } = {}) {
+  const text = numberFmt(value, digits) + suffix;
+  if (!counterObserver || typeof value !== "number") return [text];
+  const visual = el("span", { "aria-hidden": "true", "data-target": value, "data-digits": digits, "data-suffix": suffix, text: numberFmt(0, digits) + suffix });
+  counterObserver.observe(visual);
+  return [visual, el("span", { class: "sr-only", text })];
+}
+
 // ---------- Portada ----------
 
 function renderHero(count) {
@@ -143,9 +183,10 @@ function renderHero(count) {
 function renderHeader(summary) {
   $("#scan-date").textContent = t("lastScan", { date: formatDate(summary.date) });
   renderHero(summary.sites_audited);
-  $("#kpi-avg").textContent = numberFmt(summary.average_overall);
-  $("#kpi-green").textContent = `${summary.lights.verde}/${summary.sites_audited}`;
-  $("#kpi-rules").textContent = numberFmt(median(summary.sites.map((s) => s.wcag_rules)), 1);
+  $("#kpi-avg").replaceChildren(...counter(summary.average_overall));
+  $("#kpi-green").replaceChildren(...counter(summary.lights.verde, { suffix: `/${summary.sites_audited}` }));
+  const rules = median(summary.sites.map((s) => s.wcag_rules));
+  $("#kpi-rules").replaceChildren(...counter(rules, { digits: Number.isInteger(rules) ? 0 : 1 }));
   const m = summary.measurement || {};
   $("#series-note").textContent = t(state.latest?.official ? "seriesOfficial" : "seriesInitial", { origin: summary.origin || "–" });
   $("#measured-from").textContent = t("measuredFrom", {
@@ -194,15 +235,15 @@ function renderFindings(summary) {
   $("#findings-grid").replaceChildren(
     ...cards.map(([value, key]) =>
       el("article", { class: "finding ja-card" },
-        el("p", { class: "finding-num" }, el("span", { text: String(value) }), el("span", { class: "finding-of", text: ` ${t("ofSites", { n })}` })),
+        el("p", { class: "finding-num" }, el("span", {}, ...counter(value)), el("span", { class: "finding-of", text: ` ${t("ofSites", { n })}` })),
         el("p", { class: "finding-text", text: t(key) }),
       ),
     ),
     el("article", { class: "finding ja-card" },
       el("p", { class: "finding-num" },
-        el("span", { text: numberFmt(f.median_accessibility) }),
+        el("span", {}, ...counter(f.median_accessibility)),
         el("span", { class: "finding-of", text: " / " }),
-        el("span", { text: numberFmt(f.median_mobile_performance) }),
+        el("span", {}, ...counter(f.median_mobile_performance)),
       ),
       el("p", { class: "finding-text", text: t("fMedians", { a11y: numberFmt(f.median_accessibility), perf: numberFmt(f.median_mobile_performance) }) }),
     ),
@@ -260,10 +301,12 @@ function renderRadar(summary) {
     $("#radar").append(tip);
   }
 
+  const entries3d = [];
   bySector.forEach((sites, i) => {
     sites.sort((a, b) => a.id.localeCompare(b.id));
     sites.forEach((site, j) => {
       const angleDeg = i * span + ((j + 0.5) / sites.length) * span;
+      entries3d.push({ site, angle: (angleDeg * Math.PI) / 180 });
       const angle = (angleDeg * Math.PI) / 180;
       // Escala ampliada: 100 en el centro, 50 o menos en el borde (cada anillo son 10 puntos).
       const radius = Math.max(4, Math.min(102, ((100 - site.overall) * 104) / 50));
@@ -288,6 +331,7 @@ function renderRadar(summary) {
       dotsGroup.append(group);
     });
   });
+  render3D(summary, entries3d, tip);
   dimRadar();
 }
 
@@ -335,8 +379,44 @@ function matchesFilter(site) {
   return SECTORS[sectorOf(site.category)]?.key === state.filter;
 }
 
+function render3D(summary, entries, tip) {
+  const canvas = $("#radar-canvas");
+  canvas.setAttribute("aria-label", t("radar3dLabel", { n: entries.length }));
+  if (!radar3d) {
+    radar3d = createRadar3D(canvas, {
+      reduceMotion: REDUCE_MOTION,
+      onSelect: (site) => openSheet(site.id),
+      onHover: (site, x, y) => {
+        if (!site) { tip.hidden = true; return; }
+        const box = canvas.getBoundingClientRect();
+        const parent = $("#radar-3d").getBoundingClientRect();
+        tip.replaceChildren(document.createTextNode(`${site.name} · `), el("b", { text: String(site.overall) }), ` (${statusLabel(site.light)})`);
+        tip.style.left = `${box.left - parent.left + x}px`;
+        tip.style.top = `${box.top - parent.top + y}px`;
+        tip.hidden = false;
+      },
+    });
+  }
+  if (tip.parentElement !== $("#radar-3d") && state.view === "3d") $("#radar-3d").append(tip);
+  radar3d.setData(entries, SECTORS.map((_, i) => sectorLabel(i, true)));
+  setView(state.view);
+}
+
+function setView(view) {
+  state.view = view;
+  const is3d = view === "3d";
+  $("#radar-3d").hidden = !is3d;
+  $("#radar").hidden = is3d;
+  $("#view-3d").setAttribute("aria-pressed", String(is3d));
+  $("#view-flat").setAttribute("aria-pressed", String(!is3d));
+  const tip = $(".radar-tip");
+  if (tip) { tip.hidden = true; (is3d ? $("#radar-3d") : $("#radar")).append(tip); }
+  if (radar3d) { if (is3d) radar3d.start(); else radar3d.stop(); }
+}
+
 function dimRadar() {
   if (!state.summary) return;
+  radar3d?.setDim((site) => !matchesFilter(site));
   for (const blip of document.querySelectorAll(".blip")) {
     const site = state.summary.sites.find((s) => s.id === blip.dataset.id);
     blip.classList.toggle("dim", !matchesFilter(site));
@@ -546,6 +626,8 @@ async function main() {
   applyStaticText();
   setupDialog();
   $("#lang-toggle").addEventListener("click", () => setLang(state.lang === "es" ? "en" : "es"));
+  $("#view-3d").addEventListener("click", () => setView("3d"));
+  $("#view-flat").addEventListener("click", () => setView("flat"));
   try {
     const latest = await getJSON("latest.json");
     state.latest = latest;

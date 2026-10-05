@@ -236,6 +236,8 @@ h2 { font: var(--weight-black) clamp(var(--text-xl), 4vw, var(--text-2xl)) / var
 .spark circle { fill: var(--radar-route); }
 
 @media (min-width: 900px) {
+  .hero { grid-template-areas: "head radar" "body radar"; grid-template-rows: auto 1fr; align-items: start; }
+  .hero-head { align-self: end; }
   .hero { grid-template-columns: 1.05fr 1fr; padding: var(--space-12) var(--space-6) var(--space-16); margin-inline: calc(-1 * var(--space-6)); }
   .method-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .findings-split, .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -257,3 +259,36 @@ h2 { font: var(--weight-black) clamp(var(--text-xl), 4vw, var(--text-2xl)) / var
 .evidence { margin: var(--space-3) 0 0; }
 .evidence img { display: block; max-width: 100%; max-height: 320px; width: auto; border-radius: var(--radius-md); border: var(--border-1) solid var(--color-border); background: #fff; }
 .evidence figcaption { text-align: left; font-size: var(--text-xs); margin-top: var(--space-2); }
+
+/* ---------- Héroe: en móvil el radar va justo debajo del título ---------- */
+@media (max-width: 899px) { .hero { grid-template-areas: "head" "radar" "body"; } }
+.hero-head { grid-area: head; }
+.hero-body { grid-area: body; }
+.radar-wrap { grid-area: radar; }
+.hero-head h1 { margin-bottom: 0; }
+
+/* ---------- Radar 3D (canvas 2D, sin WebGL) ---------- */
+.radar-controls { display: flex; justify-content: center; gap: var(--space-2); margin-bottom: var(--space-3); }
+.radar-3d {
+  position: relative; width: 100%; max-width: 640px; margin-inline: auto; aspect-ratio: 1.25;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background: radial-gradient(120% 90% at 50% 40%, #161A20, #0B0D10 70%);
+  box-shadow: 0 0 0 1px var(--color-border), 0 0 60px -10px color-mix(in srgb, var(--radar-route) 35%, transparent);
+}
+.radar-3d[hidden], .radar[hidden] { display: none; }
+#radar-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: pan-y; cursor: grab; }
+/* Pantalla de fósforo: líneas de barrido muy sutiles. */
+.crt {
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgb(255 255 255 / .03) 0 1px, transparent 1px 3px);
+  mix-blend-mode: screen;
+}
+.radar-hint { position: absolute; left: 0; right: 0; bottom: var(--space-2); margin: 0; text-align: center; pointer-events: none; }
+@media (max-width: 480px) { .radar-3d { aspect-ratio: 1.02; } }
+@media (prefers-reduced-motion: reduce) { .crt { display: none; } }
+
+/* Reserva espacio mientras cargan los datos (evita saltos de diseño). */
+.findings-grid:empty { min-height: 180px; }
+#top-rules:empty, #by-category:empty { min-height: 320px; }
+.kpis .ja-kpi__value { min-height: 1em; }
+.series-note:empty { min-height: 2.6em; }

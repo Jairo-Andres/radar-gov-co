@@ -21,6 +21,11 @@ export const TEXT = {
     legendGood: "Bueno ≥ 80",
     legendWarn: "Regular 50–79",
     legendBad: "Malo < 50",
+    viewGroup: "Vista del radar",
+    view3d: "Vista 3D",
+    viewFlat: "Vista plana",
+    radar3dLabel: "Radar en 3D con {n} portales: cuanto más alta la baliza, más baja la nota. Los mismos datos están en la vista plana y en la tabla de posiciones.",
+    radar3dHint: "Arrastra para girar. Toca una baliza para abrir su ficha.",
 
     findingsEyebrow: "Hallazgos de esta semana",
     findingsTitleAll: "Los {n} portales medidos incumplen al menos una regla WCAG 2.1 AA",
@@ -139,6 +144,11 @@ export const TEXT = {
     legendGood: "Good ≥ 80",
     legendWarn: "Fair 50–79",
     legendBad: "Poor < 50",
+    viewGroup: "Radar view",
+    view3d: "3D view",
+    viewFlat: "Flat view",
+    radar3dLabel: "3D radar with {n} websites: the taller the beacon, the lower the score. The same data is in the flat view and in the leaderboard.",
+    radar3dHint: "Drag to rotate. Tap a beacon to open its detail sheet.",
 
     findingsEyebrow: "This week's findings",
     findingsTitleAll: "All {n} measured websites fail at least one WCAG 2.1 AA rule",

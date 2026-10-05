@@ -139,3 +139,31 @@ def test_overflow_evidence_is_shown_when_available(page, base_url):
     evidence = page.locator(".evidence img")
     expect(evidence).to_be_visible()
     assert page.evaluate("(img) => img.complete && img.naturalWidth > 0", evidence.element_handle())
+
+
+def test_radar_3d_and_flat_views(page, base_url):
+    page.goto(base_url)
+    expect(page.locator("#radar-3d")).to_be_visible()
+    expect(page.locator("#radar-canvas")).to_have_attribute("role", "img")
+    page.get_by_role("button", name="Vista plana").click()
+    expect(page.locator("#radar-svg")).to_be_visible()
+    expect(page.locator("#radar-3d")).to_be_hidden()
+    # En la vista plana cada portal es una marca enfocable con teclado.
+    page.locator(".blip").first.focus()
+    page.keyboard.press("Enter")
+    expect(page.locator("#sheet")).to_be_visible()
+
+
+def test_reduced_motion_starts_flat_and_without_counters(browser, base_url):
+    context = browser.new_context(locale="es-CO", reduced_motion="reduce")
+    page = context.new_page()
+    page.goto(base_url)
+    expect(page.locator("#view-flat")).to_have_attribute("aria-pressed", "true")
+    expect(page.locator("#kpi-avg")).to_have_text(str(latest_summary()["average_overall"]))
+    context.close()
+
+
+def test_counters_expose_final_value_to_screen_readers(page, base_url):
+    summary = latest_summary()
+    page.goto(base_url)
+    expect(page.locator("#kpi-avg .sr-only")).to_have_text(str(summary["average_overall"]))
