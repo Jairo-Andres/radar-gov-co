@@ -95,6 +95,8 @@ python -m radar run --only dian,dane                     # audita algunos sitios
 python -m radar run --measured-from "equipo local, Bogotá"   # audita los 30 (≈ 1,5 h por las pausas)
 python -m radar history                                  # reconstruye data/history.json
 python -m pytest                                         # tests del auditor (sin llamar a sitios reales)
+python -m pytest tests_web                               # tests de la web: Playwright + axe-core sobre un servidor local
+python -m http.server 8000                               # ver la web en http://localhost:8000/web/
 ```
 
 ### Datos que produce
@@ -114,7 +116,24 @@ Correr `run` con `--only` el mismo día agrega sitios al resumen de esa fecha si
 ### Despliegue
 
 - **Ejecución semanal:** [`.github/workflows/radar.yml`](.github/workflows/radar.yml) corre los tests, audita los lunes a las 6:00 a. m. (hora de Colombia) y guarda `data/` con un commit. También se puede lanzar a mano desde *Actions → Radar semanal → Run workflow*, opcionalmente con IDs. Tiene un límite de 330 minutos.
-- **Web del ranking (fase 2):** se publicará en Vercel leyendo `data/latest.json`, `summary.json` y `history.json`.
+- **CI:** [`.github/workflows/ci.yml`](.github/workflows/ci.yml) corre en cada push los tests del auditor y los de la web, incluido un análisis de axe-core sobre la propia web (debe dar 0 incumplimientos WCAG).
+
+### Web del ranking ("El radar")
+
+Página estática en [`web/`](web/) (HTML, CSS y JavaScript, sin frameworks) que lee `data/latest.json`, el `summary.json` de esa fecha, `history.json` y la ficha de cada sitio:
+
+- **Radar animado:** cada punto es un portal. La distancia al centro depende de la nota (cada anillo son 10 puntos y el borde es 50 o menos) y el sector, del tipo de entidad. Con `prefers-reduced-motion` se apaga la animación.
+- **Tabla de posiciones** con filtro por tipo de entidad. En móvil muestra solo puesto, portal, nota y reglas WCAG.
+- **Ficha por sitio** con capturas, componentes de la nota, reglas WCAG explicadas en lenguaje claro, LCP, desborde móvil y evolución semanal. Se puede enlazar directamente con `#id`, por ejemplo `#dian`.
+- `web/brand.css` guarda los tokens de la identidad visual común de los 3 proyectos (propuesta).
+
+**Despliegue en Vercel (plan Hobby):**
+
+1. En Vercel: *Add New → Project → Import* el repo `radar-gov-co`.
+2. Deja *Root Directory* en la raíz. [`vercel.json`](vercel.json) ya define el build: copia `web/` y `data/` a `dist/`, sin instalar dependencias.
+3. *Deploy*. Desde ahí, cada push a `main` (incluidos los commits semanales del workflow con datos nuevos) publica una versión nueva sola.
+
+Si la web muestra "No se pudieron cargar los resultados", revisa que `data/latest.json` exista en el último deploy y que el build haya copiado `data/` (pestaña *Build Logs* en Vercel).
 
 ### Qué revisar si algo se cae
 
@@ -192,7 +211,17 @@ Requirements: Python 3.12, Node 20+ and Google Chrome. See the commands in the S
 ### Deployment
 
 - **Weekly run:** the GitHub Actions workflow runs the tests, audits every Monday at 6:00 a.m. Colombia time and commits `data/`. It can also be triggered manually.
-- **Ranking website (phase 2):** Vercel, reading `data/latest.json`, `summary.json` and `history.json`.
+- **CI:** `ci.yml` runs the auditor tests and the website tests (Playwright plus an axe-core scan of the website itself, which must report 0 WCAG violations) on every push.
+
+### Ranking website ("The radar")
+
+A static page in `web/` (plain HTML, CSS and JavaScript) reads `data/latest.json`, that day's `summary.json`, `history.json` and each site's detail file. It has three parts:
+
+- **Animated radar:** distance to the center depends on the score and the sector on the type of entity. The animation is disabled with `prefers-reduced-motion`.
+- **Leaderboard:** with a filter by type of entity.
+- **Site sheet:** screenshots, score components, WCAG rules in plain language, LCP, mobile overflow and weekly trend. It can be deep-linked with `#id`.
+
+**Deploying to Vercel (Hobby plan):** import the repository, keep the root directory and deploy. `vercel.json` copies `web/` and `data/` into `dist/` without installing dependencies, so every push to `main`, including the weekly data commits, publishes a new version.
 
 ### Troubleshooting
 

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar .gov.co · Calidad de 30 portales públicos de Colombia</title>
+  <meta name="description" content="Auditoría semanal de accesibilidad (WCAG 2.1 AA), versión móvil, rendimiento y buenas prácticas de 30 portales del Estado colombiano.">
+  <meta name="theme-color" content="#070d14">
+  <meta property="og:title" content="Radar .gov.co">
+  <meta property="og:description" content="Ranking semanal de accesibilidad y calidad de 30 portales públicos colombianos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="brand.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#ranking">Saltar a la tabla de posiciones</a>
+
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Radar .gov.co, inicio">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" /><circle cx="16" cy="16" r="8" /><path d="M16 16 L27 9" /><circle class="brand-dot" cx="22" cy="20" r="2.2" /></svg>
+      <span>Radar <b>.gov.co</b></span>
+    </a>
+    <p class="scan-date" id="scan-date" aria-live="polite">Cargando la última medición…</p>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Auditoría semanal · WCAG 2.1 AA</p>
+        <h1 id="hero-title">¿Qué tan accesibles son <span class="accent" id="hero-count">30</span> portales del Estado?</h1>
+        <p class="lead">Cada semana un robot visita estos sitios como un ciudadano más y mide accesibilidad, versión móvil, rendimiento y buenas prácticas. Más cerca del centro del radar, mejor nota.</p>
+        <dl class="kpis" id="kpis">
+          <div><dt>Nota promedio</dt><dd id="kpi-avg">–</dd></div>
+          <div><dt>Sitios en verde</dt><dd id="kpi-green">–</dd></div>
+          <div><dt>Reglas WCAG incumplidas (mediana por sitio)</dt><dd id="kpi-rules">–</dd></div>
+        </dl>
+      </div>
+
+      <figure class="radar-wrap">
+        <div class="radar" id="radar">
+          <svg id="radar-svg" viewBox="-128 -128 256 256" role="group" aria-labelledby="radar-caption">
+            <defs>
+              <radialGradient id="radar-bg" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="scale(105)">
+                <stop offset="0" stop-color="var(--radar-core)" />
+                <stop offset="1" stop-color="var(--radar-edge)" />
+              </radialGradient>
+            </defs>
+            <circle r="104" fill="url(#radar-bg)" class="radar-disc" />
+            <g class="rings" aria-hidden="true">
+              <circle r="20.8" /><circle r="41.6" /><circle r="62.4" /><circle r="83.2" /><circle r="104" />
+            </g>
+            <g class="ring-labels" aria-hidden="true">
+              <text x="3" y="-22.5">90</text><text x="3" y="-43.3">80</text><text x="3" y="-64.1">70</text><text x="3" y="-84.9">60</text><text x="3" y="-105.7">≤50</text>
+            </g>
+            <g class="sectors" id="sectors" aria-hidden="true"></g>
+            <g class="sweep" aria-hidden="true">
+              <path d="M0 0 L0 -104 A104 104 0 0 0 -60 -85 Z" />
+              <line x1="0" y1="0" x2="0" y2="-104" />
+            </g>
+            <g id="dots"></g>
+          </svg>
+        </div>
+        <figcaption id="radar-caption">
+          Cada punto es un portal. Cada anillo son 10 puntos menos de nota y el borde es 50 o menos; el sector es el tipo de entidad.
+          <span class="legend"><i class="dot verde"></i>Verde ≥ 80 <i class="dot amarillo"></i>Amarillo 50–79 <i class="dot rojo"></i>Rojo &lt; 50</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="board" id="ranking" aria-labelledby="ranking-title" tabindex="-1">
+      <div class="board-head">
+        <h2 id="ranking-title">Tabla de posiciones</h2>
+        <div class="filters" role="group" aria-label="Filtrar por tipo de entidad" id="filters"></div>
+      </div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Tabla de posiciones (se puede desplazar)">
+        <table class="ranking">
+          <caption class="sr-only">Portales ordenados por nota global. Elige un portal para ver su ficha.</caption>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Portal</th>
+              <th scope="col">Nota</th>
+              <th scope="col" class="c-wide">Accesib.</th>
+              <th scope="col" class="c-wide">Móvil</th>
+              <th scope="col" class="c-wide">Rendim.</th>
+              <th scope="col" class="c-wide">Buenas pr.</th>
+              <th scope="col" class="c-wide">SEO</th>
+              <th scope="col" class="c-wide">Rec. fallidos</th>
+              <th scope="col" class="c-mid">WCAG</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-body"></tbody>
+        </table>
+      </div>
+      <p class="note" id="status-note" hidden></p>
+    </section>
+
+    <section class="method" aria-labelledby="method-title">
+      <h2 id="method-title">Cómo se calcula la nota</h2>
+      <ol class="weights" id="weights"></ol>
+      <div class="method-grid">
+        <article>
+          <h3>Accesibilidad primero</h3>
+          <p>axe-core revisa las reglas WCAG 2.1 A y AA en hasta 3 páginas por sitio, en escritorio y móvil. Se cuentan aparte las <strong>reglas distintas</strong> incumplidas y el <strong>total de casos</strong>.</p>
+        </article>
+        <article>
+          <h3>Mediana de 3</h3>
+          <p>Lighthouse se corre 3 veces por vista y se publica la mediana, porque el rendimiento varía entre mediciones. La nota móvil resta 0,5 puntos por cada píxel que la página se sale de una pantalla de 390 px.</p>
+        </article>
+        <article>
+          <h3>Visitante normal</h3>
+          <p>Máximo 3 páginas por sitio, pausas de varios segundos, una vez por semana, respetando robots.txt y con un agente identificable. Nada de pruebas de carga, formularios ni escaneos de seguridad (Ley 1273 de 2009).</p>
+        </article>
+      </div>
+      <p class="fineprint" id="measured-from"></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Proyecto académico de <a href="https://www.linkedin.com/in/jairo-andres31-analyst" rel="noopener">Jairo Andrés Sierra</a>. Código, datos y metodología en <a href="https://github.com/Jairo-Andres/radar-gov-co" rel="noopener">GitHub</a>.</p>
+    <p class="fineprint">Las notas son mediciones automáticas y no reemplazan una auditoría manual de accesibilidad.</p>
+  </footer>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+    <div class="sheet-inner">
+      <header class="sheet-head">
+        <div>
+          <p class="eyebrow" id="sheet-category"></p>
+          <h2 id="sheet-title"></h2>
+          <a id="sheet-url" class="sheet-url" rel="noopener" target="_blank"></a>
+        </div>
+        <button class="close" type="button" id="sheet-close" aria-label="Cerrar ficha">✕</button>
+      </header>
+      <div id="sheet-body" class="sheet-body"></div>
+    </div>
+  </dialog>
+
+  <noscript><p class="note">Esta página necesita JavaScript para cargar los resultados. Los datos están en el repositorio en formato JSON.</p></noscript>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
