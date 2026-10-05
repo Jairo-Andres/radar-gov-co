@@ -4,7 +4,7 @@ export const TEXT = {
   es: {
     pageTitle: "Radar .gov.co · Accesibilidad de 30 portales públicos de Colombia",
     skip: "Saltar a la tabla de posiciones",
-    brandLabel: "Radar .gov.co, línea Q de los proyectos de Jairo Andrés. Inicio",
+    brandLabel: "Radar .gov.co, línea Q de los proyectos de Jairo Sierra. Inicio",
     loading: "Cargando la última medición…",
     loadError: "No se pudieron cargar los resultados.",
     lastScan: "Última medición: {date}",
@@ -122,7 +122,7 @@ export const TEXT = {
   en: {
     pageTitle: "Radar .gov.co · Accessibility of 30 Colombian government websites",
     skip: "Skip to the leaderboard",
-    brandLabel: "Radar .gov.co, line Q of Jairo Andrés's projects. Home",
+    brandLabel: "Radar .gov.co, line Q of Jairo Sierra's projects. Home",
     loading: "Loading the latest scan…",
     loadError: "The results could not be loaded.",
     lastScan: "Latest scan: {date}",

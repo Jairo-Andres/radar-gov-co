@@ -150,7 +150,7 @@ Página estática en [`web/`](web/) (HTML, CSS y JavaScript, sin frameworks) que
 - **Español e inglés:** botón ES/EN, enlace directo con `?lang=en`, y por defecto el idioma del navegador. Los textos están en `web/i18n.js`.
 - **Vista previa al compartir:** `og-image.png` (1200×630) se genera con `python -m radar og` a partir de `web/og.html` y el workflow semanal la regenera con los datos nuevos.
 - **Ficha por sitio** con capturas, componentes de la nota, reglas WCAG explicadas en lenguaje claro, LCP, desborde móvil y evolución semanal. Se puede enlazar directamente con `#id`, por ejemplo `#dian`.
-- **Identidad visual común "Rutas + Cota":** el Radar es la **línea Q** (QA). `web/tokens.css`, `web/components.css`, el monograma y los favicons son copias sin modificar de `identidad-visual/fase-2` (v1.0). `web/brand.css` solo traduce esos tokens al radar. Los estados siempre llevan forma, texto y color: bueno ≥ 80 (círculo), regular 50–79 (triángulo) y malo < 50 (cuadrado). La página fuerza el tema oscuro (`data-theme="dark"`), porque el concepto es una pantalla de radar.
+- **Identidad visual común "Rutas + Cota":** el Radar es la **línea Q** (QA). `web/tokens.css`, `web/components.css`, el monograma JAS (`marca/monograma-jas-oscuro.svg`) y los favicons son copias sin modificar de `identidad-visual/fase-2`. `web/brand.css` solo traduce esos tokens al radar. Los estados siempre llevan forma, texto y color: bueno ≥ 80 (círculo), regular 50–79 (triángulo) y malo < 50 (cuadrado). La página fuerza el tema oscuro (`data-theme="dark"`), porque el concepto es una pantalla de radar.
 - Si se actualiza la identidad, hay que volver a copiar esos archivos; no se editan aquí.
 
 **Despliegue en Vercel (plan Hobby):**
