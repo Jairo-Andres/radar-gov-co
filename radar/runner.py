@@ -94,7 +94,6 @@ def run_audit(
     notes_path = PRIVATE_DIR / f"security-notes-{date}.json"
     # Las notas de otros sitios del mismo día (corridas parciales con --only) se conservan.
     audited_ids = {s.id for s in sites}
-    previous_notes = [n for n in _read_notes(notes_path) if n.get("site") not in audited_ids]
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -108,8 +107,10 @@ def run_audit(
                           "scores": {}, "light": "sin_dato"}
             write_json(day_dir / "sites" / f"{site.id}.json", record)
             # Se guarda tras cada sitio para no perder avisos si la corrida se corta.
-            if previous_notes or security.items:
-                write_json(notes_path, previous_notes + security.items)
+            # Se relee el archivo antes de escribir para no pisar otra corrida del mismo día.
+            others = [n for n in _read_notes(notes_path) if n.get("site") not in audited_ids]
+            if others or security.items:
+                write_json(notes_path, others + security.items)
             print(f"  -> {record.get('scores', {}).get('overall')} ({record['status']})", flush=True)
         browser.close()
 

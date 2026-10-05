@@ -24,9 +24,9 @@
   "average_overall": 69,
   "lights": {
     "verde": 4,
-    "amarillo": 24,
+    "amarillo": 26,
     "rojo": 0,
-    "sin_dato": 2
+    "sin_dato": 0
   },
   "sites": [
     {
@@ -327,6 +327,33 @@
       "rank": 11
     },
     {
+      "id": "alcaldia-cali",
+      "name": "Alcaldía de Cali",
+      "category": "Alcaldía",
+      "url": "https://www.cali.gov.co/",
+      "status": "ok",
+      "overall": 70,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 84,
+        "mobile": 32,
+        "performance": 56,
+        "best_practices": 54,
+        "seo": 100,
+        "failed_resources": 100,
+        "overall": 70
+      },
+      "wcag_rules": 5,
+      "wcag_cases": 61,
+      "failed_resources_first_party": 0,
+      "screenshots": [
+        "screenshots/alcaldia-cali-desktop.jpg",
+        "screenshots/alcaldia-cali-mobile.jpg"
+      ],
+      "detail": "sites/alcaldia-cali.json",
+      "rank": 12
+    },
+    {
       "id": "contraloria",
       "name": "Contraloría General de la República",
       "category": "Órgano de control",
@@ -378,7 +405,7 @@
         "screenshots/alcaldia-bucaramanga-mobile.jpg"
       ],
       "detail": "sites/alcaldia-bucaramanga.json",
-      "rank": 13
+      "rank": 14
     },
     {
       "id": "mineducacion",
@@ -405,7 +432,7 @@
         "screenshots/mineducacion-mobile.jpg"
       ],
       "detail": "sites/mineducacion.json",
-      "rank": 13
+      "rank": 14
     },
     {
       "id": "mindefensa",
@@ -432,7 +459,7 @@
         "screenshots/mindefensa-mobile.jpg"
       ],
       "detail": "sites/mindefensa.json",
-      "rank": 15
+      "rank": 16
     },
     {
       "id": "presidencia",
@@ -459,7 +486,7 @@
         "screenshots/presidencia-mobile.jpg"
       ],
       "detail": "sites/presidencia.json",
-      "rank": 16
+      "rank": 17
     },
     {
       "id": "minambiente",
@@ -486,7 +513,7 @@
         "screenshots/minambiente-mobile.jpg"
       ],
       "detail": "sites/minambiente.json",
-      "rank": 17
+      "rank": 18
     },
     {
       "id": "procuraduria",
@@ -513,7 +540,7 @@
         "screenshots/procuraduria-mobile.jpg"
       ],
       "detail": "sites/procuraduria.json",
-      "rank": 17
+      "rank": 18
     },
     {
       "id": "dnp",
@@ -540,7 +567,7 @@
         "screenshots/dnp-mobile.jpg"
       ],
       "detail": "sites/dnp.json",
-      "rank": 19
+      "rank": 20
     },
     {
       "id": "icbf",
@@ -567,7 +594,7 @@
         "screenshots/icbf-mobile.jpg"
       ],
       "detail": "sites/icbf.json",
-      "rank": 19
+      "rank": 20
     },
     {
       "id": "minjusticia",
@@ -594,7 +621,7 @@
         "screenshots/minjusticia-mobile.jpg"
       ],
       "detail": "sites/minjusticia.json",
-      "rank": 19
+      "rank": 20
     },
     {
       "id": "mintrabajo",
@@ -621,7 +648,7 @@
         "screenshots/mintrabajo-mobile.jpg"
       ],
       "detail": "sites/mintrabajo.json",
-      "rank": 19
+      "rank": 20
     },
     {
       "id": "policia",
@@ -648,7 +675,7 @@
         "screenshots/policia-mobile.jpg"
       ],
       "detail": "sites/policia.json",
-      "rank": 19
+      "rank": 20
     },
     {
       "id": "alcaldia-bogota",
@@ -675,7 +702,34 @@
         "screenshots/alcaldia-bogota-mobile.jpg"
       ],
       "detail": "sites/alcaldia-bogota.json",
-      "rank": 24
+      "rank": 25
+    },
+    {
+      "id": "gov-co",
+      "name": "Portal Único del Estado (GOV.CO)",
+      "category": "Portal del Estado",
+      "url": "https://www.gov.co/",
+      "status": "ok",
+      "overall": 63,
+      "light": "amarillo",
+      "scores": {
+        "accessibility": 94,
+        "mobile": 14,
+        "performance": 39,
+        "best_practices": 71,
+        "seo": 100,
+        "failed_resources": 40,
+        "overall": 63
+      },
+      "wcag_rules": 4,
+      "wcag_cases": 24,
+      "failed_resources_first_party": 6,
+      "screenshots": [
+        "screenshots/gov-co-desktop.jpg",
+        "screenshots/gov-co-mobile.jpg"
+      ],
+      "detail": "sites/gov-co.json",
+      "rank": 25
     },
     {
       "id": "minsalud",
@@ -702,7 +756,7 @@
         "screenshots/minsalud-mobile.jpg"
       ],
       "detail": "sites/minsalud.json",
-      "rank": 25
+      "rank": 27
     },
     {
       "id": "minvivienda",
@@ -729,7 +783,7 @@
         "screenshots/minvivienda-mobile.jpg"
       ],
       "detail": "sites/minvivienda.json",
-      "rank": 25
+      "rank": 27
     },
     {
       "id": "alcaldia-medellin",
@@ -756,7 +810,7 @@
         "screenshots/alcaldia-medellin-mobile.jpg"
       ],
       "detail": "sites/alcaldia-medellin.json",
-      "rank": 27
+      "rank": 29
     },
     {
       "id": "mintransporte",
@@ -783,39 +837,7 @@
         "screenshots/mintransporte-mobile.jpg"
       ],
       "detail": "sites/mintransporte.json",
-      "rank": 27
-    },
-    {
-      "id": "alcaldia-cali",
-      "name": "Alcaldía de Cali",
-      "category": "Alcaldía",
-      "url": "https://www.cali.gov.co/",
-      "status": "omitido_robots",
-      "overall": null,
-      "light": "sin_dato",
-      "scores": {},
-      "wcag_rules": null,
-      "wcag_cases": null,
-      "failed_resources_first_party": null,
-      "screenshots": [],
-      "detail": "sites/alcaldia-cali.json",
-      "rank": null
-    },
-    {
-      "id": "gov-co",
-      "name": "Portal Único del Estado (GOV.CO)",
-      "category": "Portal del Estado",
-      "url": "https://www.gov.co/",
-      "status": "omitido_robots",
-      "overall": null,
-      "light": "sin_dato",
-      "scores": {},
-      "wcag_rules": null,
-      "wcag_cases": null,
-      "failed_resources_first_party": null,
-      "screenshots": [],
-      "detail": "sites/gov-co.json",
-      "rank": null
+      "rank": 29
     }
   ]
 }

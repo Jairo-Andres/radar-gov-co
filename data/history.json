@@ -7,9 +7,9 @@
       "average_overall": 69,
       "lights": {
         "verde": 4,
-        "amarillo": 24,
+        "amarillo": 26,
         "rojo": 0,
-        "sin_dato": 2
+        "sin_dato": 0
       }
     }
   ],
@@ -168,6 +168,20 @@
       ],
       "change": null
     },
+    "alcaldia-cali": {
+      "name": "Alcaldía de Cali",
+      "category": "Alcaldía",
+      "url": "https://www.cali.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 70,
+          "rank": 12,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
     "contraloria": {
       "name": "Contraloría General de la República",
       "category": "Órgano de control",
@@ -190,7 +204,7 @@
         {
           "date": "2026-10-04",
           "overall": 69,
-          "rank": 13,
+          "rank": 14,
           "light": "amarillo"
         }
       ],
@@ -204,7 +218,7 @@
         {
           "date": "2026-10-04",
           "overall": 69,
-          "rank": 13,
+          "rank": 14,
           "light": "amarillo"
         }
       ],
@@ -218,7 +232,7 @@
         {
           "date": "2026-10-04",
           "overall": 67,
-          "rank": 15,
+          "rank": 16,
           "light": "amarillo"
         }
       ],
@@ -232,7 +246,7 @@
         {
           "date": "2026-10-04",
           "overall": 66,
-          "rank": 16,
+          "rank": 17,
           "light": "amarillo"
         }
       ],
@@ -246,7 +260,7 @@
         {
           "date": "2026-10-04",
           "overall": 65,
-          "rank": 17,
+          "rank": 18,
           "light": "amarillo"
         }
       ],
@@ -260,7 +274,7 @@
         {
           "date": "2026-10-04",
           "overall": 65,
-          "rank": 17,
+          "rank": 18,
           "light": "amarillo"
         }
       ],
@@ -274,7 +288,7 @@
         {
           "date": "2026-10-04",
           "overall": 64,
-          "rank": 19,
+          "rank": 20,
           "light": "amarillo"
         }
       ],
@@ -288,7 +302,7 @@
         {
           "date": "2026-10-04",
           "overall": 64,
-          "rank": 19,
+          "rank": 20,
           "light": "amarillo"
         }
       ],
@@ -302,7 +316,7 @@
         {
           "date": "2026-10-04",
           "overall": 64,
-          "rank": 19,
+          "rank": 20,
           "light": "amarillo"
         }
       ],
@@ -316,7 +330,7 @@
         {
           "date": "2026-10-04",
           "overall": 64,
-          "rank": 19,
+          "rank": 20,
           "light": "amarillo"
         }
       ],
@@ -330,7 +344,7 @@
         {
           "date": "2026-10-04",
           "overall": 64,
-          "rank": 19,
+          "rank": 20,
           "light": "amarillo"
         }
       ],
@@ -344,7 +358,21 @@
         {
           "date": "2026-10-04",
           "overall": 63,
-          "rank": 24,
+          "rank": 25,
+          "light": "amarillo"
+        }
+      ],
+      "change": null
+    },
+    "gov-co": {
+      "name": "Portal Único del Estado (GOV.CO)",
+      "category": "Portal del Estado",
+      "url": "https://www.gov.co/",
+      "series": [
+        {
+          "date": "2026-10-04",
+          "overall": 63,
+          "rank": 25,
           "light": "amarillo"
         }
       ],
@@ -358,7 +386,7 @@
         {
           "date": "2026-10-04",
           "overall": 61,
-          "rank": 25,
+          "rank": 27,
           "light": "amarillo"
         }
       ],
@@ -372,7 +400,7 @@
         {
           "date": "2026-10-04",
           "overall": 61,
-          "rank": 25,
+          "rank": 27,
           "light": "amarillo"
         }
       ],
@@ -386,7 +414,7 @@
         {
           "date": "2026-10-04",
           "overall": 57,
-          "rank": 27,
+          "rank": 29,
           "light": "amarillo"
         }
       ],
@@ -400,40 +428,12 @@
         {
           "date": "2026-10-04",
           "overall": 57,
-          "rank": 27,
+          "rank": 29,
           "light": "amarillo"
-        }
-      ],
-      "change": null
-    },
-    "alcaldia-cali": {
-      "name": "Alcaldía de Cali",
-      "category": "Alcaldía",
-      "url": "https://www.cali.gov.co/",
-      "series": [
-        {
-          "date": "2026-10-04",
-          "overall": null,
-          "rank": null,
-          "light": "sin_dato"
-        }
-      ],
-      "change": null
-    },
-    "gov-co": {
-      "name": "Portal Único del Estado (GOV.CO)",
-      "category": "Portal del Estado",
-      "url": "https://www.gov.co/",
-      "series": [
-        {
-          "date": "2026-10-04",
-          "overall": null,
-          "rank": null,
-          "light": "sin_dato"
         }
       ],
       "change": null
     }
   },
-  "generated_at": "2026-10-05T13:04:51+00:00"
+  "generated_at": "2026-10-05T13:15:35+00:00"
 }
