@@ -1,0 +1,804 @@
+{
+  "id": "alcaldia-bucaramanga",
+  "name": "Alcaldía de Bucaramanga",
+  "category": "Alcaldía",
+  "url": "https://www.bucaramanga.gov.co/",
+  "audited_at": "2026-10-05T16:34:16+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.bucaramanga.gov.co/",
+      "final_url": "https://www.bucaramanga.gov.co/",
+      "status": 200,
+      "load_ms": 7767,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "button"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 19,
+            "examples": [
+              ".et_pb_code_1_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]",
+              "#post-226375 > .post-content > .el-read-more-link > .more-link[target=\"_self\"][role=\"link\"]",
+              "li:nth-child(5) > .page-numbers[role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".et_pb_blurb_0_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_1_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_2_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "a[href$=\"www.gov.co\"]",
+              ".entry-featured-image-url[target=\"_self\"][role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".et_pb_code_1_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.bucaramanga.gov.co/wp-content/themes/Divi/js/custom.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-bucaramanga-desktop.jpg"
+    },
+    {
+      "url": "https://www.bucaramanga.gov.co/gobierno-ciudadanos/gabinete-publico/",
+      "final_url": "https://www.bucaramanga.gov.co/gobierno-ciudadanos/gabinete-publico/",
+      "status": 404,
+      "load_ms": 4753,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "button"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 15,
+            "examples": [
+              ".et_pb_code_1_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]",
+              ".px-0 > li:nth-child(10) > a[role=\"link\"]",
+              ".px-0 > li:nth-child(11) > a[role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".et_pb_blurb_0_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_1_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_2_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".et_pb_code_1_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "a[href$=\"www.gov.co\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.bucaramanga.gov.co/wp-content/themes/Divi/js/custom.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        },
+        {
+          "url": "https://www.bucaramanga.gov.co/gobierno-ciudadanos/gabinete-publico/",
+          "status": 404,
+          "type": "document",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.bucaramanga.gov.co/tramites/",
+      "final_url": "https://www.bucaramanga.gov.co/tramites/",
+      "status": 200,
+      "load_ms": 4750,
+      "axe": {
+        "score": 62,
+        "violations": [
+          {
+            "rule": "aria-allowed-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+            "help_en": "Elements must only use supported ARIA attributes",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=axeAPI",
+            "elements": 10,
+            "examples": [
+              "div[data-bs-target=\"#norma-1\"]",
+              "div[data-bs-target=\"#norma-2\"]",
+              "div[data-bs-target=\"#norma-3\"]"
+            ]
+          },
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".at-floating-navigation__button",
+              "button[onclick=\"filtrarTramites()\"]",
+              "button[onclick=\"limpiarFiltros()\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 65,
+            "examples": [
+              "label[for=\"dependencia\"]",
+              "label[for=\"costo\"]",
+              "label[for=\"modalidad\"]"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".et_pb_blurb_0_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_1_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_2_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "a[href$=\"www.gov.co\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.bucaramanga.gov.co/wp-content/themes/Divi/js/custom.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.bucaramanga.gov.co/",
+      "final_url": "https://www.bucaramanga.gov.co/",
+      "status": 200,
+      "load_ms": 6408,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "button"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 19,
+            "examples": [
+              ".et_pb_code_2_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]",
+              "#post-226375 > .post-content > .el-read-more-link > .more-link[target=\"_self\"][role=\"link\"]",
+              "li:nth-child(5) > .page-numbers[role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "aria-hidden-focus",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+            "help_en": "ARIA hidden element must not be focusable or contain focusable elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".et_pb_blurb_0_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_1_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]",
+              ".et_pb_blurb_2_tb_footer > .et_pb_blurb_content > .et_pb_main_blurb_image[aria-hidden=\"true\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "a[href$=\"www.gov.co\"]",
+              ".entry-featured-image-url[target=\"_self\"][role=\"link\"]"
+            ]
+          },
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".et_pb_code_2_tb_header > .et_pb_code_inner > .btn-govco.fill-btn-govco[role=\"link\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.bucaramanga.gov.co/wp-content/themes/Divi/js/custom.js",
+          "status": 404,
+          "type": "script",
+          "first_party": true,
+          "kind": "http"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-bucaramanga-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 24,
+        "accessibility": 74,
+        "best_practices": 88,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 5154,
+        "lcp_ms": 21630,
+        "tbt_ms": 342,
+        "cls": 1.006,
+        "speed_index_ms": 10438
+      },
+      "performance_runs": [
+        24,
+        23,
+        24
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "aria-hidden-focus",
+            "title": "Los elementos `[aria-hidden=\"true\"]` contienen elementos descendientes seleccionables"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "document-title",
+            "title": "El documento no contiene un elemento `<title>`"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "document-title",
+            "title": "El documento no contiene un elemento `<title>`"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 41,
+        "accessibility": 79,
+        "best_practices": 88,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 1434,
+        "lcp_ms": 4387,
+        "tbt_ms": 0,
+        "cls": 0.992,
+        "speed_index_ms": 4002
+      },
+      "performance_runs": [
+        41,
+        41,
+        39
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "button-name",
+            "title": "Los botones no tienen nombres accesibles"
+          },
+          {
+            "id": "aria-hidden-focus",
+            "title": "Los elementos `[aria-hidden=\"true\"]` contienen elementos descendientes seleccionables"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "document-title",
+            "title": "El documento no contiene un elemento `<title>`"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "document-title",
+            "title": "El documento no contiene un elemento `<title>`"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 7,
+    "cases": 134,
+    "criteria": [
+      "1.4.1",
+      "1.4.3",
+      "2.4.2",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-allowed-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-allowed-attr)",
+        "cases": 10
+      },
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 5
+      },
+      {
+        "rule": "aria-hidden-focus",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-hidden-focus)",
+        "cases": 12
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 99
+      },
+      {
+        "rule": "document-title",
+        "impact": "serious",
+        "criteria": [
+          "2.4.2"
+        ],
+        "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+        "cases": 2
+      },
+      {
+        "rule": "link-in-text-block",
+        "impact": "serious",
+        "criteria": [
+          "1.4.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+        "cases": 2
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 4
+      }
+    ]
+  },
+  "failed_resources_first_party": 2,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 68,
+    "mobile": 24,
+    "performance": 41,
+    "best_practices": 88,
+    "seo": 83,
+    "failed_resources": 80,
+    "overall": 60
+  },
+  "light": "amarillo"
+}

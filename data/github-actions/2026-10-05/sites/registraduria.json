@@ -1,0 +1,18 @@
+{
+  "id": "registraduria",
+  "name": "Registraduría Nacional del Estado Civil",
+  "category": "Entidad nacional",
+  "url": "https://www.registraduria.gov.co/",
+  "audited_at": "2026-10-05T15:55:36+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (403)"
+}

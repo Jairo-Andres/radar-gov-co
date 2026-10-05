@@ -1,0 +1,847 @@
+{
+  "id": "minambiente",
+  "name": "Ministerio de Ambiente y Desarrollo Sostenible",
+  "category": "Ministerio",
+  "url": "https://www.minambiente.gov.co/",
+  "audited_at": "2026-10-05T15:41:32+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.minambiente.gov.co/",
+      "final_url": "https://www.minambiente.gov.co/",
+      "status": 200,
+      "load_ms": 2644,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 5,
+            "examples": [
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(1) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]",
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(2) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]",
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(3) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 27,
+            "examples": [
+              ".vc_col-sm-2.wpb_column.vc_column_container:nth-child(1) > .vc_column-inner > .wpb_wrapper > .wpb_single_image.vc_align_center.wpb_content_element > figure > .vc_single_image-wrapper.vc_box_border_gre",
+              ".vc_col-sm-2.wpb_column.vc_column_container:nth-child(2) > .vc_column-inner > .wpb_wrapper > .wpb_single_image.vc_align_center.wpb_content_element > figure > .vc_single_image-wrapper.vc_box_border_gre",
+              ".vc_box_rounded"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "a[title=\"Perfil de Twitter Minambiente\"] > li",
+              "a[rel=\"noopener\"][target=\"_blank\"]:nth-child(2) > li",
+              "a[title=\"Perfil de Facebook Minambiente\"] > li"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][rel=\"noopener\"]:nth-child(1)",
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][rel=\"noopener\"]:nth-child(4)",
+              "a[href=\"tel:018000919301\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[width=\"300\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://archivo.minambiente.gov.co/chat/script.php?id=b6855878e5648e33def2f909a03d471a",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_NAME_NOT_RESOLVED",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop",
+      "screenshot": "screenshots/minambiente-desktop.jpg"
+    },
+    {
+      "url": "https://www.minambiente.gov.co/transparencia-y-acceso-informacion-publica/",
+      "final_url": "https://www.minambiente.gov.co/transparencia-y-acceso-informacion-publica/",
+      "status": 200,
+      "load_ms": 1262,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "img[width=\"22\"]"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "a[title=\"Perfil de Twitter Minambiente\"] > li",
+              "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2) > li",
+              "a[title=\"Perfil de Facebook Minambiente\"] > li"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][target=\"_blank\"]:nth-child(1)",
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][target=\"_blank\"]:nth-child(4)",
+              "a[href=\"tel:018000919301\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#breadcrumbs > a:nth-child(3)"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".centro-relevo"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://archivo.minambiente.gov.co/chat/script.php?id=b6855878e5648e33def2f909a03d471a",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_NAME_NOT_RESOLVED",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minambiente.gov.co/tramites-y-servicios-canales-de-atencion-y-sede-electronica-pqrsdf/",
+      "final_url": "https://www.minambiente.gov.co/tramites-y-servicios-canales-de-atencion-y-sede-electronica-pqrsdf/",
+      "status": 200,
+      "load_ms": 563,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "img[width=\"22\"]"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "a[title=\"Perfil de Twitter Minambiente\"] > li",
+              "a[target=\"_blank\"][rel=\"noopener\"]:nth-child(2) > li",
+              "a[title=\"Perfil de Facebook Minambiente\"] > li"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][target=\"_blank\"]:nth-child(1)",
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][target=\"_blank\"]:nth-child(4)",
+              "a[href=\"tel:018000919301\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".vc_inner.vc_column-gap-25.vc_row-o-equal-height:nth-child(1) > .vc_col-sm-4.vc_col-has-fill.wpb_column:nth-child(3) > .vc_custom_1633045503345.vc_column-inner > .wpb_wrapper > .wpb_text_column.wpb_co",
+              ".vc_inner.vc_column-gap-25.vc_row-o-equal-height:nth-child(2) > .vc_col-sm-4.vc_col-has-fill.wpb_column:nth-child(3) > .vc_custom_1633045503345.vc_column-inner > .wpb_wrapper > .wpb_text_column.wpb_co",
+              ".centro-relevo"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#breadcrumbs > a:nth-child(3)"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://archivo.minambiente.gov.co/chat/script.php?id=b6855878e5648e33def2f909a03d471a",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_NAME_NOT_RESOLVED",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.minambiente.gov.co/",
+      "final_url": "https://www.minambiente.gov.co/",
+      "status": 200,
+      "load_ms": 3105,
+      "axe": {
+        "score": 60,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 5,
+            "examples": [
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(1) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]",
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(2) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]",
+              ".vc_col-sm-3.wpb_column.vc_column_container:nth-child(3) > .vc_column-inner > .wpb_wrapper > .ventana[data-toggle=\"modal\"][data-target=\"#\"] > div > img[src=\"\"]"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 27,
+            "examples": [
+              ".vc_col-sm-2.wpb_column.vc_column_container:nth-child(1) > .vc_column-inner > .wpb_wrapper > .wpb_single_image.vc_align_center.wpb_content_element > figure > .vc_single_image-wrapper.vc_box_border_gre",
+              ".vc_col-sm-2.wpb_column.vc_column_container:nth-child(2) > .vc_column-inner > .wpb_wrapper > .wpb_single_image.vc_align_center.wpb_content_element > figure > .vc_single_image-wrapper.vc_box_border_gre",
+              ".vc_box_rounded"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 7,
+            "examples": [
+              "a[title=\"Perfil de Twitter Minambiente\"] > li",
+              "a[rel=\"noopener\"][target=\"_blank\"]:nth-child(2) > li",
+              "a[title=\"Perfil de Facebook Minambiente\"] > li"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 4,
+            "examples": [
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][rel=\"noopener\"]:nth-child(1)",
+              ".customize-unpreviewable[title=\"ver dirección en maps\"][rel=\"noopener\"]:nth-child(4)",
+              "a[href=\"tel:018000919301\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[width=\"300\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".he_footer_redes"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://archivo.minambiente.gov.co/chat/script.php?id=b6855878e5648e33def2f909a03d471a",
+          "status": null,
+          "type": "script",
+          "error": "net::ERR_NAME_NOT_RESOLVED",
+          "first_party": true,
+          "kind": "network"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "mobile",
+      "screenshot": "screenshots/minambiente-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 393,
+    "viewport_width": 393,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      393,
+      393
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "a.contrast-ref",
+          "right_px": 393,
+          "width_px": 36
+        },
+        {
+          "selector": "a.min-fontsize",
+          "right_px": 393,
+          "width_px": 36
+        },
+        {
+          "selector": "a.max-fontsize",
+          "right_px": 393,
+          "width_px": 36
+        },
+        {
+          "selector": "a.centro-relevo",
+          "right_px": 393,
+          "width_px": 36
+        },
+        {
+          "selector": "div.container",
+          "right_px": 393,
+          "width_px": 390
+        }
+      ],
+      "screenshot": "screenshots/minambiente-mobile-overflow.jpg"
+    },
+    "overflow_px": 3
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 48,
+        "accessibility": 73,
+        "best_practices": 73,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 13546,
+        "lcp_ms": 33220,
+        "tbt_ms": 184,
+        "cls": 0.142,
+        "speed_index_ms": 15199
+      },
+      "performance_runs": [
+        52,
+        48,
+        46
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "listitem",
+            "title": "Los elementos de lista (`<li>`) no están incluidos dentro de elementos superiores `<ul>`, `<ol>` o `<menu>`."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 50,
+        "accessibility": 73,
+        "best_practices": 73,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 2698,
+        "lcp_ms": 8850,
+        "tbt_ms": 0,
+        "cls": 0.168,
+        "speed_index_ms": 4101
+      },
+      "performance_runs": [
+        49,
+        52,
+        50
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "listitem",
+            "title": "Los elementos de lista (`<li>`) no están incluidos dentro de elementos superiores `<ul>`, `<ol>` o `<menu>`."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "sin robots.txt (404)",
+  "failed_resources_unverified": 1,
+  "wcag": {
+    "rules_count": 7,
+    "cases": 77,
+    "criteria": [
+      "1.1.1",
+      "1.3.1",
+      "1.4.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 7
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 2
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 1
+      },
+      {
+        "rule": "link-in-text-block",
+        "impact": "serious",
+        "criteria": [
+          "1.4.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+        "cases": 12
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 31
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 3
+      },
+      {
+        "rule": "listitem",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+        "cases": 21
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 2,
+  "scores": {
+    "accessibility": 66,
+    "mobile": 46,
+    "performance": 50,
+    "best_practices": 73,
+    "seo": 83,
+    "failed_resources": 100,
+    "overall": 65
+  },
+  "light": "amarillo"
+}

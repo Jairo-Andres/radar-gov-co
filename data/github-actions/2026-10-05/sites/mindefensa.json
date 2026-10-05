@@ -1,0 +1,514 @@
+{
+  "id": "mindefensa",
+  "name": "Ministerio de Defensa Nacional",
+  "category": "Ministerio",
+  "url": "https://www.mindefensa.gov.co/",
+  "audited_at": "2026-10-05T15:34:51+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.mindefensa.gov.co/",
+      "final_url": "https://www.mindefensa.gov.co/",
+      "status": 200,
+      "load_ms": 466,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 51,
+            "examples": [
+              "#menuentry_12dc9f48 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3b4af324 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3bca5026 > .menuentry_text2 > .textstyle4"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              ".menuholder1 > a[href=\"javascript:void(0);\"]:nth-child(1)",
+              ".social-icons > a[target=\"_blank\"]:nth-child(2)",
+              ".social-icons > a[target=\"_blank\"]:nth-child(3)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 3,
+      "viewport": "desktop",
+      "screenshot": "screenshots/mindefensa-desktop.jpg"
+    },
+    {
+      "url": "https://www.mindefensa.gov.co/ministerio/ministro",
+      "final_url": "https://www.mindefensa.gov.co/ministerio/ministro",
+      "status": 200,
+      "load_ms": 380,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 28,
+            "examples": [
+              "#menuentry_12dc9f48 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3b4af324 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3bca5026 > .menuentry_text2 > .textstyle4"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".social-icons > a[target=\"_blank\"]:nth-child(2)",
+              "a[target=\"_blank\"]:nth-child(3)",
+              "a[href$=\"mindefensa\"]:nth-child(4)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mindefensa.gov.co/transparencia",
+      "final_url": "https://www.mindefensa.gov.co/transparencia",
+      "status": 200,
+      "load_ms": 358,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 33,
+            "examples": [
+              "#menuentry_12dc9f48 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3b4af324 > .menuentry_text2 > .textstyle4",
+              "#menuentry_3bca5026 > .menuentry_text2 > .textstyle4"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              ".social-icons > a[target=\"_blank\"]:nth-child(2)",
+              "a[target=\"_blank\"]:nth-child(3)",
+              "a[href$=\"mindefensa\"]:nth-child(4)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 2,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mindefensa.gov.co/",
+      "final_url": "https://www.mindefensa.gov.co/",
+      "status": 200,
+      "load_ms": 676,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 23,
+            "examples": [
+              "#c48d89bf-e2f4-4f57-88c1-0511f9ebe284customComponentDiv > .containerBanner > .text-layer > h2",
+              "#c48d89bf-e2f4-4f57-88c1-0511f9ebe284customComponentDiv > .containerBanner > .text-layer > p",
+              "#b6f5898e-ccc6-42a5-9bd4-52219323f1bdcustomComponentDiv > .MD-Noticias-Secc-PagPpal > .BoxShadow[role=\"group\"] > div > div > .textstyle1 > div:nth-child(2) > div > .textstyle1 > div:nth-child(2) > div"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 15,
+            "examples": [
+              ".menuholder1 > a[href$=\"ministro\"]",
+              ".menuholder1 > a[href$=\"transparencia\"]",
+              ".menuholder1 > a[href$=\"participa\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".Lista-Youtube"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 3,
+      "viewport": "mobile",
+      "screenshot": "screenshots/mindefensa-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 400,
+    "viewport_width": 400,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      400,
+      400
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "img",
+          "right_px": 630,
+          "width_px": 30
+        },
+        {
+          "selector": "img",
+          "right_px": 600,
+          "width_px": 30
+        },
+        {
+          "selector": "img",
+          "right_px": 570,
+          "width_px": 30
+        },
+        {
+          "selector": "img",
+          "right_px": 540,
+          "width_px": 30
+        },
+        {
+          "selector": "img",
+          "right_px": 510,
+          "width_px": 30
+        }
+      ],
+      "screenshot": "screenshots/mindefensa-mobile-overflow.jpg"
+    },
+    "overflow_px": 10
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 20,
+        "accessibility": 83,
+        "best_practices": 73,
+        "seo": 91
+      },
+      "metrics": {
+        "fcp_ms": 12341,
+        "lcp_ms": 29187,
+        "tbt_ms": 485,
+        "cls": 0.667,
+        "speed_index_ms": 12515
+      },
+      "performance_runs": [
+        20,
+        20,
+        20
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 42,
+        "accessibility": 83,
+        "best_practices": 73,
+        "seo": 91
+      },
+      "metrics": {
+        "fcp_ms": 1321,
+        "lcp_ms": 5387,
+        "tbt_ms": 1,
+        "cls": 0.618,
+        "speed_index_ms": 2875
+      },
+      "performance_runs": [
+        39,
+        45,
+        42
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-breakdown-insight",
+            "title": "Desglose de LCP"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "sin robots.txt (404)",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 140,
+    "criteria": [
+      "1.3.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 112
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 27
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 10,
+  "scores": {
+    "accessibility": 85,
+    "mobile": 15,
+    "performance": 42,
+    "best_practices": 73,
+    "seo": 91,
+    "failed_resources": 100,
+    "overall": 65
+  },
+  "light": "amarillo"
+}

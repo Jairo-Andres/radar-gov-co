@@ -1,6 +1,6 @@
 {
-  "origin": "local-co",
-  "official": false,
-  "date": "2026-10-04",
-  "summary": "local-co/2026-10-04/summary.json"
+  "origin": "github-actions",
+  "official": true,
+  "date": "2026-10-05",
+  "summary": "github-actions/2026-10-05/summary.json"
 }

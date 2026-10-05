@@ -1,0 +1,18 @@
+{
+  "id": "alcaldia-cali",
+  "name": "Alcaldía de Cali",
+  "category": "Alcaldía",
+  "url": "https://www.cali.gov.co/",
+  "audited_at": "2026-10-05T16:31:39+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (403)"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "alcaldia-cartagena",
+  "name": "Alcaldía de Cartagena",
+  "category": "Alcaldía",
+  "url": "https://www.cartagena.gov.co/",
+  "audited_at": "2026-10-05T16:34:16+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (403)"
+}

@@ -1,0 +1,166 @@
+{
+  "id": "presidencia",
+  "name": "Presidencia de la República",
+  "category": "Presidencia",
+  "url": "https://www.presidencia.gov.co/",
+  "audited_at": "2026-10-05T15:02:20+00:00",
+  "status": "parcial",
+  "pages": [
+    {
+      "url": "https://www.presidencia.gov.co/",
+      "final_url": "https://www.presidencia.gov.co/",
+      "status": 200,
+      "load_ms": 222,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/presidencia-desktop.jpg"
+    },
+    {
+      "url": "https://www.presidencia.gov.co/",
+      "final_url": "https://www.presidencia.gov.co/",
+      "status": 200,
+      "load_ms": 419,
+      "axe": {
+        "score": 88,
+        "violations": [
+          {
+            "rule": "document-title",
+            "impact": "serious",
+            "criteria": [
+              "2.4.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+            "help_en": "Documents must have <title> element to aid in navigation",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/document-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          },
+          {
+            "rule": "html-has-lang",
+            "impact": "serious",
+            "criteria": [
+              "3.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+            "help_en": "<html> element must have a lang attribute",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/html-has-lang?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "html"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/presidencia-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": false,
+    "horizontal_overflow": true,
+    "scroll_width": 980,
+    "viewport_width": 980,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      980,
+      980
+    ],
+    "evidence": {
+      "offenders": [],
+      "screenshot": "screenshots/presidencia-mobile-overflow.jpg"
+    },
+    "overflow_px": 590
+  },
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "Lighthouse (mobile): 3 de 3 corridas no pudieron analizar la página",
+    "Lighthouse (desktop): 3 de 3 corridas no pudieron analizar la página"
+  ],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 2,
+    "cases": 2,
+    "criteria": [
+      "2.4.2",
+      "3.1.1"
+    ],
+    "rules": [
+      {
+        "rule": "document-title",
+        "impact": "serious",
+        "criteria": [
+          "2.4.2"
+        ],
+        "description": "No cumple el criterio WCAG 2.4.2 (regla document-title)",
+        "cases": 1
+      },
+      {
+        "rule": "html-has-lang",
+        "impact": "serious",
+        "criteria": [
+          "3.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 3.1.1 (regla html-has-lang)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 88,
+    "mobile": null,
+    "performance": null,
+    "best_practices": null,
+    "seo": null,
+    "failed_resources": 100,
+    "overall": null
+  },
+  "light": "sin_dato"
+}
