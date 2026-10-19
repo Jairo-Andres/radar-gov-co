@@ -1,0 +1,429 @@
+{
+  "id": "mininterior",
+  "name": "Ministerio del Interior",
+  "category": "Ministerio",
+  "url": "https://www.mininterior.gov.co/",
+  "audited_at": "2026-10-19T17:42:26+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.mininterior.gov.co/",
+      "final_url": "https://www.mininterior.gov.co/",
+      "status": 200,
+      "load_ms": 1628,
+      "axe": {
+        "score": 91,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 11,
+            "examples": [
+              ".et-pb-arrow-prev",
+              ".et-pb-arrow-next",
+              ".et_pb_main_blurb_image > a[href$=\"unp.gov.co/\"][target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]:nth-child(74)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/mininterior-desktop.jpg"
+    },
+    {
+      "url": "https://www.mininterior.gov.co/english-site/",
+      "final_url": "https://www.mininterior.gov.co/",
+      "status": 200,
+      "load_ms": 943,
+      "axe": {
+        "score": 91,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 11,
+            "examples": [
+              ".et-pb-arrow-prev",
+              ".et-pb-arrow-next",
+              ".et_pb_main_blurb_image > a[href$=\"unp.gov.co/\"][target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]:nth-child(74)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mininterior.gov.co/transparencia-acceso-informacion-publica/",
+      "final_url": "https://www.mininterior.gov.co/transparencia-acceso-informacion-publica/",
+      "status": 200,
+      "load_ms": 1017,
+      "axe": {
+        "score": 91,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "a[href$=\"colombia.co/\"]"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]:nth-child(76)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.mininterior.gov.co/",
+      "final_url": "https://www.mininterior.gov.co/",
+      "status": 200,
+      "load_ms": 2286,
+      "axe": {
+        "score": 91,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 11,
+            "examples": [
+              ".et-pb-arrow-prev",
+              ".et-pb-arrow-next",
+              ".et_pb_main_blurb_image > a[href$=\"unp.gov.co/\"][target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "meta-viewport",
+            "impact": "moderate",
+            "criteria": [
+              "1.4.4"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+            "help_en": "Zooming and scaling must not be disabled",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-viewport?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[name=\"viewport\"]:nth-child(74)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/mininterior-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 51,
+        "accessibility": 91,
+        "best_practices": 73,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 15376,
+        "lcp_ms": 18157,
+        "tbt_ms": 224,
+        "cls": 0,
+        "speed_index_ms": 15376
+      },
+      "performance_runs": [
+        51,
+        50,
+        51
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 73,
+        "accessibility": 88,
+        "best_practices": 73,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 1515,
+        "lcp_ms": 3330,
+        "tbt_ms": 0,
+        "cls": 0.006,
+        "speed_index_ms": 2026
+      },
+      "performance_runs": [
+        73,
+        74,
+        73
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "heading-order",
+            "title": "Los elementos de encabezado no aparecen en orden secuencial descendente"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 2,
+    "cases": 26,
+    "criteria": [
+      "1.4.4",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 23
+      },
+      {
+        "rule": "meta-viewport",
+        "impact": "moderate",
+        "criteria": [
+          "1.4.4"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.4 (regla meta-viewport)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 90,
+    "mobile": 51,
+    "performance": 73,
+    "best_practices": 73,
+    "seo": 92,
+    "failed_resources": 100,
+    "overall": 79
+  },
+  "light": "amarillo"
+}

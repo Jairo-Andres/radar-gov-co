@@ -1,0 +1,813 @@
+{
+  "id": "alcaldia-bogota",
+  "name": "Alcaldía de Bogotá",
+  "category": "Alcaldía",
+  "url": "https://bogota.gov.co/",
+  "audited_at": "2026-10-19T18:42:14+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://bogota.gov.co/",
+      "final_url": "https://bogota.gov.co/",
+      "status": 200,
+      "load_ms": 18788,
+      "axe": {
+        "score": 44,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 34,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 21,
+            "examples": [
+              "p:nth-child(5) > a",
+              ".actualidad-hoy > .enlace-actualidad",
+              ".views-row:nth-child(1) > li > .actualidad-derecha > .actualidad-der-flex > .text > .fecha-noticias"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".views-row:nth-child(1) > li",
+              ".views-row:nth-child(2) > li",
+              ".views-row:nth-child(3) > li"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"auto\"]"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "p:nth-child(5) > a"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "p:nth-child(1) > a[href$=\"que-hacer\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "ul"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-bogota-desktop.jpg"
+    },
+    {
+      "url": "https://bogota.gov.co/mi-ciudad/ambiente/2026-10/10-cosas-que-debes-saber-sobre-el-simulacro-bogota-2026-evacuacion",
+      "final_url": "https://bogota.gov.co/mi-ciudad/ambiente/2026-10/10-cosas-que-debes-saber-sobre-el-simulacro-bogota-2026-evacuacion",
+      "status": 200,
+      "load_ms": 1631,
+      "axe": {
+        "score": 68,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 32,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 10,
+            "examples": [
+              ".v2024-publication-date",
+              ".v2024-article__tags > ul > li:nth-child(1) > a",
+              "a[href$=\"simulacro\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#instagram-embed-0"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 1,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://bogota.gov.co/mi-ciudad/ambiente/mas-alla-de-un-sismo-bogota-alista-el-simulacro-distrital-2026-idiger",
+      "final_url": "https://bogota.gov.co/mi-ciudad/ambiente/mas-alla-de-un-sismo-bogota-alista-el-simulacro-distrital-2026-idiger",
+      "status": 200,
+      "load_ms": 770,
+      "axe": {
+        "score": 74,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 32,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 8,
+            "examples": [
+              ".v2024-publication-date",
+              "ul > li:nth-child(1) > a",
+              "a[href$=\"simulacro\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://bogota.gov.co/",
+      "final_url": "https://bogota.gov.co/",
+      "status": 200,
+      "load_ms": 2461,
+      "axe": {
+        "score": 44,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 34,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 21,
+            "examples": [
+              "p:nth-child(5) > a",
+              ".actualidad-hoy > .enlace-actualidad",
+              ".views-row:nth-child(1) > li > .actualidad-derecha > .actualidad-der-flex > .text > .fecha-noticias"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".views-row:nth-child(1) > li",
+              ".views-row:nth-child(2) > li",
+              ".views-row:nth-child(3) > li"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"auto\"]"
+            ]
+          },
+          {
+            "rule": "link-in-text-block",
+            "impact": "serious",
+            "criteria": [
+              "1.4.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+            "help_en": "Links must be distinguishable without relying on color",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-in-text-block?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "p:nth-child(5) > a"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "p:nth-child(1) > a[href$=\"que-hacer\"]"
+            ]
+          },
+          {
+            "rule": "list",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+            "help_en": "<ul> and <ol> must only directly contain <li>, <script> or <template> elements",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/list?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "ul"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-bogota-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 405,
+    "viewport_width": 405,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      405,
+      405
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "a",
+          "right_px": 6382,
+          "width_px": 322
+        },
+        {
+          "selector": "a",
+          "right_px": 6382,
+          "width_px": 322
+        },
+        {
+          "selector": "a.gabinete-distrital-v2__tarjeta__link",
+          "right_px": 6358,
+          "width_px": 120
+        },
+        {
+          "selector": "p.subtitle",
+          "right_px": 6342,
+          "width_px": 196
+        },
+        {
+          "selector": "a",
+          "right_px": 6334,
+          "width_px": 163
+        }
+      ],
+      "screenshot": "screenshots/alcaldia-bogota-mobile-overflow.jpg"
+    },
+    "overflow_px": 15
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 28,
+        "accessibility": 68,
+        "best_practices": 69,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 13777,
+        "lcp_ms": 37180,
+        "tbt_ms": 1814,
+        "cls": 0,
+        "speed_index_ms": 13777
+      },
+      "performance_runs": [
+        27,
+        28,
+        28
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-required-attr",
+            "title": "Los elementos `[role]` no incluyen todos los atributos `[aria-*]` necesarios"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "listitem",
+            "title": "Los elementos de lista (`<li>`) no están incluidos dentro de elementos superiores `<ul>`, `<ol>` o `<menu>`."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-aspect-ratio",
+            "title": "Muestra imágenes con una relación de aspecto incorrecta"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 59,
+        "accessibility": 68,
+        "best_practices": 69,
+        "seo": 83
+      },
+      "metrics": {
+        "fcp_ms": 887,
+        "lcp_ms": 2915,
+        "tbt_ms": 158,
+        "cls": 0.273,
+        "speed_index_ms": 2275
+      },
+      "performance_runs": [
+        63,
+        59,
+        58
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-required-attr",
+            "title": "Los elementos `[role]` no incluyen todos los atributos `[aria-*]` necesarios"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-in-text-block",
+            "title": "Los enlaces se distinguen por el color."
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "list",
+            "title": "Las listas no contienen únicamente elementos `<li>` y elementos que admiten secuencias de comandos (`<script>` y `<template>`)."
+          },
+          {
+            "id": "listitem",
+            "title": "Los elementos de lista (`<li>`) no están incluidos dentro de elementos superiores `<ul>`, `<ol>` o `<menu>`."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "image-aspect-ratio",
+            "title": "Muestra imágenes con una relación de aspecto incorrecta"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 8,
+    "cases": 148,
+    "criteria": [
+      "1.1.1",
+      "1.3.1",
+      "1.4.1",
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+        "cases": 3
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 98
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 39
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 2
+      },
+      {
+        "rule": "link-in-text-block",
+        "impact": "serious",
+        "criteria": [
+          "1.4.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.1 (regla link-in-text-block)",
+        "cases": 1
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 1
+      },
+      {
+        "rule": "list",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla list)",
+        "cases": 1
+      },
+      {
+        "rule": "listitem",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 1,
+  "scores": {
+    "accessibility": 63,
+    "mobile": 20,
+    "performance": 59,
+    "best_practices": 69,
+    "seo": 83,
+    "failed_resources": 100,
+    "overall": 60
+  },
+  "light": "amarillo"
+}
