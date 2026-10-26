@@ -1,0 +1,236 @@
+{
+  "id": "minjusticia",
+  "name": "Ministerio de Justicia y del Derecho",
+  "category": "Ministerio",
+  "url": "https://www.minjusticia.gov.co/",
+  "audited_at": "2026-10-26T17:31:43+00:00",
+  "status": "sin_respuesta",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 30,
+        "accessibility": 84,
+        "best_practices": 73,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 4742,
+        "lcp_ms": 18949,
+        "tbt_ms": 482,
+        "cls": 0.421,
+        "speed_index_ms": 4760
+      },
+      "performance_runs": [
+        33,
+        30,
+        27
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-roles",
+            "title": "Los valores de `[role]` no son válidos"
+          },
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 58,
+        "accessibility": 80,
+        "best_practices": 77,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 1090,
+        "lcp_ms": 3999,
+        "tbt_ms": 14,
+        "cls": 0.315,
+        "speed_index_ms": 1607
+      },
+      "performance_runs": [
+        58,
+        61,
+        56
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-roles",
+            "title": "Los valores de `[role]` no son válidos"
+          },
+          {
+            "id": "meta-viewport",
+            "title": "El atributo `[user-scalable=\"no\"]` se usa en el elemento `<meta name=\"viewport\">` o el valor del atributo `[maximum-scale]` es inferior a 5."
+          },
+          {
+            "id": "html-has-lang",
+            "title": "El elemento `<html>` no tiene un atributo `[lang]`"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "landmark-one-main",
+            "title": "El documento no tiene un punto de referencia principal."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [
+    "inicio (escritorio): la página no terminó de cargar a tiempo",
+    "inicio (móvil): la página no terminó de cargar a tiempo"
+  ],
+  "robots": "sin robots.txt (404)",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 0,
+    "cases": 0,
+    "criteria": [],
+    "rules": []
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 82,
+    "mobile": 30,
+    "performance": 58,
+    "best_practices": 75,
+    "seo": 92,
+    "failed_resources": null,
+    "overall": 67
+  },
+  "light": "amarillo"
+}

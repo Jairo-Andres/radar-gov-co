@@ -1,0 +1,346 @@
+{
+  "id": "alcaldia-barranquilla",
+  "name": "Alcaldía de Barranquilla",
+  "category": "Alcaldía",
+  "url": "https://www.barranquilla.gov.co/",
+  "audited_at": "2026-10-26T18:34:19+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://www.barranquilla.gov.co/",
+      "status": 403,
+      "load_ms": 280,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "meta-refresh",
+            "impact": "critical",
+            "criteria": [
+              "2.2.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+            "help_en": "Delayed refresh under 20 hours must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-refresh?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[http-equiv=\"refresh\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.barranquilla.gov.co/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-barranquilla-desktop.jpg"
+    },
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://barranquilla.gov.co/",
+      "status": 200,
+      "load_ms": 2315,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              "#slick-slide10 > .news-box > footer > .meta-info > li:nth-child(1)",
+              "#accept-cookies"
+            ]
+          },
+          {
+            "rule": "listitem",
+            "impact": "serious",
+            "criteria": [
+              "1.3.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+            "help_en": "<li> elements must be contained in a <ul> or <ol>",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/listitem?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#slick-slide20 > li"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#cambiarElemento"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 1,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-barranquilla-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 75,
+        "accessibility": 93,
+        "best_practices": 92,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 967,
+        "lcp_ms": 3071,
+        "tbt_ms": 828,
+        "cls": 0.006,
+        "speed_index_ms": 967
+      },
+      "performance_runs": [
+        74,
+        75,
+        75
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Latencia potencial máxima de la primera interacción"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bootup-time",
+            "title": "Reduce el tiempo de ejecución de JavaScript"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 99,
+        "accessibility": 93,
+        "best_practices": 92,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 296,
+        "lcp_ms": 868,
+        "tbt_ms": 19,
+        "cls": 0.001,
+        "speed_index_ms": 366
+      },
+      "performance_runs": [
+        99,
+        99,
+        100
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 1,
+  "wcag": {
+    "rules_count": 4,
+    "cases": 5,
+    "criteria": [
+      "1.3.1",
+      "1.4.3",
+      "2.2.1",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "meta-refresh",
+        "impact": "critical",
+        "criteria": [
+          "2.2.1"
+        ],
+        "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+        "cases": 1
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 2
+      },
+      {
+        "rule": "listitem",
+        "impact": "serious",
+        "criteria": [
+          "1.3.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.3.1 (regla listitem)",
+        "cases": 1
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 3,
+  "scores": {
+    "accessibility": 90,
+    "mobile": 75,
+    "performance": 99,
+    "best_practices": 92,
+    "seo": 45,
+    "failed_resources": 100,
+    "overall": 85
+  },
+  "light": "verde"
+}

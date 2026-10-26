@@ -1,0 +1,2148 @@
+{
+  "id": "contraloria",
+  "name": "Contraloría General de la República",
+  "category": "Órgano de control",
+  "url": "https://www.contraloria.gov.co/",
+  "audited_at": "2026-10-26T18:25:01+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.contraloria.gov.co/",
+      "final_url": "https://www.contraloria.gov.co/",
+      "status": 200,
+      "load_ms": 1741,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 23,
+            "examples": [
+              "#fragment-29c7d8f1-fb03-f902-9067-40fe9ec3e420 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-5e12f116-7dc9-b1d7-9286-19a4d157152a > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "#fragment-8d726608-8109-3111-e806-6274408fa5e3 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-c82c2b9f-47bd-c69c-5f8e-61eec74f22dd > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-e5be8647-1d1f-28a2-2d71-fc2e8f9e4b7c > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20127/54255/011-graph.svg/d9201e69-e7c3-3b00-1369-7609f154d03c?version=1.0&t=1630432989725",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/404440/011-graph+%281%29.svg/e335d377-6bec-112d-67c9-5e530d409c0c?version=1.0&t=1760022377652",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner_concurso_meritos_generico-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-hagamos-plan-ciudadania-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-enquevamos_cgr",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado-consejo-superior-de-carrera-administrativa-1",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado_home_reanuda-concurso-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado_home_pasaportes-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado_home_emergencias",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Todos+comunicados.png/43e56864-a995-ce29-e1c0-b89a5de549ed?version=1.0&t=1782492079818",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-template-react-renderer-impl/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/accessibility-menu-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/S_EstudiosSectoriales.png/22bb394b-dea6-923a-982f-a1ef13ff3ae6?version=1.0&t=1757419403216",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-web-peque-remates-2026-cgr-jpg-",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4298530/Control+fiscal+CGR+2025.jpg/373cad2b-a236-05a0-449e-2b72fba2ae59?version=1.0&t=1737405844221",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4298530/Observatorio+OCFA.jpg/3a32e49b-9178-d49b-6abe-444bf91369be?version=1.0&t=1737404793666",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Estrategico.jpg/33106062-a652-91e5-6b77-fc91828a3287?version=1.0&t=1687448869442",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Accion.jpeg/50da865a-5b99-1839-e576-33d954a0cfa4?version=1.0&t=1687814718278",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Control+interno.jpg/cf19d1f0-760b-0c7c-c0df-a7d3f77ec5ed?version=1.0&t=1687448866020",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informes+de+gestion.jpg/298f139f-d781-7827-5f7e-6934b1218d03?version=1.0&t=1687448868369",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Boletines+FOME.jpg/2c93c515-131f-fe03-6399-db83c5f34938?version=1.0&t=1687448864325",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Publicaciones.jpg/7512cdce-75fc-3961-66b4-ce9b65326d17?version=1.0&t=1687448869921",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/boton_PTEP.png/cdf64440-6a8b-89a3-9237-464d2ba449ff?version=1.0&t=1773790363553",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informe+INTOSAI.jpg/ae137b7d-62b7-a0bd-fa97-1be3b8239b5d?version=1.0&t=1687448867533",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Guia+SINACOF.jpg/9cd18669-91f6-49e3-1e64-0758a519ffcc?version=1.0&t=1687448867003",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Contraloria+nin%CC%83os.jpg/5e1280f8-363b-2a53-044b-aeb4fbe51bf5?version=1.0&t=1687448865434",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Clic+online.jpg/7e041fae-7b41-38e1-3eb4-44295514f124?version=1.0&t=1687448864887",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Correo+funcionarios.jpg/d7ded4b4-e7b5-26c6-8892-4e7f048ba8be?version=1.0&t=1687448866503",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Youtube.png/f3d52208-af6d-0de2-d8c1-a2954f16b902?version=1.0&t=1681309928631",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Instagram.png/762c0ddc-ee9b-eaa8-372a-180e3c1fd28e?version=1.0&t=1681309926849",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+X+twitter.png/6651c1cf-d982-8159-4fa4-c4c433fc9063?version=2.0&t=1701111079664",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+linkedin.png/b0eb74c8-a69f-7fa0-05ff-8ed2b4c2ffcb?version=1.0&t=1681309927379",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+tik+tok.png/b6b57ffe-ae22-b715-1787-7bb80376b136?version=2.0&t=1701111061832",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/AGR-LogoVertical15-grises-02.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/defensoria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/contaduria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/colombia_compra_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/gobierno_en_linea_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/facebook.svg/b68f974c-dbe9-c7fb-08fe-1e90e73f26e6?t=1671207879992",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/instagram.svg/380e9616-ba83-174c-4c91-cf841f4c3985?t=1671207880406",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/linkedin.svg/e102b5cf-feaf-17ac-c63f-e2e1b99c0175?t=1671207880793",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/x-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/youtube.svg/6026bcbe-06fd-0466-da9e-371394066700?t=1671207881624",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/tiktok-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/Logotipo_ContraloriaCFP_white.png/7cb63ecc-0ac7-3d26-5609-06c76c3fa928?t=1726015893436",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/lexicon/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Facebook.png/28eac8a4-2293-8d2c-6586-30da6f0a1dbc?version=1.0&t=1681309926382",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/pluginhost-base/pluginhost-base-min.js&/o/frontend-js-aui-web/aui/pluginhost-config/pluginhost-config-min.js&/o/frontend-js-aui-web/aui/node-pluginhost/node-pluginhost-min.js&/o/frontend-js-aui-web/aui/dom-screen/dom-screen-min.js&/o/frontend-js-aui-web/aui/node-screen/node-screen-min.js&/o/frontend-js-aui-web/aui/node-style/node-style-min.js&/o/frontend-js-aui-web/aui/aui-node-base/aui-node-base-min.js&/o/frontend-js-aui-web/aui/aui-timer/aui-timer-min.js&/o/frontend-js-aui-web/aui/event-touch/event-touch-min.js&/o/frontend-js-aui-web/aui/event-synthetic/event-synthetic-min.js&/o/frontend-js-aui-web/aui/event-move/event-move-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/yui-throttle/yui-throttle-min.js&/o/frontend-js-aui-web/aui/classnamemanager/classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-classnamemanager/aui-classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-debounce/aui-debounce-min.js&/o/frontend-js-aui-web/aui/array-extras/array-extras-min.js&/o/frontend-js-aui-web/aui/event-base/event-base-min.js&/o/frontend-js-aui-web/aui/dom-core/dom-core-min.js&/o/frontend-js-aui-web/aui/dom-base/dom-base-min.js&/o/frontend-js-aui-web/aui/selector-native/selector-native-min.js&/o/frontend-js-aui-web/aui/selector/selector-min.js&/o/frontend-js-aui-web/aui/node-core/node-core-min.js&/o/frontend-js-aui-web/aui/dom-style/dom-style-min.js&/o/frontend-js-aui-web/aui/node-base/node-base-min.js&/o/frontend-js-aui-web/aui/event-delegate/event-delegate-min.js&/o/frontend-js-aui-web/aui/node-event-delegate/node-event-delegate-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/classnames.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/prop-types.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/react.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/react-dom.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$alert.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$form.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/accessibility-settings-state-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$button.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$modal.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-state-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/layout-taglib/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tabs-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-dropdown-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cookies-banner-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tooltip-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-collapse-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-alert-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop",
+      "screenshot": "screenshots/contraloria-desktop.jpg"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/en/home",
+      "final_url": "https://www.contraloria.gov.co/en/home",
+      "status": 200,
+      "load_ms": 1321,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 23,
+            "examples": [
+              "#fragment-51b8c13d-936e-4b34-412c-aa6e1694a154 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-50bd38ee-884c-2f87-5f97-fac6a7094c75 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "#fragment-6172f0ed-a16a-a97c-89dc-733f1a22b14f > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-fe35f21c-5cfc-b598-3166-4836fcd23632 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-e1d4fa5a-100a-ef1e-8ddb-cc5abd0e9c5a > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4298530/Observatorio+OCFA.jpg/3a32e49b-9178-d49b-6abe-444bf91369be?version=1.0&t=1737404793666",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/layout-taglib/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4298530/Control+fiscal+CGR+2025.jpg/373cad2b-a236-05a0-449e-2b72fba2ae59?version=1.0&t=1737405844221",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Estrategico.jpg/33106062-a652-91e5-6b77-fc91828a3287?version=1.0&t=1687448869442",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Accion.jpeg/50da865a-5b99-1839-e576-33d954a0cfa4?version=1.0&t=1687814718278",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tabs-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tooltip-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-dropdown-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/react-dom.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Control+interno.jpg/cf19d1f0-760b-0c7c-c0df-a7d3f77ec5ed?version=1.0&t=1687448866020",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Publicaciones.jpg/7512cdce-75fc-3961-66b4-ce9b65326d17?version=1.0&t=1687448869921",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informes+de+gestion.jpg/298f139f-d781-7827-5f7e-6934b1218d03?version=1.0&t=1687448868369",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Boletines+FOME.jpg/2c93c515-131f-fe03-6399-db83c5f34938?version=1.0&t=1687448864325",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/boton_PTEP.png/cdf64440-6a8b-89a3-9237-464d2ba449ff?version=1.0&t=1773790363553",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informe+INTOSAI.jpg/ae137b7d-62b7-a0bd-fa97-1be3b8239b5d?version=1.0&t=1687448867533",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Guia+SINACOF.jpg/9cd18669-91f6-49e3-1e64-0758a519ffcc?version=1.0&t=1687448867003",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Correo+funcionarios.jpg/d7ded4b4-e7b5-26c6-8892-4e7f048ba8be?version=1.0&t=1687448866503",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Youtube.png/f3d52208-af6d-0de2-d8c1-a2954f16b902?version=1.0&t=1681309928631",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Instagram.png/762c0ddc-ee9b-eaa8-372a-180e3c1fd28e?version=1.0&t=1681309926849",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+X+twitter.png/6651c1cf-d982-8159-4fa4-c4c433fc9063?version=2.0&t=1701111079664",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Facebook.png/28eac8a4-2293-8d2c-6586-30da6f0a1dbc?version=1.0&t=1681309926382",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+linkedin.png/b0eb74c8-a69f-7fa0-05ff-8ed2b4c2ffcb?version=1.0&t=1681309927379",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+tik+tok.png/b6b57ffe-ae22-b715-1787-7bb80376b136?version=2.0&t=1701111061832",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/AGR-LogoVertical15-grises-02.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Clic+online.jpg/7e041fae-7b41-38e1-3eb4-44295514f124?version=1.0&t=1687448864887",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Contraloria+nin%CC%83os.jpg/5e1280f8-363b-2a53-044b-aeb4fbe51bf5?version=1.0&t=1687448865434",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/contaduria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/defensoria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/gobierno_en_linea_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/facebook.svg/b68f974c-dbe9-c7fb-08fe-1e90e73f26e6?t=1671207879992",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/linkedin.svg/e102b5cf-feaf-17ac-c63f-e2e1b99c0175?t=1671207880793",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/instagram.svg/380e9616-ba83-174c-4c91-cf841f4c3985?t=1671207880406",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/colombia_compra_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/tiktok-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/x-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/lexicon/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/Logotipo_ContraloriaCFP_white.png/7cb63ecc-0ac7-3d26-5609-06c76c3fa928?t=1726015893436",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/youtube.svg/6026bcbe-06fd-0466-da9e-371394066700?t=1671207881624",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$layout.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$shared.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-node-shims/__liferay__/exports/process.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$core.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/pluginhost-base/pluginhost-base-min.js&/o/frontend-js-aui-web/aui/pluginhost-config/pluginhost-config-min.js&/o/frontend-js-aui-web/aui/node-pluginhost/node-pluginhost-min.js&/o/frontend-js-aui-web/aui/dom-screen/dom-screen-min.js&/o/frontend-js-aui-web/aui/node-screen/node-screen-min.js&/o/frontend-js-aui-web/aui/node-style/node-style-min.js&/o/frontend-js-aui-web/aui/aui-node-base/aui-node-base-min.js&/o/frontend-js-aui-web/aui/aui-timer/aui-timer-min.js&/o/frontend-js-aui-web/aui/event-touch/event-touch-min.js&/o/frontend-js-aui-web/aui/event-synthetic/event-synthetic-min.js&/o/frontend-js-aui-web/aui/event-move/event-move-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/yui-throttle/yui-throttle-min.js&/o/frontend-js-aui-web/aui/classnamemanager/classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-classnamemanager/aui-classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-debounce/aui-debounce-min.js&/o/frontend-js-aui-web/aui/array-extras/array-extras-min.js&/o/frontend-js-aui-web/aui/event-base/event-base-min.js&/o/frontend-js-aui-web/aui/dom-core/dom-core-min.js&/o/frontend-js-aui-web/aui/dom-base/dom-base-min.js&/o/frontend-js-aui-web/aui/selector-native/selector-native-min.js&/o/frontend-js-aui-web/aui/selector/selector-min.js&/o/frontend-js-aui-web/aui/node-core/node-core-min.js&/o/frontend-js-aui-web/aui/dom-style/dom-style-min.js&/o/frontend-js-aui-web/aui/node-base/node-base-min.js&/o/frontend-js-aui-web/aui/event-delegate/event-delegate-min.js&/o/frontend-js-aui-web/aui/node-event-delegate/node-event-delegate-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/web/guest/la-entidad",
+      "final_url": "https://www.contraloria.gov.co/web/guest/la-entidad",
+      "status": 200,
+      "load_ms": 475,
+      "axe": {
+        "score": 100,
+        "violations": []
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-remates-octubre",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo?browserId=other&minifierType=js&languageId=es_ES&t=1792995524369&/o/frontend-js-jquery-web/jquery/jquery.min.js&/o/frontend-js-jquery-web/jquery/init.js&/o/frontend-js-jquery-web/jquery/ajax.js&/o/frontend-js-jquery-web/jquery/bootstrap.bundle.min.js&/o/frontend-js-jquery-web/jquery/collapsible_search.js&/o/frontend-js-jquery-web/jquery/fm.js&/o/frontend-js-jquery-web/jquery/form.js&/o/frontend-js-jquery-web/jquery/popper.min.js&/o/frontend-js-jquery-web/jquery/side_navigation.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/10462140/B_Contraloria_Entidad.png/74b08644-e9c5-0ca9-110d-9bd5d1b89260?version=1.0&t=1779300966709",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/AGR-LogoVertical15-grises-02.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/defensoria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/contaduria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/linkedin.svg/e102b5cf-feaf-17ac-c63f-e2e1b99c0175?t=1671207880793",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/colombia_compra_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/facebook.svg/b68f974c-dbe9-c7fb-08fe-1e90e73f26e6?t=1671207879992",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/instagram.svg/380e9616-ba83-174c-4c91-cf841f4c3985?t=1671207880406",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/youtube.svg/6026bcbe-06fd-0466-da9e-371394066700?t=1671207881624",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/x-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/tiktok-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/lexicon/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/Logotipo_ContraloriaCFP_white.png/7cb63ecc-0ac7-3d26-5609-06c76c3fa928?t=1726015893436",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-spa-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-template-react-renderer-impl/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/accessibility-menu-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/yui-throttle/yui-throttle-min.js&/o/frontend-js-aui-web/aui/classnamemanager/classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-classnamemanager/aui-classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-debounce/aui-debounce-min.js&/o/frontend-js-aui-web/aui/array-extras/array-extras-min.js&/o/frontend-js-aui-web/aui/event-base/event-base-min.js&/o/frontend-js-aui-web/aui/dom-core/dom-core-min.js&/o/frontend-js-aui-web/aui/dom-base/dom-base-min.js&/o/frontend-js-aui-web/aui/selector-native/selector-native-min.js&/o/frontend-js-aui-web/aui/selector/selector-min.js&/o/frontend-js-aui-web/aui/node-core/node-core-min.js&/o/frontend-js-aui-web/aui/dom-style/dom-style-min.js&/o/frontend-js-aui-web/aui/node-base/node-base-min.js&/o/frontend-js-aui-web/aui/event-delegate/event-delegate-min.js&/o/frontend-js-aui-web/aui/node-event-delegate/node-event-delegate-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/pluginhost-base/pluginhost-base-min.js&/o/frontend-js-aui-web/aui/pluginhost-config/pluginhost-config-min.js&/o/frontend-js-aui-web/aui/node-pluginhost/node-pluginhost-min.js&/o/frontend-js-aui-web/aui/dom-screen/dom-screen-min.js&/o/frontend-js-aui-web/aui/node-screen/node-screen-min.js&/o/frontend-js-aui-web/aui/node-style/node-style-min.js&/o/frontend-js-aui-web/aui/aui-node-base/aui-node-base-min.js&/o/frontend-js-aui-web/aui/aui-timer/aui-timer-min.js&/o/frontend-js-aui-web/aui/event-touch/event-touch-min.js&/o/frontend-js-aui-web/aui/event-synthetic/event-synthetic-min.js&/o/frontend-js-aui-web/aui/event-move/event-move-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-collapse-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tabs-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-dropdown-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tooltip-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-alert-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cookies-banner-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$button.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/react.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$form.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$empty-state.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$table.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$layout.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/prop-types.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-react-web/__liferay__/exports/classnames.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-taglib-clay/__liferay__/exports/@clayui$core.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.contraloria.gov.co/",
+      "final_url": "https://www.contraloria.gov.co/",
+      "status": 200,
+      "load_ms": 1675,
+      "axe": {
+        "score": 82,
+        "violations": [
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 24,
+            "examples": [
+              "#fragment-0706472f-1a9b-82a6-a233-cd89d9b53dd2 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#fragment-f698f070-2416-caab-15e7-1066dff23276 > .component-image.overflow-hidden > a[target=\"_blank\"]",
+              "#cvpr-slide-1 > a[target=\"_blank\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 6,
+            "examples": [
+              "#fragment-4c235bf0-5cf3-a283-a553-05e7fcacd0c4 > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-5c449e00-08a7-ea9f-166b-6655972d408e > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]",
+              "#fragment-6473854c-dab3-8e51-16bb-025c8e5ec39b > .component-heading.mb-0[data-lfr-editable-id=\"element-text\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[height=\"600\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/govco.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/image/layout_set_logo?img_id=6251347&t=1792995524012",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/Iconos/ContrastWhite.svg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20127/54255/certificado.png/70741274-0e30-13c8-d10b-c9120f5bddb2?version=1.0&t=1628556590350",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/Iconos/ContrastBlack.svg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20127/54255/chart.png/c051e9d1-99e1-2fc7-042a-3b5a96a1018e?version=1.0&t=1628556590440",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/Iconos/zoomIn.svg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20127/54255/011-graph.svg/d9201e69-e7c3-3b00-1369-7609f154d03c?version=1.0&t=1630432989725",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/404440/011-graph+%281%29.svg/e335d377-6bec-112d-67c9-5e530d409c0c?version=1.0&t=1760022377652",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner_concurso_meritos_generico-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-hagamos-plan-ciudadania-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-enquevamos_cgr",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-vuelta-a-colombia-cgr-1-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado-consejo-superior-de-carrera-administrativa-1",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado_home_reanuda-concurso-jpg",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/comunicado_home_emergencias",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/adaptive-media/image/11976249/Preview-1000x0/B_Todos+comunicados.png?t=1782492079818",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/slide-geoportal2",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/adaptive-media/image/9519505/Preview-1000x0/S_EstudiosSectoriales.png?t=1757419403216",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/9519470/Slide+Obras+inconclusas.png/1bf9b64e-d281-3f83-100f-6b5ab03139f8?version=1.0&t=1781616237242",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-web-peque-remates-2026-cgr-jpg-",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/adaptive-media/image/7441835/Preview-1000x0/Control+fiscal+CGR+2025.jpg?t=1737405844221",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/adaptive-media/image/7441560/Preview-1000x0/Observatorio+OCFA.jpg?t=1737404793666",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/B_Toda+Multimedia.png/b0e0ab89-08b4-2204-9013-38e45e2724d3?version=1.0&t=1782492080489",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Estrategico.jpg/33106062-a652-91e5-6b77-fc91828a3287?version=1.0&t=1687448869442",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-spa-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Plan+Accion.jpeg/50da865a-5b99-1839-e576-33d954a0cfa4?version=1.0&t=1687814718278",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Control+interno.jpg/cf19d1f0-760b-0c7c-c0df-a7d3f77ec5ed?version=1.0&t=1687448866020",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/accessibility-menu-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-template-react-renderer-impl/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informes+de+gestion.jpg/298f139f-d781-7827-5f7e-6934b1218d03?version=1.0&t=1687448868369",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/banner-control-fiscal-guia-de-evaluacion",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Boletines+FOME.jpg/2c93c515-131f-fe03-6399-db83c5f34938?version=1.0&t=1687448864325",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Contraloria+nin%CC%83os.jpg/5e1280f8-363b-2a53-044b-aeb4fbe51bf5?version=1.0&t=1687448865434",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Publicaciones.jpg/7512cdce-75fc-3961-66b4-ce9b65326d17?version=1.0&t=1687448869921",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Informe+INTOSAI.jpg/ae137b7d-62b7-a0bd-fa97-1be3b8239b5d?version=1.0&t=1687448867533",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/boton_PTEP.png/cdf64440-6a8b-89a3-9237-464d2ba449ff?version=1.0&t=1773790363553",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Guia+SINACOF.jpg/9cd18669-91f6-49e3-1e64-0758a519ffcc?version=1.0&t=1687448867003",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Clic+online.jpg/7e041fae-7b41-38e1-3eb4-44295514f124?version=1.0&t=1687448864887",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/Icono+azul+Correo+funcionarios.jpg/d7ded4b4-e7b5-26c6-8892-4e7f048ba8be?version=1.0&t=1687448866503",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Facebook.png/28eac8a4-2293-8d2c-6586-30da6f0a1dbc?version=1.0&t=1681309926382",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+linkedin.png/b0eb74c8-a69f-7fa0-05ff-8ed2b4c2ffcb?version=1.0&t=1681309927379",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Instagram.png/762c0ddc-ee9b-eaa8-372a-180e3c1fd28e?version=1.0&t=1681309926849",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4229829/CAMBIO+Icono+Youtube.png/f3d52208-af6d-0de2-d8c1-a2954f16b902?version=1.0&t=1681309928631",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+X+twitter.png/6651c1cf-d982-8159-4fa4-c4c433fc9063?version=2.0&t=1701111079664",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4846994/icono+tik+tok.png/b6b57ffe-ae22-b715-1787-7bb80376b136?version=2.0&t=1701111061832",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/procuraduria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/fiscalia_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/contaduria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/colombia_compra_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/facebook.svg/b68f974c-dbe9-c7fb-08fe-1e90e73f26e6?t=1671207879992",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/instagram.svg/380e9616-ba83-174c-4c91-cf841f4c3985?t=1671207880406",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/linkedin.svg/e102b5cf-feaf-17ac-c63f-e2e1b99c0175?t=1671207880793",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/defensoria_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/x-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/AGR-LogoVertical15-grises-02.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/youtube.svg/6026bcbe-06fd-0466-da9e-371394066700?t=1671207881624",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/20125/4046158/Logotipo_ContraloriaCFP_white.png/7cb63ecc-0ac7-3d26-5609-06c76c3fa928?t=1726015893436",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/portal/gobierno_en_linea_logo.png",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/documents/d/guest/tiktok-icon",
+          "status": 403,
+          "type": "image",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/lexicon/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/images/clay/icons.svg",
+          "status": 403,
+          "type": "other",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/portal-cgr-theme/cgr/js/main.js?browserId=other&minifierType=js&languageId=es_ES&t=1792995546000",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/yui-throttle/yui-throttle-min.js&/o/frontend-js-aui-web/aui/classnamemanager/classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-classnamemanager/aui-classnamemanager-min.js&/o/frontend-js-aui-web/aui/aui-debounce/aui-debounce-min.js&/o/frontend-js-aui-web/aui/array-extras/array-extras-min.js&/o/frontend-js-aui-web/aui/event-base/event-base-min.js&/o/frontend-js-aui-web/aui/dom-core/dom-core-min.js&/o/frontend-js-aui-web/aui/dom-base/dom-base-min.js&/o/frontend-js-aui-web/aui/selector-native/selector-native-min.js&/o/frontend-js-aui-web/aui/selector/selector-min.js&/o/frontend-js-aui-web/aui/node-core/node-core-min.js&/o/frontend-js-aui-web/aui/dom-style/dom-style-min.js&/o/frontend-js-aui-web/aui/node-base/node-base-min.js&/o/frontend-js-aui-web/aui/event-delegate/event-delegate-min.js&/o/frontend-js-aui-web/aui/node-event-delegate/node-event-delegate-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/combo/?browserId=other&minifierType=&languageId=es_ES&t=1733785153513&/o/frontend-js-aui-web/aui/pluginhost-base/pluginhost-base-min.js&/o/frontend-js-aui-web/aui/pluginhost-config/pluginhost-config-min.js&/o/frontend-js-aui-web/aui/node-pluginhost/node-pluginhost-min.js&/o/frontend-js-aui-web/aui/dom-screen/dom-screen-min.js&/o/frontend-js-aui-web/aui/node-screen/node-screen-min.js&/o/frontend-js-aui-web/aui/node-style/node-style-min.js&/o/frontend-js-aui-web/aui/aui-node-base/aui-node-base-min.js&/o/frontend-js-aui-web/aui/aui-timer/aui-timer-min.js&/o/frontend-js-aui-web/aui/event-touch/event-touch-min.js&/o/frontend-js-aui-web/aui/event-synthetic/event-synthetic-min.js&/o/frontend-js-aui-web/aui/event-move/event-move-min.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/layout-taglib/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tooltip-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-dropdown-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/cookies-banner-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-alert-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-collapse-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        },
+        {
+          "url": "https://www.contraloria.gov.co/o/frontend-js-tabs-support-web/__liferay__/index.js",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "mobile",
+      "screenshot": "screenshots/contraloria-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 42,
+        "accessibility": 81,
+        "best_practices": 50,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 26083,
+        "lcp_ms": 56403,
+        "tbt_ms": 524,
+        "cls": 0,
+        "speed_index_ms": 26083
+      },
+      "performance_runs": [
+        36,
+        42,
+        45
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "tabindex",
+            "title": "Algunos elementos tienen un valor de `[tabindex]` superior a 0"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "image-size-responsive",
+            "title": "Muestra imágenes con una resolución baja"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 67,
+        "accessibility": 87,
+        "best_practices": 54,
+        "seo": 92
+      },
+      "metrics": {
+        "fcp_ms": 2381,
+        "lcp_ms": 3539,
+        "tbt_ms": 52,
+        "cls": 0.013,
+        "speed_index_ms": 2381
+      },
+      "performance_runs": [
+        67,
+        61,
+        68
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "modern-http-insight",
+            "title": "HTTP moderno"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "frame-title",
+            "title": "Los elementos `<frame>` o `<iframe>` no tienen título"
+          },
+          {
+            "id": "link-name",
+            "title": "Los enlaces no tienen nombres reconocibles"
+          },
+          {
+            "id": "tabindex",
+            "title": "Algunos elementos tienen un valor de `[tabindex]` superior a 0"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "crawlable-anchors",
+            "title": "Los enlaces no son rastreables"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 102,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 61,
+    "criteria": [
+      "1.4.3",
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 12
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 2
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 47
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 3,
+  "scores": {
+    "accessibility": 85,
+    "mobile": 42,
+    "performance": 67,
+    "best_practices": 52,
+    "seo": 92,
+    "failed_resources": 100,
+    "overall": 73
+  },
+  "light": "amarillo"
+}

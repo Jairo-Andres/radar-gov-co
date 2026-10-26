@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T18:55:20+00:00",
+  "generated_at": "2026-10-26T18:41:08+00:00",
   "official_origin": "github-actions",
   "origins": {
     "github-actions": {
@@ -39,6 +39,18 @@
             "rojo": 0,
             "sin_dato": 6
           }
+        },
+        {
+          "date": "2026-10-26",
+          "summary": "github-actions/2026-10-26/summary.json",
+          "sites_audited": 30,
+          "average_overall": 69,
+          "lights": {
+            "verde": 4,
+            "amarillo": 20,
+            "rojo": 0,
+            "sin_dato": 6
+          }
         }
       ],
       "sites": {
@@ -64,9 +76,15 @@
               "overall": 86,
               "rank": 2,
               "light": "verde"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 85,
+              "rank": 2,
+              "light": "verde"
             }
           ],
-          "change": 2
+          "change": -1
         },
         "minhacienda": {
           "name": "Ministerio de Hacienda y Crédito Público",
@@ -90,9 +108,15 @@
               "overall": 89,
               "rank": 1,
               "light": "verde"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 88,
+              "rank": 1,
+              "light": "verde"
             }
           ],
-          "change": 1
+          "change": -1
         },
         "migracion": {
           "name": "Migración Colombia",
@@ -116,9 +140,15 @@
               "overall": 85,
               "rank": 3,
               "light": "verde"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 83,
+              "rank": 3,
+              "light": "verde"
             }
           ],
-          "change": 3
+          "change": -2
         },
         "mininterior": {
           "name": "Ministerio del Interior",
@@ -142,9 +172,15 @@
               "overall": 79,
               "rank": 4,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 80,
+              "rank": 4,
+              "light": "verde"
             }
           ],
-          "change": 9
+          "change": 1
         },
         "dane": {
           "name": "DANE",
@@ -168,9 +204,15 @@
               "overall": 78,
               "rank": 5,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 77,
+              "rank": 5,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": -1
         },
         "supersalud": {
           "name": "Superintendencia Nacional de Salud",
@@ -194,9 +236,15 @@
               "overall": 78,
               "rank": 5,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 75,
+              "rank": 6,
+              "light": "amarillo"
             }
           ],
-          "change": 2
+          "change": -3
         },
         "minagricultura": {
           "name": "Ministerio de Agricultura y Desarrollo Rural",
@@ -220,9 +268,15 @@
               "overall": 75,
               "rank": 7,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 75,
+              "rank": 6,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": 0
         },
         "cancilleria": {
           "name": "Ministerio de Relaciones Exteriores",
@@ -246,6 +300,12 @@
               "overall": 71,
               "rank": 9,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
             }
           ],
           "change": 0
@@ -271,6 +331,12 @@
               "date": "2026-10-19",
               "overall": 72,
               "rank": 8,
+              "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 72,
+              "rank": 9,
               "light": "amarillo"
             }
           ],
@@ -298,9 +364,15 @@
               "overall": 70,
               "rank": 10,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 70,
+              "rank": 10,
+              "light": "amarillo"
             }
           ],
-          "change": 3
+          "change": 0
         },
         "minjusticia": {
           "name": "Ministerio de Justicia y del Derecho",
@@ -324,9 +396,15 @@
               "overall": 65,
               "rank": 12,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 67,
+              "rank": 12,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": 2
         },
         "minambiente": {
           "name": "Ministerio de Ambiente y Desarrollo Sostenible",
@@ -350,9 +428,15 @@
               "overall": 65,
               "rank": 12,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 67,
+              "rank": 12,
+              "light": "amarillo"
             }
           ],
-          "change": -1
+          "change": 2
         },
         "mindefensa": {
           "name": "Ministerio de Defensa Nacional",
@@ -376,9 +460,15 @@
               "overall": 67,
               "rank": 11,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 67,
+              "rank": 12,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": 0
         },
         "icbf": {
           "name": "ICBF",
@@ -402,9 +492,15 @@
               "overall": 64,
               "rank": 14,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 62,
+              "rank": 19,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": -2
         },
         "alcaldia-bogota": {
           "name": "Alcaldía de Bogotá",
@@ -428,9 +524,15 @@
               "overall": 60,
               "rank": 18,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 63,
+              "rank": 17,
+              "light": "amarillo"
             }
           ],
-          "change": 6
+          "change": 3
         },
         "dnp": {
           "name": "Departamento Nacional de Planeación",
@@ -454,9 +556,15 @@
               "overall": 62,
               "rank": 16,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 63,
+              "rank": 17,
+              "light": "amarillo"
             }
           ],
-          "change": 0
+          "change": 1
         },
         "minsalud": {
           "name": "Ministerio de Salud y Protección Social",
@@ -480,9 +588,15 @@
               "overall": 60,
               "rank": 18,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 66,
+              "rank": 15,
+              "light": "amarillo"
             }
           ],
-          "change": 2
+          "change": 6
         },
         "alcaldia-bucaramanga": {
           "name": "Alcaldía de Bucaramanga",
@@ -505,6 +619,12 @@
               "date": "2026-10-19",
               "overall": 59,
               "rank": 22,
+              "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 59,
+              "rank": 20,
               "light": "amarillo"
             }
           ],
@@ -532,9 +652,15 @@
               "overall": 61,
               "rank": 17,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 69,
+              "rank": 11,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": 8
         },
         "minvivienda": {
           "name": "Ministerio de Vivienda",
@@ -558,9 +684,15 @@
               "overall": 64,
               "rank": 14,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 66,
+              "rank": 15,
+              "light": "amarillo"
             }
           ],
-          "change": 4
+          "change": 2
         },
         "procuraduria": {
           "name": "Procuraduría General de la Nación",
@@ -584,9 +716,15 @@
               "overall": 60,
               "rank": 18,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 56,
+              "rank": 21,
+              "light": "amarillo"
             }
           ],
-          "change": -5
+          "change": -4
         },
         "policia": {
           "name": "Policía Nacional",
@@ -610,9 +748,15 @@
               "overall": 60,
               "rank": 18,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 56,
+              "rank": 21,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": -4
         },
         "mintransporte": {
           "name": "Ministerio de Transporte",
@@ -636,9 +780,15 @@
               "overall": 57,
               "rank": 23,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 55,
+              "rank": 23,
+              "light": "amarillo"
             }
           ],
-          "change": 2
+          "change": -2
         },
         "alcaldia-medellin": {
           "name": "Alcaldía de Medellín",
@@ -662,9 +812,15 @@
               "overall": 54,
               "rank": 24,
               "light": "amarillo"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 54,
+              "rank": 24,
+              "light": "amarillo"
             }
           ],
-          "change": 1
+          "change": 0
         },
         "alcaldia-cali": {
           "name": "Alcaldía de Cali",
@@ -685,6 +841,12 @@
             },
             {
               "date": "2026-10-19",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
               "overall": null,
               "rank": null,
               "light": "sin_dato"
@@ -714,6 +876,12 @@
               "overall": null,
               "rank": null,
               "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
             }
           ],
           "change": null
@@ -740,9 +908,15 @@
               "overall": null,
               "rank": null,
               "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": 73,
+              "rank": 8,
+              "light": "amarillo"
             }
           ],
-          "change": null
+          "change": 3
         },
         "mintrabajo": {
           "name": "Ministerio del Trabajo",
@@ -763,6 +937,12 @@
             },
             {
               "date": "2026-10-19",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
               "overall": null,
               "rank": null,
               "light": "sin_dato"
@@ -792,6 +972,12 @@
               "overall": null,
               "rank": null,
               "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
             }
           ],
           "change": null
@@ -815,6 +1001,12 @@
             },
             {
               "date": "2026-10-19",
+              "overall": null,
+              "rank": null,
+              "light": "sin_dato"
+            },
+            {
+              "date": "2026-10-26",
               "overall": null,
               "rank": null,
               "light": "sin_dato"
