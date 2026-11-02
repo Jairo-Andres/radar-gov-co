@@ -1,0 +1,302 @@
+{
+  "id": "cancilleria",
+  "name": "Ministerio de Relaciones Exteriores",
+  "category": "Ministerio",
+  "url": "https://www.cancilleria.gov.co/",
+  "audited_at": "2026-11-02T21:07:36+00:00",
+  "status": "parcial",
+  "pages": [
+    {
+      "url": "https://www.cancilleria.gov.co/",
+      "final_url": "https://www.cancilleria.gov.co/",
+      "status": 403,
+      "load_ms": 421,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "meta-refresh",
+            "impact": "critical",
+            "criteria": [
+              "2.2.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+            "help_en": "Delayed refresh under 20 hours must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-refresh?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[http-equiv=\"refresh\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.cancilleria.gov.co/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "desktop",
+      "screenshot": "screenshots/cancilleria-desktop.jpg"
+    },
+    {
+      "url": "https://www.cancilleria.gov.co/",
+      "final_url": "https://www.cancilleria.gov.co/",
+      "status": 403,
+      "load_ms": 624,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "meta-refresh",
+            "impact": "critical",
+            "criteria": [
+              "2.2.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+            "help_en": "Delayed refresh under 20 hours must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-refresh?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[http-equiv=\"refresh\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.cancilleria.gov.co/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "mobile",
+      "screenshot": "screenshots/cancilleria-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 2,
+      "categories": {
+        "performance": 77,
+        "accessibility": 93,
+        "best_practices": 96,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 996,
+        "lcp_ms": 2633,
+        "tbt_ms": 829,
+        "cls": 0.006,
+        "speed_index_ms": 1220
+      },
+      "performance_runs": [
+        77,
+        77
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Latencia potencial máxima de la primera interacción"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 2,
+      "categories": {
+        "performance": 100,
+        "accessibility": 93,
+        "best_practices": 96,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 298,
+        "lcp_ms": 591,
+        "tbt_ms": 42,
+        "cls": 0.001,
+        "speed_index_ms": 414
+      },
+      "performance_runs": [
+        100,
+        100
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [
+    "Lighthouse (mobile): 1 de 3 corridas no pudieron analizar la página",
+    "Lighthouse (desktop): 1 de 3 corridas no pudieron analizar la página"
+  ],
+  "robots": "ok",
+  "failed_resources_unverified": 1,
+  "wcag": {
+    "rules_count": 1,
+    "cases": 1,
+    "criteria": [
+      "2.2.1"
+    ],
+    "rules": [
+      {
+        "rule": "meta-refresh",
+        "impact": "critical",
+        "criteria": [
+          "2.2.1"
+        ],
+        "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 4,
+  "scores": {
+    "accessibility": 92,
+    "mobile": 77,
+    "performance": 100,
+    "best_practices": 96,
+    "seo": 45,
+    "failed_resources": 100,
+    "overall": 87
+  },
+  "light": "verde"
+}
