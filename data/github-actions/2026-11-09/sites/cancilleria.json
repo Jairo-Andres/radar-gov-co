@@ -1,0 +1,18 @@
+{
+  "id": "cancilleria",
+  "name": "Ministerio de Relaciones Exteriores",
+  "category": "Ministerio",
+  "url": "https://www.cancilleria.gov.co/",
+  "audited_at": "2026-11-09T21:49:15+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (403)"
+}
