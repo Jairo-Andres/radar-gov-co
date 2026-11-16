@@ -1,0 +1,502 @@
+{
+  "id": "alcaldia-barranquilla",
+  "name": "Alcaldía de Barranquilla",
+  "category": "Alcaldía",
+  "url": "https://www.barranquilla.gov.co/",
+  "audited_at": "2026-11-16T22:12:48+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://barranquilla.gov.co/",
+      "status": 200,
+      "load_ms": 2474,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-search-predictive-govco"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              ".n-1 > .body-tarjeta-govco.title-big-card.description-big-card > .meta-info > .on",
+              ".n-2 > .body-tarjeta-govco.title-big-card.description-big-card > .meta-info > .on",
+              "#accept-cookies"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#cambiarElemento"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://barranquilla.gov.co/?page_id=163067",
+          "status": 403,
+          "type": "script",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-barranquilla-desktop.jpg"
+    },
+    {
+      "url": "https://barranquilla.gov.co/transparencia",
+      "final_url": "https://barranquilla.gov.co/transparencia",
+      "status": 200,
+      "load_ms": 1027,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-search-predictive-govco"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".bread-current31",
+              "#accept-cookies"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#cambiarElemento"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://barranquilla.gov.co/?page_id=163067",
+          "status": 403,
+          "type": "font",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://barranquilla.gov.co/atencion-al-ciudadano",
+      "final_url": "https://barranquilla.gov.co/atencion-al-ciudadano",
+      "status": 200,
+      "load_ms": 1024,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "button-name",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+            "help_en": "Buttons must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/button-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-search-predictive-govco"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".bread-current49",
+              "#accept-cookies"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "#cambiarElemento"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://barranquilla.gov.co/?page_id=163067",
+          "status": 403,
+          "type": "font",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 1,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.barranquilla.gov.co/",
+      "final_url": "https://www.barranquilla.gov.co/",
+      "status": 403,
+      "load_ms": 944,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "meta-refresh",
+            "impact": "critical",
+            "criteria": [
+              "2.2.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+            "help_en": "Delayed refresh under 20 hours must not be used",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/meta-refresh?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "meta[http-equiv=\"refresh\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [
+        {
+          "url": "https://www.barranquilla.gov.co/",
+          "status": 403,
+          "type": "document",
+          "first_party": true,
+          "kind": "blocked"
+        }
+      ],
+      "third_party_failures": 2,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-barranquilla-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 79,
+        "accessibility": 93,
+        "best_practices": 92,
+        "seo": 45
+      },
+      "metrics": {
+        "fcp_ms": 1027,
+        "lcp_ms": 2343,
+        "tbt_ms": 832,
+        "cls": 0.006,
+        "speed_index_ms": 1043
+      },
+      "performance_runs": [
+        79,
+        76,
+        100
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Latencia potencial máxima de la primera interacción"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 81,
+        "accessibility": 93,
+        "best_practices": 96,
+        "seo": 50
+      },
+      "metrics": {
+        "fcp_ms": 1802,
+        "lcp_ms": 2083,
+        "tbt_ms": 65,
+        "cls": 0,
+        "speed_index_ms": 1802
+      },
+      "performance_runs": [
+        80,
+        99,
+        81
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "interactive",
+            "title": "Tiempo necesario para interactuar"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce el contenido JavaScript que no se use"
+          },
+          {
+            "id": "bf-cache",
+            "title": "La página ha impedido la restauración de la caché de páginas completas"
+          },
+          {
+            "id": "redirects",
+            "title": "Evita que haya varias redirecciones de página"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "meta-refresh",
+            "title": "El documento usa `<meta http-equiv=\"refresh\">`"
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "is-crawlable",
+            "title": "Se ha bloqueado la indexación de la página"
+          },
+          {
+            "id": "meta-description",
+            "title": "El documento no tiene una metadescripción"
+          },
+          {
+            "id": "http-status-code",
+            "title": "El código de estado HTTP de la página no es válido"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 2,
+  "wcag": {
+    "rules_count": 4,
+    "cases": 14,
+    "criteria": [
+      "1.4.3",
+      "2.2.1",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "button-name",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla button-name)",
+        "cases": 3
+      },
+      {
+        "rule": "meta-refresh",
+        "impact": "critical",
+        "criteria": [
+          "2.2.1"
+        ],
+        "description": "No cumple el criterio WCAG 2.2.1 (regla meta-refresh)",
+        "cases": 1
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 7
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 3
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 5,
+  "scores": {
+    "accessibility": 87,
+    "mobile": 79,
+    "performance": 81,
+    "best_practices": 94,
+    "seo": 48,
+    "failed_resources": 100,
+    "overall": 83
+  },
+  "light": "verde"
+}

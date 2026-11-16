@@ -1,0 +1,18 @@
+{
+  "id": "alcaldia-bucaramanga",
+  "name": "Alcaldía de Bucaramanga",
+  "category": "Alcaldía",
+  "url": "https://www.bucaramanga.gov.co/",
+  "audited_at": "2026-11-16T22:15:16+00:00",
+  "status": "omitido_robots",
+  "pages": [],
+  "mobile": null,
+  "lighthouse": {
+    "mobile": null,
+    "desktop": null
+  },
+  "errors": [
+    "no se pudo leer robots.txt; se omite por prudencia"
+  ],
+  "robots": "robots.txt no disponible (Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.bucaramanga.gov.co/robots.txt)"
+}
