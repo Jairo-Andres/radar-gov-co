@@ -1,0 +1,506 @@
+{
+  "id": "alcaldia-bogota",
+  "name": "Alcaldía de Bogotá",
+  "category": "Alcaldía",
+  "url": "https://bogota.gov.co/",
+  "audited_at": "2026-11-23T23:40:31+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://bogota.gov.co/",
+      "final_url": "https://bogota.gov.co/",
+      "status": 200,
+      "load_ms": 1467,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 30,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".BogotaNews-featured-cta"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/alcaldia-bogota-desktop.jpg"
+    },
+    {
+      "url": "https://bogota.gov.co/tag/pronostico-del-clima-para-bogota",
+      "final_url": "https://bogota.gov.co/tag/pronostico-del-clima-para-bogota",
+      "status": 200,
+      "load_ms": 899,
+      "axe": {
+        "score": 74,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 30,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 18,
+            "examples": [
+              ".row:nth-child(1) > .col-md-4.col-sm-6.col-xs-12:nth-child(1) > .views-field-fieldset.views-field > .field-content > .tarjeta.tarjeta-3.interna-entidades > .views-field-created.views-field > .field-co",
+              "time[datetime=\"2026-11-23T06:24:00-05:00\"]",
+              ".row:nth-child(1) > .col-md-4.col-sm-6.col-xs-12:nth-child(2) > .views-field-fieldset.views-field > .field-content > .tarjeta.tarjeta-3.interna-entidades > .views-field-created.views-field > .field-co"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://bogota.gov.co/mi-ciudad/habitat/2026-11/epm-asume-el-alumbrado-publico-en-bogota-desde-diciembre-de-2026",
+      "final_url": "https://bogota.gov.co/mi-ciudad/habitat/2026-11/epm-asume-el-alumbrado-publico-en-bogota-desde-diciembre-de-2026",
+      "status": 200,
+      "load_ms": 1398,
+      "axe": {
+        "score": 68,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 31,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "aria-required-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+            "help_en": "Required ARIA attributes must be provided",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-required-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "div[role=\"heading\"]"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 18,
+            "examples": [
+              ".v2024-publication-date",
+              "a[href$=\"alumbrado-publico\"]",
+              "a[href$=\"alumbrado-publico-local\"]"
+            ]
+          },
+          {
+            "rule": "frame-title",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+            "help_en": "Frames must have an accessible name",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/frame-title?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "iframe[allowfullscreen=\"\"]"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://bogota.gov.co/",
+      "final_url": "https://bogota.gov.co/",
+      "status": 200,
+      "load_ms": 1494,
+      "axe": {
+        "score": 84,
+        "violations": [
+          {
+            "rule": "image-alt",
+            "impact": "critical",
+            "criteria": [
+              "1.1.1"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+            "help_en": "Images must have alternative text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=axeAPI",
+            "elements": 30,
+            "examples": [
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-0-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-1-items\"] > img",
+              "#BTAheader button[aria-controls=\"BTANavigation-0-child-2-items\"] > img"
+            ]
+          },
+          {
+            "rule": "color-contrast",
+            "impact": "serious",
+            "criteria": [
+              "1.4.3"
+            ],
+            "level": "AA",
+            "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+            "help_en": "Elements must meet minimum color contrast ratio thresholds",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=axeAPI",
+            "elements": 2,
+            "examples": [
+              ".BogotaNews-featured-cta",
+              "h3 > span"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/alcaldia-bogota-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": false,
+    "scroll_width": 390,
+    "viewport_width": 390,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      390,
+      390
+    ],
+    "overflow_px": 0
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 18,
+        "accessibility": 91,
+        "best_practices": 73,
+        "seo": 85
+      },
+      "metrics": {
+        "fcp_ms": 2306,
+        "lcp_ms": 13538,
+        "tbt_ms": 1704,
+        "cls": 0.77,
+        "speed_index_ms": 5325
+      },
+      "performance_runs": [
+        17,
+        18,
+        18
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 62,
+        "accessibility": 91,
+        "best_practices": 73,
+        "seo": 85
+      },
+      "metrics": {
+        "fcp_ms": 789,
+        "lcp_ms": 2171,
+        "tbt_ms": 73,
+        "cls": 0.619,
+        "speed_index_ms": 1447
+      },
+      "performance_runs": [
+        62,
+        60,
+        69
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "cls-culprits-insight",
+            "title": "Causantes de los cambios de diseño"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitudes que bloquean el renderizado"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          },
+          {
+            "id": "color-contrast",
+            "title": "Los colores de fondo y de primer plano no tienen una relación de contraste adecuada."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": [
+          {
+            "id": "robots-txt",
+            "title": "robots.txt no es válido"
+          },
+          {
+            "id": "image-alt",
+            "title": "Los elementos de imagen no tienen ningún atributo `[alt]`"
+          }
+        ]
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 4,
+    "cases": 132,
+    "criteria": [
+      "1.1.1",
+      "1.4.3",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-required-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-required-attr)",
+        "cases": 2
+      },
+      {
+        "rule": "image-alt",
+        "impact": "critical",
+        "criteria": [
+          "1.1.1"
+        ],
+        "description": "No cumple el criterio WCAG 1.1.1 (regla image-alt)",
+        "cases": 91
+      },
+      {
+        "rule": "color-contrast",
+        "impact": "serious",
+        "criteria": [
+          "1.4.3"
+        ],
+        "description": "No cumple el criterio WCAG 1.4.3 (regla color-contrast)",
+        "cases": 38
+      },
+      {
+        "rule": "frame-title",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla frame-title)",
+        "cases": 1
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 84,
+    "mobile": 18,
+    "performance": 62,
+    "best_practices": 73,
+    "seo": 85,
+    "failed_resources": 100,
+    "overall": 68
+  },
+  "light": "amarillo"
+}

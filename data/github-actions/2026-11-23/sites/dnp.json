@@ -1,0 +1,465 @@
+{
+  "id": "dnp",
+  "name": "Departamento Nacional de Planeación",
+  "category": "Entidad nacional",
+  "url": "https://www.dnp.gov.co/",
+  "audited_at": "2026-11-23T23:20:39+00:00",
+  "status": "ok",
+  "pages": [
+    {
+      "url": "https://www.dnp.gov.co/",
+      "final_url": "https://www.dnp.gov.co/",
+      "status": 200,
+      "load_ms": 3722,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "aria-valid-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+            "help_en": "ARIA attributes must conform to valid names",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-Act"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop",
+      "screenshot": "screenshots/dnp-desktop.jpg"
+    },
+    {
+      "url": "https://www.dnp.gov.co/Paginas/Politica-de-seguridad.aspx",
+      "final_url": "https://www.dnp.gov.co/Paginas/Politica-de-seguridad.aspx",
+      "status": 200,
+      "load_ms": 812,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "aria-valid-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+            "help_en": "ARIA attributes must conform to valid names",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-Act"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              "#DNPDropdown51",
+              "#DNPDropdown52",
+              "#DNPDropdown53"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "ul:nth-child(12) > li:nth-child(4) > a:nth-child(2)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dnp.gov.co/politica-de-seguridad",
+      "final_url": "https://www.dnp.gov.co/politica-de-seguridad",
+      "status": 200,
+      "load_ms": 666,
+      "axe": {
+        "score": 78,
+        "violations": [
+          {
+            "rule": "aria-valid-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+            "help_en": "ARIA attributes must conform to valid names",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-Act"
+            ]
+          },
+          {
+            "rule": "nested-interactive",
+            "impact": "serious",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+            "help_en": "Interactive controls must not be nested",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=axeAPI",
+            "elements": 3,
+            "examples": [
+              "#DNPDropdown1251",
+              "#DNPDropdown1252",
+              "#DNPDropdown1253"
+            ]
+          },
+          {
+            "rule": "link-name",
+            "impact": "serious",
+            "criteria": [
+              "2.4.4",
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+            "help_en": "Links must have discernible text",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              "ul:nth-child(12) > li:nth-child(4) > a:nth-child(2)"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "desktop"
+    },
+    {
+      "url": "https://www.dnp.gov.co/",
+      "final_url": "https://www.dnp.gov.co/",
+      "status": 200,
+      "load_ms": 3537,
+      "axe": {
+        "score": 90,
+        "violations": [
+          {
+            "rule": "aria-valid-attr",
+            "impact": "critical",
+            "criteria": [
+              "4.1.2"
+            ],
+            "level": "A",
+            "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+            "help_en": "ARIA attributes must conform to valid names",
+            "help_url": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr?application=axeAPI",
+            "elements": 1,
+            "examples": [
+              ".btn-Act"
+            ]
+          }
+        ]
+      },
+      "failed_resources": [],
+      "third_party_failures": 0,
+      "viewport": "mobile",
+      "screenshot": "screenshots/dnp-mobile.jpg"
+    }
+  ],
+  "mobile": {
+    "viewport_meta": true,
+    "horizontal_overflow": true,
+    "scroll_width": 478,
+    "viewport_width": 478,
+    "screen_width": 390,
+    "readings_scroll_width": [
+      478,
+      478
+    ],
+    "evidence": {
+      "offenders": [
+        {
+          "selector": "button.DNPSlider-buttons-dots-element.DNPPortales-dot",
+          "right_px": 463,
+          "width_px": 12
+        },
+        {
+          "selector": "img.Image_asistente",
+          "right_px": 443,
+          "width_px": 84
+        },
+        {
+          "selector": "button.DNPSlider-buttons-dots-element.DNPPortales-dot",
+          "right_px": 441,
+          "width_px": 12
+        },
+        {
+          "selector": "button.DNPSlider-buttons-dots-element.DNPPortales-dot",
+          "right_px": 420,
+          "width_px": 12
+        },
+        {
+          "selector": "button.DNPSlider-buttons-dots-element.DNPPortales-dot",
+          "right_px": 398,
+          "width_px": 12
+        }
+      ],
+      "screenshot": "screenshots/dnp-mobile-overflow.jpg"
+    },
+    "overflow_px": 88
+  },
+  "lighthouse": {
+    "mobile": {
+      "runs": 3,
+      "categories": {
+        "performance": 27,
+        "accessibility": 93,
+        "best_practices": 54,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 14475,
+        "lcp_ms": 24678,
+        "tbt_ms": 1618,
+        "cls": 0.085,
+        "speed_index_ms": 14475
+      },
+      "performance_runs": [
+        29,
+        27,
+        27
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-valid-attr",
+            "title": "Los atributos `[aria-*]` no son válidos o no están bien escritos"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    },
+    "desktop": {
+      "runs": 3,
+      "categories": {
+        "performance": 51,
+        "accessibility": 93,
+        "best_practices": 54,
+        "seo": 100
+      },
+      "metrics": {
+        "fcp_ms": 3271,
+        "lcp_ms": 4674,
+        "tbt_ms": 238,
+        "cls": 0.002,
+        "speed_index_ms": 3296
+      },
+      "performance_runs": [
+        51,
+        50,
+        53
+      ],
+      "failed_audits": {
+        "performance": [
+          {
+            "id": "cache-insight",
+            "title": "Usar tiempos de vida de caché eficientes"
+          },
+          {
+            "id": "document-latency-insight",
+            "title": "Latencia de solicitud del documento"
+          },
+          {
+            "id": "font-display-insight",
+            "title": "Visualización de fuentes"
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Redistribución forzada"
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Mejorar la entrega de imágenes"
+          },
+          {
+            "id": "lcp-discovery-insight",
+            "title": "Descubrimiento de solicitudes de LCP"
+          },
+          {
+            "id": "legacy-javascript-insight",
+            "title": "JavaScript antiguo"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árbol de dependencia de red"
+          }
+        ],
+        "accessibility": [
+          {
+            "id": "aria-valid-attr",
+            "title": "Los atributos `[aria-*]` no son válidos o no están bien escritos"
+          },
+          {
+            "id": "target-size",
+            "title": "Las áreas táctiles no tienen un tamaño o un espaciado suficientes."
+          },
+          {
+            "id": "label-content-name-mismatch",
+            "title": "Los elementos con etiquetas de texto visibles no tienen nombres accesibles que coincidan."
+          }
+        ],
+        "best_practices": [
+          {
+            "id": "deprecations",
+            "title": "Usa API obsoletas"
+          },
+          {
+            "id": "errors-in-console",
+            "title": "Se han registrado errores del navegador en la consola"
+          },
+          {
+            "id": "valid-source-maps",
+            "title": "No hay mapas de origen para JavaScript propio de gran tamaño"
+          }
+        ],
+        "seo": []
+      },
+      "lighthouse_version": "13.5.0"
+    }
+  },
+  "errors": [],
+  "robots": "ok",
+  "failed_resources_unverified": 0,
+  "wcag": {
+    "rules_count": 3,
+    "cases": 11,
+    "criteria": [
+      "2.4.4",
+      "4.1.2"
+    ],
+    "rules": [
+      {
+        "rule": "aria-valid-attr",
+        "impact": "critical",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla aria-valid-attr)",
+        "cases": 3
+      },
+      {
+        "rule": "link-name",
+        "impact": "serious",
+        "criteria": [
+          "2.4.4",
+          "4.1.2"
+        ],
+        "description": "No cumple los criterios WCAG 2.4.4, 4.1.2 (regla link-name)",
+        "cases": 2
+      },
+      {
+        "rule": "nested-interactive",
+        "impact": "serious",
+        "criteria": [
+          "4.1.2"
+        ],
+        "description": "No cumple el criterio WCAG 4.1.2 (regla nested-interactive)",
+        "cases": 6
+      }
+    ]
+  },
+  "failed_resources_first_party": 0,
+  "third_party_failures": 0,
+  "scores": {
+    "accessibility": 88,
+    "mobile": 0,
+    "performance": 51,
+    "best_practices": 54,
+    "seo": 100,
+    "failed_resources": 100,
+    "overall": 64
+  },
+  "light": "amarillo"
+}
